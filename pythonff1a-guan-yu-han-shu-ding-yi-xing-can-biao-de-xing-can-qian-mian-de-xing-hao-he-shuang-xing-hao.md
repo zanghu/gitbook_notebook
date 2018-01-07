@@ -5,17 +5,11 @@
 允许用户调用函数时输入不定个参数, 例如: func\(a, b, c\), 函数自动将它们全部包装成一个列表args = \[a, b, c\], 供函数内使用
 
 ``` python
-
 def func1(*args):
-
     assert isinstance\(args, tuple\)
-
     print 'args: {0}'.format\(args\)
-
     for i, elem in enumerate\(args\):
-
         print 'args\[{0}\] = {1}'.format\(i, args\[i\]\)
-
 ```
 
 ### 调用方法1
@@ -33,8 +27,6 @@ func1\(\*c\) \# 把list解包成不定参数
 允许用户调用函数时输入不定个键值对形式的参数, 例如: func\(a=1, b=2, c='123'\)函数自动将它们全部包装成一个字典args = {'a': 1, 'b: 2, 'c': '123'}, 供函数内使用
 
 def func2\(\*\*args\):
-
-```
 assert isinstance\(args, dict\)
 
 print 'args: {0}'.format\(args\)
