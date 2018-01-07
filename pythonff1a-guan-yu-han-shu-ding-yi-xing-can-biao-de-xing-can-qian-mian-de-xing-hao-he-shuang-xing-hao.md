@@ -8,13 +8,13 @@
 
 def func1(*args):
 
-assert isinstance\(args, tuple\)
+    assert isinstance\(args, tuple\)
 
-print 'args: {0}'.format\(args\)
+    print 'args: {0}'.format\(args\)
 
-for i, elem in enumerate\(args\):
+    for i, elem in enumerate\(args\):
 
-    print 'args\[{0}\] = {1}'.format\(i, args\[i\]\)
+        print 'args\[{0}\] = {1}'.format\(i, args\[i\]\)
 
 ```
 
