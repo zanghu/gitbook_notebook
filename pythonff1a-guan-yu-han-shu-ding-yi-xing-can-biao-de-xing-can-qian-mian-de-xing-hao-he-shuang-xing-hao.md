@@ -6,6 +6,7 @@
 
 ```python
 def func1(*args):
+    """"""
     assert isinstance(args, tuple)
     print 'args: {0}'.format(args)
     for i, elem in enumerate(args):
@@ -28,6 +29,7 @@ func1\(\*c\) \# 把list解包成不定参数
 
 ```python
 def func2(**args):
+    """"""
     assert isinstance(args, dict)
     print 'args: {0}'.format(args)
     for key, val in args.iteritems():
