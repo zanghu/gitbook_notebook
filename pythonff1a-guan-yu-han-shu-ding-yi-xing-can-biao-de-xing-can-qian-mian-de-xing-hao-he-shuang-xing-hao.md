@@ -4,11 +4,10 @@
 
 允许用户调用函数时输入不定个参数, 例如: func\(a, b, c\), 函数自动将它们全部包装成一个列表args = \[a, b, c\], 供函数内使用
 
-\`\`\` python
+``` python
 
-`def func1(*args):`
+def func1(*args):
 
-```
 assert isinstance\(args, tuple\)
 
 print 'args: {0}'.format\(args\)
@@ -16,9 +15,8 @@ print 'args: {0}'.format\(args\)
 for i, elem in enumerate\(args\):
 
     print 'args\[{0}\] = {1}'.format\(i, args\[i\]\)
-```
 
-\`\`\`
+```
 
 ### 调用方法1
 
