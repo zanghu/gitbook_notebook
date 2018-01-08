@@ -4,6 +4,8 @@
 
 This note will present an overview of how autograd works and records the operations. It's not strictly necessary to understand all this, but we recommend getting familiar with it, as it will help you write more efficient, cleaner programs, and can aid you in debugging.
 
+本文将对autograd如何工作和如何记录运算进行综述。了解这一切严格来说并不是必须的，但是熟悉这部分内容将有助于你写出更为高效、干净的程序，并将对debugging有所助益。
+
 ## Excluding subgraphs from backward
 
 Every Variable has two flags: :attr:`requires_grad` and :attr:`volatile`.  
