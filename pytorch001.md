@@ -8,11 +8,7 @@ This note will present an overview of how autograd works and records the operati
 
 ## Excluding subgraphs from backward
 
-Every Variable has two flags: :attr:`requires_grad` and :attr:`volatile`.  
-They both allow for fine grained exclusion of subgraphs from gradient  
-computation and can increase efficiency.
-
-.. \_excluding-requires\_grad:
+Every Variable has two flags: :attr:`requires_grad` and :attr:`volatile`. They both allow for fine grained exclusion of subgraphs from gradient scomputation and can increase efficiency.
 
 `requires_grad`
 
