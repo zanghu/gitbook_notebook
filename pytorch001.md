@@ -6,10 +6,9 @@ operations. It's not strictly necessary to understand all this, but we recommend
 getting familiar with it, as it will help you write more efficient, cleaner
 programs, and can aid you in debugging.
 
-.. _excluding-subgraphs:
 
-Excluding subgraphs from backward
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+## Excluding subgraphs from backward
 
 Every Variable has two flags: :attr:`requires_grad` and :attr:`volatile`.
 They both allow for fine grained exclusion of subgraphs from gradient
