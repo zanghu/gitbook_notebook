@@ -1,3 +1,5 @@
+# \[Python\]使用functools.update\_wrapper保持被装饰器修饰的函数的自省/反射属性
+
 下面演示对使用函数装饰器的函数调用自省/反射方法**name**和**doc**的效果
 
 ```python
