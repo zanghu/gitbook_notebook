@@ -2,7 +2,7 @@
 
 下面演示对使用函数装饰器的函数调用自省/反射方法**name**和**doc**的效果
 
-```python
+``` python
 def wrap(func):  
     def call_it(*args, **kwargs):  
         """wrap func: call_it"""  
@@ -32,16 +32,20 @@ if __name__ == '__main__':
     hello()  
     print hello.__name__  
     print hello.__doc__
+
+    print  
+    hello2()  
+    print hello2.__name__  
+    print hello2.__doc__
 ```
-
-返回结果
-
-```python
-print  
-hello2()  
-print hello2.__name__  
-print hello2.__doc__
+返回结果如下:
+``` python
+before call
+hello world
+call_it
+wrap func: call_it
+before call
+hello world2
+hello2
+test hello
 ```
-
-
-
