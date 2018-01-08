@@ -16,6 +16,8 @@ Every Variable has two flags: `requires_grad` and `volatile`. They both allow fo
 
 If there's a single input to an operation that requires gradient, its output will also require gradient. Conversely, only if all inputs don't require gradient, the output also won't require it. Backward computation is never performed in the subgraphs, where all Variables didn't require gradients.
 
+如果生成Varable的运算表达式至少有一个输入的requies\_grad属性为True, 那么表达式输出的Variable对象的requires\_grad属性也将是
+
 ```python
     >>> x = Variable(torch.randn(5, 5))
     >>> y = Variable(torch.randn(5, 5))
@@ -28,7 +30,7 @@ If there's a single input to an operation that requires gradient, its output wil
     True
 ```
 
-This is especially useful when you want to freeze part of your model, or you know in advance that you're not going to use gradients w.r.t. some parameters. For example if you want to finetune a pretrained CNN, it's enough to switch the **`requires_grad`** flags in the frozen base, and no intermediate buffers will be saved, until the computation gets to the last layer, where the affine transform will use weights that require gradient, and the output of the network will also require them.
+This is especially useful when you want to freeze part of your model, or you know in advance that you're not going to use gradients w.r.t. some parameters. For example if you want to finetune a pretrained CNN, it's enough to switch the `requires_grad` flags in the frozen base, and no intermediate buffers will be saved, until the computation gets to the last layer, where the affine transform will use weights that require gradient, and the output of the network will also require them.
 
 ```python
     model = torchvision.models.resnet18(pretrained=True)
