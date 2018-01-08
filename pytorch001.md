@@ -14,13 +14,9 @@ Every Variable has two flags: `requires_grad` and `volatile`. They both allow fo
 
 ### requires\_grad
 
-If there's a single input to an operation that requires gradient, its output
-will also require gradient. Conversely, only if all inputs don't require
-gradient, the output also won't require it. Backward computation is never
-performed in the subgraphs, where all Variables didn't require gradients.
+If there's a single input to an operation that requires gradient, its output will also require gradient. Conversely, only if all inputs don't require gradient, the output also won't require it. Backward computation is never performed in the subgraphs, where all Variables didn't require gradients.
 
-``` python
-
+```python
     >>> x = Variable(torch.randn(5, 5))
     >>> y = Variable(torch.randn(5, 5))
     >>> z = Variable(torch.randn(5, 5), requires_grad=True)
@@ -31,16 +27,10 @@ performed in the subgraphs, where all Variables didn't require gradients.
     >>> b.requires_grad
     True
 ```
-This is especially useful when you want to freeze part of your model, or you
-know in advance that you're not going to use gradients w.r.t. some parameters.
-For example if you want to finetune a pretrained CNN, it's enough to switch the
-:attr:`requires_grad` flags in the frozen base, and no intermediate buffers will
-be saved, until the computation gets to the last layer, where the affine
-transform will use weights that require gradient, and the output of the network
-will also require them.
 
-``` python
+This is especially useful when you want to freeze part of your model, or you know in advance that you're not going to use gradients w.r.t. some parameters. For example if you want to finetune a pretrained CNN, it's enough to switch the :attr:`requires_grad` flags in the frozen base, and no intermediate buffers will be saved, until the computation gets to the last layer, where the affine transform will use weights that require gradient, and the output of the network will also require them.
 
+```python
     model = torchvision.models.resnet18(pretrained=True)
     for param in model.parameters():
         param.requires_grad = False
