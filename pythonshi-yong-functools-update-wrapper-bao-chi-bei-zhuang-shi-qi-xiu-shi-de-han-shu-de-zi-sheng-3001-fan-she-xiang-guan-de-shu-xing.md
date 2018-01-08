@@ -38,7 +38,7 @@ if __name__ == '__main__':
     print hello2.__name__  
     print hello2.__doc__
 ```
-返回结果如下:
+返回结果如下, 使用functools.update_wrapper()前被修饰函数的函数签名是call_it, 使用后则变回hello2:
 ``` python
 before call
 hello world
