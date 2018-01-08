@@ -1,10 +1,7 @@
 # Autograd机制的原理
 ==================
 
-This note will present an overview of how autograd works and records the
-operations. It's not strictly necessary to understand all this, but we recommend
-getting familiar with it, as it will help you write more efficient, cleaner
-programs, and can aid you in debugging.
+This note will present an overview of how autograd works and records the operations. It's not strictly necessary to understand all this, but we recommend getting familiar with it, as it will help you write more efficient, cleaner programs, and can aid you in debugging.
 
 
 
