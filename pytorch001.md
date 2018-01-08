@@ -8,7 +8,9 @@ This note will present an overview of how autograd works and records the operati
 
 ## Excluding subgraphs from backward
 
-Every Variable has two flags: **`requires_grad`** and **`volatile`**. They both allow for fine grained exclusion of subgraphs from gradient scomputation and can increase efficiency.
+Every Variable has two flags: `requires_grad` and `volatile`. They both allow for fine grained exclusion of subgraphs from gradient computation and can increase efficiency.
+
+每个Variable对象都有两个作为标志位的属性：requires\_grad和volatile. 通过设置这两个属性的值可以使整个计算图的某些子图免于被计算梯度，同时提高效率。
 
 ### requires\_grad
 
