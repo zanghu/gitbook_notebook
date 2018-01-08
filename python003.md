@@ -4,7 +4,7 @@ array和asarray都可以将结构数据转化为ndarray，但是主要区别就�
 
 
 
-当输入数据源不是numpyndarray类型时，二者返回的都是copy的副本
+当输入数据源不是numpyndarray类型时，二者返回的都是copy的副本。可见array和asarray没有区别，都对元数据进行了复制。
 
 
 
