@@ -16,7 +16,7 @@ Every Variable has two flags: `requires_grad` and `volatile`. They both allow fo
 
 If there's a single input to an operation that requires gradient, its output will also require gradient. Conversely, only if all inputs don't require gradient, the output also won't require it. Backward computation is never performed in the subgraphs, where all Variables didn't require gradients.
 
-如果生成Varable的运算表达式至少有一个输入的requies\_grad属性为True, 那么表达式输出的Variable对象的requires\_grad属性也将是
+如果生成Varable的运算表达式至少有一个Varable输入对象的requiesgrad属性为True, 那么表达式输出的Variable对象的requires\_grad属性也将是True. 反之，只有当运算表达式的所有Varable输入对象的requires\_grad
 
 ```python
     >>> x = Variable(torch.randn(5, 5))
