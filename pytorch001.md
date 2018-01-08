@@ -1,21 +1,20 @@
 # Autograd机制的原理
+
 ==================
 
 This note will present an overview of how autograd works and records the operations. It's not strictly necessary to understand all this, but we recommend getting familiar with it, as it will help you write more efficient, cleaner programs, and can aid you in debugging.
 
-
-
 ## Excluding subgraphs from backward
 
-Every Variable has two flags: :attr:`requires_grad` and :attr:`volatile`.
-They both allow for fine grained exclusion of subgraphs from gradient
+Every Variable has two flags: :attr:`requires_grad` and :attr:`volatile`.  
+They both allow for fine grained exclusion of subgraphs from gradient  
 computation and can increase efficiency.
 
-.. _excluding-requires_grad:
+.. \_excluding-requires\_grad:
 
-``requires_grad``
-~~~~~~~~~~~~~~~~~
+`requires_grad`
 
+```~~~~~
 If there's a single input to an operation that requires gradient, its output
 will also require gradient. Conversely, only if all inputs don't require
 gradient, the output also won't require it. Backward computation is never
@@ -54,94 +53,95 @@ will also require them.
     optimizer = optim.SGD(model.fc.parameters(), lr=1e-2, momentum=0.9)
 
 ``volatile``
-~~~~~~~~~~~~
+```
 
-Volatile is recommended for purely inference mode, when you're sure you won't
-be even calling `.backward()`. It's more efficient than any other autograd
-setting - it will use the absolute minimal amount of memory to evaluate the
-model. ``volatile`` also determines that ``requires_grad is False``.
+Volatile is recommended for purely inference mode, when you're sure you won't  
+be even calling `.backward()`. It's more efficient than any other autograd  
+setting - it will use the absolute minimal amount of memory to evaluate the  
+model. `volatile` also determines that `requires_grad is False`.
 
-Volatile differs from :ref:`excluding-requires_grad` in how the flag propagates.
-If there's even a single volatile input to an operation, its output is also
-going to be volatile. Volatility spreads across the graph much easier than
-non-requiring gradient - you only need a **single** volatile leaf to have a
-volatile output, while you need **all** leaves to not require gradient to
-have an output that doesn't require gradient. Using volatile flag you don't
-need to change any settings of your model parameters to use it for
-inference. It's enough to create a volatile input, and this will ensure that
+Volatile differs from :ref:`excluding-requires_grad` in how the flag propagates.  
+If there's even a single volatile input to an operation, its output is also  
+going to be volatile. Volatility spreads across the graph much easier than  
+non-requiring gradient - you only need a **single** volatile leaf to have a  
+volatile output, while you need **all** leaves to not require gradient to  
+have an output that doesn't require gradient. Using volatile flag you don't  
+need to change any settings of your model parameters to use it for  
+inference. It's enough to create a volatile input, and this will ensure that  
 no intermediate states are saved.
 
 .. code::
 
-    >>> regular_input = Variable(torch.randn(1, 3, 227, 227))
-    >>> volatile_input = Variable(torch.randn(1, 3, 227, 227), volatile=True)
-    >>> model = torchvision.models.resnet18(pretrained=True)
-    >>> model(regular_input).requires_grad
-    True
-    >>> model(volatile_input).requires_grad
-    False
-    >>> model(volatile_input).volatile
-    True
-    >>> model(volatile_input).grad_fn is None
-    True
+> > > regular\_input = Variable\(torch.randn\(1, 3, 227, 227\)\)  
+> > > volatile\_input = Variable\(torch.randn\(1, 3, 227, 227\), volatile=True\)  
+> > > model = torchvision.models.resnet18\(pretrained=True\)  
+> > > model\(regular\_input\).requires\_grad  
+> > >     True  
+> > > model\(volatile\_input\).requires\_grad  
+> > >     False  
+> > > model\(volatile\_input\).volatile  
+> > >     True  
+> > > model\(volatile\_input\).grad\_fn is None  
+> > >     True
 
-How autograd encodes the history
+How autograd encodes the history  
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Autograd is reverse automatic differentiation system.  Conceptually,
-autograd records a graph recording all of the operations that created
-the data as you execute operations, giving you a directed acyclic graph
-whose leaves are the input variables and roots are the output variables.
-By tracing this graph from roots to leaves, you can automatically
+Autograd is reverse automatic differentiation system.  Conceptually,  
+autograd records a graph recording all of the operations that created  
+the data as you execute operations, giving you a directed acyclic graph  
+whose leaves are the input variables and roots are the output variables.  
+By tracing this graph from roots to leaves, you can automatically  
 compute the gradients using the chain rule.
 
-Internally, autograd represents this graph as a graph of
-:class:`Function` objects (really expressions), which can be
-:meth:`~torch.autograd.Function.apply` ed to compute the result of
-evaluating the graph.  When computing the forwards pass, autograd
-simultaneously performs the requested computations and builds up a graph
-representing the function that computes the gradient (the ``.grad_fn``
-attribute of each :class:`Variable` is an entry point into this graph).
-When the forwards pass is completed, we evaluate this graph in the
+Internally, autograd represents this graph as a graph of  
+:class:`Function` objects \(really expressions\), which can be  
+:meth:`~torch.autograd.Function.apply` ed to compute the result of  
+evaluating the graph.  When computing the forwards pass, autograd  
+simultaneously performs the requested computations and builds up a graph  
+representing the function that computes the gradient \(the `.grad_fn`  
+attribute of each :class:`Variable` is an entry point into this graph\).  
+When the forwards pass is completed, we evaluate this graph in the  
 backwards pass to compute the gradients.
 
-An important thing to note is that the graph is recreated from scratch at every
-iteration, and this is exactly what allows for using arbitrary Python control
-flow statements, that can change the overall shape and size of the graph at
-every iteration. You don't have to encode all possible paths before you
+An important thing to note is that the graph is recreated from scratch at every  
+iteration, and this is exactly what allows for using arbitrary Python control  
+flow statements, that can change the overall shape and size of the graph at  
+every iteration. You don't have to encode all possible paths before you  
 launch the training - what you run is what you differentiate.
 
-In-place operations on Variables
+In-place operations on Variables  
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Supporting in-place operations in autograd is a hard matter, and we discourage
-their use in most cases. Autograd's aggressive buffer freeing and reuse makes
-it very efficient and there are very few occasions when in-place operations
-actually lower memory usage by any significant amount. Unless you're operating
+Supporting in-place operations in autograd is a hard matter, and we discourage  
+their use in most cases. Autograd's aggressive buffer freeing and reuse makes  
+it very efficient and there are very few occasions when in-place operations  
+actually lower memory usage by any significant amount. Unless you're operating  
 under heavy memory pressure, you might never need to use them.
 
 There are two main reasons that limit the applicability of in-place operations:
 
-1. Overwriting values required to compute gradients. This is why variables don't
-   support ``log_``. Its gradient formula requires the original input, and while
-   it is possible to recreate it by computing the inverse operation, it is
-   numerically unstable, and requires additional work that often defeats the
+1. Overwriting values required to compute gradients. This is why variables don't  
+   support `log_`. Its gradient formula requires the original input, and while  
+   it is possible to recreate it by computing the inverse operation, it is  
+   numerically unstable, and requires additional work that often defeats the  
    purpose of using these functions.
 
-2. Every in-place operation actually requires the implementation to rewrite the
-   computational graph. Out-of-place versions simply allocate new objects and
-   keep references to the old graph, while in-place operations, require
-   changing the creator of all inputs to the :class:`Function` representing
-   this operation. This can be tricky, especially if there are many Variables
-   that reference the same storage (e.g. created by indexing or transposing),
-   and in-place functions will actually raise an error if the storage of
+2. Every in-place operation actually requires the implementation to rewrite the  
+   computational graph. Out-of-place versions simply allocate new objects and  
+   keep references to the old graph, while in-place operations, require  
+   changing the creator of all inputs to the :class:`Function` representing  
+   this operation. This can be tricky, especially if there are many Variables  
+   that reference the same storage \(e.g. created by indexing or transposing\),  
+   and in-place functions will actually raise an error if the storage of  
    modified inputs is referenced by any other :class:`Variable`.
 
-In-place correctness checks
+In-place correctness checks  
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Every variable keeps a version counter, that is incremented every time it's
-marked dirty in any operation. When a Function saves any tensors for backward,
-a version counter of their containing Variable is saved as well. Once you access
-``self.saved_tensors`` it is checked, and if it's greater than the saved value
+Every variable keeps a version counter, that is incremented every time it's  
+marked dirty in any operation. When a Function saves any tensors for backward,  
+a version counter of their containing Variable is saved as well. Once you access  
+`self.saved_tensors` it is checked, and if it's greater than the saved value  
 an error is raised.
+
