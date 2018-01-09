@@ -32,6 +32,8 @@ If there's a single input to an operation that requires gradient, its output wil
 
 This is especially useful when you want to freeze part of your model, or you know in advance that you're not going to use gradients w.r.t. some parameters. For example if you want to finetune a pretrained CNN, it's enough to switch the `requires_grad` flags in the frozen base, and no intermediate buffers will be saved, until the computation gets to the last layer, where the affine transform will use weights that require gradient, and the output of the network will also require them.
 
+特别是当你希望冻结你的模型的一部分时，或者你更进一步的知道你不会用到哪些参数的梯度时，这种方法（将对应子图的Variable的requires\_grad属性设为False）将会非常有效。举例来说，当你希望利用一个预训练好的CNN作为特征提取层来训练一个基于该CNN的Softmax层，那么就可以
+
 ```python
     model = torchvision.models.resnet18(pretrained=True)
     for param in model.parameters():
