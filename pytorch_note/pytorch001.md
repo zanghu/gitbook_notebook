@@ -76,19 +76,11 @@ Autograd is reverse automatic differentiation system.  Conceptually, autograd re
 
 Internally, autograd represents this graph as a graph of `Function` objects \(really expressions\), which can be `~torch.autograd.Function.apply` ed to compute the result of evaluating the graph.  When computing the forwards pass, autograd simultaneously performs the requested computations and builds up a graph representing the function that computes the gradient \(the `.grad_fn` attribute of each :class:`Variable` is an entry point into this graph\). When the forwards pass is completed, we evaluate this graph in the backwards pass to compute the gradients.
 
-An important thing to note is that the graph is recreated from scratch at every  
-iteration, and this is exactly what allows for using arbitrary Python control  
-flow statements, that can change the overall shape and size of the graph at  
-every iteration. You don't have to encode all possible paths before you  
-launch the training - what you run is what you differentiate.
+An important thing to note is that the graph is recreated from scratch at every iteration, and this is exactly what allows for using arbitrary Python control flow statements, that can change the overall shape and size of the graph at every iteration. You don't have to encode all possible paths before you launch the training - what you run is what you differentiate.
 
 ### In-place operations on Variables
 
-Supporting in-place operations in autograd is a hard matter, and we discourage  
-their use in most cases. Autograd's aggressive buffer freeing and reuse makes  
-it very efficient and there are very few occasions when in-place operations  
-actually lower memory usage by any significant amount. Unless you're operating  
-under heavy memory pressure, you might never need to use them.
+Supporting in-place operations in autograd is a hard matter, and we discourage their use in most cases. Autograd's aggressive buffer freeing and reuse makes it very efficient and there are very few occasions when in-place operations actually lower memory usage by any significant amount. Unless you're operating under heavy memory pressure, you might never need to use them.
 
 There are two main reasons that limit the applicability of in-place operations:
 
