@@ -54,6 +54,8 @@ Volatile被推荐用于纯推理模式中，即当你确定你不会再调用Var
 
 Volatile differs from `requires_grad` in how the flag propagates. If there's even a single volatile input to an operation, its output is also going to be volatile. Volatility spreads across the graph much easier than non-requiring gradient - you only need a **single** volatile leaf to have a volatile output, while you need **all** leaves to not require gradient to have an output that doesn't require gradient. Using volatile flag you don't need to change any settings of your model parameters to use it for inference. It's enough to create a volatile input, and this will ensure that no intermediate states are saved.
 
+计算图中各个Variable对象之间传递volatile属性和传递requiresgrad属性的方式并不相同。参与运算的输入Variable对象中只要有一个的volatile属性为True，那么运算结果的volatile属性就是True. 在一个计算图中，只要有一个叶子节点的volatile属性为True，那么计算图输出的Variable对象的volatile也是True, 而只有当所有叶子节点的requires\_grad属性为False时，计算图输出
+
 ```python
 >>> regular_input = Variable(torch.randn(1, 3, 227, 227))  
 >>> volatile_input = Variable(torch.randn(1, 3, 227, 227), volatile=True)  
