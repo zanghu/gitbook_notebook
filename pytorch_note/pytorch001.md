@@ -72,22 +72,9 @@ True
 
 ### How autograd encodes the history  
 
-Autograd is reverse automatic differentiation system.  Conceptually,  
-autograd records a graph recording all of the operations that created  
-the data as you execute operations, giving you a directed acyclic graph  
-whose leaves are the input variables and roots are the output variables.  
-By tracing this graph from roots to leaves, you can automatically  
-compute the gradients using the chain rule.
+Autograd is reverse automatic differentiation system.  Conceptually, autograd records a graph recording all of the operations that created the data as you execute operations, giving you a directed acyclic graph whose leaves are the input variables and roots are the output variables. By tracing this graph from roots to leaves, you can automatically compute the gradients using the chain rule.
 
-Internally, autograd represents this graph as a graph of  
-:class:`Function` objects \(really expressions\), which can be  
-:meth:`~torch.autograd.Function.apply` ed to compute the result of  
-evaluating the graph.  When computing the forwards pass, autograd  
-simultaneously performs the requested computations and builds up a graph  
-representing the function that computes the gradient \(the `.grad_fn`  
-attribute of each :class:`Variable` is an entry point into this graph\).  
-When the forwards pass is completed, we evaluate this graph in the  
-backwards pass to compute the gradients.
+Internally, autograd represents this graph as a graph of `Function` objects \(really expressions\), which can be `~torch.autograd.Function.apply` ed to compute the result of evaluating the graph.  When computing the forwards pass, autograd simultaneously performs the requested computations and builds up a graph representing the function that computes the gradient \(the `.grad_fn` attribute of each :class:`Variable` is an entry point into this graph\). When the forwards pass is completed, we evaluate this graph in the backwards pass to compute the gradients.
 
 An important thing to note is that the graph is recreated from scratch at every  
 iteration, and this is exactly what allows for using arbitrary Python control  
@@ -95,8 +82,7 @@ flow statements, that can change the overall shape and size of the graph at
 every iteration. You don't have to encode all possible paths before you  
 launch the training - what you run is what you differentiate.
 
-In-place operations on Variables  
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+### In-place operations on Variables
 
 Supporting in-place operations in autograd is a hard matter, and we discourage  
 their use in most cases. Autograd's aggressive buffer freeing and reuse makes  
