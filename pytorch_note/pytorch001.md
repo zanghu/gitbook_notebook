@@ -52,7 +52,7 @@ Volatile is recommended for purely inference mode, when you're sure you won't be
 
 Volatile被推荐用于纯推理模式中，即当你确定你不会再调用Variable.backward\(\)方法的时候。通过将Variable对象的volatile属性设为True来禁用求导是比通过其他方式设置来达到这一目的更为高效的方法——它将使用最少量的内存空间来实现模型求值。将Variable对象的volatile属性设为True同时将导致其requires\_grad属性被自动设为False.
 
-Volatile differs from `excluding-requires_grad` in how the flag propagates. If there's even a single volatile input to an operation, its output is also going to be volatile. Volatility spreads across the graph much easier than non-requiring gradient - you only need a **single** volatile leaf to have a volatile output, while you need **all** leaves to not require gradient to have an output that doesn't require gradient. Using volatile flag you don't need to change any settings of your model parameters to use it for inference. It's enough to create a volatile input, and this will ensure that no intermediate states are saved.
+Volatile differs from `requires_grad` in how the flag propagates. If there's even a single volatile input to an operation, its output is also going to be volatile. Volatility spreads across the graph much easier than non-requiring gradient - you only need a **single** volatile leaf to have a volatile output, while you need **all** leaves to not require gradient to have an output that doesn't require gradient. Using volatile flag you don't need to change any settings of your model parameters to use it for inference. It's enough to create a volatile input, and this will ensure that no intermediate states are saved.
 
 ```python
 >>> regular_input = Variable(torch.randn(1, 3, 227, 227))  
