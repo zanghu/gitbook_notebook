@@ -70,7 +70,7 @@ True
 True
 ```
 
-### ow autograd encodes the history  
+### How autograd encodes the history  
 
 Autograd is reverse automatic differentiation system.  Conceptually,  
 autograd records a graph recording all of the operations that created  
