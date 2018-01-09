@@ -48,13 +48,9 @@ This is especially useful when you want to freeze part of your model, or you kno
 
 ### volatile
 
-Volatile is recommended for purely inference mode, when you're sure you won't  
-be even calling `.backward()`. It's more efficient than any other autograd  
-setting - it will use the absolute minimal amount of memory to evaluate the  
-model. `volatile` also determines that `requires_grad is False`.
+Volatile is recommended for purely inference mode, when you're sure you won't be even calling `.backward()`. It's more efficient than any other autograd setting - it will use the absolute minimal amount of memory to evaluate the model. `volatile` also determines that `requires_grad is False`.
 
-Volatile differs from :ref:`excluding-requires_grad` in how the flag propagates.  
-If there's even a single volatile input to an operation, its output is also  
+Volatile differs from `excluding-requires_grad` in how the flag propagates. If there's even a single volatile input to an operation, its output is also  
 going to be volatile. Volatility spreads across the graph much easier than  
 non-requiring gradient - you only need a **single** volatile leaf to have a  
 volatile output, while you need **all** leaves to not require gradient to  
