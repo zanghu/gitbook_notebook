@@ -184,12 +184,10 @@ type 接受一个字典来为类定义属性，因此
 
 ```python
 >>> Foo = type('Foo', (), {'bar':True})
-1
->>> Foo = type('Foo', (), {'bar':True})
+```
+
 并且可以将Foo当成一个普通的类一样使用：
-
-Python
-
+```python
 >>> print Foo
 <class '__main__.Foo'>
 >>> print Foo.bar
@@ -199,15 +197,6 @@ True
 <__main__.Foo object at 0x8a9b84c>
 >>> print f.bar
 True
-1
-2
-3
-4
-5
-6
-7
-8
-9
 >>> print Foo
 <class '__main__.Foo'>
 >>> print Foo.bar
@@ -217,72 +206,56 @@ True
 <__main__.Foo object at 0x8a9b84c>
 >>> print f.bar
 True
+```
 当然，你可以向这个类继承，所以，如下的代码：
 
-Python
-
+```python
 >>> class FooChild(Foo):
 …       pass
-1
-2
 >>> class FooChild(Foo):
 …       pass
+```
 就可以写成：
 
-Python
-
+```python
 >>> FooChild = type('FooChild', (Foo,),{})
 >>> print FooChild
 <class '__main__.FooChild'>
 >>> print FooChild.bar   # bar属性是由Foo继承而来
 True
-1
-2
-3
-4
-5
 >>> FooChild = type('FooChild', (Foo,),{})
 >>> print FooChild
 <class '__main__.FooChild'>
 >>> print FooChild.bar   # bar属性是由Foo继承而来
 True
+```
 最终你会希望为你的类增加方法。只需要定义一个有着恰当签名的函数并将其作为属性赋值就可以了。
 
-Python
+```python
+>>> def echo_bar(self):
+…       print self.bar
+…
+>>> FooChild = type('FooChild', (Foo,), {'echo_bar': echo_bar})
+>>> hasattr(Foo, 'echo_bar')
+False
+>>> hasattr(FooChild, 'echo_bar')
+True
+>>> my_foo = FooChild()
+>>> my_foo.echo_bar()
+True
+>>> def echo_bar(self):
+…       print self.bar
+…
+>>> FooChild = type('FooChild', (Foo,), {'echo_bar': echo_bar})
+>>> hasattr(Foo, 'echo_bar')
+False
+>>> hasattr(FooChild, 'echo_bar')
+True
+>>> my_foo = FooChild()
+>>> my_foo.echo_bar()
+True
+```
 
->>> def echo_bar(self):
-…       print self.bar
-…
->>> FooChild = type('FooChild', (Foo,), {'echo_bar': echo_bar})
->>> hasattr(Foo, 'echo_bar')
-False
->>> hasattr(FooChild, 'echo_bar')
-True
->>> my_foo = FooChild()
->>> my_foo.echo_bar()
-True
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
->>> def echo_bar(self):
-…       print self.bar
-…
->>> FooChild = type('FooChild', (Foo,), {'echo_bar': echo_bar})
->>> hasattr(Foo, 'echo_bar')
-False
->>> hasattr(FooChild, 'echo_bar')
-True
->>> my_foo = FooChild()
->>> my_foo.echo_bar()
-True
 你可以看到，在Python中，类也是对象，你可以动态的创建类。这就是当你使用关键字class时Python在幕后做的事情，而这就是通过元类来实现的。
 
  
@@ -291,25 +264,18 @@ True
 
 元类就是用来创建类的“东西”。你创建类就是为了创建类的实例对象，不是吗？但是我们已经学习到了Python中的类也是对象。好吧，元类就是用来创建这些类（对象）的，元类就是类的类，你可以这样理解 为：
 
-Python
-
+```python
 MyClass = MetaClass()
 MyObject = MyClass()
-1
-2
-MyClass = MetaClass()
-MyObject = MyClass()
+```
 你已经看到了type可以让你像这样做：
 
-Python
-
+```python
 MyClass = type('MyClass', (), {})
-1
-MyClass = type('MyClass', (), {})
+```
 这是因为函数type实际上是一个元类。type就是Python在背后用来创建所有类的元类。现在你想知道那为什么type会全部采用小写形式而不是Type呢？好吧，我猜这是为了和str保持一致性，str是用来创建字符串对象的类，而int是用来创建整数对象的类。type就是创建类对象的类。你可以通过检查__class__属性来看到这一点。Python中所有的东西，注意，我是指所有的东西——都是对象。这包括整数、字符串、函数以及类。它们全部都是对象，而且它们都是从一个类创建而来。
 
-Python
-
+```python
 >>> age = 35
 >>> age.__class__
 <type 'int'>
@@ -323,36 +289,10 @@ Python
 >>> b = Bar()
 >>> b.__class__
 <class '__main__.Bar'>
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
->>> age = 35
->>> age.__class__
-<type 'int'>
->>> name = 'bob'
->>> name.__class__
-<type 'str'>
->>> def foo(): pass
->>>foo.__class__
-<type 'function'>
->>> class Bar(object): pass
->>> b = Bar()
->>> b.__class__
-<class '__main__.Bar'>
+```
 现在，对于任何一个__class__的__class__属性又是什么呢？
 
-Python
-
+```python
 >>> a.__class__.__class__
 <type 'type'>
 >>> age.__class__.__class__
@@ -361,22 +301,7 @@ Python
 <type 'type'>
 >>> b.__class__.__class__
 <type 'type'>
-1
-2
-3
-4
-5
-6
-7
-8
->>> a.__class__.__class__
-<type 'type'>
->>> age.__class__.__class__
-<type 'type'>
->>> foo.__class__.__class__
-<type 'type'>
->>> b.__class__.__class__
-<type 'type'>
+```
 因此，元类就是创建类这种对象的东西。如果你喜欢的话，可以把元类称为“类工厂”（不要和工厂类搞混了:D） type就是Python的内建元类，当然了，你也可以创建自己的元类。
 
  
@@ -385,27 +310,17 @@ __metaclass__属性
 
 你可以在写一个类的时候为其添加__metaclass__属性。
 
-Python
-
+```python
 class Foo(object):
 	__metaclass__ = something…
 […]
-1
-2
-3
-class Foo(object):
-	__metaclass__ = something…
-[…]
+```
 如果你这么做了，Python就会用元类来创建类Foo。小心点，这里面有些技巧。你首先写下class Foo(object)，但是类对象Foo还没有在内存中创建。Python会在类的定义中寻找__metaclass__属性，如果找到了，Python就会用它来创建类Foo，如果没有找到，就会用内建的type来创建这个类。把下面这段话反复读几次。当你写如下代码时 :
 
-Python
-
+```python
 class Foo(Bar):
     pass
-1
-2
-class Foo(Bar):
-    pass
+```
 Python做了如下的操作：
 
 Foo中有__metaclass__这个属性吗？如果是，Python会在内存中通过__metaclass__创建一个名字为Foo的类对象（我说的是类对象，请紧跟我的思路）。如果Python没有找到__metaclass__，它会继续在Bar（父类）中寻找__metaclass__属性，并尝试做和前面同样的操作。如果Python在任何父类中都找不到__metaclass__，它就会在模块层次中去寻找__metaclass__，并尝试做同样的操作。如果还是找不到__metaclass__,Python就会用内置的type来创建这个类对象。
@@ -420,24 +335,12 @@ Foo中有__metaclass__这个属性吗？如果是，Python会在内存中通过_
 
 幸运的是，__metaclass__实际上可以被任意调用，它并不需要是一个正式的类（我知道，某些名字里带有‘class’的东西并不需要是一个class，画画图理解下，这很有帮助）。所以，我们这里就先以一个简单的函数作为例子开始。
 
-Python
-
+```python
 # 元类会自动将你通常传给‘type’的参数作为自己的参数传入
 def upper_attr(future_class_name, future_class_parents, future_class_attr):
     '''返回一个类对象，将属性都转为大写形式'''
     #  选择所有不以'__'开头的属性
     attrs = ((name, value) for name, value in future_class_attr.items() if not name.startswith('__'))
-1
-2
-3
-4
-5
-# 元类会自动将你通常传给‘type’的参数作为自己的参数传入
-def upper_attr(future_class_name, future_class_parents, future_class_attr):
-    '''返回一个类对象，将属性都转为大写形式'''
-    #  选择所有不以'__'开头的属性
-    attrs = ((name, value) for name, value in future_class_attr.items() if not name.startswith('__'))
-Python
 
     # 将它们转为大写形式
     uppercase_attr = dict((name.upper(), value) for name, value in attrs)
@@ -450,29 +353,6 @@ __metaclass__ = upper_attr  #  这会作用到这个模块中的所有类
 class Foo(object):
     # 我们也可以只在这里定义__metaclass__，这样就只会作用于这个类中
     bar = 'bip'
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-    # 将它们转为大写形式
-    uppercase_attr = dict((name.upper(), value) for name, value in attrs)
- 
-    # 通过'type'来做类对象的创建
-    return type(future_class_name, future_class_parents, uppercase_attr)
- 
-__metaclass__ = upper_attr  #  这会作用到这个模块中的所有类
- 
-class Foo(object):
-    # 我们也可以只在这里定义__metaclass__，这样就只会作用于这个类中
-    bar = 'bip'
-Python
 
 print hasattr(Foo, 'bar')
 # 输出: False
@@ -482,26 +362,10 @@ print hasattr(Foo, 'BAR')
 f = Foo()
 print f.BAR
 # 输出:'bip'
-1
-2
-3
-4
-5
-6
-7
-8
-print hasattr(Foo, 'bar')
-# 输出: False
-print hasattr(Foo, 'BAR')
-# 输出:True
- 
-f = Foo()
-print f.BAR
-# 输出:'bip'
+```
 现在让我们再做一次，这一次用一个真正的class来当做元类。
 
-Python
-
+```python
 # 请记住，'type'实际上是一个类，就像'str'和'int'一样
 # 所以，你可以从type继承
 class UpperAttrMetaClass(type):
@@ -516,38 +380,10 @@ class UpperAttrMetaClass(type):
         attrs = ((name, value) for name, value in future_class_attr.items() if not name.startswith('__'))
         uppercase_attr = dict((name.upper(), value) for name, value in attrs)
         return type(future_class_name, future_class_parents, uppercase_attr)
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-# 请记住，'type'实际上是一个类，就像'str'和'int'一样
-# 所以，你可以从type继承
-class UpperAttrMetaClass(type):
-    # __new__ 是在__init__之前被调用的特殊方法
-    # __new__是用来创建对象并返回之的方法
-    # 而__init__只是用来将传入的参数初始化给对象
-    # 你很少用到__new__，除非你希望能够控制对象的创建
-    # 这里，创建的对象是类，我们希望能够自定义它，所以我们这里改写__new__
-    # 如果你希望的话，你也可以在__init__中做些事情
-    # 还有一些高级的用法会涉及到改写__call__特殊方法，但是我们这里不用
-    def __new__(upperattr_metaclass, future_class_name, future_class_parents, future_class_attr):
-        attrs = ((name, value) for name, value in future_class_attr.items() if not name.startswith('__'))
-        uppercase_attr = dict((name.upper(), value) for name, value in attrs)
-        return type(future_class_name, future_class_parents, uppercase_attr)
+```
 但是，这种方式其实不是OOP。我们直接调用了type，而且我们没有改写父类的__new__方法。现在让我们这样去处理:
 
-Python
-
+```python
 class UpperAttrMetaclass(type):
     def __new__(upperattr_metaclass, future_class_name, future_class_parents, future_class_attr):
         attrs = ((name, value) for name, value in future_class_attr.items() if not name.startswith('__'))
@@ -556,60 +392,24 @@ class UpperAttrMetaclass(type):
         # 复用type.__new__方法
         # 这就是基本的OOP编程，没什么魔法
         return type.__new__(upperattr_metaclass, future_class_name, future_class_parents, uppercase_attr)
-1
-2
-3
-4
-5
-6
-7
-8
-class UpperAttrMetaclass(type):
-    def __new__(upperattr_metaclass, future_class_name, future_class_parents, future_class_attr):
-        attrs = ((name, value) for name, value in future_class_attr.items() if not name.startswith('__'))
-        uppercase_attr = dict((name.upper(), value) for name, value in attrs)
- 
-        # 复用type.__new__方法
-        # 这就是基本的OOP编程，没什么魔法
-        return type.__new__(upperattr_metaclass, future_class_name, future_class_parents, uppercase_attr)
+```
 你可能已经注意到了有个额外的参数upperattr_metaclass，这并没有什么特别的。类方法的第一个参数总是表示当前的实例，就像在普通的类方法中的self参数一样。当然了，为了清晰起见，这里的名字我起的比较长。但是就像self一样，所有的参数都有它们的传统名称。因此，在真实的产品代码中一个元类应该是像这样的：
 
-Python
-
+```python
 class UpperAttrMetaclass(type):
     def __new__(cls, name, bases, dct):
         attrs = ((name, value) for name, value in dct.items() if not name.startswith('__')
         uppercase_attr  = dict((name.upper(), value) for name, value in attrs)
         return type.__new__(cls, name, bases, uppercase_attr)
-1
-2
-3
-4
-5
-class UpperAttrMetaclass(type):
-    def __new__(cls, name, bases, dct):
-        attrs = ((name, value) for name, value in dct.items() if not name.startswith('__')
-        uppercase_attr  = dict((name.upper(), value) for name, value in attrs)
-        return type.__new__(cls, name, bases, uppercase_attr)
-如果使用super方法的话，我们还可以使它变得更清晰一些，这会缓解继承（是的，你可以拥有元类，从元类继承，从type继承）
+```如果使用super方法的话，我们还可以使它变得更清晰一些，这会缓解继承（是的，你可以拥有元类，从元类继承，从type继承）
 
-Python
-
+```python
 class UpperAttrMetaclass(type):
     def __new__(cls, name, bases, dct):
         attrs = ((name, value) for name, value in dct.items() if not name.startswith('__'))
         uppercase_attr = dict((name.upper(), value) for name, value in attrs)
         return super(UpperAttrMetaclass, cls).__new__(cls, name, bases, uppercase_attr)
-1
-2
-3
-4
-5
-class UpperAttrMetaclass(type):
-    def __new__(cls, name, bases, dct):
-        attrs = ((name, value) for name, value in dct.items() if not name.startswith('__'))
-        uppercase_attr = dict((name.upper(), value) for name, value in attrs)
-        return super(UpperAttrMetaclass, cls).__new__(cls, name, bases, uppercase_attr)
+```
 就是这样，除此之外，关于元类真的没有别的可说的了。使用到元类的代码比较复杂，这背后的原因倒并不是因为元类本身，而是因为你通常会使用元类去做一些晦涩的事情，依赖于自省，控制继承等等。确实，用元类来搞些“黑暗魔法”是特别有用的，因而会搞出些复杂的东西来。但就元类本身而言，它们其实是很简单的：
 
 1)   拦截类的创建
@@ -644,27 +444,17 @@ class UpperAttrMetaclass(type):
 
 元类的主要用途是创建API。一个典型的例子是Django ORM。它允许你像这样定义：
 
-Python
-
+```python
 class Person(models.Model):
     name = models.CharField(max_length=30)
     age = models.IntegerField()
-1
-2
-3
-class Person(models.Model):
-    name = models.CharField(max_length=30)
-    age = models.IntegerField()
+```
 但是如果你像这样做的话：
 
-Python
-
+```python
 guy  = Person(name='bob', age='35')
 print guy.age
-1
-2
-guy  = Person(name='bob', age='35')
-print guy.age
+```
 这并不会返回一个IntegerField对象，而是会返回一个int，甚至可以直接从数据库中取出数据。这是有可能的，因为models.Model定义了__metaclass__， 并且使用了一些魔法能够将你刚刚定义的简单的Person类转变成对数据库的一个复杂hook。Django框架将这些看起来很复杂的东西通过暴露出一个简单的使用元类的API将其化简，通过这个API重新创建代码，在背后完成真正的工作。
 
  
@@ -677,12 +467,7 @@ print guy.age
 >>>class Foo(object): pass
 >>> id(Foo)
 142630324
-1
-2
-3
->>>class Foo(object): pass
->>> id(Foo)
-142630324
+```
 Python中的一切都是对象，它们要么是类的实例，要么是元类的实例，除了type。type实际上是它自己的元类，在纯Python环境中这可不是你能够做到的，这是通过在实现层面耍一些小手段做到的。其次，元类是很复杂的。对于非常简单的类，你可能不希望通过使用元类来对类做修改。你可以通过其他两种技术来修改类：
 
 1） Monkey patching
