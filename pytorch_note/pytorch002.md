@@ -51,7 +51,7 @@ tensor.autograd.Variable对象可以直接调用上面提到的所有方法, 包
 >>>a = torch.autograd.Variable(torch.ones(2, 2))
 >>>a.is_contiguous()
 True
->>>b = a.transpose(0, 1)
+>>>b = a.transpose(0, 1) # 即使没有发生实际的轴置换, 返回结果仍然会变成非contiguous的
 >>>b.__class__
 <class 'torch.autograd.variable.Variable'>
 >>>b.is_contiguous()
