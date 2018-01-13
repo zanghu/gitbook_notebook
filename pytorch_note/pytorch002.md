@@ -41,3 +41,18 @@ False
 >>>z.is_contiguous()
 True
 ```
+
+### 3.对于tensor.autograd.Variable
+tensor.autograd.Variable对象可以直接调用上面提到的所有方法, 包括: transpose, permute, contiguous, is_contiguous, 用法与torch.Tensor相同
+``` python
+>>>import torch
+>>>a = torch.autograd.Variable(torch.ones(2, 2))
+>>>a.is_contiguous()
+True
+>>>b = a.transpose(0, 1)
+>>>b.is_contiguous()
+False
+>>>c = b.contiguous()
+>>>c.is_contiguous()
+True
+```
