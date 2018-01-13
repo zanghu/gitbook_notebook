@@ -4,30 +4,23 @@
 
 在理解元类之前，你需要先掌握Python中的类。Python中类的概念借鉴于Smalltalk，这显得有些奇特。在大多数编程语言中，类就是一组用来描述如何生成一个对象的代码段。在Python中这一点仍然成立：
 
-Python
-
+``` Python
 >>> class ObjectCreator(object):
 …       pass
 …
 >>> my_object = ObjectCreator()
 >>> print my_object
 <__main__.ObjectCreator object at 0x8974f2c>
-1
-2
-3
-4
-5
-6
 >>> class ObjectCreator(object):
 …       pass
 …
 >>> my_object = ObjectCreator()
 >>> print my_object
 <__main__.ObjectCreator object at 0x8974f2c>
+```
 但是，Python中的类还远不止如此。类同样也是一种对象。是的，没错，就是对象。只要你使用关键字class，Python解释器在执行的时候就会创建一个对象。下面的代码段：
 
-Python
-
+``` Python
 >>> class ObjectCreator(object):
 …       pass
 …
@@ -37,6 +30,7 @@ Python
 >>> class ObjectCreator(object):
 …       pass
 …
+```
 将在内存中创建一个对象，名字就是ObjectCreator。这个对象（类）自身拥有创建对象（类实例）的能力，而这就是为什么它是一个类的原因。但是，它的本质仍然是一个对象，于是乎你可以对它做如下的操作：
 
 1)   你可以将它赋值给一个变量
