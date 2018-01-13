@@ -34,7 +34,8 @@ as view is only supposed to work on contiguous tensors, and transposing a tensor
 >>>x = torch.ones(2, 2)
 >>>x.is_contiguous()
 True
->>>y = x.transpose(0, 1)
+>>>y = x.transpose(0, 1) # 即使没有发生实际的轴置换, 返回结果仍然会变成非contiguous的
+
 >>>y.is_contiguous()
 False
 >>>z = y.contiguous()
