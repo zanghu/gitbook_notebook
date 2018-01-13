@@ -17,3 +17,7 @@ BTW, permute internally calls transpose a number of times
 
 参考网址: https://discuss.pytorch.org/t/swap-axes-in-pytorch/970
 
+torch.Tensor对象使用transpose或permute返回的tensor，一般需要调用contiguous方法来使内存连续，才能正确调用view()，原因是:
+
+as view is only supposed to work on contiguous tensors, and transposing a tensor makes it non-contiguous. You can use .contiguous() after transpose to fix your issue
+
