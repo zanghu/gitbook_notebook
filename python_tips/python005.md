@@ -11,22 +11,10 @@
 >>> my_object = ObjectCreator()
 >>> print my_object
 <__main__.ObjectCreator object at 0x8974f2c>
->>> class ObjectCreator(object):
-…       pass
-…
->>> my_object = ObjectCreator()
->>> print my_object
-<__main__.ObjectCreator object at 0x8974f2c>
 ```
 但是，Python中的类还远不止如此。类同样也是一种对象。是的，没错，就是对象。只要你使用关键字class，Python解释器在执行的时候就会创建一个对象。下面的代码段：
 
 ```python
->>> class ObjectCreator(object):
-…       pass
-…
-1
-2
-3
 >>> class ObjectCreator(object):
 …       pass
 …
@@ -44,23 +32,6 @@
 下面是示例：
 
 ```Python
->>> print ObjectCreator     # 你可以打印一个类，因为它其实也是一个对象
-<class '__main__.ObjectCreator'>
->>> def echo(o):
-…       print o
-…
->>> echo(ObjectCreator)                 # 你可以将类做为参数传给函数
-<class '__main__.ObjectCreator'>
->>> print hasattr(ObjectCreator, 'new_attribute')
-Fasle
->>> ObjectCreator.new_attribute = 'foo' #  你可以为类增加属性
->>> print hasattr(ObjectCreator, 'new_attribute')
-True
->>> print ObjectCreator.new_attribute
-foo
->>> ObjectCreatorMirror = ObjectCreator # 你可以将类赋值给一个变量
->>> print ObjectCreatorMirror()
-<__main__.ObjectCreator object at 0x8997b4c>
 >>> print ObjectCreator     # 你可以打印一个类，因为它其实也是一个对象
 <class '__main__.ObjectCreator'>
 >>> def echo(o):
@@ -100,33 +71,10 @@ foo
 <class '__main__'.Foo>
 >>> print MyClass()            # 你可以通过这个类创建类实例，也就是对象
 <__main__.Foo object at 0x89c6d4c>
->>> def choose_class(name):
-…       if name == 'foo':
-…           class Foo(object):
-…               pass
-…           return Foo     # 返回的是类，不是类的实例
-…       else:
-…           class Bar(object):
-…               pass
-…           return Bar
-…
->>> MyClass = choose_class('foo')
->>> print MyClass              # 函数返回的是类，不是类的实例
-<class '__main__'.Foo>
->>> print MyClass()            # 你可以通过这个类创建类实例，也就是对象
-<__main__.Foo object at 0x89c6d4c>
 ```
 但这还不够动态，因为你仍然需要自己编写整个类的代码。由于类也是对象，所以它们必须是通过什么东西来生成的才对。当你使用class关键字时，Python解释器自动创建这个对象。但就和Python中的大多数事情一样，Python仍然提供给你手动处理的方法。还记得内建函数type吗？这个古老但强大的函数能够让你知道一个对象的类型是什么，就像这样：
 
 ```Python
->>> print type(1)
-<type 'int'>
->>> print type("1")
-<type 'str'>
->>> print type(ObjectCreator)
-<type 'type'>
->>> print type(ObjectCreator())
-<class '__main__.ObjectCreator'>
 >>> print type(1)
 <type 'int'>
 >>> print type("1")
@@ -151,19 +99,10 @@ type(类名, 父类的元组（针对继承的情况，可以为空），包含�
 ```Python
 >>> class MyShinyClass(object):
 …       pass
-1
-2
->>> class MyShinyClass(object):
-…       pass
 ```
 可以手动像这样创建：
 
 ```Python
->>> MyShinyClass = type('MyShinyClass', (), {})  # 返回一个类对象
->>> print MyShinyClass
-<class '__main__.MyShinyClass'>
->>> print MyShinyClass()  #  创建一个该类的实例
-<__main__.MyShinyClass object at 0x8997cec>
 >>> MyShinyClass = type('MyShinyClass', (), {})  # 返回一个类对象
 >>> print MyShinyClass
 <class '__main__.MyShinyClass'>
@@ -175,8 +114,6 @@ type(类名, 父类的元组（针对继承的情况，可以为空），包含�
 type 接受一个字典来为类定义属性，因此
 
 ```Python
->>> class Foo(object):
-…       bar = True
 >>> class Foo(object):
 …       bar = True
 ```
@@ -197,21 +134,10 @@ True
 <__main__.Foo object at 0x8a9b84c>
 >>> print f.bar
 True
->>> print Foo
-<class '__main__.Foo'>
->>> print Foo.bar
-True
->>> f = Foo()
->>> print f
-<__main__.Foo object at 0x8a9b84c>
->>> print f.bar
-True
 ```
 当然，你可以向这个类继承，所以，如下的代码：
 
 ```python
->>> class FooChild(Foo):
-…       pass
 >>> class FooChild(Foo):
 …       pass
 ```
@@ -223,26 +149,10 @@ True
 <class '__main__.FooChild'>
 >>> print FooChild.bar   # bar属性是由Foo继承而来
 True
->>> FooChild = type('FooChild', (Foo,),{})
->>> print FooChild
-<class '__main__.FooChild'>
->>> print FooChild.bar   # bar属性是由Foo继承而来
-True
 ```
 最终你会希望为你的类增加方法。只需要定义一个有着恰当签名的函数并将其作为属性赋值就可以了。
 
 ```python
->>> def echo_bar(self):
-…       print self.bar
-…
->>> FooChild = type('FooChild', (Foo,), {'echo_bar': echo_bar})
->>> hasattr(Foo, 'echo_bar')
-False
->>> hasattr(FooChild, 'echo_bar')
-True
->>> my_foo = FooChild()
->>> my_foo.echo_bar()
-True
 >>> def echo_bar(self):
 …       print self.bar
 …
@@ -305,7 +215,6 @@ MyClass = type('MyClass', (), {})
 因此，元类就是创建类这种对象的东西。如果你喜欢的话，可以把元类称为“类工厂”（不要和工厂类搞混了:D） type就是Python的内建元类，当然了，你也可以创建自己的元类。
 
  
-
 __metaclass__属性
 
 你可以在写一个类的时候为其添加__metaclass__属性。
