@@ -20,7 +20,7 @@
 ```
 但是，Python中的类还远不止如此。类同样也是一种对象。是的，没错，就是对象。只要你使用关键字class，Python解释器在执行的时候就会创建一个对象。下面的代码段：
 
-```Python
+```python
 >>> class ObjectCreator(object):
 …       pass
 …
@@ -61,7 +61,6 @@ foo
 >>> ObjectCreatorMirror = ObjectCreator # 你可以将类赋值给一个变量
 >>> print ObjectCreatorMirror()
 <__main__.ObjectCreator object at 0x8997b4c>
-
 >>> print ObjectCreator     # 你可以打印一个类，因为它其实也是一个对象
 <class '__main__.ObjectCreator'>
 >>> def echo(o):
@@ -141,11 +140,12 @@ foo
 
 type可以像这样工作：
 
-Python
-
+```python
 type(类名, 父类的元组（针对继承的情况，可以为空），包含属性的字典（名称和值）)
 1
 type(类名, 父类的元组（针对继承的情况，可以为空），包含属性的字典（名称和值）)
+```
+
 比如下面的代码：
 
 ```Python
@@ -182,8 +182,7 @@ type 接受一个字典来为类定义属性，因此
 ```
 可以翻译为：
 
-Python
-
+```python
 >>> Foo = type('Foo', (), {'bar':True})
 1
 >>> Foo = type('Foo', (), {'bar':True})
