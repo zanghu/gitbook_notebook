@@ -1,13 +1,17 @@
-# [Pytorch]torch.Tensor的permute()方法与transpose方法的区别
+# \[Pytorch\]torch.Tensor的permute\(\)方法与transpose方法的区别
 
-transpose only applies to 2 axis, while permute can be applied to all the axes at the same time.
+transpose和permute都是用来对torch.Tensor做轴置换的，功能类似于numpy.transpose\(\)或theano.dimshuffle\(\)
+
+Pytorch中transpose和permute二者功能的区别是：
+
+transpose only applies to 2 axis, while permute can be applied to all the axes at the same time.  
 For example
-``` python
+
+```python
 a = torch.rand(1,2,3,4)
 print(a.transpose(0,3).transpose(1,2).size())
 print(a.permute(3,2,1,0).size())
 ```
+
 BTW, permute internally calls transpose a number of times
-
-
 
