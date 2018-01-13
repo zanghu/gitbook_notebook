@@ -1,4 +1,4 @@
-# \[Python\]numpy的array方法和asarray方法的区别
+# \[Python\]关于staticmethod和calssmethod的区别
 
 array和asarray都可以将结构数据转化为ndarray，但是主要区别是：
 
