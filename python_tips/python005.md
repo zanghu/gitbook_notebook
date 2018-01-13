@@ -4,7 +4,7 @@
 
 在理解元类之前，你需要先掌握Python中的类。Python中类的概念借鉴于Smalltalk，这显得有些奇特。在大多数编程语言中，类就是一组用来描述如何生成一个对象的代码段。在Python中这一点仍然成立：
 
-``` Python
+```python
 >>> class ObjectCreator(object):
 …       pass
 …
@@ -20,7 +20,7 @@
 ```
 但是，Python中的类还远不止如此。类同样也是一种对象。是的，没错，就是对象。只要你使用关键字class，Python解释器在执行的时候就会创建一个对象。下面的代码段：
 
-``` Python
+```Python
 >>> class ObjectCreator(object):
 …       pass
 …
@@ -43,7 +43,24 @@
 
 下面是示例：
 
-Python
+```Python
+>>> print ObjectCreator     # 你可以打印一个类，因为它其实也是一个对象
+<class '__main__.ObjectCreator'>
+>>> def echo(o):
+…       print o
+…
+>>> echo(ObjectCreator)                 # 你可以将类做为参数传给函数
+<class '__main__.ObjectCreator'>
+>>> print hasattr(ObjectCreator, 'new_attribute')
+Fasle
+>>> ObjectCreator.new_attribute = 'foo' #  你可以为类增加属性
+>>> print hasattr(ObjectCreator, 'new_attribute')
+True
+>>> print ObjectCreator.new_attribute
+foo
+>>> ObjectCreatorMirror = ObjectCreator # 你可以将类赋值给一个变量
+>>> print ObjectCreatorMirror()
+<__main__.ObjectCreator object at 0x8997b4c>
 
 >>> print ObjectCreator     # 你可以打印一个类，因为它其实也是一个对象
 <class '__main__.ObjectCreator'>
@@ -62,48 +79,13 @@ foo
 >>> ObjectCreatorMirror = ObjectCreator # 你可以将类赋值给一个变量
 >>> print ObjectCreatorMirror()
 <__main__.ObjectCreator object at 0x8997b4c>
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
->>> print ObjectCreator     # 你可以打印一个类，因为它其实也是一个对象
-<class '__main__.ObjectCreator'>
->>> def echo(o):
-…       print o
-…
->>> echo(ObjectCreator)                 # 你可以将类做为参数传给函数
-<class '__main__.ObjectCreator'>
->>> print hasattr(ObjectCreator, 'new_attribute')
-Fasle
->>> ObjectCreator.new_attribute = 'foo' #  你可以为类增加属性
->>> print hasattr(ObjectCreator, 'new_attribute')
-True
->>> print ObjectCreator.new_attribute
-foo
->>> ObjectCreatorMirror = ObjectCreator # 你可以将类赋值给一个变量
->>> print ObjectCreatorMirror()
-<__main__.ObjectCreator object at 0x8997b4c>
- 
+```
 
 动态地创建类
 
 因为类也是对象，你可以在运行时动态的创建它们，就像其他任何对象一样。首先，你可以在函数中创建类，使用class关键字即可。
 
-Python
-
+```Python
 >>> def choose_class(name):
 …       if name == 'foo':
 …           class Foo(object):
@@ -119,21 +101,6 @@ Python
 <class '__main__'.Foo>
 >>> print MyClass()            # 你可以通过这个类创建类实例，也就是对象
 <__main__.Foo object at 0x89c6d4c>
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
 >>> def choose_class(name):
 …       if name == 'foo':
 …           class Foo(object):
@@ -149,10 +116,10 @@ Python
 <class '__main__'.Foo>
 >>> print MyClass()            # 你可以通过这个类创建类实例，也就是对象
 <__main__.Foo object at 0x89c6d4c>
+```
 但这还不够动态，因为你仍然需要自己编写整个类的代码。由于类也是对象，所以它们必须是通过什么东西来生成的才对。当你使用class关键字时，Python解释器自动创建这个对象。但就和Python中的大多数事情一样，Python仍然提供给你手动处理的方法。还记得内建函数type吗？这个古老但强大的函数能够让你知道一个对象的类型是什么，就像这样：
 
-Python
-
+```Python
 >>> print type(1)
 <type 'int'>
 >>> print type("1")
@@ -161,14 +128,6 @@ Python
 <type 'type'>
 >>> print type(ObjectCreator())
 <class '__main__.ObjectCreator'>
-1
-2
-3
-4
-5
-6
-7
-8
 >>> print type(1)
 <type 'int'>
 >>> print type("1")
@@ -177,6 +136,7 @@ Python
 <type 'type'>
 >>> print type(ObjectCreator())
 <class '__main__.ObjectCreator'>
+```
 这里，type有一种完全不同的能力，它也能动态的创建类。type可以接受一个类的描述作为参数，然后返回一个类。（我知道，根据传入参数的不同，同一个函数拥有两种完全不同的用法是一件很傻的事情，但这在Python中是为了保持向后兼容性）
 
 type可以像这样工作：
@@ -188,45 +148,38 @@ type(类名, 父类的元组（针对继承的情况，可以为空），包含�
 type(类名, 父类的元组（针对继承的情况，可以为空），包含属性的字典（名称和值）)
 比如下面的代码：
 
-Python
-
+```Python
 >>> class MyShinyClass(object):
 …       pass
 1
 2
 >>> class MyShinyClass(object):
 …       pass
+```
 可以手动像这样创建：
 
-Python
-
+```Python
 >>> MyShinyClass = type('MyShinyClass', (), {})  # 返回一个类对象
 >>> print MyShinyClass
 <class '__main__.MyShinyClass'>
 >>> print MyShinyClass()  #  创建一个该类的实例
 <__main__.MyShinyClass object at 0x8997cec>
-1
-2
-3
-4
-5
 >>> MyShinyClass = type('MyShinyClass', (), {})  # 返回一个类对象
 >>> print MyShinyClass
 <class '__main__.MyShinyClass'>
 >>> print MyShinyClass()  #  创建一个该类的实例
 <__main__.MyShinyClass object at 0x8997cec>
+```
 你会发现我们使用“MyShinyClass”作为类名，并且也可以把它当做一个变量来作为类的引用。类和变量是不同的，这里没有任何理由把事情弄的复杂。
 
 type 接受一个字典来为类定义属性，因此
 
-Python
-
+```Python
 >>> class Foo(object):
 …       bar = True
-1
-2
 >>> class Foo(object):
 …       bar = True
+```
 可以翻译为：
 
 Python
@@ -721,8 +674,7 @@ print guy.age
 
 首先，你知道了类其实是能够创建出类实例的对象。好吧，事实上，类本身也是实例，当然，它们是元类的实例。
 
-Python
-
+```Python
 >>>class Foo(object): pass
 >>> id(Foo)
 142630324
