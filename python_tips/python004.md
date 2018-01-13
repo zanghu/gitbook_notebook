@@ -16,7 +16,5 @@
 
 ![](/assets/2.jpg)
 
-
-
-参考资料：
+参考资料：https://www.zhihu.com/question/20021164
 
