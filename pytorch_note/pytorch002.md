@@ -1,7 +1,6 @@
 # \[Pytorch\]torch.Tensor的permute\(\)方法与transpose方法的区别
 
-1.transpose与permute的区别
-transpose和permute都是用来对torch.Tensor做轴置换的，功能类似于numpy.transpose\(\)或theano.dimshuffle\(\)
+### 1.transpose与permute的区别 transpose和permute都是用来对torch.Tensor做轴置换的，功能类似于numpy.transpose\(\)或theano.dimshuffle\(\)
 
 Pytorch中transpose和permute二者功能的区别是：
 
@@ -16,11 +15,11 @@ print(a.permute(3,2,1,0).size())
 
 BTW, permute internally calls transpose a number of times
 
-参考网址: https://discuss.pytorch.org/t/swap-axes-in-pytorch/970
+参考网址: [https://discuss.pytorch.org/t/swap-axes-in-pytorch/970](https://discuss.pytorch.org/t/swap-axes-in-pytorch/970)
 
 2.关于torch.Tensor的contiguous方法的用途
 
-torch.Tensor对象使用transpose或permute返回的tensor，一般需要调用contiguous方法来使内存连续，才能正确调用view()，原因是:
+torch.Tensor对象使用transpose或permute返回的tensor，一般需要调用contiguous方法来使内存连续，才能正确调用view\(\)，原因是:
 
-as view is only supposed to work on contiguous tensors, and transposing a tensor makes it non-contiguous. You can use .contiguous() after transpose to fix your issue
+as view is only supposed to work on contiguous tensors, and transposing a tensor makes it non-contiguous. You can use .contiguous\(\) after transpose to fix your issue
 
