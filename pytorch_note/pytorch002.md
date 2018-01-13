@@ -23,5 +23,21 @@ BTW, permute internally calls transpose a number of times
 
 torch.Tensor对象使用transpose或permute返回的tensor，一般需要调用contiguous方法来使内存连续，才能正确调用view\(\)，原因是:
 
+有些tensor不是一整块内存，而是又不同的数据块组成，而tensor的view()操作依赖于内存是整块的，这时只需要执行以下contiguous()这个操作。
+
 as view is only supposed to work on contiguous tensors, and transposing a tensor makes it non-contiguous. You can use .contiguous\(\) after transpose to fix your issue
 
+当不确定一个tensor是否是contiguous的时候, 可以用is_contiguous()方法来查看
+
+``` python
+>>>import torch
+>>>x = torch.ones(2, 2)
+>>>x.is_contiguous()
+True
+>>>y = x.transpose(0, 1)
+>>>y.is_contiguous()
+False
+>>>z = y.contiguous()
+>>>z.is_contiguous()
+True
+```
