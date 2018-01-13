@@ -15,3 +15,5 @@ print(a.permute(3,2,1,0).size())
 
 BTW, permute internally calls transpose a number of times
 
+参考网址: https://discuss.pytorch.org/t/swap-axes-in-pytorch/970
+
