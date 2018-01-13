@@ -1,4 +1,6 @@
-# \[Pytorch\]torch.Tensor的permute\(\)方法与transpose方法的区别
+# \[Pytorch\]
+
+## torch.Tensor的permute\(\)方法与transpose方法的区别
 
 ### 1.transpose与permute的区别
 
