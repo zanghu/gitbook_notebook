@@ -57,7 +57,7 @@ foo
 
 因为类也是对象，你可以在运行时动态的创建它们，就像其他任何对象一样。首先，你可以在函数中创建类，使用class关键字即可。
 
-```Python
+```python
 >>> def choose_class(name):
 …       if name == 'foo':
 …           class Foo(object):
@@ -77,7 +77,7 @@ foo
 
 但这还不够动态，因为你仍然需要自己编写整个类的代码。由于类也是对象，所以它们必须是通过什么东西来生成的才对。当你使用class关键字时，Python解释器自动创建这个对象。但就和Python中的大多数事情一样，Python仍然提供给你手动处理的方法。还记得内建函数type吗？这个古老但强大的函数能够让你知道一个对象的类型是什么，就像这样：
 
-```Python
+```python
 >>> print type(1)
 <type 'int'>
 >>> print type("1")
