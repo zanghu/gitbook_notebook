@@ -16,6 +16,11 @@ Returns a new tensor with a dimension of size one inserted at the specified posi
 The returned tensor shares the same underlying data with this tensor.  
 A negative dim value can be used and will correspond todim+input.dim\(\)+1dim+input.dim\(\)+1
 
+**Parameters:**
+    input (Tensor) – the input tensor
+    dim (int) – the index at which to insert the singleton dimension
+    out (Tensor, optional) – the output tensor
+
 **Example:**
 
 ```python
@@ -43,4 +48,24 @@ torch.squeeze(input, dim=None, out=None)
 Returns a tensor with all the dimensions of input of size 1 removed.  
 For example, if input is of shape: \(A×1×B×C×1×D\)\(A×1×B×C×1×D\) then the out tensor will be of shape: \(A×B×C×D\)\(A×B×C×D\).  
 When dim is given, a squeeze operation is done only in the given dimension. If input is of shape: \(A×1×B\)\(A×1×B\), squeeze\(input, 0\) leaves the tensor unchanged, but squeeze\(input, 1\) will squeeze the tensor to the shape \(A×B\)\(A×B\)
+
+
+Parameters:	
+input (Tensor) – the input tensor
+dim (int, optional) – if given, the input will be squeezed only in this dimension
+out (Tensor, optional) – the output tensor
+Example:
+
+>>> x = torch.zeros(2,1,2,1,2)
+>>> x.size()
+(2L, 1L, 2L, 1L, 2L)
+>>> y = torch.squeeze(x)
+>>> y.size()
+(2L, 2L, 2L)
+>>> y = torch.squeeze(x, 0)
+>>> y.size()
+(2L, 1L, 2L, 1L, 2L)
+>>> y = torch.squeeze(x, 1)
+>>> y.size()
+(2L, 2L, 1L, 2L)
 
