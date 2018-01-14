@@ -55,7 +55,7 @@ input (Tensor) – the input tensor
 dim (int, optional) – if given, the input will be squeezed only in this dimension
 out (Tensor, optional) – the output tensor
 Example:
-
+```python
 >>> x = torch.zeros(2,1,2,1,2)
 >>> x.size()
 (2L, 1L, 2L, 1L, 2L)
@@ -68,4 +68,4 @@ Example:
 >>> y = torch.squeeze(x, 1)
 >>> y.size()
 (2L, 2L, 1L, 2L)
-
+```
