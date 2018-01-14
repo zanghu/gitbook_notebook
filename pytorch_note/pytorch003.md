@@ -70,5 +70,5 @@ out (Tensor, optional) – the output tensor
 (2L, 2L, 1L, 2L)
 ```
 **注意**
-a.\)As an exception to the above, a 1-dimensional tensor of size 1 will not have its dimensions changed
-b.\)The returned tensor shares the storage with the input tensor, so changing the contents of one will change the contents of the other.
+a.\) As an exception to the above, a 1-dimensional tensor of size 1 will not have its dimensions changed
+b.\) The returned tensor shares the storage with the input tensor, so changing the contents of one will change the contents of the other.
