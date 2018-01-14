@@ -1,6 +1,6 @@
 ## \[Pytorch\]
 
-### torch.Tensor的squeeze\(\)方法与unsqueeze\(\)方法
+### torch.Tensor的squeeze\(\)方法与torch.unsqueeze\(\)方法
 
 
 
