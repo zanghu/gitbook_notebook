@@ -3,9 +3,9 @@
 ### torch.Tensor的squeeze\(\)方法与unsqueeze\(\)方法
 
 官方文档中的解释：
-
+```python
 torch.unsqueeze(input, dim, out=None)
-
+```
 Returns a new tensor with a dimension of size one inserted at the specified position.
 
 The returned tensor shares the same underlying data with this tensor.
