@@ -2,7 +2,7 @@
 
 ### torch.Tensor的squeeze\(\)方法与unsqueeze\(\)方法
 
-**torch.unsqueeze**
+#### 1.**torch.unsqueeze**
 
 功能说明：向torch.Tensor或torch.autograd.Variable对象中增加一个轴, 新增轴维数为1
 
@@ -31,13 +31,16 @@ A negative dim value can be used and will correspond todim+input.dim\(\)+1dim+in
 [torch.FloatTensor of size 4x1]
 ```
 
-**torch.squeeze**
+#### 2.**torch.squeeze**
 
 功能说明：去掉torch.Tensor或torch.autograd.Variable对象中维数为1的轴向
+
 ```python
 torch.squeeze(input, dim=None, out=None)
 ```
-官方文档中的解释：
-Returns a tensor with all the dimensions of input of size 1 removed.
-For example, if input is of shape: (A×1×B×C×1×D)(A×1×B×C×1×D) then the out tensor will be of shape: (A×B×C×D)(A×B×C×D).
-When dim is given, a squeeze operation is done only in the given dimension. If input is of shape: (A×1×B)(A×1×B), squeeze(input, 0) leaves the tensor unchanged, but squeeze(input, 1) will squeeze the tensor to the shape (A×B)(A×B)
+
+官方文档中的解释：  
+Returns a tensor with all the dimensions of input of size 1 removed.  
+For example, if input is of shape: \(A×1×B×C×1×D\)\(A×1×B×C×1×D\) then the out tensor will be of shape: \(A×B×C×D\)\(A×B×C×D\).  
+When dim is given, a squeeze operation is done only in the given dimension. If input is of shape: \(A×1×B\)\(A×1×B\), squeeze\(input, 0\) leaves the tensor unchanged, but squeeze\(input, 1\) will squeeze the tensor to the shape \(A×B\)\(A×B\)
+
