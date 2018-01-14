@@ -10,4 +10,6 @@
    * [Pytorch: 关于自动求梯度的原理](pytorch_note/pytorch001.md)
    * [Pytorch: permute与transpose的区别](pytorch_note/pytorch002.md)
    * [Pytorch: squeeze与unsqueeze](pytorch_note/pytorch003.md)
+ * [CV](pytorch_note/README.md)
+   * [CV: 非最大压制方法(NMS)过滤重叠boundiung box](pytorch_note/cv001.md)
 
