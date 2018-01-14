@@ -2,6 +2,8 @@
 
 ### torch.Tensor的squeeze\(\)方法与unsqueeze\(\)方法
 
+**torch.unsqueeze**
+
 功能说明：向torch.Tensor或torch.autograd.Variable对象中增加一个轴, 新增轴维数为1
 
 官方文档中的解释：
