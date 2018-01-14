@@ -7,14 +7,22 @@
 torch.unsqueeze(input, dim, out=None)
 ```
 Returns a new tensor with a dimension of size one inserted at the specified position.
-
 The returned tensor shares the same underlying data with this tensor.
-
 A negative dim value can be used and will correspond todim+input.dim\(\)+1dim+input.dim\(\)+1
 
-| Parameters: | **input**\([_Tensor_](http://pytorch.org/docs/master/tensors.html#torch.Tensor)\) – the input tensor**dim**\([_int_](https://docs.python.org/2/library/functions.html#int)\) – the index at which to insert the singleton dimension**out**\([_Tensor_](http://pytorch.org/docs/master/tensors.html#torch.Tensor)_,optional_\) – the output tensor |
-| :--- | :--- |
-
+Example:
+```python
+>>> x = torch.Tensor([1, 2, 3, 4])
+>>> torch.unsqueeze(x, 0)
+ 1  2  3  4
+[torch.FloatTensor of size 1x4]
+>>> torch.unsqueeze(x, 1)
+ 1
+ 2
+ 3
+ 4
+[torch.FloatTensor of size 4x1]
+```
 
 
 
