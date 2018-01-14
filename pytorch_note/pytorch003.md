@@ -50,11 +50,11 @@ For example, if input is of shape: \(A×1×B×C×1×D\)\(A×1×B×C×1×D\) then
 When dim is given, a squeeze operation is done only in the given dimension. If input is of shape: \(A×1×B\)\(A×1×B\), squeeze\(input, 0\) leaves the tensor unchanged, but squeeze\(input, 1\) will squeeze the tensor to the shape \(A×B\)\(A×B\)
 
 
-Parameters:	
+**Parameters:**	
 input (Tensor) – the input tensor
 dim (int, optional) – if given, the input will be squeezed only in this dimension
 out (Tensor, optional) – the output tensor
-Example:
+**Example:**
 ```python
 >>> x = torch.zeros(2,1,2,1,2)
 >>> x.size()
