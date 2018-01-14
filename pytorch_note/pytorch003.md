@@ -4,25 +4,7 @@
 
 官方文档中的解释：
 
-`torch.`
-
-`unsqueeze`
-
-\(
-
-_input_
-
-,
-
-_dim_
-
-,
-
-_out=None_
-
-\)
-
-
+torch.unsqueeze(input, dim, out=None)
 
 Returns a new tensor with a dimension of size one inserted at the specified position.
 
