@@ -2,7 +2,8 @@
 
 pytorch 的 Variable 对象中有两个方法，detach和 detach 本文主要介绍这两个方法的效果和 能用这两个方法干什么。
 
-### 1.detach  
+### 1.detach\(\)
+
 官方文档中，对这个方法是这么介绍的。
 
 返回一个新的 从当前图中分离的 Variable。  
@@ -33,7 +34,8 @@ def detach(self):
     return result
 ```
 
-### 2.detach\_  
+### 2.detach\_\(\)
+
 官网给的解释是：将 Variable 从创建它的 graph 中分离，把它作为叶子节点。
 
 从源码中也可以看出这一点
@@ -52,7 +54,8 @@ def detach_(self):
     self.requires_grad = False
 ```
 
-### 3.能用来干啥  
+### 3.能用来干啥
+
 如果我们有两个网络 A,B, 两个关系是这样的 y=A\(x\),z=B\(y\) 现在我们想用 z.backward\(\) 来为 B 网络的参数来求梯度，但是又不想求 A 网络参数的梯度。我们可以这样：
 
 ```python
