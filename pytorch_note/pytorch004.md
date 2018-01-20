@@ -24,7 +24,7 @@ v3_detached.data.add_(t1) # 修改了 v3_detached Variable中 tensor 的值
 print(v3, v3_detached)    # v3 中tensor 的值也会改变
 ```
 
-### 2.detach 的源码
+detach 的源码
 
 ```python
 def detach(self):
@@ -33,7 +33,7 @@ def detach(self):
     return result
 ```
 
-detach\_  
+### 2.detach\_  
 官网给的解释是：将 Variable 从创建它的 graph 中分离，把它作为叶子节点。
 
 从源码中也可以看出这一点
