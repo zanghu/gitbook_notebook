@@ -36,10 +36,12 @@ def detach(self):
 
 ### 2.torch.autograd.Variable.detach\_\(\)
 
-* 功能：官网给的解释是：将 Variable 从创建它的 graph 中分离，把它作为叶子节点。从源码中也可以看出这一点
+* 功能：官网给的解释是：将 Variable 从创建它的 graph 中分离，把它作为叶子节点。
 
-        将 Variable 的grad\_fn 设置为 None，这样，BP 的时候，到这个 Variable 就找不到 它的 grad\_fn，所以就不会再往后BP了。  
-将 requires\_grad 设置为 False。这个感觉大可不必，但是既然源码中这么写了，如果有需要梯度的话可以再手动 将 requires\_grad 设置为 true.
+从源码中也可以看出这一点
+
+将 Variable 的grad\_fn 设置为 None，这样，BP 的时候，到这个 Variable 就找不到 它的 grad\_fn，所以就不会再往后BP了。  
+将 requires\_grad 设置为 False。这个感觉大可不必，但是既然源码中这么写了，如果有需要梯度的话可以再手动 将 requires\_grad 设置为 true
 
 * detach\_ 的源码
 
@@ -54,7 +56,7 @@ def detach_(self):
 
 ### 3.能用来干啥
 
-        如果我们有两个网络 A,B, 两个关系是这样的 y=A\(x\),z=B\(y\) 现在我们想用 z.backward\(\) 来为 B 网络的参数来求梯度，但是又不想求 A 网络参数的梯度。我们可以这样：
+如果我们有两个网络 A,B, 两个关系是这样的 y=A\(x\),z=B\(y\) 现在我们想用 z.backward\(\) 来为 B 网络的参数来求梯度，但是又不想求 A 网络参数的梯度。我们可以这样：
 
 ```python
 # y=A(x), z=B(y) 求B中参数的梯度，不求A中参数的梯度
@@ -70,5 +72,5 @@ z = B(y)
 z.backward()
 ```
 
-        在这种情况下，detach 和 detach\_ 都可以用。但是如果 你也想用 y 来对 A 进行 BP 呢？那就只能用第一种方法了。因为 第二种方法 已经将 A 模型的输出 给 detach（分离）了。
+在这种情况下，detach 和 detach\_ 都可以用。但是如果 你也想用 y 来对 A 进行 BP 呢？那就只能用第一种方法了。因为 第二种方法 已经将 A 模型的输出 给 detach（分离）了。
 
