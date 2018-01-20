@@ -52,7 +52,7 @@ def detach_(self):
     self.requires_grad = False
 ```
 
-能用来干啥  
+### 3.能用来干啥  
 如果我们有两个网络 A,B, 两个关系是这样的 y=A\(x\),z=B\(y\) 现在我们想用 z.backward\(\) 来为 B 网络的参数来求梯度，但是又不想求 A 网络参数的梯度。我们可以这样：
 
 ```python
