@@ -1,9 +1,8 @@
 ## pytorch: detach\(\)与 detach\_\(\)
 
-_  
-_pytorch 的 Variable 对象中有两个方法，detach和 detach 本文主要介绍这两个方法的效果和 能用这两个方法干什么。
+pytorch 的 Variable 对象中有两个方法，detach和 detach 本文主要介绍这两个方法的效果和 能用这两个方法干什么。
 
-detach  
+1.detach  
 官方文档中，对这个方法是这么介绍的。
 
 返回一个新的 从当前图中分离的 Variable。  
