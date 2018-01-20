@@ -2,7 +2,7 @@
 
 pytorch 的 Variable 对象中有两个方法，detach和 detach 本文主要介绍这两个方法的效果和 能用这两个方法干什么。
 
-1.detach  
+### 1.detach  
 官方文档中，对这个方法是这么介绍的。
 
 返回一个新的 从当前图中分离的 Variable。  
@@ -24,7 +24,7 @@ v3_detached.data.add_(t1) # 修改了 v3_detached Variable中 tensor 的值
 print(v3, v3_detached)    # v3 中tensor 的值也会改变
 ```
 
-detach 的源码
+### 2.detach 的源码
 
 ```python
 def detach(self):
