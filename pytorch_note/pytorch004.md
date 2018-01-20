@@ -4,7 +4,7 @@ pytorch 的 torch.autograd.Variable 对象中有两个方法，detach和 detach 
 
 ### 1.torch.autograd.Variable.detach\(\)
 
-官方文档中，对这个方法是这么介绍的。
+* 功能：官方文档中，对这个方法是这么介绍的。
 
 返回一个新的 从当前图中分离的 Variable。  
 返回的 Variable 永远不会需要梯度  
@@ -25,7 +25,7 @@ v3_detached.data.add_(t1) # 修改了 v3_detached Variable中 tensor 的值
 print(v3, v3_detached)    # v3 中tensor 的值也会改变
 ```
 
-detach 的源码
+* detach 的源码
 
 ```python
 def detach(self):
@@ -36,14 +36,14 @@ def detach(self):
 
 ### 2.torch.autograd.Variable.detach\_\(\)
 
-官网给的解释是：将 Variable 从创建它的 graph 中分离，把它作为叶子节点。
+* 功能：官网给的解释是：将 Variable 从创建它的 graph 中分离，把它作为叶子节点。
 
 从源码中也可以看出这一点
 
 将 Variable 的grad\_fn 设置为 None，这样，BP 的时候，到这个 Variable 就找不到 它的 grad\_fn，所以就不会再往后BP了。  
 将 requires\_grad 设置为 False。这个感觉大可不必，但是既然源码中这么写了，如果有需要梯度的话可以再手动 将 requires\_grad 设置为 true
 
-detach\_ 的源码
+* detach\_ 的源码
 
 ```python
 def detach_(self):
