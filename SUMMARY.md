@@ -13,4 +13,4 @@
    * [Pytorch: detach()与detach_()](pytorch_note/pytorch004.md)
  * [CV](pytorch_note/README.md)
    * [CV: 非最大压制方法(NMS)过滤重叠boundiung box](cv/cv001.md)
-
+   * [CV: 图像的仿射变换](cv/cv002.md)
