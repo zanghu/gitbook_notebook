@@ -1,8 +1,8 @@
 ## pytorch: detach\(\)与 detach\_\(\)
 
-pytorch 的 Variable 对象中有两个方法，detach和 detach 本文主要介绍这两个方法的效果和 能用这两个方法干什么。
+pytorch 的 torch.autograd.Variable 对象中有两个方法，detach和 detach 本文主要介绍这两个方法的效果和 能用这两个方法干什么。
 
-### 1.detach\(\)
+### 1.torch.autograd.Variable.detach\(\)
 
 官方文档中，对这个方法是这么介绍的。
 
@@ -34,7 +34,7 @@ def detach(self):
     return result
 ```
 
-### 2.detach\_\(\)
+### 2.torch.autograd.Variable.detach\_\(\)
 
 官网给的解释是：将 Variable 从创建它的 graph 中分离，把它作为叶子节点。
 
