@@ -14,3 +14,4 @@
  * [CV](pytorch_note/README.md)
    * [CV: 非最大压制方法(NMS)过滤重叠boundiung box](cv/cv001.md)
    * [CV: 图像的仿射变换](cv/cv002.md)
+   * [CV: 「计算机视觉必读干货」图像分类、检测，语义分割等方法梳理](cv/cv003.md)
