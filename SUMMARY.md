@@ -20,4 +20,4 @@
   * [CV: 「计算机视觉必读干货」图像分类、检测，语义分割等方法梳理](cv/cv003.md)
 * [Linux tips](linux_tips/README.md)
   * [Linux: chmod修改文件权限](linux_tips/lin001.md)
-
+  * [Linux: mount命令挂载移动硬盘](linux_tips/lin002.md)
