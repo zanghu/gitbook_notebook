@@ -1,5 +1,7 @@
 # \[python\]快速配置 jupyter notebook 服务器
 
+参考资料（官网）: http://jupyter-notebook.readthedocs.io/en/latest/public\_server.html
+
 #### 1.生成本地配置文件
 
 执行下面的命令后, 会生成~/.jupyter目录, 其中有jupyter notebook的配置文件jupyter\_notebook\_config.py
@@ -59,7 +61,7 @@ c.NotebookApp.password = u'sha1:40605d0ceb4a:8cfaf89d785a7d91d4e7ebb288eab9fb3ef
 c.NotebookApp.port = 8888
 ```
 
-保存退出, 修改后的配置文件参考:
+保存退出, 修改后的配置文件参考:  
 [assets/jupyter\_notebook\_config.py](/assets/jupyter_notebook_config.py)
 
 #### 3.修改~/.bashrc, 建立快速启动
@@ -74,5 +76,6 @@ vim ~/.bashrc
 # jupyter notebook
 alias ipy="jupyter notebook"
 ```
+
 
 
