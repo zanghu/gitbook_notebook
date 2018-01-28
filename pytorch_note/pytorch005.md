@@ -9,9 +9,9 @@ PyTorch默认使用从0开始的GPU，如果GPU0正在运行程序，需要指�
 ### 1.类似tensorflow指定GPU的方式，使用CUDA\_VISIBLE\_DEVICES。
 
 直接终端中设定：
-
+```shell
 CUDA\_VISIBLE\_DEVICES=1 python main.py
-
+```
 python代码中设定：
 
 ```python
