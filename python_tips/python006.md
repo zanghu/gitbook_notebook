@@ -1,18 +1,23 @@
 # \[python\]快速配置 jupyter notebook 服务器
 
 #### 1.生成本地配置文件
-执行下面的命令后, 会生成~/.jupyter目录, 其中有jupyter notebook的配置文件jupyter_notebook_config.py
+
+执行下面的命令后, 会生成~/.jupyter目录, 其中有jupyter notebook的配置文件jupyter\_notebook\_config.py
+
 ```python
 jupyter notebook --generate-config
 ```
 
 #### 2.生成sha1密码
+
 进入ipython
+
 ```shell
 ipython
 ```
 
 在ipython下执行如下命令:
+
 ```python
 In [1]: from notebook.auth import passwd
 In [2]: passwd()
@@ -22,8 +27,10 @@ Out[2]: 'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed'
 ```
 
 #### 3.设置jupyter notebook配置文件
-打开配置文件~/.jupyter_notebook_config.py
+
+打开配置文件~/.jupyter\_notebook\_config.py  
 修改以下行
+
 ```python
 ## The IP address the notebook server will listen on.
 c.NotebookApp.ip = '*'
@@ -51,16 +58,21 @@ c.NotebookApp.password = u'sha1:40605d0ceb4a:8cfaf89d785a7d91d4e7ebb288eab9fb3ef
 ## The port the notebook server will listen on.
 c.NotebookApp.port = 8888
 ```
+
 保存退出
 
-
 #### 3.修改~/.bashrc, 建立快速启动
+
 ```shell
 vim ~/.bashrc
 ```
+
 加入下面的内容
+
 ```shell
 # jupyter notebook
 alias ipy="jupyter notebook"
 ```
+
+[assets/jupyter\_notebook\_config.py](/assets/jupyter_notebook_config.py)
 
