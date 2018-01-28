@@ -51,6 +51,8 @@ c.NotebookApp.password = u'sha1:40605d0ceb4a:8cfaf89d785a7d91d4e7ebb288eab9fb3ef
 ## The port the notebook server will listen on.
 c.NotebookApp.port = 8888
 ```
+保存退出
+
 
 #### 3.修改~/.bashrc, 建立快速启动
 ```shell
