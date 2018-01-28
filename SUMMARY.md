@@ -12,6 +12,7 @@
    * [Pytorch: permute与transpose的区别](pytorch_note/pytorch002.md)
    * [Pytorch: squeeze与unsqueeze](pytorch_note/pytorch003.md)
    * [Pytorch: detach()与detach_()](pytorch_note/pytorch004.md)
+   * [Pytorch: 指定所用设备](pytorch_note/pytorch005.md)
  * [CV](pytorch_note/README.md)
    * [CV: 非最大压制方法(NMS)过滤重叠boundiung box](cv/cv001.md)
    * [CV: 图像的仿射变换](cv/cv002.md)
