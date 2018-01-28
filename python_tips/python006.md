@@ -59,7 +59,8 @@ c.NotebookApp.password = u'sha1:40605d0ceb4a:8cfaf89d785a7d91d4e7ebb288eab9fb3ef
 c.NotebookApp.port = 8888
 ```
 
-保存退出
+保存退出, 修改后的配置文件参考:
+[assets/jupyter\_notebook\_config.py](/assets/jupyter_notebook_config.py)
 
 #### 3.修改~/.bashrc, 建立快速启动
 
@@ -74,5 +75,4 @@ vim ~/.bashrc
 alias ipy="jupyter notebook"
 ```
 
-[assets/jupyter\_notebook\_config.py](/assets/jupyter_notebook_config.py)
 
