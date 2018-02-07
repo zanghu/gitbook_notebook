@@ -13,7 +13,7 @@
   * [Pytorch: permute与transpose的区别](pytorch_note/pytorch002.md)
   * [Pytorch: squeeze与unsqueeze](pytorch_note/pytorch003.md)
   * [Pytorch: detach\(\)与detach\_\(\)](pytorch_note/pytorch004.md)
-  * [Pytorch: 指定GPU](pytorch_note/pytorch005.md)
+  * [Pytorch: 使用指定的GPU](pytorch_note/pytorch005.md)
 * [CV](pytorch_note/README.md)
   * [CV: 非最大压制方法\(NMS\)过滤重叠boundiung box](cv/cv001.md)
   * [CV: 图像的仿射变换](cv/cv002.md)
@@ -26,3 +26,4 @@
   * [Linux: 脚本编程001——字符串排序](linux_tips/lin005.md)
 * [Statistics](statistics/README.md)
   * [Static: N sigma](statistics/static001.md)
+
