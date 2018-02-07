@@ -23,5 +23,6 @@
   * [Linux: mount命令挂载移动硬盘](linux_tips/lin002.md)
   * [Linux: 安装Matlab](linux_tips/lin003.md)
   * [Linux: 安装Tensorflow\(From Source\)](linux_tips/lin004.md)
+  * [Linux: 脚本编程001——字符串排序](linux_tips/lin005.md)
 * [Statistics](statistics/README.md)
   * [Static: N sigma](statistics/static001.md)
