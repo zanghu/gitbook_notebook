@@ -12,11 +12,7 @@ github链接：[https://github.com/aleju/imgaug](https://github.com/aleju/imgaug
 简介：基于pyqt实现的图像标注工具，生成pascal\_voc格式的标注信息文件  
 github链接 [https://github.com/tzutalin/labelImg](https://github.com/tzutalin/labelImg)
 
-推荐下matlab2017a版本自带的trainingImageLabel app标记工具或者2017b及其以后版本的
-
-[imageLabeler app](http://cn.mathworks.com/help/vision/ref/imagelabeler-app.html?searchHighlight=imageLabeler&s_tid=doc_srchtitle)
-
-（2017a的兼容升级版，还可以对像素进行标注），非常方便！实用！在工具标记完后“导出ROIs”输出是matlab内置的table类型或者struct类型数据\(17b是table或者groundTruth类型\)，为统一起见，导出选择table格式！
+推荐下matlab2017a版本自带的trainingImageLabel app标记工具或者2017b及其以后版本的[imageLabeler app](http://cn.mathworks.com/help/vision/ref/imagelabeler-app.html?searchHighlight=imageLabeler&s_tid=doc_srchtitle)（2017a的兼容升级版，还可以对像素进行标注），非常方便！实用！在工具标记完后“导出ROIs”输出是matlab内置的table类型或者struct类型数据\(17b是table或者groundTruth类型\)，为统一起见，导出选择table格式！
 
 ### 二、论文相关类
 
