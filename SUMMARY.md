@@ -28,4 +28,5 @@
   * [Linux: 安装caffe](linux_tips/lin007.md)
 * [Statistics](statistics/README.md)
   * [Static: N sigma 准则](statistics/static001.md)
-
+* [Others](others/README.md)
+  * [Others: 有价值的开源软件收集](others/others001.md)
