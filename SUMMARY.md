@@ -30,6 +30,6 @@
 * [Statistics](statistics/README.md)
   * [Static: N sigma 准则](statistics/static001.md)
 * [C Programming](C_programming/README.md)
-  * [C: 类Unix系统下获取IP、MAC和掩码](C Programming/c001.md)
+  * [C: 类Unix系统下获取IP、MAC和掩码](C_Programming/c001.md)
 * [Others](others/README.md)
   * [Others: 有价值的开源软件收集](others/others001.md)
