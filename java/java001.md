@@ -27,3 +27,4 @@ source ~/.bashrc
 ```shell
 mvn -v # 或者 mvn -version
 ```
+显示maven版本信息则安装成功
