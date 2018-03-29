@@ -34,7 +34,6 @@
   * [C: 类Unix系统下获取IP、MAC和掩码](c/c001.md)
 * [JAVA Programming](java/README.md)
   * [JAVA: Linux环境安装maven](java/java001.md)
-  * [JAVA: Linux环境配置maven](java/java002.md)
-  * [JAVA: Linux环境使用maven](java/java003.md)
+  * [JAVA: Linux环境配置maven 、创建项目](java/java002.md)
 * [Others](others/README.md)
   * [Others: 有价值的开源软件收集](others/others001.md)
