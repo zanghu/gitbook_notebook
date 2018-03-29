@@ -36,5 +36,10 @@ helloworld\_project
                         \|--helloworld  
                             \|--App.java
 
-可见maven项目的基本目录结构是
-
+可见maven项目的基本目录结构是: 
+project_name  
+    \|--pom.xml  
+    \|--src  
+        \|--main   
+        \|--text  
+    \|--target
