@@ -21,3 +21,9 @@ export PATH=$PATH:$MAVEN_HOME/bin
 ```shell
 source ~/.bashrc
 ```
+
+### 3.安装验证
+终端命令行执行命令
+```shell
+mvn -v # 或者 mvn -version
+```
