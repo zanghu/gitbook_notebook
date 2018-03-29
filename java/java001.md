@@ -16,6 +16,7 @@
 ```shell
 export MAVEN_HOME=$SOFTWARE_HOME/maven/maven-3.5.3 # SOFTWARE_HOME环境变量由用户自行设定为希望安装的目录
 export PATH=$PATH:$MAVEN_HOME/bin
+export MAVEN_OPT="-Xms64m -Xmx512m" # 可以不配置
 ```
 在终端命令行执行
 ```shell
