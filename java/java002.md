@@ -19,7 +19,7 @@ mvn -archetype:generate -DgroupId=com.abc.helloworld -DartifactId=helloworld_pro
 ```
 
 其中：-DfroupId指定的是创建的项目的包路径（构建后可执行文件的调用全名前缀），-DartifactId指定的是创建的项目的顶级目录名（也是构建后的jar包名）  
-执行完成后，会自动在当前目录下创建helloworld\_project目录，其中的结构包括:  
+初次执行maven，会从服务器下载一些数据。执行完成后，会自动在当前目录下创建helloworld\_project目录，其中的结构包括:  
 helloworld\_project  
     \|--pom.xml  
     \|--src  
@@ -43,3 +43,19 @@ project_name
         \|--main   
         \|--text  
     \|--target
+
+### 3.构建Maven项目
+在命令行执行
+```shell
+cd [项目目录]
+mvn package
+```shell
+执行完毕后，项目目录下会产生target目录，其下包括项目编译好的jar包, 包名是artifactId
+
+### 4.执行项目
+在命令行执行
+```shell
+$ java - cp target/helloworld_project-1.0-SNAPSHOT.jar com.abc.helloworld.App
+Hello World!
+```
+
