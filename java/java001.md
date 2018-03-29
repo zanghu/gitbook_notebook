@@ -10,3 +10,14 @@
 
 ![](/assets/java001_001.png)
 
+### 2.安装
+
+解压后将解药后的目录拷贝到希望安装的目录下，之后在~/.bashrc中配置环境变量
+```shell
+export MAVEN_HOME=$SOFTWARE_HOME/maven/maven-3.5.3 # SOFTWARE_HOME环境变量由用户自行设定为希望安装的目录
+export PATH=$PATH:$MAVEN_HOME/bin
+```
+在终端命令行执行
+```shell
+source ~/.bashrc
+```
