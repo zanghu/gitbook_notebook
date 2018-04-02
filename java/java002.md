@@ -52,12 +52,13 @@ mvn package
 ```shell
 执行完毕后，项目目录下会产生target目录，其下包括项目编译好的jar包, 包名是artifactId
 
-### 4.执行项目
-在命令行执行
+# 执行项目
 ```shell
 $ java -cp target/helloworld_project-1.0-SNAPSHOT.jar com.abc.helloworld.App
 Hello World!
 ```
+
+### 3.配置依赖jar包
 
 
 
