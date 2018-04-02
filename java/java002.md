@@ -55,7 +55,7 @@ mvn package
 ### 4.执行项目
 在命令行执行
 ```shell
-$ java - cp target/helloworld_project-1.0-SNAPSHOT.jar com.abc.helloworld.App
+$ java -cp target/helloworld_project-1.0-SNAPSHOT.jar com.abc.helloworld.App
 Hello World!
 ```
 
