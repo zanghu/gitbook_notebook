@@ -63,6 +63,8 @@ Hello World!
 
 ### 3.配置依赖jar包
 
+参考资料：https://blog.csdn.net/u014079773/article/details/60773287
+
 maven是JAVA项目构建框架，同时也具备项目依赖库（jar包）版本管理功能。
 
 为maven项目配置依赖jar包的方法之一是：将以来的jar包安装到本机maven软件版本库，方法如下：
