@@ -7,7 +7,7 @@
 在命令行执行:
 
 ```shell
-mvn -archetype:generate -DgroupId=com.abc.helloworld -DartifactId=helloworld_project
+mvn archetype:generate -DgroupId=com.abc.helloworld -DartifactId=helloworld_project
 ```
 
 其中：-DfroupId指定的是创建的项目的包路径（构建后可执行文件的调用全名前缀），-DartifactId指定的是创建的项目的顶级目录名（也是构建后的jar包名）  
