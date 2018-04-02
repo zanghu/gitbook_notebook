@@ -35,6 +35,6 @@
 * [JAVA Programming](java/README.md)
   * [JAVA: Linux环境安装maven](java/java001.md)
   * [JAVA: Linux环境maven创建项目](java/java002.md)
+  * [JAVA: Maven项目的pom文件中scope项配置详解](java/java003.md)
 * [Others](others/README.md)
   * [Others: 有价值的开源软件收集](others/others001.md)
-
