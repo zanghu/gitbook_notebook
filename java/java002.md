@@ -2,7 +2,7 @@
 
 参考资料：[http://wentao365.iteye.com/blog/903396/](http://wentao365.iteye.com/blog/903396/)
 
-### 1..使用Maven创建HelloWorld工程
+### 1.使用Maven创建HelloWorld工程
 
 在命令行执行:
 
