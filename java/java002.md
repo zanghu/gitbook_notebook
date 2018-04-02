@@ -2,6 +2,8 @@
 
 参考资料：[http://wentao365.iteye.com/blog/903396/](http://wentao365.iteye.com/blog/903396/)
 
+参考资料：https://www.yiibai.com/maven/
+
 ### 1.使用Maven创建HelloWorld工程
 
 在命令行执行:
@@ -85,6 +87,7 @@ mvn install:install-file -Dfile=/path/to/netty-all-4.1.22.Final.jar \
 ### 4.运行maven项目
 
 maven的运行命令有两种：一种是运行单元测试，一种是运行项目中的主函数，这里只讲后者。
+
 ```shell
 # 假设要运行的maven项目的包路径是com.abc.TimeEcho，主函数所在类是TimeServer
 cd [项目目录]
