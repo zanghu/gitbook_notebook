@@ -72,9 +72,10 @@ mvn install:install-file -Dfile=/path/to/netty-all-4.1.22.Final.jar \
                          -Dversion=4.1.22-Final \
                          -Dpackaging=jar
 ```
+
 注意：上面的命令中的参数-Dfile、-DgroupId、-DartifactId、-Dversion、-Dpackaging不可缺少，否则会报错。
 
-之后，在maven项目的目录下的pol.xml文件中配置
+之后，在maven项目的目录下的pol.xml文件中加入如下图绿框中所示内容后保存退出。
 
-
+![](/assets/java02_003.png)
 
