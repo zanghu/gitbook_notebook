@@ -1,262 +1,50 @@
-## 类UNIX系统中获取IP、MAC和掩码
+## Maven项目的pom文件中scope项配置详解
 
-### 1.一种简单清晰的方法
+### Dependency Scope 
 
-该方法来源于：[http://blog.csdn.net/piaoxuwuyu/article/details/8891803\#](http://blog.csdn.net/piaoxuwuyu/article/details/8891803#)
+在POM 4中，<dependency>中还引入了<scope>，它主要管理依赖的部署。目前<scope>可以使用5个值： 
 
-**优点**：可以在AIX和Linux下正常工作
+    * compile，缺省值，适用于所有阶段，会随着项目一起发布。 
+    * provided，类似compile，期望JDK、容器或使用者会提供这个依赖。如servlet.jar。 
+    * runtime，只在运行时使用，如JDBC驱动，适用运行和测试阶段。 
+    * test，只在测试时使用，用于编译和运行测试代码。不会随项目发布。 
+    * system，类似provided，需要显式提供包含依赖的jar，Maven不会在Repository中查找它。
 
-**缺点**：使用了线程不安全的函数 inet\_ntoa\(\)，应该考虑用线程安全的 inet\_ntop\(\)替换
+依赖范围控制哪些依赖在哪些classpath 中可用，哪些依赖包含在一个应用中。让我们详细看一下每一种范围：
+ 
+#### compile （编译范围）
+ 
+compile是默认的范围；如果没有提供一个范围，那该依赖的范围就是编译范围。编译范围依赖在所有的classpath 中可用，
 
-```c
-#include <arpa/inet.h>
-#include <net/if.h>
-#include <net/if_arp.h>
-#include <netinet/in.h>
-#include <stdio.h>
-#include <sys/ioctl.h>
-#include <sys/socket.h>
-#include <unistd.h>
+同时它们也会被打包。
+ 
+#### provided （已提供范围）
+ 
+provided 依赖只有在当JDK 或者一个容器已提供该依赖之后才使用。例如， 如果你开发了一个web 应用，你可能在编译
 
-#define MAXINTERFACES 16    /* 最大接口数 */
+classpath 中需要可用的Servlet API 来编译一个servlet，但是你不会想要在打包好的WAR 中包含这个Servlet API；这个
 
-int fd;         /* 套接字 */
-int if_len;     /* 接口数量 */
-struct ifreq buf[MAXINTERFACES];    /* ifreq结构数组 */
-struct ifconf ifc;                  /* ifconf结构 */
+Servlet API JAR 由你的应用服务器或者servlet 容器提供。已提供范围的依赖在编译classpath （不是运行时）可用。它们
 
-int main(argc, argv)
-{
-    /* 建立IPv4的UDP套接字fd */
-    if ((fd = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
-    {
-        perror("socket(AF_INET, SOCK_DGRAM, 0)");
-        return -1;
-    }
+不是传递性的，也不会被打包。
+ 
+#### runtime （运行时范围）
+ 
+runtime 依赖在运行和测试系统的时候需要，但在编译的时候不需要。比如，你可能在编译的时候只需要JDBC API JAR，而只
 
-    /* 初始化ifconf结构 */
-    ifc.ifc_len = sizeof(buf);
-    ifc.ifc_buf = (caddr_t) buf;
+有在运行的时候才需要JDBC
+ 驱动实现。
+ 
+#### test （测试范围）
+ 
+test范围依赖 在一般的编译和运行时都不需要，它们只有在测试编译和测试运行阶段可用。
+ 
+#### system （系统范围）
+ 
+system范围依赖与provided 类似，但是你必须显式的提供一个对于本地系统中JAR 文件的路径。这么做是为了允许基于本地
 
-    /* 获得接口列表 */
-    if (ioctl(fd, SIOCGIFCONF, (char *) &ifc) == -1)
-    {
-        perror("SIOCGIFCONF ioctl");
-        return -1;
-    }
+对象编译，而这些对象是系统类库的一部分。这样的构件应该是一直可用的，Maven 也不会在仓库中去寻找它。如果你将一个
 
-    if_len = ifc.ifc_len / sizeof(struct ifreq); /* 接口数量 */
-    printf("接口数量:%d\n\n", if_len);
+依赖范围设置成系统范围，你必须同时提供一个 systemPath 元素。注意该范围是不推荐使用的（你应该一直尽量去从公共或
 
-    while (if_len– > 0) /* 遍历每个接口 */
-    {
-        printf("接口：%s\n", buf[if_len].ifr_name); /* 接口名称 */
-
-        /* 获得接口标志 */
-        if (!(ioctl(fd, SIOCGIFFLAGS, (char *) &buf[if_len])))
-        {
-            /* 接口状态 */
-            if (buf[if_len].ifr_flags & IFF_UP)
-            {
-                printf("接口状态: UP\n");
-            }
-            else
-            {
-                printf("接口状态: DOWN\n");
-            }
-        }
-        else
-        {
-            char str[256];
-            sprintf(str, "SIOCGIFFLAGS ioctl %s", buf[if_len].ifr_name);
-            perror(str);
-        }
-
-
-        /* IP地址 */
-        if (!(ioctl(fd, SIOCGIFADDR, (char *) &buf[if_len])))
-        {
-            printf("IP地址:%s\n",
-                    (char*)inet_ntoa(((struct sockaddr_in*) (&buf[if_len].ifr_addr))->sin_addr));
-        }
-        else
-        {
-            char str[256];
-            sprintf(str, "SIOCGIFADDR ioctl %s", buf[if_len].ifr_name);
-            perror(str);
-        }
-
-        /* 子网掩码 */
-        if (!(ioctl(fd, SIOCGIFNETMASK, (char *) &buf[if_len])))
-        {
-            printf("子网掩码:%s\n",
-                    (char*)inet_ntoa(((struct sockaddr_in*) (&buf[if_len].ifr_addr))->sin_addr));
-        }
-        else
-        {
-            char str[256];
-            sprintf(str, "SIOCGIFADDR ioctl %s", buf[if_len].ifr_name);
-            perror(str);
-        }
-
-        /* 广播地址 */
-        if (!(ioctl(fd, SIOCGIFBRDADDR, (char *) &buf[if_len])))
-        {
-            printf("广播地址:%s\n",
-                    (char*)inet_ntoa(((struct sockaddr_in*) (&buf[if_len].ifr_addr))->sin_addr));
-        }
-        else
-        {
-            char str[256];
-            sprintf(str, "SIOCGIFADDR ioctl %s", buf[if_len].ifr_name);
-            perror(str);
-        }
-
-        /*MAC地址 */
-        if (!(ioctl(fd, SIOCGIFHWADDR, (char *) &buf[if_len])))
-        {
-            printf("MAC地址:%02x:%02x:%02x:%02x:%02x:%02x\n\n",
-                    (unsigned char) buf[if_len].ifr_hwaddr.sa_data[0],
-                    (unsigned char) buf[if_len].ifr_hwaddr.sa_data[1],
-                    (unsigned char) buf[if_len].ifr_hwaddr.sa_data[2],
-                    (unsigned char) buf[if_len].ifr_hwaddr.sa_data[3],
-                    (unsigned char) buf[if_len].ifr_hwaddr.sa_data[4],
-                    (unsigned char) buf[if_len].ifr_hwaddr.sa_data[5]);
-        }
-        else
-        {
-            char str[256];
-            sprintf(str, "SIOCGIFHWADDR ioctl %s", buf[if_len].ifr_name);
-            perror(str);
-        }
-    }//–while end
-
-    //关闭socket
-    close(fd);
-    return 0;
-}
-```
-
-### 2.一种线程安全的版本
-
-下面的例子只包含获取IP的方法，使用了线程安全的inet\_ntop\(\)函数
-
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <arpa/inet.h>
-
-/**
- * @function
- * @brief 获取消费方本地ip, 将所有ip拼成一个字符串, 如果本地有多个IP则最大上传16个IP, 会自动过滤掉127开头的ip
- * @param is_success: 是否成功取得ip
- * @param 本机所有ip组成的字符串, 不通ip间用'|'分隔, 例如"192.168.1.1|10.230.139.79|123.456.789.000"
- * @return 函数正常执行返回0, 否则返回非0
- */
-int getLocalIpAll(int *is_success, char **ip_str_all)
-{
-    int fd = 0;         /* 套接字 */
-    int if_len = 0;     /* 接口数量 */
-    struct ifreq buf[1024];    /* ifreq结构数组 */
-    struct ifconf ifc;                  /* ifconf结构 */
-
-    /* 建立IPv4的UDP套接字fd */
-    if ((fd = socket(AF_INET, SOCK_DGRAM, 0)) == -1) {
-        int err = errno;
-        WARN_MSG_1("Warning: get local ip failed, cannot open socket, errno:%d\n", err);
-        *is_success = 0;
-        return 0;
-    }
-
-    int is_success_tmp = 0;
-    struct DynamicString *ds = NULL;
-    do {
-
-    CHECK_ERROR_CODE(createDynamicStringWithSpecifiedSize(&ds, 128), DYNAMICSTRING002017_CREATE_WITH_SPEC_SIZE_FAILURE);
-
-    /* 初始化ifconf结构 */
-    ifc.ifc_len = sizeof(buf);
-    ifc.ifc_buf = (caddr_t) buf;
-
-    /* 获得接口列表 */
-    if (ioctl(fd, SIOCGIFCONF, (char *) &ifc) == -1) {
-        int err = errno;
-        WARN_MSG_1("Warning: get local ip failed, ioctl failed, errno:%d\n", err);
-        break;
-    }
-
-    if_len = ifc.ifc_len / sizeof(struct ifreq); /* 接口数量 */
-    //fprintf(stdout, "接口数量:%d\n\n", if_len);
-
-    /* 遍历每个接口 */
-    int i = -1;
-    char ip_buf[16]; // 保存点分十进制到ip地址
-    unsigned int u32_addr = 0;
-    struct sockaddr_in *serv = NULL;
-    int cnt = 0;
-    while ((++i) < if_len) {
-
-        //fprintf(stdout, "接口：%s\n", buf[i].ifr_name); /* 接口名称 */
-
-        /* 获得接口标志 */
-        if (ioctl(fd, SIOCGIFFLAGS, (char *) &buf[i]) == -1) { // 只有开启的地址才有效
-            continue;
-        }
-
-        // 获取ip
-        if (ioctl(fd, SIOCGIFADDR, (char *) &buf[i]) != -1) {
-            serv = (struct sockaddr_in *)(&(buf[i].ifr_addr));
-            u32_addr = (serv->sin_addr).s_addr;
-            if (inet_ntop(AF_INET, &u32_addr, ip_buf, (socklen_t)sizeof(ip_buf)) == NULL) {
-                WARN_MSG_1("Warning: get local ip failed, inet_ntop failed, errno:%d\n", errno);
-                continue;
-            }
-            else {
-                // 127开头的地址全部过滤
-                if (strncmp(ip_buf, "127", 3) == 0) {
-                    continue;
-                }
-
-                // 记录ip地址
-                if (cnt > 0) {
-                    CHECK_ERROR_CODE(addDynamicStringSingleCharacter(ds, '|'), DYNAMICSTRING002012_ADD_CHAR_FAILURE);
-                }
-                CHECK_ERROR_CODE(addDynamicString(ds, ip_buf), DYNAMICSTRING002004_ADD_STR_FAILURE);
-                ++cnt;
-            }
-        }
-
-        // 避免上传IP字符串过长, 目前RMC先值长度是500
-        if (cnt >= 16) { 
-            break;
-        }
-    }
-
-    // 只要获取到至少一个ip就认为成功
-    if (cnt > 0) {
-        is_success_tmp = 1;
-    }
-
-    } while (0);
-
-    // 加入socket关闭失败检查
-    if (close(fd) != 0) { // 关闭socket失败需要记录警告日志, 避免打开socket过多导致建立连接失败
-        int err = errno;
-        fprintf(stderr, "Warning: clsoe sock failed, errno: %d\n", err);
-        ACC_LOG_WARN_1("Warning: clsoe sock failed, errno: %d\n", err);
-    }
-
-    *is_success = is_success_tmp;
-    if (is_success_tmp == 1) {
-        CHECK_ERROR_CODE(getDynamicStringData(ip_str_all, ds), DYNAMICSTRING002008_GET_DATA_STR_FAILURE);
-    }
-    CHECK_ERROR_CODE(destroyDynamicString(ds), DYNAMICSTRING002009_DESTROY_FAILURE);
-    ds = NULL;
-
-    return 0;
-}
-```
-
-
-
+定制的 Maven 仓库中引用依赖）。
