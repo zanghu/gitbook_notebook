@@ -2,7 +2,7 @@
 
 参考资料：[http://wentao365.iteye.com/blog/903396/](http://wentao365.iteye.com/blog/903396/)
 
-参考资料：https://www.yiibai.com/maven/
+参考资料：[https://www.yiibai.com/maven/](https://www.yiibai.com/maven/) \# 非常详细的maven教程
 
 ### 1.使用Maven创建HelloWorld工程
 
