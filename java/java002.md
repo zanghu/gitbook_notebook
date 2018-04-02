@@ -66,7 +66,11 @@ maven是JAVA项目构建框架，同时也具备项目依赖库（jar包）版�
 
 ```shell
 # 假设要安装的jar包名为: netty-all-4.1.22.Final.jar
-mvn install:install-file -Dfile=/path/to/netty-all-4.1.22.Final.jar -DgroupId=io.netty -DartifactId=netty-all -Dversion=4.1.22-Final -Dpackaging=jar
+mvn install:install-file -Dfile=/path/to/netty-all-4.1.22.Final.jar \
+                         -DgroupId=io.netty \
+                         -DartifactId=netty-all \
+                         -Dversion=4.1.22-Final \
+                         -Dpackaging=jar
 ```
 
 
