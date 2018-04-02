@@ -1,6 +1,8 @@
 ## Maven常用命令
 
-参考资料：[https://www.cnblogs.com/asingna/p/5234908.html](https://www.cnblogs.com/wkrbky/p/6352188.html)  
+参考资料：[https://www.cnblogs.com/asingna/p/5234908.html](https://www.cnblogs.com/wkrbky/p/6352188.html)
+
+  
 Maven库：
 
 [http://repo2.maven.org/maven2/](http://repo2.maven.org/maven2/)
@@ -74,10 +76,10 @@ mvn jar:jar
 16. 只测试而不编译，也不测试编译：
 
 mvn test -skipping compile -skipping test-compile  
- \( -skipping 的灵活运用，当然也可以用于其他组合命令\)   
+ \( -skipping 的灵活运用，当然也可以用于其他组合命令\)  
 17. 清除eclipse的一些系统设置:
 
-mvn eclipse:clean   
+mvn eclipse:clean  
 18.查看当前项目已被解析的依赖：
 
 mvn dependency:list  
