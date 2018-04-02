@@ -1,5 +1,7 @@
 ## Maven项目的pom文件中scope项配置详解
 
+参考资料：https://www.cnblogs.com/asingna/p/5234908.html
+
 ### Dependency Scope 
 
 在POM 4中，<dependency>中还引入了<scope>，它主要管理依赖的部署。目前<scope>可以使用5个值： 
