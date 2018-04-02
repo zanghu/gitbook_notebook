@@ -26,7 +26,7 @@
   * [Linux: 安装Tensorflow\(From Source\)](linux_tips/lin004.md)
   * [Linux: 脚本编程001——字符串排序](linux_tips/lin005.md)
   * [Linux: copy命令赋值符号链接](linux_tips/lin006.md)
-  * [Linux: 安装caffe](linux_tips/lin007.md)]
+  * [Linux: 安装caffe](linux_tips/lin007.md)
   * [Linux: ubuntu源列表结构分析](linux_tips/lin008.md)
 * [Statistics](statistics/README.md)
   * [Static: N sigma 准则](statistics/static001.md)
@@ -34,6 +34,7 @@
   * [C: 类Unix系统下获取IP、MAC和掩码](c/c001.md)
 * [JAVA Programming](java/README.md)
   * [JAVA: Linux环境安装maven](java/java001.md)
-  * [JAVA: Linux环境配置maven 、创建项目](java/java002.md)
+  * [JAVA: Linux环境maven创建项目](java/java002.md)
 * [Others](others/README.md)
   * [Others: 有价值的开源软件收集](others/others001.md)
+
