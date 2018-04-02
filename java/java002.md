@@ -7,7 +7,8 @@
 在命令行执行:
 
 ```shell
-mvn archetype:generate -DgroupId=com.abc.helloworld -DartifactId=helloworld_project
+# 下面的命令如果省略-Dversion，则pom.xml里面的<version></version>默认是1.0-SNAPSHOT
+mvn archetype:generate -DgroupId=com.abc.helloworld -DartifactId=helloworld_project -Dversion=0.1
 ```
 
 其中：-DfroupId指定的是创建的项目的包路径（构建后可执行文件的调用全名前缀），-DartifactId指定的是创建的项目的顶级目录名（也是构建后的jar包名）  
