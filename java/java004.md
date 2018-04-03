@@ -20,7 +20,7 @@ mvn archetype:generate -DgroupId=otowa.user.dao -DartifactId=user-dao -Dversion=
 ```
 #### 2. 创建Maven的Web项目：
 ```shell
-mvn archetype:create  
+mvn archetype:generate
     -DgroupId=packageName  
     -DartifactId=webappName  
     -DarchetypeArtifactId=maven-archetype-webapp
