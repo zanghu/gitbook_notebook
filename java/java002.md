@@ -26,7 +26,7 @@ helloworld\_project
                     \|--abc  
                         \|--helloworld  
                             \|--AppTest.java  
-        \|--text  
+        \|--test  
             \|--java  
                 \|--com   
                     \|--abc  
@@ -63,7 +63,7 @@ Hello World!
 
 ### 3.配置依赖jar包
 
-参考资料：https://blog.csdn.net/u014079773/article/details/60773287
+参考资料：[https://blog.csdn.net/u014079773/article/details/60773287](https://blog.csdn.net/u014079773/article/details/60773287)
 
 maven是JAVA项目构建框架，同时也具备项目依赖库（jar包）版本管理功能。
 
