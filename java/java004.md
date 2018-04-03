@@ -14,6 +14,7 @@ Maven依赖查询：
 ### 一，Maven常用命令：  
 #### 1. 创建Maven的普通Java项目：
 目前"archetype:create"经被"archetype:generate"所取代，用来创建maven项目
+在命令行输入如下内容，即可创建一个项目
 ```shell
 mvn archetype:generate -DgroupId=otowa.user.dao -DartifactId=user-dao -Dversion=0.01-SNAPSHOT
 ```
