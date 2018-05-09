@@ -31,7 +31,7 @@ Flexibility： 一个完整的Linux编译环境需要很多支持包，交叉编
 
 交叉编译的困难点在于两个方面：
 
-不同的体系架构拥有不同的机器特性：
+（1）不同的体系架构拥有不同的机器特性：
 
 * **Word size： 是64位还是32位系统Endianness： **
 * **是大端还是小端系统**
@@ -39,9 +39,9 @@ Flexibility： 一个完整的Linux编译环境需要很多支持包，交叉编
 * **Default signedness： 默认数据类型是有符号还是无符号**
 * **NOMMU： 是否支持MMU**
 
-交叉编译时的主机环境与目标环境不同
+（2）交叉编译时的主机环境与目标环境不同
 
-Configuration issues：
+* **Configuration issues：**
 
 * **HOSTCC vs TARGETCC：**
 * **Toolchain Leaks：**
