@@ -42,7 +42,6 @@ Flexibility： 一个完整的Linux编译环境需要很多支持包，交叉编
 （2）交叉编译时的主机环境与目标环境不同
 
 * **Configuration issues：**
-
 * **HOSTCC vs TARGETCC：**
 * **Toolchain Leaks：**
 * **Libraries：**
