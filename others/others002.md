@@ -33,20 +33,20 @@ Flexibility： 一个完整的Linux编译环境需要很多支持包，交叉编
 
 不同的体系架构拥有不同的机器特性：
 
-* Word size： 是64位还是32位系统Endianness： 
-* 是大端还是小端系统
-* Alignment： 是否必修按照4字节对齐方式进行访问
-* Default signedness： 默认数据类型是有符号还是无符号
-* NOMMU： 是否支持MMU
+* **Word size： 是64位还是32位系统Endianness： **
+* **是大端还是小端系统**
+* **Alignment： 是否必修按照4字节对齐方式进行访问**
+* **Default signedness： 默认数据类型是有符号还是无符号**
+* **NOMMU： 是否支持MMU**
 
 交叉编译时的主机环境与目标环境不同
 
 Configuration issues：
 
-* HOSTCC vs TARGETCC：
-* Toolchain Leaks：
-* Libraries：
-* Testing： 
+* **HOSTCC vs TARGETCC：**
+* **Toolchain Leaks：**
+* **Libraries：**
+* **Testing： **
 
 详细的对比可以参看这篇文章，已经写的很详细了，在这就不细说了：[Introduction to cross-compiling for Linux](http://landley.net/writing/docs/cross-compiling.html)
 
