@@ -38,7 +38,8 @@ Flexibility： 一个完整的Linux编译环境需要很多支持包，交叉编
 * Alignment： 是否必修按照4字节对齐方式进行访问
 * Default signedness： 默认数据类型是有符号还是无符号
 * NOMMU： 是否支持MMU
-* 交叉编译时的主机环境与目标环境不同
+
+交叉编译时的主机环境与目标环境不同
 
 Configuration issues：
 
