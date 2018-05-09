@@ -45,6 +45,8 @@ Flexibility： 一个完整的Linux编译环境需要很多支持包，交叉编
 
 详细的对比可以参看这篇文章，已经写的很详细了，在这就不细说了：[Introduction to cross-compiling for Linux](http://landley.net/writing/docs/cross-compiling.html)
 
+PDF版本：[E:\git\_code\gitbook\_notebook\assets\Introduction to cross-compiling for Linux.pdf](/E:\git_code\gitbook_notebook\assets\Introduction to cross-compiling for Linux.pdf)
+
 ### 4.交叉编译一般流程
 
 明白了什么是交叉编译，那我们来看看什么是交叉编译链。
