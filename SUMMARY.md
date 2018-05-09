@@ -39,4 +39,4 @@
   * [Maven: Maven命令](java/java004.md)
 * [Others](others/README.md)
   * [Others: 有价值的开源软件收集](others/others001.md)
-  * [Others: 科学术语收集](others/others002.md)
+  * [Others: 科技术语汇总](others/others002.md)
