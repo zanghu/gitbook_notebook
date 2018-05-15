@@ -20,6 +20,50 @@ docker一般只支持操作系统的最新几个主流版本，具体到Ubuntu�
 
 除了操作系统外，还有一些其他要求，但一般的Ubuntu都能满足。
 
+**STEP 1: 前驱安装**
+（1）安装依赖库
+```shell
+$ sudo apt-get update
+
+$ sudo apt-get install \
+    linux-image-extra-$(uname -r) \
+    linux-image-extra-virtual
+```  
+（2）Update the apt package index:
+```shell
+$ sudo apt-get update
+```
+Install packages to allow apt to use a repository over HTTPS:
+```shell
+$ sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+````
+（3）Add Docker’s official GPG key:
+```shell
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+Verify that you now have the key with the fingerprint 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88, by searching for the last 8 characters of the fingerprint.
+```shell
+$ sudo apt-key fingerprint 0EBFCD88
+
+pub   4096R/0EBFCD88 2017-02-22
+      Key fingerprint = 9DC8 5822 9FC7 DD38 854A  E2D8 8D81 803C 0EBF CD88
+uid                  Docker Release (CE deb) <docker@docker.com>
+sub   4096R/F273FCD8 2017-02-22
+```
+Use the following command to set up the stable repository. 
+Note: The lsb_release -cs sub-command below returns the name of your Ubuntu distribution, such as xenial. Sometimes, in a distribution like Linux Mint, you might need to change $(lsb_release -cs) to your parent Ubuntu distribution. For example, if you are using Linux Mint Rafaela, you could use trusty.
+
+```shell
+$ sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+```
+
 ### 2.安装管理工具
 
 #### 2.1.本地安装docker-compose
