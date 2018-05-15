@@ -84,25 +84,31 @@ $ sudo docker version
 * 添加一个用户组（下面用的用户组名字是docker）
 
 ```shell
-sudo groupadd docker
+$ sudo groupadd docker
 ```
 
 * 将当前用户加入该group内，然后退出并重新登录生效。
 
 ```shell
-sudo gpasswd -a ${USER} docker
+$ sudo gpasswd -a ${USER} docker
 ```
 
 * 重启docker服务
 
 ```shell
-sudo service docker restart
+$ sudo service docker restart
 ```
 
 * 新建一个shell，加入该用户组
 
 ```shell
-newgrp - docker
+$ ewgrp - docker
+```
+
+* 验证
+
+```shell
+$ docker run hello-world
 ```
 
 ### 2.安装管理工具
