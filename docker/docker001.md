@@ -195,10 +195,10 @@ sudo apt-get install virtualbox
 
 问题2：提示需要手动设置主板开启CPU功能 Intel VT-x 或 AMD-V  
 实验中遇到此问题是由于VMware虚拟机默认没有打开此项功能。打开此功能的办法：  
-（1）关闭当前虚拟机  
+（1）关闭VMware当前虚拟机  
 （2）在虚拟机窗口最上方一行中，依次点击“虚拟机” -&gt; “设置”，之后在弹出窗口的左侧选中“CPU”，在右侧的“虚拟化引擎”区域中勾选第二项“虚拟化 Intel VT-x/EPT或 AMD-V/RVI\(V\)”，如下图所示。
 
 ![](/assets/docker001_001.jpg)
 
-（3）重启虚拟机
+（3）重启VMware虚拟机
 
