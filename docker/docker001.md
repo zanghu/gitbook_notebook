@@ -5,7 +5,13 @@
 
 ### 1.本地安装docker
 
-官方指南：https://docs.docker.com/install/linux/docker-ce/ubuntu/
+官方指南：[https://docs.docker.com/install/linux/docker-ce/ubuntu/](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+
+docker分为社区版（CE）和企业版（EE），其中前者免费使用而后者收费使用。
+
+不管是CE版还是EE版，docker都只支持少数几种主流操作系统的主流版本，例如：Windows环境只支持Win10。
+
+docker（CE）目前支持的操作系统如下
 
 ### 2.安装管理工具
 
