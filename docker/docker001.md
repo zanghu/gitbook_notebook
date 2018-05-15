@@ -177,7 +177,7 @@ docker-machine version 0.14.0, build 9371605
 docker-machine create default
 ```
 
-执行上面的命令可能会提示：  
+执行上面的命令可能会遇到如下问题： 
 （1）未安装virtualBox  
 由于docker-machine使用与创建虚拟机，并在虚拟机上部署docker的工具，因此创建虚拟机需要安装虚拟机引擎。目前docker-machine支持多种虚拟机引擎（通过在create时输入的参数来配置），默认情况下选用virtualBox  
 解决办法：安装virtualBox  

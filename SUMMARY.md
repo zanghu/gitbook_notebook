@@ -38,6 +38,8 @@
   * [Maven: Linux环境maven创建项目](java/java002.md)
   * [Maven: Maven项目的pom文件中scope项配置详解](java/java003.md)
   * [Maven: Maven命令](java/java004.md)
+* [linkerd](linkerd/README.md)
+  * [linkerd: example之add-steps运行](linkerd/linkerd001.md)
 * [docker](docker/README.md)
   * [docker: docker环境的安装与配置](docker/docker001.md)
 * [Others](others/README.md)
