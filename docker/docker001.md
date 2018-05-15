@@ -115,7 +115,7 @@ $ docker run hello-world
 
 #### 2.2.设置阿里云加速镜像
 
-打开阿里云docker镜像登陆网页：
+打开阿里云网页：https://account.aliyun.com/login/login.htm
 
 登录后在主页右上方的搜索栏内输入搜索内容“docker镜像加速器”
 
