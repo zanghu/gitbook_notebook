@@ -79,7 +79,7 @@ $ sudo docker version
 
 ### 2.其他设置
 
-### 设置不需要使用sudo即可调用docker命令
+#### 2.1.设置不需要使用sudo即可调用docker命令
 
 参考资料：[https://www.cnblogs.com/ksir16/p/6530587.html](https://www.cnblogs.com/ksir16/p/6530587.html)
 
@@ -112,6 +112,10 @@ $ ewgrp - docker
 ```shell
 $ docker run hello-world
 ```
+
+#### 2.2.设置阿里云加速镜像
+
+打开阿里云docker镜像登陆网页：
 
 ### 3.安装管理工具
 
