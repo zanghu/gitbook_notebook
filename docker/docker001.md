@@ -122,7 +122,8 @@ $ docker run hello-world
 * Run this command to download the latest version of Docker Compose:
 
   ```shell
-  sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+  sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) \
+               -o /usr/local/bin/docker-compose
   ```
 
 * Apply executable permissions to the binary:
