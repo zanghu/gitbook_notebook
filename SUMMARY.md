@@ -18,7 +18,7 @@
   * [CV: 非最大压制方法\(NMS\)过滤重叠boundiung box](cv/cv001.md)
   * [CV: 图像的仿射变换](cv/cv002.md)
   * [CV: 「计算机视觉必读干货」图像分类、检测，语义分割等方法梳理](cv/cv003.md)
-  * [CV: 图像样本膨胀之jitter（抖动）](cv/cv004.md)
+  * [CV: 图像样本膨胀方法jitter（抖动）](cv/cv004.md)
 * [Linux tips](linux_tips/README.md)
   * [Linux: chmod修改文件权限](linux_tips/lin001.md)
   * [Linux: mount命令挂载移动硬盘](linux_tips/lin002.md)
@@ -44,3 +44,4 @@
   * [Others: 有价值的开源软件收集](others/others001.md)
   * [Others: 知识——交叉编译](others/others002.md)
   * [Others: 知识——编译器自举](others/others003.md)
+
