@@ -53,7 +53,7 @@ uid                  Docker Release (CE deb) <docker@docker.com>
 sub   4096R/F273FCD8 2017-02-22
 ```
 Use the following command to set up the stable repository. 
-Note: lsb_release -cs 返回Ubuntu的版本代号（对于14.04LTS来说就是trusty）.
+Note: lsb_release -cs 返回Ubuntu的发行版本代号（对于14.04LTS来说就是trusty）.
 
 ```shell
 $ sudo add-apt-repository \
