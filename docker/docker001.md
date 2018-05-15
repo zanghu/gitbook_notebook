@@ -135,9 +135,9 @@ $ docker run hello-world
   ```
 
   解决办法：  
-  将解析uname命令返回值后的地址[手动复制到浏览器下载](https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86_64手动复制到浏览器下载)
+  将解析uname命令返回值后的地址手动复制到浏览器下载
 
-* [https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86\_64](https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86_64手动复制到浏览器下载)  
+  [https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86\_64](https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86_64手动复制到浏览器下载)  
   之后将下载到的文件docker-compose-Linux-x86\_64拷贝到目标目录病重命名为docker-compose
 
   ```shell
