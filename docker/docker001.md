@@ -158,7 +158,7 @@ $ docker run hello-world
 
 #### 3.2.本地安装docker-machine
 
-官方指南：\[[https://docs.docker.com/machine/install-machine/](https://docs.docker.com/machine/install-machine/)\)
+官方指南：[https://docs.docker.com/machine/install-machine/](https://docs.docker.com/machine/install-machine/)]
 
 * 必须确保已经在本地安装了docker。
 
