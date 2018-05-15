@@ -29,12 +29,9 @@ $ sudo apt-get install \
     linux-image-extra-$(uname -r) \
     linux-image-extra-virtual
 ```  
-（2）Update the apt package index:
+（2）Install packages to allow apt to use a repository over HTTPS:
 ```shell
 $ sudo apt-get update
-```
-Install packages to allow apt to use a repository over HTTPS:
-```shell
 $ sudo apt-get install \
     apt-transport-https \
     ca-certificates \
