@@ -117,10 +117,10 @@ $ docker run hello-world
 
 打开阿里云网页：[https://account.aliyun.com/login/login.htm](https://account.aliyun.com/login/login.htm)
 
-登录后在主页右上方的搜索栏内输入搜索内容“docker镜像加速器”![](/assets/docker001_004.png)
+登录后在主页右上方的搜索栏内输入搜索内容“docker镜像加速器”
+![](/assets/docker001_004.png)
 
 之后选择第一个搜索结果，进入后点击左侧边栏最下面一项“镜像加速器”
-
 ![](/assets/docker001_005.png)
 
 ### 3.安装管理工具
