@@ -77,7 +77,9 @@ $ sudo add-apt-repository \
 $ sudo docker version
 ```
 
-### 2.设置不需要使用sudo即可调用docker命令
+### 2.其他设置
+
+### 设置不需要使用sudo即可调用docker命令
 
 参考资料：[https://www.cnblogs.com/ksir16/p/6530587.html](https://www.cnblogs.com/ksir16/p/6530587.html)
 
