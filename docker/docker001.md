@@ -84,7 +84,8 @@ sudo service docker restart
 ```
 
 新建一个shell，加入该用户组
-```shellnewgrp - docker
+```shell
+newgrp - docker
 ```
 
 ### 2.安装管理工具
