@@ -117,7 +117,7 @@ $ docker run hello-world
 
 #### 3.1.本地安装docker-compose
 
-官方指南：[https://docs.docker.com/compose/install/)
+官方指南：\[[https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)\)
 
 * 必须确保已经在本地安装了docker。
 
@@ -127,16 +127,22 @@ $ docker run hello-world
   sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) \
                -o /usr/local/bin/docker-compose
   ```
-注意，这里在实际操作时，由于实验环境的/usr/local/bin下存在旧版不支持HTTPS的curl，这里用sudo命令导致搜索可执行文件时未按照环境变量$PATH规定的顺序进行搜索，所以报错：
-```shell
-curl: (1) Protocol "https" not supported or disabled in libcurl
-```
-解决办法：
-将解析uname命令返回值后的地址: https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86_64手动复制到浏览器下载
-之后将下载到的文件docker-compose-Linux-x86_64拷贝到目标目录病重命名为docker-compose
-```shell
-sudo cp docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
-```
+
+  注意，这里在实际操作时，由于实验环境的/usr/local/bin下存在旧版不支持HTTPS的curl，这里用sudo命令导致搜索可执行文件时未按照环境变量$PATH规定的顺序进行搜索，所以报错：
+
+  ```shell
+  curl: (1) Protocol "https" not supported or disabled in libcurl
+  ```
+
+  解决办法：  
+  将解析uname命令返回值后的地址[手动复制到浏览器下载](https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86_64手动复制到浏览器下载)
+
+* [https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86\_64](https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86_64手动复制到浏览器下载)  
+  之后将下载到的文件docker-compose-Linux-x86\_64拷贝到目标目录病重命名为docker-compose
+
+  ```shell
+  sudo cp docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
+  ```
 
 * Apply executable permissions to the binary:
 
@@ -153,23 +159,26 @@ sudo cp docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
 
 #### 3.2.本地安装docker-machine
 
-官方指南：[https://docs.docker.com/machine/install-machine/)
+官方指南：\[[https://docs.docker.com/machine/install-machine/](https://docs.docker.com/machine/install-machine/)\)
 
 * 必须确保已经在本地安装了docker。
 
 * 执行下列命令下载已经编译好的docker-machine的可执行文件
-```shell
-$ base=https://github.com/docker/machine/releases/download/v0.14.0 &&
+
+  ```shell
+  $ base=https://github.com/docker/machine/releases/download/v0.14.0 &&
   curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine &&
   sudo install /tmp/docker-machine /usr/local/bin/docker-machine
-```
-如果遇到无法下载的错误，类似于安装docker-compose的做法，可以直接把下载地址URL拷贝到浏览器下载，之后再改名复制到目标目录
+  ```
+
+  如果遇到无法下载的错误，类似于安装docker-compose的做法，可以直接把下载地址URL拷贝到浏览器下载，之后再改名复制到目标目录
 
 * Check the installation by displaying the Machine version:
-```shell
-$ docker-machine version
-docker-machine version 0.14.0, build 9371605
-```
+
+  ```shell
+  $ docker-machine version
+  docker-machine version 0.14.0, build 9371605
+  ```
 
 #### 3.3.创建一个本地docker machine
 
@@ -177,7 +186,7 @@ docker-machine version 0.14.0, build 9371605
 docker-machine create default
 ```
 
-执行上面的命令可能会遇到如下问题： 
+执行上面的命令可能会遇到如下问题：   
 （1）未安装virtualBox  
 由于docker-machine使用与创建虚拟机，并在虚拟机上部署docker的工具，因此创建虚拟机需要安装虚拟机引擎。目前docker-machine支持多种虚拟机引擎（通过在create时输入的参数来配置），默认情况下选用virtualBox  
 解决办法：安装virtualBox  
