@@ -123,7 +123,12 @@ $ docker run hello-world
 之后选择第一个搜索结果，进入后点击左侧边栏最下面一项“镜像加速器”  
 ![](/assets/docker001_005.png)
 
-按照右侧
+按照上图网页中的内容配置即可。配置完成后，可以通过
+```shell
+sudo docker restart
+sudo docker info
+```
+来查看配置是否生效
 
 ### 3.安装管理工具
 
