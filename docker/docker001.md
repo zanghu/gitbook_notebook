@@ -119,7 +119,7 @@ $ docker run hello-world
 
 官方指南：[https://docs.docker.com/compose/install/)
 
-必须确保已经在本地安装了docker。
+* 必须确保已经在本地安装了docker。
 
 * Run this command to download the latest version of Docker Compose（下载已经编译好的docker-compose的可执行文件）:
 
@@ -155,7 +155,7 @@ sudo cp docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
 
 官方指南：[https://docs.docker.com/machine/install-machine/)
 
-必须确保已经在本地安装了docker。
+* 必须确保已经在本地安装了docker。
 
 * 执行下列命令下载已经编译好的docker-machine的可执行文件
 ```shell
