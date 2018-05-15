@@ -68,7 +68,24 @@ $ sudo docker version
 
 ### 2.设置不需要使用sudo即可调用docker命令
 
+添加一个用户组（下面用的用户组名字是docker）
+```shell
+sudo groupadd docker
+```
 
+将当前用户加入该group内，然后退出并重新登录生效。
+```shell
+sudo gpasswd -a ${USER} docker
+```
+
+重启docker服务
+```shell
+sudo service docker restart
+```
+
+新建一个shell，加入该用户组
+```shellnewgrp - docker
+```
 
 ### 2.安装管理工具
 
