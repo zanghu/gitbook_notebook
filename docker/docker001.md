@@ -117,7 +117,7 @@ $ docker run hello-world
 
 #### 3.1.本地安装docker-compose
 
-官方指南：\[[https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)\)
+官方指南：[https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)
 
 * 必须确保已经在本地安装了docker。
 
