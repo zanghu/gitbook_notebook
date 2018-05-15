@@ -181,6 +181,8 @@ $ docker run hello-world
 
 #### 3.3.创建一个本地docker machine
 
+使用如下命令创建一个docker machine，下面的命令省略了一些参数（使用默认值）。
+
 ```shell
 docker-machine create default
 ```
