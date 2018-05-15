@@ -32,6 +32,7 @@ $ sudo apt-get install \
 （2）Install packages to allow apt to use a repository over HTTPS:
 ```shell
 $ sudo apt-get update
+
 $ sudo apt-get install \
     apt-transport-https \
     ca-certificates \
