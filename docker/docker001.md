@@ -117,6 +117,10 @@ $ docker run hello-world
 
 打开阿里云docker镜像登陆网页：
 
+登录后在主页右上方的搜索栏内输入搜索内容“docker镜像加速器”
+
+之后选择第一个搜索结果，进入后点击左侧边栏最下面一项“镜像加速器”
+
 ### 3.安装管理工具
 
 目前用到的docker管理工具有两个：docker-compose和docker-machine
