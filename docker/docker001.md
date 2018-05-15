@@ -79,7 +79,7 @@ $ sudo docker version
 
 ### 2.设置不需要使用sudo即可调用docker命令
 
-参考资料：https://www.cnblogs.com/ksir16/p/6530587.html
+参考资料：[https://www.cnblogs.com/ksir16/p/6530587.html](https://www.cnblogs.com/ksir16/p/6530587.html)
 
 * 添加一个用户组（下面用的用户组名字是docker）
 
@@ -111,7 +111,7 @@ $ ewgrp - docker
 $ docker run hello-world
 ```
 
-### 2.安装管理工具
+### 3.安装管理工具
 
 #### 2.1.本地安装docker-compose
 
