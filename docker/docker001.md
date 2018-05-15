@@ -1,7 +1,7 @@
 ## Docker环境的安装与配置
 
 本文目的是介绍如何在Ubuntu上安装Docker  
-本文中的实验环境为：Ubuntu14.04LTS（win7上用VMware运行的虚拟机）
+本文内容的实验环境为：Ubuntu14.04LTS（win7上用VMware运行的虚拟机）
 
 ### 1.本地安装docker
 
