@@ -115,26 +115,31 @@ $ docker run hello-world
 
 目前用到的docker管理工具有两个：docker-compose和docker-machine
 
-#### 2.1.本地安装docker-compose
+#### 3.1.本地安装docker-compose
+
 官方指南：[https://www.cnblogs.com/ksir16/p/6530587.html](https://www.cnblogs.com/ksir16/p/6530587.html)
 
 * Run this command to download the latest version of Docker Compose:
-```shell
-sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
-```
+
+  ```shell
+  sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+  ```
 
 * Apply executable permissions to the binary:
-```shell
-sudo chmod +x /usr/local/bin/docker-compose
-```
+
+  ```shell
+  sudo chmod +x /usr/local/bin/docker-compose
+  ```
 
 * Test the installation.
-```
-$ docker-compose --version
-docker-compose version 1.21.2, build 1719ceb
-```
 
-#### 2.2.本地安装docker-machine
+  ```
+  $ docker-compose --version
+  docker-compose version 1.21.2, build 1719ceb
+  ```
+
+#### 3.2.本地安装docker-machine
+
 官方指南：[https://www.cnblogs.com/ksir16/p/6530587.html](https://www.cnblogs.com/ksir16/p/6530587.html)
 
 ##### 创建一个本地docker machine
