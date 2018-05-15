@@ -53,7 +53,7 @@ uid                  Docker Release (CE deb) <docker@docker.com>
 sub   4096R/F273FCD8 2017-02-22
 ```
 Use the following command to set up the stable repository. 
-Note: The lsb_release -cs sub-command below returns the name of your Ubuntu distribution, such as xenial. Sometimes, in a distribution like Linux Mint, you might need to change $(lsb_release -cs) to your parent Ubuntu distribution. For example, if you are using Linux Mint Rafaela, you could use trusty.
+Note: lsb_release -cs 返回Ubuntu的版本代号（对于14.04LTS来说就是trusty）.
 
 ```shell
 $ sudo add-apt-repository \
