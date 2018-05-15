@@ -117,9 +117,11 @@ $ docker run hello-world
 
 #### 3.1.本地安装docker-compose
 
-官方指南：[https://www.cnblogs.com/ksir16/p/6530587.html](https://www.cnblogs.com/ksir16/p/6530587.html)
+官方指南：[https://docs.docker.com/compose/install/)
 
-* Run this command to download the latest version of Docker Compose:
+必须确保已经在本地安装了docker。
+
+* Run this command to download the latest version of Docker Compose（下载已经编译好的docker-compose的可执行文件）:
 
   ```shell
   sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) \
@@ -148,9 +150,18 @@ sudo cp docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
 
 #### 3.2.本地安装docker-machine
 
-官方指南：[https://www.cnblogs.com/ksir16/p/6530587.html](https://www.cnblogs.com/ksir16/p/6530587.html)
+官方指南：[https://docs.docker.com/machine/install-machine/)
 
-##### 创建一个本地docker machine
+必须确保已经在本地安装了docker。
+
+执行下列命令下载已经编译好的docker-machine的可执行文件
+```shell
+$ base=https://github.com/docker/machine/releases/download/v0.14.0 &&
+  curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine &&
+  sudo install /tmp/docker-machine /usr/local/bin/docker-machine
+```
+
+#### 3.3.创建一个本地docker machine
 
 ```shell
 docker-machine create default
