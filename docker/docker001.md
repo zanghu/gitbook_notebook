@@ -181,13 +181,13 @@ $ docker run hello-world
 
 #### 3.3.创建一个本地docker machine
 
-使用如下命令创建一个docker machine，下面的命令省略了一些参数（使用默认值）。
+* 使用如下命令创建一个docker machine，下面的命令省略了一些参数（使用默认值）。
 
 ```shell
 docker-machine create default
 ```
 
-执行上面的命令可能会遇到如下问题：  
+* 执行上面的命令可能会遇到如下问题：  
 问题1：提示未安装virtualBox  
 由于docker-machine使用与创建虚拟机，并在虚拟机上部署docker的工具，因此创建虚拟机需要安装虚拟机引擎。目前docker-machine支持多种虚拟机引擎（通过在create时输入的参数来配置），默认情况下选用virtualBox  
 解决办法：安装virtualBox  
@@ -204,3 +204,7 @@ sudo apt-get install virtualbox
 
 （3）重启VMware虚拟机
 
+* 查看当前所有machine
+```shell
+docker-machine ls
+```
