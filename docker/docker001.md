@@ -134,11 +134,11 @@ $ docker run hello-world
   curl: (1) Protocol "https" not supported or disabled in libcurl
   ```
 
-  解决办法：  
+  **解决办法：**  
   将解析uname命令返回值后的地址手动复制到浏览器下载
 
   [https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86\_64](https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86_64手动复制到浏览器下载)  
-  之后将下载到的文件docker-compose-Linux-x86\_64拷贝到目标目录病重命名为docker-compose
+  之后将下载到的文件docker-compose-Linux-x86\_64拷贝到目标目录，重命名为docker-compose
 
   ```shell
   sudo cp docker-compose-Linux-x86_64 /usr/local/bin/docker-compose
@@ -186,7 +186,7 @@ $ docker run hello-world
 docker-machine create default
 ```
 
-执行上面的命令可能会遇到如下问题：   
+执行上面的命令可能会遇到如下问题：  
 （1）未安装virtualBox  
 由于docker-machine使用与创建虚拟机，并在虚拟机上部署docker的工具，因此创建虚拟机需要安装虚拟机引擎。目前docker-machine支持多种虚拟机引擎（通过在create时输入的参数来配置），默认情况下选用virtualBox  
 解决办法：安装virtualBox  
