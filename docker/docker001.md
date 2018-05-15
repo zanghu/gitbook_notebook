@@ -20,16 +20,19 @@ docker一般只支持操作系统的最新几个主流版本，具体到Ubuntu�
 
 除了操作系统外，还有一些其他要求，但一般的Ubuntu都能满足。
 
-**STEP 1: 前驱安装**
+**STEP 1: 前驱安装**  
 （1）安装依赖库
+
 ```shell
 $ sudo apt-get update
 
 $ sudo apt-get install \
     linux-image-extra-$(uname -r) \
     linux-image-extra-virtual
-```  
+```
+
 （2）Install packages to allow apt to use a repository over HTTPS:
+
 ```shell
 $ sudo apt-get update
 
@@ -38,12 +41,17 @@ $ sudo apt-get install \
     ca-certificates \
     curl \
     software-properties-common
-````
+`
+```
+
 （3）Add Docker’s official GPG key:
+
 ```shell
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 ```
+
 Verify that you now have the key with the fingerprint 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88, by searching for the last 8 characters of the fingerprint.
+
 ```shell
 $ sudo apt-key fingerprint 0EBFCD88
 
@@ -52,8 +60,9 @@ pub   4096R/0EBFCD88 2017-02-22
 uid                  Docker Release (CE deb) <docker@docker.com>
 sub   4096R/F273FCD8 2017-02-22
 ```
-（4）Use the following command to set up the stable repository. 
-Note: lsb_release -cs 返回Ubuntu的发行版本代号（对于14.04LTS来说就是trusty）.
+
+（4）Use the following command to set up the stable repository.   
+Note: lsb\_release -cs 返回Ubuntu的发行版本代号（对于14.04LTS来说就是trusty）.
 
 ```shell
 $ sudo add-apt-repository \
@@ -61,29 +70,37 @@ $ sudo add-apt-repository \
    $(lsb_release -cs) \
    stable"
 ```
+
 （5）检查安装
+
 ```shell
 $ sudo docker version
 ```
 
 ### 2.设置不需要使用sudo即可调用docker命令
 
-添加一个用户组（下面用的用户组名字是docker）
+参考资料：
+
+* 添加一个用户组（下面用的用户组名字是docker）
+
 ```shell
 sudo groupadd docker
 ```
 
-将当前用户加入该group内，然后退出并重新登录生效。
+* 将当前用户加入该group内，然后退出并重新登录生效。
+
 ```shell
 sudo gpasswd -a ${USER} docker
 ```
 
-重启docker服务
+* 重启docker服务
+
 ```shell
 sudo service docker restart
 ```
 
-新建一个shell，加入该用户组
+* 新建一个shell，加入该用户组
+
 ```shell
 newgrp - docker
 ```
