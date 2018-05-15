@@ -158,7 +158,7 @@ $ docker run hello-world
 
 #### 3.2.本地安装docker-machine
 
-官方指南：[https://docs.docker.com/machine/install-machine/](https://docs.docker.com/machine/install-machine/)]
+官方指南：[https://docs.docker.com/machine/install-machine/](https://docs.docker.com/machine/install-machine/)
 
 * 必须确保已经在本地安装了docker。
 
@@ -188,12 +188,12 @@ docker-machine create default
 ```
 
 * 执行上面的命令可能会遇到如下问题：  
-问题1：提示未安装virtualBox  
-由于docker-machine使用与创建虚拟机，并在虚拟机上部署docker的工具，因此创建虚拟机需要安装虚拟机引擎。目前docker-machine支持多种虚拟机引擎（通过在create时输入的参数来配置），默认情况下选用virtualBox  
-解决办法：安装virtualBox  
-\`\`\`shell  
-sudo apt-get update  
-sudo apt-get install virtualbox
+  问题1：提示未安装virtualBox  
+  由于docker-machine使用与创建虚拟机，并在虚拟机上部署docker的工具，因此创建虚拟机需要安装虚拟机引擎。目前docker-machine支持多种虚拟机引擎（通过在create时输入的参数来配置），默认情况下选用virtualBox  
+  解决办法：安装virtualBox  
+  \`\`\`shell  
+  sudo apt-get update  
+  sudo apt-get install virtualbox
 
 问题2：提示需要手动设置主板开启CPU功能 Intel VT-x 或 AMD-V  
 实验中遇到此问题是由于VMware虚拟机默认没有打开此项功能。打开此功能的办法：  
@@ -205,6 +205,9 @@ sudo apt-get install virtualbox
 （3）重启VMware虚拟机
 
 * 查看当前所有machine
-```shell
-docker-machine ls
-```
+  ```shell
+  docker-machine ls
+  ```
+
+
+
