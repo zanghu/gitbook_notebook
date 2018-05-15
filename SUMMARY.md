@@ -28,6 +28,7 @@
   * [Linux: copy命令赋值符号链接](linux_tips/lin006.md)
   * [Linux: 安装caffe](linux_tips/lin007.md)
   * [Linux: ubuntu源列表结构分析](linux_tips/lin008.md)
+  * [Linux: sudo运行程序搜索路径变化原因的研究](linux_tips/lin009.md)
 * [Statistics](statistics/README.md)
   * [Static: N sigma 准则](statistics/static001.md)
 * [C Programming](c/README.md)
