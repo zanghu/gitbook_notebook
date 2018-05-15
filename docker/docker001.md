@@ -186,10 +186,15 @@ docker-machine create default
 ```
 
 执行上面的命令可能会遇到如下问题：  
-（1）未安装virtualBox  
+问题1：提示未安装virtualBox  
 由于docker-machine使用与创建虚拟机，并在虚拟机上部署docker的工具，因此创建虚拟机需要安装虚拟机引擎。目前docker-machine支持多种虚拟机引擎（通过在create时输入的参数来配置），默认情况下选用virtualBox  
 解决办法：安装virtualBox  
 \`\`\`shell  
 sudo apt-get update  
 sudo apt-get install virtualbox
+
+问题2：提示需要手动设置主板开启CPU功能 Intel VT-x 或 AMD-V
+实验中遇到此问题是由于VMware虚拟机默认没有打开此项功能。打开此功能的办法：
+（1）关闭当前虚拟机
+（2）在虚拟机窗口最上方一行中，依次点击“虚拟机” -> “设置”，之后在弹出窗口的左侧选中“CPU”，在右侧的“虚拟化引擎”区域中勾选第二项“虚拟化 Intel VT-x/EPT或 AMD-V/RVI(V)”，如下图所示。
 
