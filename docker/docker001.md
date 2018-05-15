@@ -125,6 +125,7 @@ $ docker run hello-world
   sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) \
                -o /usr/local/bin/docker-compose
   ```
+注意，这里在实际操作时，由于实验环境的/usr/local/bin下存在旧版不支持HTTPS的curl，这里用sudo命令导致搜索可执行文件时未按照环境变量$PATH规定的顺序进行搜索，所以报错：
 
 * Apply executable permissions to the binary:
 
