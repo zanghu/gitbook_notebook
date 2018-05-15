@@ -11,13 +11,14 @@ docker分为社区版（CE）和企业版（EE），其中前者免费使用而�
 
 不管是CE版还是EE版，docker都只支持少数几种主流操作系统的主流版本，例如：Windows环境只支持Win10。
 
-docker（CE）目前支持的操作系统如下图：
-![](/assets/docker001_002.png)  
+docker（CE）目前支持的操作系统如下图：  
+![](/assets/docker001_002.png)
 
-
-STEP 0: 安装前检查  
+**STEP 0: 安装前检查**  
 docker一般只支持操作系统的最新几个主流版本，具体到Ubuntu，目前支持的包括：  
 ![](/assets/docker001_003.png)
+
+除了操作系统外，还有一些其他要求，但一般的Ubuntu都能满足。
 
 ### 2.安装管理工具
 
