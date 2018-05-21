@@ -1,8 +1,8 @@
 ## docker-compose 学习
 
-参考资料1：https://docs.docker.com/compose/overview/
+参考资料1：[https://docs.docker.com/compose/overview/](https://docs.docker.com/compose/overview/)
 
-参考资料2
+参考资料2：https://docs.docker.com/compose/gettingstarted/
 
 ### 1.使用 dokcer-compose 的三个基本步骤：
 
