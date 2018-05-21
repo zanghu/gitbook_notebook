@@ -43,6 +43,7 @@
   * [linkerd: example之add-steps运行](linkerd/linkerd001.md)
 * [docker](docker/README.md)
   * [docker: 安装与配置](docker/docker001.md)
+  * [docker: 使用 docker-compose 学习](docker/docker002.md)
 * [Others](others/README.md)
   * [Others: 有价值的开源软件收集](others/others001.md)
   * [Others: 知识——交叉编译](others/others002.md)
