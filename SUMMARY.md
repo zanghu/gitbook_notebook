@@ -30,6 +30,7 @@
   * [Linux: ubuntu源列表结构分析](linux_tips/lin008.md)
   * [Linux: sudo运行程序搜索路径变化原因的研究](linux_tips/lin009.md)
   * [Linux: dd命令制作Ubuntu安装U盘](linux_tips/lin010.md)
+  * [Linux: 格式化和挂载SSD](linux_tips/lin011.md)
 * [Statistics](statistics/README.md)
   * [Static: N sigma 准则](statistics/static001.md)
 * [C Programming](c/README.md)
