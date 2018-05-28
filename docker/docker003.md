@@ -1,10 +1,12 @@
-## DockerFilede的概念和例子
+## DockerFilede的概念和简单例子
+
+### 1.定义
 
 Dockerfile是一个记录了构建目标镜像所必须的各种命令的文本文件。
 
 docker可以通过读取一个Dockerfile文件中的配置信息快速自动创建一个镜像。
 
-* 例子
+### 2.例子
 
 下面的例子来源于: [https://github.com/linkerd/linkerd-examples/tree/master/add-steps](https://github.com/linkerd/linkerd-examples/tree/master/add-steps)
 
@@ -31,22 +33,7 @@ COPY --from=0 /go/src/github.com/linkerd/linkerd-examples/add-steps/app /app
 ENTRYPOINT \["/app"\]
 ```
 
-### 2.Dockerfile常用命令
 
-参考资料：[https://www.cnblogs.com/dazhoushuoceshi/p/7066041.html](https://www.cnblogs.com/dazhoushuoceshi/p/7066041.html)
 
-FROM
 
-功能为指定基础镜像，并且必须是第一条指令。
-
-如果不以任何镜像为基础，那么写法为：FROM scratch。
-
-同时意味着接下来所写的指令将作为镜像的第一层开始
-
-语法：
-
-FROM &lt;image&gt;  
-FROM &lt;image&gt;:&lt;tag&gt;  
-FROM &lt;image&gt;:&lt;digest&gt;  
-三种写法，其中&lt;tag&gt;和&lt;digest&gt; 是可选项，如果没有选择，那么默认值为latest
 
