@@ -25,7 +25,7 @@
 Compose is a tool for defining and running multi-container Docker applications.
 ```
 
-### 1.使用 dokcer-compose 的三个基本步骤：
+### 2.使用 dokcer-compose 的三个基本步骤：
 
 * Step 1: 在 DockerFile 文件中定义你的应用的环境变量，这样应用即可在任何地方被复现.
 
