@@ -32,14 +32,16 @@ FROM scratch。
 
 * **说明**
 
-功能为运行指定的命令创建镜像
-
-* **语法**
+功能为运行指定的命令
 
 RUN命令有两种格式
+```
+# 第一种
+RUN &lt;command&gt;
 
-1. RUN &lt;command&gt;
-2. RUN \["executable", "param1", "param2"\]
+# 第二种
+RUN \["executable", "param1", "param2"\]
+```
    第一种后边直接跟shell命令
 
 在linux操作系统上默认 /bin/sh -c
