@@ -54,6 +54,6 @@ FROM
 语法：
 
 FROM &lt;image&gt;
-FROM <image>:<tag>
-FROM <image>:<digest> 
-三种写法，其中<tag>和<digest> 是可选项，如果没有选择，那么默认值为latest
+FROM &lt;image&gt;:&lt;tag>
+FROM &lt;image&gt;:&lt;digest&gt;
+三种写法，其中&lt;tag&gt;和&lt;digest&gt; 是可选项，如果没有选择，那么默认值为latest
