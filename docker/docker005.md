@@ -129,15 +129,19 @@ ARG buildno=1
 
 * **语法**
 
+```
 ONBUILD [INSTRUCTION]
+```
+
 这个命令只对当前镜像的子镜像生效。
 
 比如当前镜像为A，在Dockerfile种添加：
 
+```
 ONBUILD RUN ls -al
-这个 ls -al 命令不会在A镜像构建或启动的时候执行
+```
 
- 
+这个 ls -al 命令不会在A镜像构建或启动的时候执行
 
 此时有一个镜像B是基于A镜像构建的，那么这个ls -al 命令会在B镜像构建的时候被执行。
 
@@ -147,18 +151,26 @@ ONBUILD RUN ls -al
 
 ### STOPSIGNAL
 
-语法：
 
-STOPSIGNAL signal
+* **功能**
+
 STOPSIGNAL命令是的作用是当容器推出时给系统发送什么样的指令
 
- 
 
- 
+* **语法**
 
-HEALTHCHECK
+```
+STOPSIGNAL signal
+```
+
+### HEALTHCHECK
+
+* **功能**
 
  容器健康状况检查命令
+
+* **语法**
+
 
 语法有两种：
 
