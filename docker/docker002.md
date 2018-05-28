@@ -141,6 +141,8 @@ services:
         aliases:
          - baseline_app
 
+# 以下是10个使用linkerd调用的服务的容器
+
   linkerd_app1:
     build: .
 
