@@ -182,10 +182,11 @@ services:
     build: .
     command: -latency=2s -success-rate=0.4
 
+  # 配置linkerd服务的容器
   linkerd:
     image: buoyantio/linkerd:1.3.6
     ports:
-      - 4140:4140
+      - 4140:4140 # 容器端口与宿主机端口的映射关系
       - 9990:9990
     volumes:
       - ./linkerd.yml:/io/buoyant/linkerd/config.yml:ro
