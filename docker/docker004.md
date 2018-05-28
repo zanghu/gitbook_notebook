@@ -13,10 +13,11 @@
 同时意味着接下来所写的指令将作为镜像的第一层开始
 
 * **语法**
-
+```
 FROM &lt;image&gt;  
 FROM &lt;image&gt;:&lt;tag&gt;  
-FROM &lt;image&gt;:&lt;digest&gt;  
+FROM &lt;image&gt;:&lt;digest&gt;
+```  
 三种写法，其中&lt;tag&gt;和&lt;digest&gt; 是可选项，如果没有选择，那么默认值为latest
 
 ### RUN
