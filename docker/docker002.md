@@ -61,7 +61,7 @@ version: '2'
 # 
 services:
 
-# 首先是10个作为测试基线的服务
+# 配置10个不使用linkerd连接的服务的容器
   baseline_app1: # 容器名称
     build: . # 容器对应的镜像的Dokerfile文件所在的目录
     networks: # 网络配置
@@ -141,7 +141,7 @@ services:
         aliases:
          - baseline_app
 
-# 以下是10个使用linkerd调用的服务的容器
+# 配置10个使用linkerd调用的服务的容器
 
   linkerd_app1:
     build: .
