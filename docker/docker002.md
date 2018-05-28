@@ -188,12 +188,13 @@ services:
     ports: # 容器端口与宿主机端口的映射关系
       - 4140:4140 # linkerd对客户端暴露的服务访问端口
       - 9990:9990 # linkerd的控制面板访问端口
-    volumes:
+    volumes: # 数据卷, docker run -v
       - ./linkerd.yml:/io/buoyant/linkerd/config.yml:ro
       - ./disco:/disco
     command:
       - "/io/buoyant/linkerd/config.yml"
 
+  # 配置性能数据收集工具的服务容器
   prometheus:
     image: prom/prometheus:v1.4.1
     volumes:
@@ -204,6 +205,7 @@ services:
     ports:
       - 9090:9090
 
+  # 配置性能数据展示工具的服务容器
   grafana:
     build:
       context: .
