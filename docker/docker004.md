@@ -257,22 +257,23 @@ ENTRYPOINT command param1 param2
 
 相同点：
 
-只能写一条，如果写了多条，那么只有最后一条生效
+（1）只能写一条，如果写了多条，那么只有最后一条生效
 
-容器启动时才运行，运行时机相同
+（2）容器启动时才运行，运行时机相同
 
 不同点：
 
-ENTRYPOINT不会被运行的command覆盖，而CMD则会被覆盖
+（1）ENTRYPOINT不会被运行的command覆盖，而CMD则会被覆盖
 
-如果我们在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD指令不是一个完整的可执行命令，那么CMD指定的内容将会作为ENTRYPOINT的参数
+（2）如果我们在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD指令不是一个完整的可执行命令，那么CMD指定的内容将会作为ENTRYPOINT的参数
 
 如下：
-
+```
 FROM ubuntu  
-ENTRYPOINT \["top", "-b"\]  
-CMD \["-c"\]  
+ENTRYPOINT ["top", "-b"]  
+CMD ["-c"]  
 如果我们在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD是一个完整的指令，那么它们两个会互相覆盖，谁在最后谁生效
+```
 
 如下：
 
