@@ -213,13 +213,24 @@ ADD http://example.com/foobar
 
 ### COPY
 
+* **功能**
+
 看这个名字就知道，又是一个复制命令
+
+* **语法**
 
 语法如下：
 
-1. COPY &lt;src&gt;... &lt;dest&gt;
-2. COPY \["&lt;src&gt;",... "&lt;dest&gt;"\]
-   与ADD的区别
+```
+# 语法1
+COPY &lt;src&gt;... &lt;dest&gt;
+
+# 语法2
+COPY ["<src>",... "<dest>"]
+
+* **注意**
+
+与ADD的区别
 
 COPY的&lt;src&gt;只能是本地文件，其他用法一致
 
