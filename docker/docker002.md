@@ -43,6 +43,14 @@ docker-compose的本质，就是通过一个配置文件将多个咋的docker ru
 
 先来看一个例子，来源于：[https://github.com/linkerd/linkerd-examples/tree/master/add-steps](https://github.com/linkerd/linkerd-examples/tree/master/add-steps)，这里加入了一些注释
 
+例子的原始目的是要在服务集群各节点连接速度不稳定的情况下，在使用linkerd和不使用linkerd两种情况下，对比客户端调用服务的速度。
+
+例子中的设计
+
+* 集群A和B各包含10个独立服务器1-10，每个服务器上部署的都是相同的服务，人工设置节点延迟随着服务编号逐渐递增（0s-2s）；
+* 两个发压客户端，每个客户端启动50个并发，一个客户端访问服务集群A（不使用linkerd），一个客户端访问服务集群B（使用linkerd），对比平均访问速度；
+* 服务端程序使用Go语言编写，客户端使用bouyant公司开发的slow_cooker（也是Go语言编写），性能数据收集和展示使用 prometheus + grafana
+
 ```shell
 # docker-compose 语法版本，目前最高是3
 version: '2'
@@ -51,6 +59,7 @@ version: '2'
 # 
 services:
 
+# 首先是10个作为测试基线的服务
   baseline_app1:
     build: .
     networks:
