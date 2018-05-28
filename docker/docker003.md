@@ -14,7 +14,7 @@ docker可以通过读取一个Dockerfile文件中的配置信息快速自动创�
 
 ```shell
 FROM golang:1.10.1-alpine3.7 # 创建目标镜像所需的基础镜像
-WORKDIR /go/src/github.com/linkerd/linkerd-examples/add-steps/ # 基于该镜像的容器启动后的工作目录
+WORKDIR /go/src/github.com/linkerd/linkerd-examples/add-steps/ # 为后续的其他指令（RUN、CMD、ENTRYPOINT）配置工作目录
 RUN apk update && apk add git
 RUN go get -d -v github.com/prometheus/client\_golang/prometheus
 COPY server.go .
