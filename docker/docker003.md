@@ -2,11 +2,19 @@
 
 ### 1.关于Dockerfile
 
-* Step 1: 在 DockerFile 文件中定义你的应用的环境变量，这样应用即可在任何地方被复现.
+* 定义
 
-* Step 2: 在 docker-compose.yml 文件中定义构成你的应用的服务，这样它们就可以在一个孤立环境上一起运行.
+Dockerfile是一个记录了构建目标镜像所必须的各种命令的文本文件。
 
-* Step 3: 执行 docker-compose up 命令，之后 Compose 就会启动和运行你的整个应用.
+docker可以通过读取一个Dockerfile文件中的配置信息快速自动创建一个镜像。
+
+* 例子
+
+
+
+
+
+
 
 
 
