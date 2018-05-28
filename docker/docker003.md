@@ -1,4 +1,4 @@
-## docker-compose 学习
+## docker的一般概念与注意事项
 
 参考资料1：[https://docs.docker.com/compose/overview/](https://docs.docker.com/compose/overview/)
 
@@ -11,8 +11,6 @@
 * Step 2: 在 docker-compose.yml 文件中定义构成你的应用的服务，这样它们就可以在一个孤立环境上一起运行.
 
 * Step 3: 执行 docker-compose up 命令，之后 Compose 就会启动和运行你的整个应用.
-
-
 
 
 
