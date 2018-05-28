@@ -1,5 +1,4 @@
 # Summary
-* [Introduction](README.md)
 * [Python tips](pytorch_tips/README.md)
   * [Python：关于函数定义形参表的形参前面的星号和双星号](python_tips/python001.md)
   * [Python：使用functools.update\_wrapper保持被装饰器修饰的函数的自省/反射属性](python_tips/python002.md)
