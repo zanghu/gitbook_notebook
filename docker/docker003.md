@@ -39,52 +39,34 @@ ENTRYPOINT \["/app"\]
 
 * FROM
 功能为指定基础镜像，并且必须是第一条指令。
-
 如果不以任何镜像为基础，那么写法为：FROM scratch。
-
 同时意味着接下来所写的指令将作为镜像的第一层开始
 
- 
-
 语法：
-
 FROM <image>
 FROM <image>:<tag>
 FROM <image>:<digest> 
 三种写法，其中<tag>和<digest> 是可选项，如果没有选择，那么默认值为latest
 
- 
-
- 
-
 RUN
-
- 功能为运行指定的命令
-
+功能为运行指定的命令
 RUN命令有两种格式
-
 1. RUN <command>
 2. RUN ["executable", "param1", "param2"]
 第一种后边直接跟shell命令
 
 在linux操作系统上默认 /bin/sh -c
-
 在windows操作系统上默认 cmd /S /C
 
 第二种是类似于函数调用。
-
 可将executable理解成为可执行文件，后面就是两个参数。
 
- 
-
 两种写法比对：
-
 RUN /bin/bash -c 'source $HOME/.bashrc; echo $HOME
 RUN ["/bin/bash", "-c", "echo hello"]
 注意：多行命令不要写多个RUN，原因是Dockerfile中每一个指令都会建立一层.
 
- 多少个RUN就构建了多少层镜像，会造成镜像的臃肿、多层，不仅仅增加了构件部署的时间，还容易出错。
-
+多少个RUN就构建了多少层镜像，会造成镜像的臃肿、多层，不仅仅增加了构件部署的时间，还容易出错。
 RUN书写时的换行符是\
 
  
