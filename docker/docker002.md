@@ -66,7 +66,7 @@ services:
     build: . # 容器对应的镜像的Dokerfile文件所在的目录
     networks: # 网络配置
       default: # 使用默认网络
-        aliases:
+        aliases: # 为当前网络起一个别名
          - baseline_app
 
   baseline_app2:
