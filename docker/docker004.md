@@ -135,15 +135,22 @@ LABEL会继承基础镜像种的LABEL，如遇到key相同，则值覆盖
 
 ### MAINTAINER
 
+* **功能**
+
 指定作者
 
+* **功能**
 语法：
 
-MAINTAINER &lt;name&gt;
+```
+MAINTAINER <name>
+```
 
 ### EXPOSE
 
-功能为暴漏容器运行时的监听端口给外部
+* **功能**
+
+暴露容器运行时的监听端口给外部
 
 但是EXPOSE并不会使容器访问主机的端口
 
@@ -151,13 +158,20 @@ MAINTAINER &lt;name&gt;
 
 ### ENV
 
-功能为设置环境变量
+* **功能**
+设置环境变量
+
+* **语法**
 
 语法有两种
 
-1. ENV &lt;key&gt; &lt;value&gt;
-2. ENV &lt;key&gt;=&lt;value&gt; ...
-   两者的区别就是第一种是一次设置一个，第二种是一次设置多个
+```
+# 语法1：一次设置一个
+ENV <key> <value>
+
+# 语法2：一次设置多个
+ENV <key>=<value> ...
+```
 
 ### ADD
 
