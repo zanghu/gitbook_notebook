@@ -237,12 +237,19 @@ COPY的&lt;src&gt;只能是本地文件，其他用法一致
 
 ### ENTRYPOINT
 
+* **功能**
+
 功能是启动时的默认命令
 
-语法如下：
+* **语法**
 
-1. ENTRYPOINT \["executable", "param1", "param2"\]
-2. ENTRYPOINT command param1 param2
+```
+# 语法1
+ENTRYPOINT \["executable", "param1", "param2"\]
+
+# 语法2
+ENTRYPOINT command param1 param2
+```
 
 如果从上到下看到这里的话，那么你应该对这两种语法很熟悉啦。
 
