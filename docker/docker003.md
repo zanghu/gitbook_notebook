@@ -35,11 +35,11 @@ COPY --from=0 /go/src/github.com/linkerd/linkerd-examples/add-steps/app /app
 ENTRYPOINT \["/app"\]
 ```
 
-RUN 与 CMD和ENTRYPOINT 的区别
+#### RUN 与 CMD和ENTRYPOINT 的区别
 RUN后面的内容是用来创建镜像时执行的命令。
 CMD和ENTRYPOINT后面的内容是基于镜像的容器在启动后自动执行的命令。
 
-CMD 与ENTRYPOINT的区别
+#### CMD 与ENTRYPOINT的区别
 1. 相同点：
 只能写一条，如果写了多条，那么只有最后一条生效
 容器启动时才运行，运行时机相同
