@@ -4,7 +4,7 @@
 
 ### FROM
 
-* **说明**
+* **功能**
 
 功能为指定基础镜像，并且必须是第一条指令。
 
@@ -30,7 +30,7 @@ FROM scratch。
 
 ### RUN
 
-* **说明**
+* **功能**
 
 功能为运行指定的命令
 
@@ -56,24 +56,32 @@ RUN书写时的换行符是\\
 
 ### CMD
 
-功能为容器启动时要运行的命令
+* **功能**
+
+基于当前Dockerfile创建的镜像的容器启动时要运行的命令
+
+* **语法**
 
 语法有三种写法
+```
+# 语法1
+CMD \["executable","param1","param2"\]
 
-1. CMD \["executable","param1","param2"\]
-2. CMD \["param1","param2"\]
-3. CMD command param1 param2
-   第三种比较好理解了，就时shell这种执行方式和写法
+# 语法2
+CMD \["param1","param2"\]
 
-第一种和第二种其实都是可执行文件加上参数的形式
+# 语法3
+CMD command param1 param2
+```
 
 举例说明两种写法：
-
+```
 CMD \[ "sh", "-c", "echo $HOME"  
-CMD \[ "echo", "$HOME" \]  
+CMD \[ "echo", "$HOME" \]
+```
 补充细节：这里边包括参数的一定要用双引号，就是",不能是单引号。千万不能写成单引号。
 
-原因是参数传递后，docker解析的是一个JSON array
+* **注意**
 
 RUN & CMD
 
@@ -85,27 +93,38 @@ CMD是容器启动时执行的命令，在构件时并不运行，构件时紧�
 
 ### LABEL
 
-功能是为镜像指定标签
+* **功能**
+
+为镜像指定标签
+
+* **语法**
 
 语法：
 
-LABEL &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; ...  
+```
+LABEL <key>=<value> <key>=<value> <key>=<value> ...  
+```
+
  一个Dockerfile种可以有多个LABEL，如下：
 
+```
 LABEL "com.example.vendor"="ACME Incorporated"  
 LABEL com.example.label-with-value="foo"  
 LABEL version="1.0"  
 LABEL description="This text illustrates \  
 that label-values can span multiple lines."  
- 但是并不建议这样写，最好就写成一行，如太长需要换行的话则使用\符号
+```
 
-如下：
-
+但是并不建议这样写，最好就写成一行，如太长需要换行的话则使用\符号，如下：
+```
 LABEL multi.label1="value1" \  
 multi.label2="value2" \  
 other="value3"
+```
 
-说明：LABEL会继承基础镜像种的LABEL，如遇到key相同，则值覆盖
+* **说明**
+
+LABEL会继承基础镜像种的LABEL，如遇到key相同，则值覆盖
 
 ### MAINTAINER
 
