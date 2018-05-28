@@ -23,3 +23,10 @@ COPY --from=0 /go/src/github.com/linkerd/linkerd-examples/add-steps/app /app
 ENTRYPOINT \["/app"\]
 ```
 
+```shell
+# 创建准备用于挂载ISO文件 R2017b_glnxa64.iso 的挂载点目录
+$ mkdir -p /home/username/tmp
+
+# 挂载
+$ sudo mount -t auto -o loop /path/to/your/R2018a_glnxa64_dvd1.iso /home/username/tmp
+```
