@@ -105,8 +105,6 @@ CMD是容器启动时执行的命令，在构件时并不运行，构件时紧�
 
 * **语法**
 
-语法：
-
 ```
 LABEL <key>=<value> <key>=<value> <key>=<value> ...
 ```
@@ -183,8 +181,6 @@ ENV <key>=<value> ...
 
 * **语法**
 
-语法如下：
-
 ```
 # 语法1
 ADD <src>... <dest>;
@@ -219,8 +215,6 @@ ADD http://example.com/foobar
 
 * **语法**
 
-语法如下：
-
 ```
 # 语法1
 COPY &lt;src&gt;... &lt;dest&gt;
@@ -253,7 +247,7 @@ ENTRYPOINT command param1 param2
 
 * **注意**
 
-与CMD比较说明（这俩命令太像了，而且还可以配合使用）：
+1.与CMD比较说明（这俩命令太像了，而且还可以配合使用）：
 
 相同点：
 
@@ -268,6 +262,7 @@ ENTRYPOINT command param1 param2
 （2）如果在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD指令不是一个完整的可执行命令，那么CMD指定的内容将会作为ENTRYPOINT的参数
 
 如下：
+
 ```
 # 如果在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD是一个完整的指令，那么它们两个会互相覆盖，谁在最后谁生效
 FROM ubuntu  
@@ -275,8 +270,8 @@ ENTRYPOINT ["top", "-b"]
 CMD ["-c"]
 ```
 
-
 如下：
+
 ```
 # 将执行ls -al ,top -b不会执行。
 FROM ubuntu  
@@ -284,4 +279,9 @@ ENTRYPOINT \["top", "-b"\]
 CMD ls -al
 ```
 
+2.与RUN比较
+
+（1）RUN是Dockerfile创建镜像时执行的命令；
+
+（2）CMD和ENTRYPOINT都是基于Dockerfile创建的镜像的容器启动后执行的命令。
 
