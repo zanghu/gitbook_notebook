@@ -10,6 +10,8 @@ docker可以通过读取一个Dockerfile文件中的配置信息快速自动创�
 
 下面的例子来源于: [https://github.com/linkerd/linkerd-examples/tree/master/add-steps](https://github.com/linkerd/linkerd-examples/tree/master/add-steps)
 
+本文中使用时已经加上了注释。
+
 ```shell
 # 创建目标镜像所需的基础镜像，并且必须是第一条指令。
 FROM golang:1.10.1-alpine3.7
@@ -32,8 +34,6 @@ COPY --from=0 /go/src/github.com/linkerd/linkerd-examples/add-steps/app /app
 # 基于镜像启动容器后首先执行的命令，注意与RUN和CMD区分
 ENTRYPOINT \["/app"\]
 ```
-
-
 
 
 
