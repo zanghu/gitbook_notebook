@@ -33,5 +33,7 @@ Compose is a tool for defining and running multi-container Docker applications.
 
 * Step 3: 执行 docker-compose up 命令，之后 docker-compose 就会启动和运行你的整个应用.
 
+### 3.编写配置文件 docker-compose.yml
+
 
 
