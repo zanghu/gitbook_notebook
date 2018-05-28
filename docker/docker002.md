@@ -71,7 +71,7 @@ services:
 
   baseline_app2:
     build: .
-    command: -latency=10ms # 为镜像Dockerfile的CMD命令补充参数
+    command: -latency=10ms # 覆盖镜像的Dockerfile的CMD命令
     networks:
       default:
         aliases:
