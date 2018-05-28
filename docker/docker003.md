@@ -43,4 +43,8 @@ FROM
 如果不以任何镜像为基础，那么写法为：FROM scratch。
 同时意味着接下来所写的指令将作为镜像的第一层开始
 
-<
+语法：
+FROM \<image\>
+FROM \<image\>:\<tag\>
+FROM \<image\>:\<digest\> 
+三种写法，其中\<tag\>和\<digest\> 是可选项，如果没有选择，那么默认值为latest
