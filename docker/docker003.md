@@ -45,6 +45,6 @@ FROM
 
 语法：
 FROM \<image\>
-FROM <image>:<tag>
-FROM <image>:<digest> 
+FROM \<image\>:\<tag\>
+FROM \<image>:<digest> 
 三种写法，其中<tag>和<digest> 是可选项，如果没有选择，那么默认值为latest
