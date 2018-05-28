@@ -53,7 +53,7 @@ docker-compose的本质，就是通过一个配置文件将多个咋的docker ru
 
 **Dockerfile文件内容**
 
-```shell
+```
 # docker-compose 语法版本，目前最高是3
 version: '2'
 
@@ -62,8 +62,8 @@ version: '2'
 services:
 
 # 首先是10个作为测试基线的服务
-  baseline_app1:
-    build: .
+  baseline_app1: # 容器名称
+    build: . # 
     networks:
       default:
         aliases:
