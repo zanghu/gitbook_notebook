@@ -23,7 +23,7 @@ RUN
 
 RUN命令有两种格式
 
-1. RUN <command>
+1. RUN &lt;command&gt;
 2. RUN ["executable", "param1", "param2"]
 第一种后边直接跟shell命令
 
@@ -98,7 +98,7 @@ LABEL
 
 语法：
 
-LABEL <key>=<value> <key>=<value> <key>=<value> ...
+LABEL &lt;key>=<value&gt; &lt;key>=<value&gt; &lt;key>=<value&gt; ...
  一个Dockerfile种可以有多个LABEL，如下：
 
 LABEL "com.example.vendor"="ACME Incorporated"
@@ -127,7 +127,7 @@ MAINTAINER
 
 语法：
 
-MAINTAINER <name>
+MAINTAINER &lt;name&gt;
  
 
  
@@ -150,8 +150,8 @@ ENV
 
 语法有两种
 
-1. ENV <key> <value>
-2. ENV <key>=<value> ...
+1. ENV &lt;key&gt; &lt;value&gt;
+2. ENV &lt;key>=<value&gt; ...
 两者的区别就是第一种是一次设置一个，第二种是一次设置多个
 
  
@@ -168,17 +168,17 @@ ADD
 
 语法如下：
 
-1. ADD <src>... <dest>
+1. ADD &lt;src>... &lt;dest&gt;
 2. ADD ["<src>",... "<dest>"]
  
 
-<dest>路径的填写可以是容器内的绝对路径，也可以是相对于工作目录的相对路径
+&lt;dest&gt;路径的填写可以是容器内的绝对路径，也可以是相对于工作目录的相对路径
 
-<src>可以是一个本地文件或者是一个本地压缩文件，还可以是一个url
+&lt;src&gt;可以是一个本地文件或者是一个本地压缩文件，还可以是一个url
 
  
 
-如果把<src>写成一个url，那么ADD就类似于wget命令
+如果把&lt;src&gt;写成一个url，那么ADD就类似于wget命令
 
  
 
@@ -187,7 +187,7 @@ ADD
 ADD test relativeDir/ 
 ADD test /relativeDir
 ADD http://example.com/foobar /
-尽量不要把<scr>写成一个文件夹，如果<src>是一个文件夹了，复制整个目录的内容,包括文件系统元数据
+尽量不要把&lt;scr&gt;写成一个文件夹，如果&lt;src&gt;是一个文件夹了，复制整个目录的内容,包括文件系统元数据
 
  
 
@@ -197,11 +197,11 @@ COPY
 
 语法如下：
 
-1. COPY <src>... <dest>
+1. COPY &lt;src>... &lt;dest&gt;
 2. COPY ["<src>",... "<dest>"]
 与ADD的区别
 
-COPY的<src>只能是本地文件，其他用法一致
+COPY的&lt;src&gt;只能是本地文件，其他用法一致
 
  
 
