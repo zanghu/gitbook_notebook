@@ -269,16 +269,19 @@ ENTRYPOINT command param1 param2
 
 如下：
 ```
+# 如果我们在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD是一个完整的指令，那么它们两个会互相覆盖，谁在最后谁生效
 FROM ubuntu  
 ENTRYPOINT ["top", "-b"]  
-CMD ["-c"]  
-如果我们在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD是一个完整的指令，那么它们两个会互相覆盖，谁在最后谁生效
+CMD ["-c"]
 ```
 
-如下：
 
+如下：
+```
+# 将执行ls -al ,top -b不会执行。
 FROM ubuntu  
 ENTRYPOINT \["top", "-b"\]  
-CMD ls -al  
-那么将执行ls -al ,top -b不会执行。
+CMD ls -al
+```
+
 
