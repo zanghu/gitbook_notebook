@@ -186,7 +186,10 @@ ENV <key>=<value> ...
 语法如下：
 
 ```
-1. ADD <src>... <dest>;
+# 语法1
+ADD <src>... <dest>;
+
+# 语法2
 2. ADD ["<src>",... "<dest>"]
 ```
 
