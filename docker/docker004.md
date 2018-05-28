@@ -8,6 +8,18 @@
 
 功能为指定基础镜像，并且必须是第一条指令。
 
+* **语法**
+
+```
+FROM <image>  
+FROM <image>:<tag>  
+FROM <image>:<digest>
+```
+
+三种写法，其中&lt;tag&gt;和&lt;digest&gt; 是可选项，如果没有选择，那么默认值为latest
+
+* **注意**
+
 如果不以任何镜像为基础，那么写法为：
 
 ```
@@ -16,17 +28,9 @@ FROM scratch。
 
 同时意味着接下来所写的指令将作为镜像的第一层开始
 
-* **语法**
-
-```
-FROM <image>  
-FROM <image>:<tag>  
-FROM <image>:<digest>
-```  
-
-三种写法，其中&lt;tag&gt;和&lt;digest&gt; 是可选项，如果没有选择，那么默认值为latest
-
 ### RUN
+
+* **说明**
 
 功能为运行指定的命令
 
