@@ -229,7 +229,7 @@ ADD
 
 ADD test relativeDir/ 
 ADD test /relativeDir
-ADD http://example.com/foobar /
+ADD http://example.com/foobar/
 尽量不要把<scr>写成一个文件夹，如果<src>是一个文件夹了，复制整个目录的内容,包括文件系统元数据
 
  
