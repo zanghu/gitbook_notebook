@@ -71,7 +71,7 @@ services:
 
   baseline_app2:
     build: .
-    command: -latency=10ms
+    command: -latency=10ms # 容器启动后之心命令的参数
     networks:
       default:
         aliases:
