@@ -227,6 +227,7 @@ COPY &lt;src&gt;... &lt;dest&gt;
 
 # 语法2
 COPY ["<src>",... "<dest>"]
+```
 
 * **注意**
 
