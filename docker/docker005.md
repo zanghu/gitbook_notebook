@@ -171,18 +171,16 @@ STOPSIGNAL signal
 
 * **语法**
 
+```
+# 语法1：在容器内部运行一个命令来检查容器的健康状况
+HEALTHCHECK [OPTIONS] CMD command
 
-语法有两种：
-
-1. HEALTHCHECK [OPTIONS] CMD command
-2. HEALTHCHECK NONE
-第一个的功能是在容器内部运行一个命令来检查容器的健康状况
-
-第二个的功能是在基础镜像中取消健康检查命令
-
- 
+# 语法2：在基础镜像中取消健康检查命令
+HEALTHCHECK NONE
+``` 
 
 [OPTIONS]的选项支持以下三中选项：
+```
 
     --interval=DURATION 两次检查默认的时间间隔为30秒
 
@@ -190,7 +188,7 @@ STOPSIGNAL signal
 
     --retries=N 当连续失败指定次数后，则容器被认为是不健康的，状态为unhealthy，默认次数是3
 
-    
+```
 
 注意：
 
