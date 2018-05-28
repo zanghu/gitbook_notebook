@@ -63,6 +63,7 @@ version: '2'
 services:
 
 # 配置10个不使用linkerd连接的服务的容器
+# 前8个服务只配置延迟，最后两个还有一定概率失败（返回HTTP错误状态码）
   baseline_app1: # 容器名称
     build: . # 容器对应的镜像的Dokerfile文件所在的目录
     networks: # 网络配置
@@ -143,6 +144,8 @@ services:
          - baseline_app
 
 # 配置10个使用linkerd调用的服务的容器
+# 前8个服务只配置延迟，最后两个还有一定概率失败（返回HTTP错误状态码）
+
 
   linkerd_app1:
     build: .
