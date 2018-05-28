@@ -35,6 +35,7 @@ FROM scratch。
 功能为运行指定的命令
 
 RUN命令有两种格式
+
 ```
 # 第一种，后边直接跟shell命令。在linux操作系统上默认 /bin/sh -c，在windows操作系统上默认 cmd /S /C
 RUN <command> 
@@ -44,15 +45,17 @@ RUN \["executable", "param1", "param2"\]
 ```
 
 两种写法比对：
+
 ```
 RUN /bin/bash -c 'source $HOME/.bashrc; echo $HOME  
-RUN \["/bin/bash", "-c", "echo hello"\]  
+RUN \["/bin/bash", "-c", "echo hello"\]
 ```
+
 注意：多行命令不要写多个RUN，原因是Dockerfile中每一个指令都会建立一层.
 
 多少个RUN就构建了多少层镜像，会造成镜像的臃肿、多层，不仅仅增加了构件部署的时间，还容易出错。
 
-RUN书写时的换行符是\\
+RUN书写时的换行符是\
 
 ### CMD
 
@@ -63,22 +66,25 @@ RUN书写时的换行符是\\
 * **语法**
 
 语法有三种写法
+
 ```
 # 语法1
-CMD \["executable","param1","param2"\]
+CMD ["executable","param1","param2"]
 
 # 语法2
-CMD \["param1","param2"\]
+CMD ["param1","param2"]
 
 # 语法3
 CMD command param1 param2
 ```
 
 举例说明两种写法：
+
 ```
-CMD \[ "sh", "-c", "echo $HOME"  
-CMD \[ "echo", "$HOME" \]
+CMD [ "sh", "-c", "echo $HOME"  
+CMD [ "echo", "$HOME" ]
 ```
+
 补充细节：这里边包括参数的一定要用双引号，就是",不能是单引号。千万不能写成单引号。
 
 * **注意**
@@ -102,20 +108,21 @@ CMD是容器启动时执行的命令，在构件时并不运行，构件时紧�
 语法：
 
 ```
-LABEL <key>=<value> <key>=<value> <key>=<value> ...  
+LABEL <key>=<value> <key>=<value> <key>=<value> ...
 ```
 
- 一个Dockerfile种可以有多个LABEL，如下：
+一个Dockerfile种可以有多个LABEL，如下：
 
 ```
 LABEL "com.example.vendor"="ACME Incorporated"  
 LABEL com.example.label-with-value="foo"  
 LABEL version="1.0"  
 LABEL description="This text illustrates \  
-that label-values can span multiple lines."  
+that label-values can span multiple lines."
 ```
 
 但是并不建议这样写，最好就写成一行，如太长需要换行的话则使用\符号，如下：
+
 ```
 LABEL multi.label1="value1" \  
 multi.label2="value2" \  
