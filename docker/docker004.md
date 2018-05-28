@@ -14,9 +14,9 @@
 
 * **语法**
 ```
-FROM &lt;image&gt;  
-FROM &lt;image&gt;:&lt;tag&gt;  
-FROM &lt;image&gt;:&lt;digest&gt;
+FROM <image>  
+FROM <image>:<tag>  
+FROM <image>:<digest>
 ```  
 三种写法，其中&lt;tag&gt;和&lt;digest&gt; 是可选项，如果没有选择，那么默认值为latest
 
