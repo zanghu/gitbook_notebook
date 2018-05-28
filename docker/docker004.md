@@ -129,7 +129,7 @@ multi.label2="value2" \
 other="value3"
 ```
 
-* 注意
+* **注意**
 
 LABEL会继承基础镜像种的LABEL，如遇到key相同，则值覆盖
 
