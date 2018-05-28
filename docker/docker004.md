@@ -60,7 +60,7 @@ RUN书写时的换行符是\
 
 举例说明两种写法：
 
-CMD \[ "sh", "-c", "echo $HOME"   
+CMD \[ "sh", "-c", "echo $HOME"  
 CMD \[ "echo", "$HOME" \]  
 补充细节：这里边包括参数的一定要用双引号，就是",不能是单引号。千万不能写成单引号。
 
@@ -143,12 +143,12 @@ MAINTAINER &lt;name&gt;
 
 如以下写法都是可以的：
 
-ADD test relativeDir/   
+ADD test relativeDir/  
 ADD test /relativeDir  
 ADD [http://example.com/foobar](http://example.com/foobar)/  
 尽量不要把&lt;scr&gt;写成一个文件夹，如果&lt;src&gt;是一个文件夹了，复制整个目录的内容,包括文件系统元数据
 
-COPY
+### COPY
 
 看这个名字就知道，又是一个复制命令
 
@@ -160,7 +160,7 @@ COPY
 
 COPY的&lt;src&gt;只能是本地文件，其他用法一致
 
-ENTRYPOINT
+### ENTRYPOINT
 
 功能是启动时的默认命令
 
@@ -177,17 +177,17 @@ ENTRYPOINT
 
 与CMD比较说明（这俩命令太像了，而且还可以配合使用）：
 
-1. 相同点：
+相同点：
 
 只能写一条，如果写了多条，那么只有最后一条生效
 
 容器启动时才运行，运行时机相同
 
-1. 不同点：
+不同点：
 
-   ENTRYPOINT不会被运行的command覆盖，而CMD则会被覆盖
+ENTRYPOINT不会被运行的command覆盖，而CMD则会被覆盖
 
-   如果我们在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD指令不是一个完整的可执行命令，那么CMD指定的内容将会作为ENTRYPOINT的参数
+如果我们在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD指令不是一个完整的可执行命令，那么CMD指定的内容将会作为ENTRYPOINT的参数
 
 如下：
 
