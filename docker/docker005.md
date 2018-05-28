@@ -204,17 +204,14 @@ CMD后边的命令的返回值决定了本次健康检查是否成功，具体�
 
 2: reserved - 保留值
 ```
- 
 
 例子：
 
+```
+# 健康检查命令是：curl -f http://localhost/ || exit 1
+# 两次检查的间隔时间是5秒
+# 命令超时时间为3秒
 HEALTHCHECK --interval=5m --timeout=3s \
 CMD curl -f http://localhost/ || exit 1
-  
-
-健康检查命令是：curl -f http://localhost/ || exit 1
-
-两次检查的间隔时间是5秒
-
-命令超时时间为3秒
+```  
 
