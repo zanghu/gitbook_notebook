@@ -37,5 +37,5 @@ ENTRYPOINT \["/app"\]
 
 ### 2.Dockerfile常用命令
 
-参考资料：
+参考资料：https://www.cnblogs.com/dazhoushuoceshi/p/7066041.html
 
