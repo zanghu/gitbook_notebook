@@ -216,12 +216,14 @@ services:
       - GF_AUTH_ANONYMOUS_ENABLED=true
       - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
 
+  # 配置不使用linkerd的发压客户端的容器
   baseline_slow_cooker:
     image: buoyantio/slow_cooker:1.1.0-golang1.8rc2
     entrypoint: /bin/sh
     command: >
       -c 'sleep 15 && slow_cooker -noreuse -metric-addr :8505 -qps 10 -concurrency 50 -interval 5s -totalRequests 10000000 http://baseline_app:8501'
 
+  # 配置使用linkerd的发压客户端的容器
   linkerd_slow_cooker:
     image: buoyantio/slow_cooker:1.1.0-golang1.8rc2
     entrypoint: /bin/sh
