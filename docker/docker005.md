@@ -97,28 +97,31 @@ ARG命令定义了一个变量，在docker build创建镜像的时候，使用 -
 
 提示如下：
 
+```
 [Warning] One or more build-args [foo] were not consumed.
-    
+``` 
 
 我们可以定义一个或多个参数，如下：
 
+```
 FROM busybox
 ARG user1
 ARG buildno
 ...
+```
+
 也可以给参数一个默认值：
 
+```
 FROM busybox
 ARG user1=someuser
 ARG buildno=1
 ...
+```
+
 如果我们给了ARG定义的参数默认值，那么当build镜像时没有指定参数值，将会使用这个默认值
 
- 
-
- 
-
-ONBUILD
+### ONBUILD
 
 语法：
 
