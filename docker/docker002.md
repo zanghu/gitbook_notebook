@@ -63,9 +63,9 @@ services:
 
 # 首先是10个作为测试基线的服务
   baseline_app1: # 容器名称
-    build: . # 
-    networks:
-      default:
+    build: . # 容器对应的镜像的Dokerfile文件所在的目录
+    networks: # 网络配置
+      default: # 使用默认网络
         aliases:
          - baseline_app
 
