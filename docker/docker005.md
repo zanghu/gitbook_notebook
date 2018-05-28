@@ -2,86 +2,88 @@
 
 参考资料：[https://www.cnblogs.com/dazhoushuoceshi/p/7066041.html](https://www.cnblogs.com/dazhoushuoceshi/p/7066041.html)
 
-VOLUME
+### VOLUME
 
- 
+* **功能**
 
-可实现挂载功能，可以将内地文件夹或者其他容器种得文件夹挂在到这个容器种
+实现挂载功能，可以将内地文件夹或者其他容器种得文件夹挂在到这个容器种
 
- 
+类似于命令 docker run -v
 
-语法为：
+* **语法**
 
+```
 VOLUME ["/data"]
-    
+``` 
 
-说明：
+\["/data"\]可以是一个JsonArray ，也可以是多个值。所以如下几种写法都是正确的
 
-   ["/data"]可以是一个JsonArray ，也可以是多个值。所以如下几种写法都是正确的
-
+```
 VOLUME ["/var/log/"]
 VOLUME /var/log
 VOLUME /var/log /var/db
+```
+
 一般的使用场景为需要持久化存储数据时
 
 容器使用的是AUFS，这种文件系统不能持久化数据，当容器关闭后，所有的更改都会丢失。
 
 所以当数据需要持久化时用这个命令。
 
- 
+### USER
 
- 
+* **功能**
 
-USER
+设置启动容器的用户，可以是用户名或UID
 
- 
+* **语法**
 
-设置启动容器的用户，可以是用户名或UID，所以，只有下面的两种写法是正确的
+下面的两种写法是正确的
 
+```
 USER daemo
 USER UID
+```
+
+* **注意**
+
 注意：如果设置了容器以daemon用户去运行，那么RUN, CMD 和 ENTRYPOINT 都会以这个用户去运行
 
- 
+### WORKDIR
 
- 
+* **功能**
+设置工作目录
 
-WORKDIR
+* **语法**
 
- 
-
-语法：
-
+```
 WORKDIR /path/to/workdir
- 
+```
 
-设置工作目录，对RUN,CMD,ENTRYPOINT,COPY,ADD生效。如果不存在则会创建，也可以设置多次。
+对RUN,CMD,ENTRYPOINT,COPY,ADD生效。如果不存在则会创建，也可以设置多次。如：
 
- 
-
-如：
-
+```
 WORKDIR /a
 WORKDIR b
 WORKDIR c
 RUN pwd
-pwd执行的结果是/a/b/c
+# pwd执行的结果是/a/b/c
+```
 
- 
+WORKDIR也可以解析环境变量，如：
 
-WORKDIR也可以解析环境变量
-
-如：
-
+```
 ENV DIRPATH /path
 WORKDIR $DIRPATH/$DIRNAME
 RUN pwd
-pwd的执行结果是/path/$DIRNAME
-
+# pwd的执行结果是/path/$DIRNAME
+```
  
+### ARG
 
-ARG
+* **功能**
 
+* **语法**
 语法：
 
 ARG <name>[=<default value>]
