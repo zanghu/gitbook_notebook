@@ -123,7 +123,11 @@ ARG buildno=1
 
 ### ONBUILD
 
-语法：
+
+* **功能**
+
+
+* **语法**
 
 ONBUILD [INSTRUCTION]
 这个命令只对当前镜像的子镜像生效。
@@ -141,7 +145,7 @@ ONBUILD RUN ls -al
 
  
 
-STOPSIGNAL
+### STOPSIGNAL
 
 语法：
 
