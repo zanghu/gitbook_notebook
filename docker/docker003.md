@@ -19,6 +19,7 @@ FROM golang:1.10.1-alpine3.7
 # 为后续的其他指令（RUN、CMD、ENTRYPOINT）指明工作目录
 WORKDIR /go/src/github.com/linkerd/linkerd-examples/add-steps/
 
+# 安装一些必要的软件
 RUN apk update && apk add git
 RUN go get -d -v github.com/prometheus/client\_golang/prometheus
 
