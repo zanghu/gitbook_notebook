@@ -41,7 +41,7 @@ RUN命令有两种格式
 RUN <command> 
 
 # 第二种，类似于函数调用。可将executable理解成为可执行文件，后面就是两个参数。
-RUN \["executable", "param1", "param2"\]
+RUN ["executable", "param1", "param2"]
 ```
 
 两种写法比对：
@@ -190,7 +190,7 @@ ENV <key>=<value> ...
 ADD <src>... <dest>;
 
 # 语法2
-2. ADD ["<src>",... "<dest>"]
+ADD ["<src>",... "<dest>"]
 ```
 
 &lt;dest&gt;路径的填写可以是容器内的绝对路径，也可以是相对于工作目录的相对路径
