@@ -47,6 +47,7 @@
   * [Others: 有价值的开源软件收集](others/others001.md)
   * [Others: 知识——交叉编译](others/others002.md)
   * [Others: 知识——编译器自举](others/others003.md)
+  * [Others: 如何在markdown语法中显示尖括号](others/others004.md)
 * [docker](docker/README.md)
   * [docker: 安装与配置](docker/docker001.md)
   * [docker: 使用 docker-compose](docker/docker002.md)
