@@ -43,17 +43,16 @@ RUN <command>
 RUN \["executable", "param1", "param2"\]
 ```
 
-
-
 两种写法比对：
-
+```
 RUN /bin/bash -c 'source $HOME/.bashrc; echo $HOME  
 RUN \["/bin/bash", "-c", "echo hello"\]  
+```
 注意：多行命令不要写多个RUN，原因是Dockerfile中每一个指令都会建立一层.
 
 多少个RUN就构建了多少层镜像，会造成镜像的臃肿、多层，不仅仅增加了构件部署的时间，还容易出错。
 
-RUN书写时的换行符是\
+RUN书写时的换行符是\\
 
 ### CMD
 
