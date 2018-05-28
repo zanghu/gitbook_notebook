@@ -185,9 +185,9 @@ services:
   # 配置linkerd服务的容器
   linkerd:
     image: buoyantio/linkerd:1.3.6
-    ports:
-      - 4140:4140 # 容器端口与宿主机端口的映射关系
-      - 9990:9990
+    ports: # 容器端口与宿主机端口的映射关系
+      - 4140:4140 # linkerd对客户端暴露的服务访问端口
+      - 9990:9990 # linkerd的控制面板访问端口
     volumes:
       - ./linkerd.yml:/io/buoyant/linkerd/config.yml:ro
       - ./disco:/disco
