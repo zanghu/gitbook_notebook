@@ -201,9 +201,14 @@ ADD <src>... <dest>;
 
 如以下写法都是可以的：
 
+```
 ADD test relativeDir/  
 ADD test /relativeDir  
-ADD [http://example.com/foobar](http://example.com/foobar)/  
+ADD http://example.com/foobar
+```
+
+* **注意**
+
 尽量不要把&lt;scr&gt;写成一个文件夹，如果&lt;src&gt;是一个文件夹了，复制整个目录的内容,包括文件系统元数据
 
 ### COPY
