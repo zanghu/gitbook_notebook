@@ -2,7 +2,7 @@
 
 参考资料：[https://www.cnblogs.com/dazhoushuoceshi/p/7066041.html](https://www.cnblogs.com/dazhoushuoceshi/p/7066041.html)
 
-### FROM
+### 001.FROM
 
 * **功能**
 
@@ -28,7 +28,7 @@ FROM scratch。
 
 同时意味着接下来所写的指令将作为镜像的第一层开始
 
-### RUN
+### 002.RUN
 
 * **功能**
 
@@ -57,7 +57,7 @@ RUN \["/bin/bash", "-c", "echo hello"\]
 
 RUN书写时的换行符是\
 
-### CMD
+### 003.CMD
 
 * **功能**
 
@@ -97,7 +97,7 @@ RUN是构件容器时就运行的命令以及提交运行结果
 
 CMD是容器启动时执行的命令，在构件时并不运行，构件时紧紧指定了这个命令到底是个什么样子
 
-### LABEL
+### 004.LABEL
 
 * **功能**
 
@@ -131,7 +131,7 @@ other="value3"
 
 LABEL会继承基础镜像种的LABEL，如遇到key相同，则值覆盖
 
-### MAINTAINER
+### 005.MAINTAINER
 
 * **功能**
 
@@ -143,7 +143,7 @@ LABEL会继承基础镜像种的LABEL，如遇到key相同，则值覆盖
 MAINTAINER <name>
 ```
 
-### EXPOSE
+### 006.EXPOSE
 
 * **功能**
 
@@ -153,7 +153,7 @@ MAINTAINER <name>
 
 如果想使得容器与主机的端口有映射关系，必须在容器启动的时候加上 -P参数
 
-### ENV
+### 007.ENV
 
 * **功能**  
 
@@ -171,7 +171,7 @@ ENV <key> <value>
 ENV <key>=<value> ...
 ```
 
-### ADD
+### 008.ADD
 
 * **功能**
 
@@ -207,7 +207,7 @@ ADD http://example.com/foobar
 
 尽量不要把&lt;scr&gt;写成一个文件夹，如果&lt;src&gt;是一个文件夹了，复制整个目录的内容,包括文件系统元数据
 
-### COPY
+### 009.COPY
 
 * **功能**
 
@@ -229,7 +229,7 @@ COPY ["<src>",... "<dest>"]
 
 COPY的&lt;src&gt;只能是本地文件，其他用法一致
 
-### ENTRYPOINT
+### 010.ENTRYPOINT
 
 * **功能**
 
