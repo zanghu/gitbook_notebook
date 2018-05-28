@@ -129,7 +129,7 @@ multi.label2="value2" \
 other="value3"
 ```
 
-* **说明**
+* 注意
 
 LABEL会继承基础镜像种的LABEL，如遇到key相同，则值覆盖
 
@@ -140,7 +140,7 @@ LABEL会继承基础镜像种的LABEL，如遇到key相同，则值覆盖
 指定作者
 
 * **功能**
-语法：
+  语法：
 
 ```
 MAINTAINER <name>
@@ -158,8 +158,8 @@ MAINTAINER <name>
 
 ### ENV
 
-* **功能**
-设置环境变量
+* **功能**  
+  设置环境变量
 
 * **语法**
 
