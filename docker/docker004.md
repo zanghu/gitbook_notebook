@@ -98,7 +98,7 @@ LABEL
 
 语法：
 
-LABEL &lt;key>=&lt;value&gt; &lt;key>=&lt;value&gt; &lt;key>=&lt;value&gt; ...
+LABEL &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; &lt;key&gt;=&lt;value&gt; ...
  一个Dockerfile种可以有多个LABEL，如下：
 
 LABEL "com.example.vendor"="ACME Incorporated"
@@ -151,7 +151,7 @@ ENV
 语法有两种
 
 1. ENV &lt;key&gt; &lt;value&gt;
-2. ENV &lt;key>=&lt;value&gt; ...
+2. ENV &lt;key&gt;=&lt;value&gt; ...
 两者的区别就是第一种是一次设置一个，第二种是一次设置多个
 
  
@@ -168,8 +168,8 @@ ADD
 
 语法如下：
 
-1. ADD &lt;src>... &lt;dest&gt;
-2. ADD ["&lt;src>",... "&lt;dest>"]
+1. ADD &lt;src&gt;... &lt;dest&gt;
+2. ADD ["&lt;src&gt;",... "&lt;dest&gt;"]
  
 
 &lt;dest&gt;路径的填写可以是容器内的绝对路径，也可以是相对于工作目录的相对路径
@@ -197,8 +197,8 @@ COPY
 
 语法如下：
 
-1. COPY &lt;src>... &lt;dest&gt;
-2. COPY ["&lt;src>",... "&lt;dest>"]
+1. COPY &lt;src&gt;... &lt;dest&gt;
+2. COPY ["&lt;src&gt;",... "&lt;dest&gt;"]
 与ADD的区别
 
 COPY的&lt;src&gt;只能是本地文件，其他用法一致
