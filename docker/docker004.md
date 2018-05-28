@@ -283,5 +283,5 @@ CMD ls -al
 
 （1）RUN是Dockerfile创建镜像时执行的命令；
 
-（2）CMD和ENTRYPOINT都是基于Dockerfile创建的镜像的容器启动后执行的命令。
+（2）CMD和ENTRYPOINT都是基于Dockerfile创建的镜像的**容器**启动后执行的命令。
 
