@@ -31,8 +31,8 @@ RUN CGO\_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
 FROM scratch  
 COPY --from=0 /go/src/github.com/linkerd/linkerd-examples/add-steps/app /app
 
-# 镜像启动时的首先执行的命令，注意与RUN和CMD区分
-ENTRYPOINT \["/app"\] 
+# 基于镜像启动容器后首先执行的命令，注意与RUN和CMD区分
+ENTRYPOINT \["/app"\]
 ```
 
 
