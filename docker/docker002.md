@@ -35,7 +35,7 @@ Compose is a tool for defining and running multi-container Docker applications.
 
 ### 3.配置文件 docker-compose.yml 的例子
 
-先来看一个例子，来源于
+先来看一个例子，来源于：[https://github.com/linkerd/linkerd-examples/tree/master/add-steps](https://github.com/linkerd/linkerd-examples/tree/master/add-steps)
 
 ```shell
 version: '2'
