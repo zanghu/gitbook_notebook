@@ -265,11 +265,11 @@ ENTRYPOINT command param1 param2
 
 （1）ENTRYPOINT不会被运行的command覆盖，而CMD则会被覆盖
 
-（2）如果我们在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD指令不是一个完整的可执行命令，那么CMD指定的内容将会作为ENTRYPOINT的参数
+（2）如果在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD指令不是一个完整的可执行命令，那么CMD指定的内容将会作为ENTRYPOINT的参数
 
 如下：
 ```
-# 如果我们在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD是一个完整的指令，那么它们两个会互相覆盖，谁在最后谁生效
+# 如果在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD是一个完整的指令，那么它们两个会互相覆盖，谁在最后谁生效
 FROM ubuntu  
 ENTRYPOINT ["top", "-b"]  
 CMD ["-c"]
