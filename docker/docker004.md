@@ -251,11 +251,7 @@ ENTRYPOINT \["executable", "param1", "param2"\]
 ENTRYPOINT command param1 param2
 ```
 
-如果从上到下看到这里的话，那么你应该对这两种语法很熟悉啦。
-
-第二种就是写shell
-
-第一种就是可执行文件加参数
+* **注意**
 
 与CMD比较说明（这俩命令太像了，而且还可以配合使用）：
 
