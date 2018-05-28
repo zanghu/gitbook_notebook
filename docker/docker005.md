@@ -2,286 +2,196 @@
 
 参考资料：[https://www.cnblogs.com/dazhoushuoceshi/p/7066041.html](https://www.cnblogs.com/dazhoushuoceshi/p/7066041.html)
 
-### 001.FROM
+VOLUME
 
-* **功能**
+ 
 
-功能为指定基础镜像，并且必须是第一条指令。
+可实现挂载功能，可以将内地文件夹或者其他容器种得文件夹挂在到这个容器种
 
-* **语法**
+ 
 
-```
-FROM <image>  
-FROM <image>:<tag>  
-FROM <image>:<digest>
-```
+语法为：
 
-三种写法，其中&lt;tag&gt;和&lt;digest&gt; 是可选项，如果没有选择，那么默认值为latest
+VOLUME ["/data"]
+    
 
-* **注意**
+说明：
 
-如果不以任何镜像为基础，那么写法为：
+   ["/data"]可以是一个JsonArray ，也可以是多个值。所以如下几种写法都是正确的
 
-```
-FROM scratch。
-```
+VOLUME ["/var/log/"]
+VOLUME /var/log
+VOLUME /var/log /var/db
+一般的使用场景为需要持久化存储数据时
 
-同时意味着接下来所写的指令将作为镜像的第一层开始
+容器使用的是AUFS，这种文件系统不能持久化数据，当容器关闭后，所有的更改都会丢失。
 
-### 002.RUN
+所以当数据需要持久化时用这个命令。
 
-* **功能**
+ 
 
-功能为运行指定的命令
+ 
 
-RUN命令有两种格式
+USER
 
-```
-# 第一种，后边直接跟shell命令。在linux操作系统上默认 /bin/sh -c，在windows操作系统上默认 cmd /S /C
-RUN <command> 
+ 
 
-# 第二种，类似于函数调用。可将executable理解成为可执行文件，后面就是两个参数。
-RUN ["executable", "param1", "param2"]
-```
+设置启动容器的用户，可以是用户名或UID，所以，只有下面的两种写法是正确的
 
-两种写法比对：
+USER daemo
+USER UID
+注意：如果设置了容器以daemon用户去运行，那么RUN, CMD 和 ENTRYPOINT 都会以这个用户去运行
 
-```
-RUN /bin/bash -c 'source $HOME/.bashrc; echo $HOME  
-RUN \["/bin/bash", "-c", "echo hello"\]
-```
+ 
 
-注意：多行命令不要写多个RUN，原因是Dockerfile中每一个指令都会建立一层.
+ 
 
-多少个RUN就构建了多少层镜像，会造成镜像的臃肿、多层，不仅仅增加了构件部署的时间，还容易出错。
+WORKDIR
 
-RUN书写时的换行符是\
+ 
 
-### 003.CMD
+语法：
 
-* **功能**
+WORKDIR /path/to/workdir
+ 
 
-基于当前Dockerfile创建的镜像的容器启动时要运行的命令
+设置工作目录，对RUN,CMD,ENTRYPOINT,COPY,ADD生效。如果不存在则会创建，也可以设置多次。
 
-* **语法**
+ 
 
-语法有三种写法
+如：
 
-```
-# 语法1
-CMD ["executable","param1","param2"]
+WORKDIR /a
+WORKDIR b
+WORKDIR c
+RUN pwd
+pwd执行的结果是/a/b/c
 
-# 语法2
-CMD ["param1","param2"]
+ 
 
-# 语法3
-CMD command param1 param2
-```
+WORKDIR也可以解析环境变量
 
-举例说明两种写法：
+如：
 
-```
-CMD [ "sh", "-c", "echo $HOME"  
-CMD [ "echo", "$HOME" ]
-```
+ENV DIRPATH /path
+WORKDIR $DIRPATH/$DIRNAME
+RUN pwd
+pwd的执行结果是/path/$DIRNAME
 
-补充细节：这里边包括参数的一定要用双引号，就是",不能是单引号。千万不能写成单引号。
+ 
 
-* **注意**
+ARG
 
-RUN & CMD
+语法：
 
-不要把RUN和CMD搞混了。
+ARG <name>[=<default value>]
+设置变量命令，ARG命令定义了一个变量，在docker build创建镜像的时候，使用 --build-arg <varname>=<value>来指定参数
 
-RUN是构件容器时就运行的命令以及提交运行结果
+如果用户在build镜像时指定了一个参数没有定义在Dockerfile种，那么将有一个Warning
 
-CMD是容器启动时执行的命令，在构件时并不运行，构件时紧紧指定了这个命令到底是个什么样子
+提示如下：
 
-### 004.LABEL
+[Warning] One or more build-args [foo] were not consumed.
+    
 
-* **功能**
+我们可以定义一个或多个参数，如下：
 
-为镜像指定标签
+FROM busybox
+ARG user1
+ARG buildno
+...
+也可以给参数一个默认值：
 
-* **语法**
+FROM busybox
+ARG user1=someuser
+ARG buildno=1
+...
+如果我们给了ARG定义的参数默认值，那么当build镜像时没有指定参数值，将会使用这个默认值
 
-```
-LABEL <key>=<value> <key>=<value> <key>=<value> ...
-```
+ 
 
-一个Dockerfile种可以有多个LABEL，如下：
+ 
 
-```
-LABEL "com.example.vendor"="ACME Incorporated"  
-LABEL com.example.label-with-value="foo"  
-LABEL version="1.0"  
-LABEL description="This text illustrates \  
-that label-values can span multiple lines."
-```
+ONBUILD
 
-但是并不建议这样写，最好就写成一行，如太长需要换行的话则使用\符号，如下：
+语法：
 
-```
-LABEL multi.label1="value1" \  
-multi.label2="value2" \  
-other="value3"
-```
+ONBUILD [INSTRUCTION]
+这个命令只对当前镜像的子镜像生效。
 
-* **注意**
+比如当前镜像为A，在Dockerfile种添加：
 
-LABEL会继承基础镜像种的LABEL，如遇到key相同，则值覆盖
+ONBUILD RUN ls -al
+这个 ls -al 命令不会在A镜像构建或启动的时候执行
 
-### 005.MAINTAINER
+ 
 
-* **功能**
+此时有一个镜像B是基于A镜像构建的，那么这个ls -al 命令会在B镜像构建的时候被执行。
 
-指明Dockerfile的作者
+ 
 
-* **语法**
+ 
 
-```
-MAINTAINER <name>
-```
+STOPSIGNAL
 
-### 006.EXPOSE
+语法：
 
-* **功能**
+STOPSIGNAL signal
+STOPSIGNAL命令是的作用是当容器推出时给系统发送什么样的指令
 
-暴露容器运行时的监听端口给外部
+ 
 
-但是EXPOSE并不会使容器访问主机的端口
+ 
 
-如果想使得容器与主机的端口有映射关系，必须在容器启动的时候加上 -P参数
+HEALTHCHECK
 
-### 007.ENV
+ 容器健康状况检查命令
 
-* **功能**  
+语法有两种：
 
-设置环境变量
+1. HEALTHCHECK [OPTIONS] CMD command
+2. HEALTHCHECK NONE
+第一个的功能是在容器内部运行一个命令来检查容器的健康状况
 
-* **语法**
+第二个的功能是在基础镜像中取消健康检查命令
 
-语法有两种
+ 
 
-```
-# 语法1：一次设置一个
-ENV <key> <value>
+[OPTIONS]的选项支持以下三中选项：
 
-# 语法2：一次设置多个
-ENV <key>=<value> ...
-```
+    --interval=DURATION 两次检查默认的时间间隔为30秒
 
-### 008.ADD
+    --timeout=DURATION 健康检查命令运行超时时长，默认30秒
 
-* **功能**
+    --retries=N 当连续失败指定次数后，则容器被认为是不健康的，状态为unhealthy，默认次数是3
 
-一个复制命令，把文件复制到景象中。
+    
 
-如果把虚拟机与容器想象成两台linux服务器的话，那么这个命令就类似于scp，只是scp需要加用户名和密码的权限验证，而ADD不用。
+注意：
 
-* **语法**
+HEALTHCHECK命令只能出现一次，如果出现了多次，只有最后一个生效。
 
-```
-# 语法1
-ADD <src>... <dest>;
+ 
 
-# 语法2
-ADD ["<src>",... "<dest>"]
-```
+CMD后边的命令的返回值决定了本次健康检查是否成功，具体的返回值如下：
 
-&lt;dest&gt;路径的填写可以是容器内的绝对路径，也可以是相对于工作目录的相对路径
+0: success - 表示容器是健康的
 
-&lt;src&gt;可以是一个本地文件或者是一个本地压缩文件，还可以是一个url
+1: unhealthy - 表示容器已经不能工作了
 
-如果把&lt;src&gt;写成一个url，那么ADD就类似于wget命令
+2: reserved - 保留值
 
-如以下写法都是可以的：
+ 
 
-```
-ADD test relativeDir/  
-ADD test /relativeDir  
-ADD http://example.com/foobar
-```
+例子：
 
-* **注意**
+HEALTHCHECK --interval=5m --timeout=3s \
+CMD curl -f http://localhost/ || exit 1
+  
 
-尽量不要把&lt;scr&gt;写成一个文件夹，如果&lt;src&gt;是一个文件夹了，复制整个目录的内容,包括文件系统元数据
+健康检查命令是：curl -f http://localhost/ || exit 1
 
-### 009.COPY
+两次检查的间隔时间是5秒
 
-* **功能**
-
-看这个名字就知道，又是一个复制命令
-
-* **语法**
-
-```
-# 语法1
-COPY &lt;src&gt;... &lt;dest&gt;
-
-# 语法2
-COPY ["<src>",... "<dest>"]
-```
-
-* **注意**
-
-与ADD的区别
-
-COPY的&lt;src&gt;只能是本地文件，其他用法一致
-
-### 010.ENTRYPOINT
-
-* **功能**
-
-功能是启动时的默认命令
-
-* **语法**
-
-```
-# 语法1
-ENTRYPOINT \["executable", "param1", "param2"\]
-
-# 语法2
-ENTRYPOINT command param1 param2
-```
-
-* **注意**
-
-1.与CMD比较说明（这俩命令太像了，而且还可以配合使用）：
-
-相同点：
-
-（1）只能写一条，如果写了多条，那么只有最后一条生效
-
-（2）容器启动时才运行，运行时机相同
-
-不同点：
-
-（1）ENTRYPOINT不会被运行的command覆盖，而CMD则会被覆盖
-
-（2）如果在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD指令不是一个完整的可执行命令，那么CMD指定的内容将会作为ENTRYPOINT的参数
-
-如下：
-
-```
-# 如果在Dockerfile种同时写了ENTRYPOINT和CMD，并且CMD是一个完整的指令，那么它们两个会互相覆盖，谁在最后谁生效
-FROM ubuntu  
-ENTRYPOINT ["top", "-b"]  
-CMD ["-c"]
-```
-
-如下：
-
-```
-# 将执行ls -al ,top -b不会执行。
-FROM ubuntu  
-ENTRYPOINT \["top", "-b"\]  
-CMD ls -al
-```
-
-2.与RUN比较
-
-（1）RUN是Dockerfile创建镜像时执行的命令；
-
-（2）CMD和ENTRYPOINT都是基于Dockerfile创建的镜像的**容器**启动后执行的命令。
+命令超时时间为3秒
 
