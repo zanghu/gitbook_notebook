@@ -137,10 +137,9 @@ LABEL会继承基础镜像种的LABEL，如遇到key相同，则值覆盖
 
 * **功能**
 
-指定作者
+指明Dockerfile的作者
 
-* **功能**
-  语法：
+* **语法**
 
 ```
 MAINTAINER <name>
