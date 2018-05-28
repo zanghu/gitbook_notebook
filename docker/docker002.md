@@ -21,7 +21,9 @@ docker容器运行的一般方式:
 为解决上述问题，docker提供了一个管理复杂docker容器任务（主要面向多容器管理的场景）的工具: docker-compose
 
 按照官方文档**定义**:
+```
 Compose is a tool for defining and running multi-container Docker applications.
+```
 
 ### 1.使用 dokcer-compose 的三个基本步骤：
 
