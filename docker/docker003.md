@@ -37,10 +37,7 @@ ENTRYPOINT \["/app"\]
 
 ### 2.Dockerfile常用命令
 
-FROM
-
- 
-
+* FROM
 功能为指定基础镜像，并且必须是第一条指令。
 
 如果不以任何镜像为基础，那么写法为：FROM scratch。
