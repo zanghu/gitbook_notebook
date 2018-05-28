@@ -13,7 +13,7 @@ docker可以通过读取一个Dockerfile文件中的配置信息快速自动创�
 下面的例子来源于: [https://github.com/linkerd/linkerd-examples/tree/master/add-steps](https://github.com/linkerd/linkerd-examples/tree/master/add-steps)
 
 ```shell
-FROM golang:1.10.1-alpine3.7
+FROM golang:1.10.1-alpine3.7 # 创建目标镜像所需的基础镜像
 WORKDIR /go/src/github.com/linkerd/linkerd-examples/add-steps/
 RUN apk update && apk add git
 RUN go get -d -v github.com/prometheus/client\_golang/prometheus
