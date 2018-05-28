@@ -25,7 +25,13 @@
 Compose is a tool for defining and running multi-container Docker applications.
 ```
 
-### 2.使用 dokcer-compose 的三个基本步骤：
+### 2.使用 dokcer-compose 
+
+docker-compose的本质，就是通过一个配置文件将多个咋的docker run指令统合在一起，按序执行
+
+因此，docker-compose.yml中的配置的内容从根本上说，就是每个 docker run 命令的参数。
+
+三个基本步骤：
 
 * Step 1: 在 DockerFile 文件中定义你的应用的环境变量，这样应用即可在任何地方被复现.
 
@@ -38,8 +44,11 @@ Compose is a tool for defining and running multi-container Docker applications.
 先来看一个例子，来源于：[https://github.com/linkerd/linkerd-examples/tree/master/add-steps](https://github.com/linkerd/linkerd-examples/tree/master/add-steps)，这里加入了一些注释
 
 ```shell
+# docker-compose 语法版本，目前最高是3
 version: '2'
 
+# 构成应用的所有服务，每个服务启动一个容器，每个子段落对应于一个容器的配置
+# 
 services:
 
   baseline_app1:
