@@ -36,21 +36,14 @@ FROM scratch。
 
 RUN命令有两种格式
 ```
-# 第一种
-RUN &lt;command&gt;
+# 第一种，后边直接跟shell命令。在linux操作系统上默认 /bin/sh -c，在windows操作系统上默认 cmd /S /C
+RUN <command> 
 
-# 第二种
+# 第二种，类似于函数调用。可将executable理解成为可执行文件，后面就是两个参数。
 RUN \["executable", "param1", "param2"\]
 ```
-   第一种后边直接跟shell命令
 
-在linux操作系统上默认 /bin/sh -c
 
-在windows操作系统上默认 cmd /S /C
-
-第二种是类似于函数调用。
-
-可将executable理解成为可执行文件，后面就是两个参数。
 
 两种写法比对：
 
