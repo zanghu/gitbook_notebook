@@ -10,7 +10,7 @@
 
 * **STEP 1**: 创建镜像; 如果运行容器所用的所有镜像可以直接从仓库下载或已在本地，则可以省略此步
 
-* **STEP 2**: 启动容器; 一般使用 docker run -ti [参数]
+* **STEP 2**: 启动容器; 一般使用 docker run -ti \[参数\]
 
 （2）按照上述方法运行docker容器，存在如下缺点:
 
@@ -21,11 +21,12 @@
 （3）为解决上述问题，docker提供了一个管理复杂docker容器任务（主要面向多容器管理的场景）的工具: docker-compose
 
 按照官方文档**定义**:
+
 ```
 Compose is a tool for defining and running multi-container Docker applications.
 ```
 
-### 2.使用 dokcer-compose 
+### 2.使用 dokcer-compose
 
 docker-compose的本质，就是通过一个配置文件将多个咋的docker run指令统合在一起，按序执行
 
@@ -49,7 +50,7 @@ docker-compose的本质，就是通过一个配置文件将多个咋的docker ru
 
 * 集群A和B各包含10个独立服务器1-10，每个服务器上部署的都是相同的服务，人工设置节点延迟随着服务编号逐渐递增（0s-2s）；
 * 两个发压客户端，每个客户端启动50个并发，一个客户端访问服务集群A（不使用linkerd），一个客户端访问服务集群B（使用linkerd），对比平均访问速度；
-* 服务端程序使用Go语言编写，客****户端使用bouyant公司开发的slow_cooker（也是Go语言编写），性能数据收集和展示使用 prometheus + grafana
+* 服务端程序使用Go语言编写，客_\*\*_户端使用bouyant公司开发的slow\_cooker（也是Go语言编写），性能数据收集和展示使用 prometheus + grafana
 
 **Dockerfile文件内容**
 
@@ -229,6 +230,7 @@ services:
     entrypoint: /bin/sh
     command: >
       -c 'sleep 15 && slow_cooker -noreuse -metric-addr :8505 -qps 10 -concurrency 50 -interval 5s -totalRequests 10000000 http://linkerd:4140'
-
 ```
+
+
 
