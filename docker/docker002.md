@@ -146,7 +146,6 @@ services:
 # 配置10个使用linkerd调用的服务的容器
 # 前8个服务只配置延迟，最后两个还有一定概率失败（返回HTTP错误状态码）
 
-
   linkerd_app1:
     build: .
 
