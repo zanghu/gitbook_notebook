@@ -91,7 +91,7 @@ RUN pwd
 ARG <name>[=<default value>]
 ```
 
-ARG命令定义了一个变量，在docker build创建镜像的时候，使用 --build-arg <varname>=<value>来指定参数
+ARG命令定义了一个变量，在docker build创建镜像的时候，使用 --build-arg &lt;varname&gt;=&lt;value&gt;来指定参数
 
 如果用户在build镜像时指定了一个参数没有定义在Dockerfile种，那么将有一个Warning
 
