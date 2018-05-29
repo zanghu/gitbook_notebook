@@ -104,7 +104,7 @@ $ sudo service docker restart
 * 新建一个shell，加入该用户组
 
 ```shell
-$ newgrp - docker
+$ newgrp docker
 ```
 
 * 验证
