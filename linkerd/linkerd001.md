@@ -37,7 +37,7 @@ $ open http://$(docker-machine ip default):3000 # or equivalent docker ip addres
 如果在执行此命令前没有创建默认的 docker-machine 服务，会报错
 ![](/assets/linkerd001_003.PNG)
 
-解决方法：
+**解决方法：**
 
 在命令行执行下面的命令创建默认 cocker-machine 服务
 ```shell
@@ -51,3 +51,5 @@ $ sudo-apt-get install virtualbox
 * **问题2**
 如果之前已经有默认的 docker-machine 服务，仍有可能报错：
 ![](/assets/linkerd001_004.PNG)
+
+**解决方法**
