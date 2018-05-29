@@ -2,6 +2,13 @@
 
 ### 1.容器运行命令：run
 
+* **最常用的参数**
+
+  ```
+  -i, --interactive=false   打开STDIN，用于控制台交互    
+  -t, --tty=false            分配tty设备，该可以支持终端登录，默认为false    
+  ```
+
 * **基于一个镜像启动一个容器**
 
 ```shell
