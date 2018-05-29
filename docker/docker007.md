@@ -25,6 +25,7 @@ $ docker run -ti -d ubuntu:latest echo hello world
 
 ```shell
 $ docker inspect ubuntu:latest
+# 以下为返回内容
 [
     {
         "Id": "sha256:452a96d81c30a1e426bc250428263ac9ca3f47c9bf086f876d11cb39cf57aeec",
