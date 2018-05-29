@@ -38,7 +38,7 @@ $ open http://$(docker-machine ip default):3000 # or equivalent docker ip addres
 
 * **问题1**: 
 
-**症状:**
+\ \ **症状:**
 
 docker-machine 服务无法启动
 
