@@ -61,5 +61,6 @@ $ docker-machine create default --driver virtualbox
 ```
 
 * **问题3：**cannot get a file descriptor referring to the console
+
 症状：
 ![](/assets/linkerd001_005.PNG)
