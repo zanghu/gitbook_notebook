@@ -39,16 +39,3 @@ $ open http://$(docker-machine ip default):3000 # or equivalent docker ip addres
 
 
 
-### 二、Linux环境配置Maven
-
-参考资料：http://wentao365.iteye.com/blog/903396/
-
-### 2.1.配置settings.xml文件
-
-由于需要配置仓库，因此目前的经验是maven不能离开服务器使用，必须将服务器信息配置在settings.xml中
-
-例如，用户从maven安装目录的conf子目录下找到settings.xml，在settings.xml的&lt;mirrors&gt;&lt;/mirrors&gt;标签内加入如下图绿框中的内容
-
-![](/assets/java002_001.png)
-
-Linux环境下，maven会在用户首次调用maven创建项目时自动在用户主目录下生成.m2目录，将修改完成后的settings.xml文件拷贝到~/.m2目录下即可.
