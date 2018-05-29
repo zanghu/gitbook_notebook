@@ -26,6 +26,8 @@ $ docker run -ti -d ubuntu:latest echo hello world
 ```shell
 $ docker inspect ubuntu:latest
 ```
+
+```shell
 # 以下为返回内容
 [
     {
