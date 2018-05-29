@@ -1,6 +1,6 @@
 ## linkerd-examples: add-steps
 
-参考资料：
+参考资料：https://github.com/linkerd/linkerd-examples/tree/master/add-steps
 
 ### 一、实验介绍
 
