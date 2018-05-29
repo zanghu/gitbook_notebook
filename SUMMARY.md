@@ -1,4 +1,6 @@
 # Summary
+
+* [Introduction](README.md)
 * [Python tips](pytorch_tips/README.md)
   * [Python：关于函数定义形参表的形参前面的星号和双星号](python_tips/python001.md)
   * [Python：使用functools.update\_wrapper保持被装饰器修饰的函数的自省/反射属性](python_tips/python002.md)
@@ -48,8 +50,9 @@
   * [Others: 如何在markdown语法中显示尖括号](others/others004.md)
 * [docker](docker/README.md)
   * [docker: 安装与配置](docker/docker001.md)
-  * [docker: 使用 docker-compose](docker/docker002.md)
+  * [docker: 使用 docker-compose工具](docker/docker002.md)
   * [docker: docker-compose.yml 实例分析](docker/docker006.md)
   * [docker: Dockerfile的定义和简单例子](docker/docker003.md)
   * [docker: Dockerfile命令（一）](docker/docker004.md)
   * [docker: Dockerfile命令（二）](docker/docker005.md)
+
