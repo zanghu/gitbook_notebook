@@ -6,7 +6,7 @@
 
 ```
 -i, --interactive=false   打开STDIN，用于控制台交互    
--t, --tty=false            分配tty设备，该可以支持终端登录，默认为false    
+-t, --tty=false            分配tty设备，该可以支持终端登录，默认为false
 ```
 
 * **基于一个镜像启动一个容器**
@@ -36,13 +36,13 @@ $ docker run -ti -d ubuntu:latest echo hello world
   ```shell
   $ docker run -ti --entrypoint ls grafana/grafana:3.1.1 -al
   ```
-  
+
   这里注意 --entrypoit的命令如果有参数，那么一定要放在镜像名之后，像下面这样的命令会报错。
-  
+
   ```shell
   $ docker run -ti --entrypoint "ls -al" grafana/grafana:3.1.1 # 是错误的
   ```
-  
+
   参考资料：[https://medium.com/@oprearocks/how-to-properly-override-the-entrypoint-using-docker-run-2e081e5feb9d](https://medium.com/@oprearocks/how-to-properly-override-the-entrypoint-using-docker-run-2e081e5feb9d)
 
 * **其他常用参数**
@@ -57,8 +57,8 @@ $ docker run -ti -d ubuntu:latest echo hello world
 --volumes-from=[]          给容器挂载其他容器上的卷，挂载到容器的某个目录
 ```
 
-  返回容器ID
-  
+返回容器ID
+
 ```shell
 7b6c6037b2a4de816cc244b85112605936aa5fb69608ad9fa17330b451a743ce
 ```
@@ -92,6 +92,7 @@ $ docker run -tid ubuntu:14.04 /bin/sh # 可以通过 docker ps 检查后台容�
 ```
 
 连接这个容器
+
 ```shell
 $ docker attach badf191e93f5
 ```
@@ -167,6 +168,7 @@ $ docker inspect ubuntu:latest
 ```
 
 以下为返回内容
+
 ```shell
 [
     {
@@ -258,11 +260,6 @@ $ docker inspect ubuntu:latest
     }
 ]
 ```
-
-
-
-
-
 
 
 
