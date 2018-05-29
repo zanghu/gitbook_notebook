@@ -24,7 +24,7 @@ $ docker-compose build && docker-compose up -d
 ```
 
 执行后效果如下图:
-![](/assets/linkerd_001_002.png)
+![](/assets/linkerd001_002.png)
 
 ### 1.3.启动展示工具
 
@@ -38,7 +38,8 @@ $ open http://$(docker-machine ip default):3000 # or equivalent docker ip addres
 ![](/assets/linkerd001_003.PNG)
 
 解决方法：
-首先在命令行执行：
+
+在命令行执行下面的命令创建默认 cocker-machine 服务
 ```shell
 docker-machine create default --driver virtualbox
 ```
@@ -46,3 +47,7 @@ docker-machine create default --driver virtualbox
 ```shell
 $ sudo-apt-get install virtualbox
 ```
+
+* **问题2**
+如果之前已经有默认的 docker-machine 服务，仍有可能报错：
+![](/assets/linkerd_001_004.PNG)
