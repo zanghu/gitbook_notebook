@@ -23,6 +23,10 @@ $ docker run -ti -d ubuntu:latest echo hello world
 
 ### 3.镜像查看命令：inspect
 
+查看指定镜像的详细信息。
+
+如果把镜像都看作是由 Dockerfile 创建的，那么 inspec 相当于查看创建镜像的 Dockerfile 的内容。
+
 ```shell
 $ docker inspect ubuntu:latest
 ```
