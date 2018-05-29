@@ -14,6 +14,8 @@
 
 实验内容示意图如下：
 
+![](/assets/add-steps.png)
+
 * **docker-compose.yml 内容分析**
 
 ```
