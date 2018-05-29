@@ -29,6 +29,10 @@ $ docker ps -a
 $ docker ps
 ```
 
+查看容器占用内存大小
+```shell
+$ docker ps -s
+```
 
 ### 3.镜像查看命令：inspect
 
