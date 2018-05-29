@@ -1,5 +1,20 @@
 ## linkerd-examples: add-steps
 
+### 一、实验介绍
+
+#### 1.1.实验目的
+
+#### 1.2.实验设计
+
+#### 1.3.所用工具
+
+* docker：整个测试程序都是基于 docker 容器运行的；
+* bouyant linkerd：service mesh 框架，测试主角兼被测对象；
+* bouyant slow_cooker（慢炖锅）：发压客户端；
+* server.go: 专门为本次测试编写的服务端程序（Go语言）；
+* prometeus：监控数据收集工具，从服务端应用收集数据，使用Go语言开发；
+* Grafana: 监控数据展示工具，负责展示（通过网页） prometheus 收集到的数据。
+ 
 ### 二、运行程序
 
 ### 2.1.准备工作
