@@ -28,14 +28,21 @@ $ docker-compose build && docker-compose up -d
 
 ### 1.3.启动展示工具
 
-终端执行命令
+官方文档要求终端执行命令
 
 ```shell
 $ open http://$(docker-machine ip default):3000 # or equivalent docker ip address
 ```
-
+* **问题1**
 如果在执行此命令前没有创建默认的 docker-machine 服务，会报错
 ![](/assets/linkerd001_003.PNG)
 
-
-
+解决方法：
+首先在命令行执行：
+```shell
+docker-machine create default --driver virtualbox
+```
+如果提示 virtualbox 不存在，ubuntu环境下可以使用下面的命令安装
+···shell
+$ sudo-apt-get install virtualbox
+```
