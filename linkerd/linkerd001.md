@@ -60,7 +60,7 @@ $ docker-machine rm default
 $ docker-machine create default --driver virtualbox
 ```
 
-* **问题3：**无法获取指向控制台的文件描述符
+* **问题3：**cannot get a file descriptor referring to the console
 症状：
 ```shell
 
