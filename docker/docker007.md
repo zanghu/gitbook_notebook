@@ -26,12 +26,13 @@ $ docker run -ti -d ubuntu:latest echo hello world
 * **其他常用参数**
 
 ```
--w, --workdir=""           指定容器的工作目录   
--c, --cpu-shares=0        设置容器CPU权重，在CPU共享场景使用    
--e, --env=[]               指定环境变量，容器中可以使用该环境变量    
--h, --hostname=""          指定容器的主机名    
--v, --volume=[]            给容器挂载存储卷，挂载到容器的某个目录 
---net="bridge"             容器网络设置:
+-w, --workdir=""           指定容器的工作目录  
+-c, --cpu-shares=0        设置容器CPU权重，在CPU共享场景使用
+-e, --env=[]               指定环境变量，容器中可以使用该环境变量
+-h, --hostname=""          指定容器的主机名
+--net="bridge"             容器网络设置
+-v, --volume=[]            给容器挂载存储卷，挂载到容器的某个目录
+--volumes-from=[]          给容器挂载其他容器上的卷，挂载到容器的某个目录
 ```
 
   返回容器ID
