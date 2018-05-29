@@ -40,7 +40,7 @@ $ open http://$(docker-machine ip default):3000 # or equivalent docker ip addres
 
     **症状:**
 
-docker-machine 服务无法启动
+    docker-machine 服务无法启动
 
 如果在执行此命令前没有创建默认的 docker-machine 服务，会报错
 ![](/assets/linkerd001_003.PNG)
