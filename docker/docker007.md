@@ -159,13 +159,14 @@ $ docker inspect ubuntu:latest
   ```shell
   $ docker run -ti --entrypoint ls grafana/grafana:3.1.1 -al
   ```
-  这里注意 --entrypoit的命令如果有参数，那么一定要放在镜像名之后，像下面这样
+  
+  这里注意 --entrypoit的命令如果有参数，那么一定要放在镜像名之后，像下面这样的命令会报错。
   
   ```shell
   $ docker run -ti --entrypoint "ls -al" grafana/grafana:3.1.1 # 是错误的
   ```
   
-  会报错。
+  参考资料：[https://medium.com/@oprearocks/how-to-properly-override-the-entrypoint-using-docker-run-2e081e5feb9d](https://medium.com/@oprearocks/how-to-properly-override-the-entrypoint-using-docker-run-2e081e5feb9d)
 
 
 
