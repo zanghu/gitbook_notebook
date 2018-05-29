@@ -83,7 +83,34 @@ $ docker ps
 $ docker ps -s
 ```
 
-### 3.镜像查看命令: images
+### 3.连接后台运行的容器：attach
+
+启动一个容器，后台运行
+
+```shell
+$ docker run -tid ubuntu:14.04 /bin/sh # 可以通过 docker ps 检查后台容器是否启动，并获得容器ID
+```
+
+连接这个容器
+```shell
+$ docker attach badf191e93f5
+```
+
+### 4.启动容器控制台：exec
+
+要想研究一个容器的内部，最简单的想法就是在在容器内打开一个终端，之后通过终端查看容器内文件系统.
+
+实现方法：
+
+首先使用 docker ps 查看当前正在运行的所有容器，找到目标容器的id
+
+之后，使用 docker exec 打开容器内终端
+
+```shell
+sudo docker exec [容器id]
+```
+
+### 4.镜像查看命令: images
 
 列出本地镜像。
 
@@ -102,12 +129,12 @@ OPTIONS说明：
 -q :只显示镜像ID。
 ```
 
-### 4.镜像搜索命令：search
+### 5.镜像搜索命令：search
 
 从Docker Hub查找镜像
 
 ```shell
-docker search [OPTIONS] TERM
+$ docker search [OPTIONS] TERM
 ```
 
 OPTIONS说明：
@@ -118,7 +145,7 @@ OPTIONS说明：
 -s :列出收藏数不小于指定值的镜像。
 ```
 
-### 5.镜像查看命令：inspect
+### 6.镜像查看命令：inspect
 
 查看指定镜像的详细信息。
 
