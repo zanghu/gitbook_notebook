@@ -24,7 +24,7 @@ $ docker run -ti -d ubuntu:latest echo hello world
 ### 3.镜像查看命令：inspect
 
 ```shell
-zanghu@zanghu-virtual-machine:~$ docker inspect ubuntu:latest
+$ docker inspect ubuntu:latest
 [
     {
         "Id": "sha256:452a96d81c30a1e426bc250428263ac9ca3f47c9bf086f876d11cb39cf57aeec",
