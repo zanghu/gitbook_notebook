@@ -42,7 +42,7 @@
   * [Maven: Maven项目的pom文件中scope项配置详解](java/java003.md)
   * [Maven: Maven命令](java/java004.md)
 * [linkerd](linkerd/README.md)
-  * [linkerd-example: add-steps](linkerd/linkerd001.md)
+  * [linkerd-examples: add-steps](linkerd/linkerd001.md)
 * [Others](others/README.md)
   * [Others: 有价值的开源软件收集](others/others001.md)
   * [Others: 知识——交叉编译](others/others002.md)
