@@ -33,7 +33,7 @@ $ docker-compose build && docker-compose up -d
 ```shell
 $ open http://$(docker-machine ip default):3000 # or equivalent docker ip address
 ```
-* **问题1**
+* **问题1**: docker-machine 服务无法启动
 如果在执行此命令前没有创建默认的 docker-machine 服务，会报错
 ![](/assets/linkerd001_003.PNG)
 
@@ -48,7 +48,7 @@ docker-machine create default --driver virtualbox
 $ sudo-apt-get install virtualbox
 ```
 
-* **问题2**
+* **问题2**: 本地创建过 docker-machine 服务无法启动
 如果之前已经有默认的 docker-machine 服务，仍有可能报错：
 ![](/assets/linkerd001_004.PNG)
 
@@ -59,3 +59,6 @@ $ sudo-apt-get install virtualbox
 $ docker-machine rm default
 $ docker-machine create default --driver virtualbox
 ```
+
+* **问题3：**无法获取指向控制台的文件描述符
+
