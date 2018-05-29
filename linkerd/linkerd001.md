@@ -97,17 +97,17 @@ $ open http://$(docker-machine ip default):3000 # or equivalent docker ip addres
 * **问题4**
 
   **症状描述:**
+  
+  打开浏览器后页面无法正常显示。
 
-  ![](/assets/linkerd001_005.PNG)
-
-  原因应该是ubuntu下默认没有open程序
-
-  解决办法  
-    使用 xdg-open 代替 open，即执行如下命令：
-
-  ```shell
-    $ xdg-open http://$(docker-machine ip default):3000 # or equivalent docker ip address
+  **解决办法**
+  
+  手动打开浏览器，在地址栏输入：
   ```
+  http://localhost:3000/
+  ```
+  回车确定
+
 
 
 
