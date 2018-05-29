@@ -15,7 +15,7 @@
 * 两个发压客户端，每个客户端启动50个并发，一个客户端访问服务集群A（不使用linkerd），一个客户端访问服务集群B（使用linkerd），对比平均访问速度；
 * 服务端程序使用Go语言编写，客_\*\*_户端使用bouyant公司开发的slow\_cooker（也是Go语言编写），性能数据收集和展示使用 prometheus + grafana
 
-**Dockerfile文件内容**
+* **docker-compose.yml 内容分析**
 
 ```
 # docker-compose 语法版本，目前最高是3
