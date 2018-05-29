@@ -43,6 +43,6 @@ $ open http://$(docker-machine ip default):3000 # or equivalent docker ip addres
 docker-machine create default --driver virtualbox
 ```
 如果提示 virtualbox 不存在，ubuntu环境下可以使用下面的命令安装
-···shell
+```shell
 $ sudo-apt-get install virtualbox
 ```
