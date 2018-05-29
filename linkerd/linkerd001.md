@@ -1,16 +1,12 @@
 ## linkerd-examples: add-steps
 
-### 一、Linux环境安装Maven
+### 一、运行程序
 
-### 1.1.下载安装包
+### 1.1.操作步骤
 
- 选择下载编译好的可执行文件（jar包）
-
-下载地址：[https://maven.apache.org/download.cgi](https://maven.apache.org/download.cgi)
-
-下载文件名称：[apache-maven-3.5.3-bin.tar.gz](http://mirrors.shu.edu.cn/apache/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz)
-
-![](/assets/java001_001.png)
+```shell
+$ cd /path/to/linkerd-examples/add-steps 
+```
 
 ### 1.2.安装
 
@@ -25,6 +21,9 @@ export MAVEN_OPT="-Xms64m -Xmx512m" # 可以不配置
 source ~/.bashrc
 ```
 
+目录下内容如下图所示
+
+![](/assets/linkerd001_001.png)
 ### 1.3.安装验证
 终端命令行执行命令
 ```shell
