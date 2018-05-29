@@ -80,6 +80,7 @@ $ open http://$(docker-machine ip default):3000 # or equivalent docker ip addres
 * **问题3**
 
   **症状描述:**
+  
   英文版报错：cannot get a file descriptor referring to the console，中文版则是：
 
   ![](/assets/linkerd001_005.PNG)
