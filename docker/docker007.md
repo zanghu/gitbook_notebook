@@ -83,7 +83,11 @@ $ docker ps
 $ docker ps -s
 ```
 
-### 3.镜像查看命令：inspect
+### 3.镜像查看命令: images
+
+### 4.镜像搜索命令：search
+
+### 5.镜像查看命令：inspect
 
 查看指定镜像的详细信息。
 
