@@ -61,4 +61,7 @@ $ docker-machine create default --driver virtualbox
 ```
 
 * **问题3：**无法获取指向控制台的文件描述符
+症状：
+```shell
 
+```
