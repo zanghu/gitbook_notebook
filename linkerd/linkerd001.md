@@ -1,8 +1,16 @@
 ## linkerd-examples: add-steps
 
+参考资料：
+
 ### 一、实验介绍
 
 #### 1.1.实验目的
+
+参考资料：https://buoyant.io/2017/01/31/making-things-faster-by-adding-more-steps/
+
+In short, Linkerd’s latency-aware load balancing can rapidly detect when instances are slow and shift request traffic away from them. By combining this behavior with circuit breaking and retries, Linkerd can dramatically decrease end-to-end latency in a distributed system—despite being “yet another component”.
+
+Let’s take a look at a dramatic example of this behavior with some poorly-behaved services.
 
 #### 1.2.实验设计
 
