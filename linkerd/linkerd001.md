@@ -34,6 +34,7 @@ $ docker-compose build && docker-compose up -d
 $ open http://$(docker-machine ip default):3000 # or equivalent docker ip address
 ```
 * **问题1**: docker-machine 服务无法启动
+
 如果在执行此命令前没有创建默认的 docker-machine 服务，会报错
 ![](/assets/linkerd001_003.PNG)
 
@@ -64,3 +65,11 @@ $ docker-machine create default --driver virtualbox
 
 症状：
 ![](/assets/linkerd001_005.PNG)
+
+原因应该是ubuntu下默认没有open程序
+
+解决办法
+使用 xdg-open 代替 open，即执行如下命令：
+```shell
+$ xdg-open http://$(docker-machine ip default):3000 # or equivalent docker ip address
+```
