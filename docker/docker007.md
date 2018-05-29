@@ -8,7 +8,7 @@
 $ docker run -ti ubuntu:latest echo hello world
 ```
 
-* **基于一个镜像启动一个容器，后台运行不会关闭**
+* **基于一个镜像启动一个容器，后台运行**
 
 ```shell
 $ docker run -ti -d ubuntu:latest echo hello world
