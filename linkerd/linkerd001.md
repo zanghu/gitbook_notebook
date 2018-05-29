@@ -34,7 +34,8 @@ $ docker-compose build && docker-compose up -d
 $ open http://$(docker-machine ip default):3000 # or equivalent docker ip address
 ```
 
-如果正常执行的话，会自动打开一个浏览器页面，展示性能检测结果。
+如果正常执行的话，会自动打开一个浏览器页面，展示性能检测结果，如下图所示
+![](/assets/linkerd001_006.PNG)
 
 * **问题1**:
 
