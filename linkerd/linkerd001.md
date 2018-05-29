@@ -50,4 +50,4 @@ $ sudo-apt-get install virtualbox
 
 * **问题2**
 如果之前已经有默认的 docker-machine 服务，仍有可能报错：
-![](/assets/linkerd_001_004.PNG)
+![](/assets/linkerd001_004.PNG)
