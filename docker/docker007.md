@@ -107,7 +107,16 @@ $ docker attach badf191e93f5
 之后，使用 docker exec 打开容器内终端
 
 ```shell
-sudo docker exec [容器id]
+$ docker exec [options] [容器id]
+```
+
+举个例子
+
+```shell
+$ docker run -tid ubuntu:14.04 /bin/sh
+c45d581ad4da
+$ docker exec -ti c45d581ad4da /bin/sh
+#
 ```
 
 这个方法很适合那些存在默认启动命令、并且启动命令会妨碍终端操作的容器.
