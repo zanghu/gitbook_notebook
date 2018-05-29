@@ -192,7 +192,7 @@ services:
       - 4140:4140 # linkerd对客户端暴露的服务访问端口
       - 9990:9990 # linkerd的控制面板访问端口
     volumes: # 数据卷, docker run -v
-      - ./linkerd.yml:/io/buoyant/linkerd/config.yml:ro
+      - ./linkerd.yml:/io/buoyant/linkerd/config.yml:ro # 第二个冒号后main的ro表示以只读模式加载数据卷
       - ./disco:/disco
     command:
       - "/io/buoyant/linkerd/config.yml"
