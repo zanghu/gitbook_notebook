@@ -1,14 +1,14 @@
 ## linkerd-examples: add-steps
 
-### 一、运行程序
+### 二、运行程序
 
-### 1.1.准备工作
+### 2.1.准备工作
 
 * 下载 [https://github.com/linkerd/linkerd-examples/add-steps](https://github.com/linkerd/linkerd-examples/add-steps)
 * 安装 docker
 * 安装 docker-sompose 工具和 docker-machine 工具
 
-### 1.2.启动服务容器
+### 2.2.启动服务容器
 
 ```shell
 $ cd /path/to/linkerd-examples/add-steps
@@ -26,7 +26,7 @@ $ docker-compose build && docker-compose up -d
 执行后效果如下图:  
 ![](/assets/linkerd001_002.png)
 
-### 1.3.启动展示工具
+### 2.3.启动展示工具
 
 官方文档要求终端执行命令
 
