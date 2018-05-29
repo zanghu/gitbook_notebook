@@ -87,6 +87,20 @@ $ docker ps -s
 
 ### 4.镜像搜索命令：search
 
+从Docker Hub查找镜像
+
+```shell
+docker search [OPTIONS] TERM
+```
+
+OPTIONS说明：
+
+```
+--automated :只列出 automated build类型的镜像；
+--no-trunc :显示完整的镜像描述；
+-s :列出收藏数不小于指定值的镜像。
+```
+
 ### 5.镜像查看命令：inspect
 
 查看指定镜像的详细信息。
