@@ -11,6 +11,7 @@ $ docker run -ti ubuntu:latest echo hello world
 * **基于一个镜像启动一个容器，后台运行**
 
 ```shell
+# 增加的-d 参数使得容器在后台运行，运行结果不会被打印。容器启动后会返回一个容器ID
 $ docker run -ti -d ubuntu:latest echo hello world
 7b6c6037b2a4de816cc244b85112605936aa5fb69608ad9fa17330b451a743ce
 ```
