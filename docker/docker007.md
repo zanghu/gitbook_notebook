@@ -144,3 +144,33 @@ $ docker inspect ubuntu:latest
     }
 ]
 ```
+
+
+### 4.覆盖镜像默认的CMD命令：--entrypoint
+
+  很多镜像在创建时都指定了实例化为容器后的默认动作，Dockerfile 创建镜像时，CMD命令就是用来指定镜像实例化后的默认命令的。
+
+  某些情况下，不希望这些默认命令被启动，比如希望在容器启动后研究下容器内部某个文件的内容、文件组织等等。
+
+  这时，在 docker run 中加入 --entrypoint 参数可以覆盖原镜像的默认启动命令。
+
+  例如，希望在启动容器后，显示容器内的目录结构
+
+  ```shell
+  $ docker run -ti --entrypoint ls grafana/grafana:3.1.1 -al
+  ```
+  这里注意 --entrypoit的命令如果有参数，那么一定要放在镜像名之后，像下面这样
+  
+  ```shell
+  $ docker run -ti --entrypoint "ls -al" grafana/grafana:3.1.1 # 是错误的
+  ```
+  
+  会报错。
+
+
+
+
+
+
+
+
