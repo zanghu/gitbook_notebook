@@ -104,7 +104,7 @@ $ sudo service docker restart
 * 新建一个shell，加入该用户组
 
 ```shell
-$ ewgrp - docker
+$ newgrp - docker
 ```
 
 * 验证
@@ -124,10 +124,12 @@ $ docker run hello-world
 ![](/assets/docker001_005.png)
 
 按照上图网页中的内容配置即可。配置完成后，可以通过
+
 ```shell
 sudo docker restart
 sudo docker info
 ```
+
 来查看配置是否生效
 
 ### 3.安装管理工具
