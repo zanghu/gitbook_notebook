@@ -1,7 +1,5 @@
-## 使用工具： docker-compose
-
-参考资料1：[https://docs.docker.com/compose/overview/](https://docs.docker.com/compose/overview/)
 ## 配置文件 docker-compose.yml 的例子
+
 
 * **示例来源**
 
