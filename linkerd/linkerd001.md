@@ -50,6 +50,7 @@ $ sudo-apt-get install virtualbox
 ```
 
 * **问题2**: 本地创建过 docker-machine 服务无法启动
+
 如果之前已经有默认的 docker-machine 服务，仍有可能报错：
 ![](/assets/linkerd001_004.PNG)
 
