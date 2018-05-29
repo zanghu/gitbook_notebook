@@ -59,7 +59,7 @@ $ open http://$(docker-machine ip default):3000 # or equivalent docker ip addres
     $ sudo-apt-get install virtualbox
   ```
 
-* **问题2**:
+* **问题2**
 
   **症状描述:**
 
@@ -77,7 +77,24 @@ $ open http://$(docker-machine ip default):3000 # or equivalent docker ip addres
     $ docker-machine create default --driver virtualbox
   ```
 
-* **问题3：**cannot get a file descriptor referring to the console
+* **问题3**
+
+  **症状描述:**
+  英文版报错：cannot get a file descriptor referring to the console
+  中文版：
+
+  ![](/assets/linkerd001_005.PNG)
+
+  原因应该是ubuntu下默认没有open程序
+
+  解决办法  
+    使用 xdg-open 代替 open，即执行如下命令：
+
+  ```shell
+    $ xdg-open http://$(docker-machine ip default):3000 # or equivalent docker ip address
+  ```
+
+* **问题4**
 
   **症状描述:**
 
@@ -91,6 +108,8 @@ $ open http://$(docker-machine ip default):3000 # or equivalent docker ip addres
   ```shell
     $ xdg-open http://$(docker-machine ip default):3000 # or equivalent docker ip address
   ```
+
+
 
 
 
