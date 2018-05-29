@@ -53,3 +53,9 @@ $ sudo-apt-get install virtualbox
 ![](/assets/linkerd001_004.PNG)
 
 **解决方法**
+
+先删除旧的 docker-machine 服务，再重新创建
+```shell
+$ docker-machine rm default
+$ docker-machine create default --driver virtualbox
+```
