@@ -110,6 +110,8 @@ $ docker attach badf191e93f5
 sudo docker exec [容器id]
 ```
 
+这个方法很适合那些存在默认启动命令、并且启动命令会妨碍终端操作的容器.
+
 ### 4.镜像查看命令: images
 
 列出本地镜像。
