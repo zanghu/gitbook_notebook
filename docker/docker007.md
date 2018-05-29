@@ -19,6 +19,15 @@ $ docker run -ti -d ubuntu:latest echo hello world
 
 ### 2.容器查看命令：ps
 
+查看所有容器
+```shell
+$ docker ps -a
+```
+
+查看正在运行的容器
+```shell
+$ docker ps
+```
 
 
 ### 3.镜像查看命令：inspect
