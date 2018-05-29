@@ -17,9 +17,9 @@ $ docker run -ti -d ubuntu:latest echo hello world
 ```
 
   返回容器ID
-  ```shell
-  7b6c6037b2a4de816cc244b85112605936aa5fb69608ad9fa17330b451a743ce
-  ```
+```shell
+7b6c6037b2a4de816cc244b85112605936aa5fb69608ad9fa17330b451a743ce
+```
 
 ### 2.容器查看命令：ps
 
