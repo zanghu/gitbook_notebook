@@ -97,13 +97,13 @@
   管理维护Daemon Set，负责创建Daemon Pod，保证指定的Node上正常的运行Daemon Pod。
 
 \-\- Deployment Controller
-　　　　管理维护Deployment，关联Deployment和Replication Controller，保证运行指定数量的Pod。当Deployment更新时，控制实现Replication Controller和　Pod的更新。
+  管理维护Deployment，关联Deployment和Replication Controller，保证运行指定数量的Pod。当Deployment更新时，控制实现Replication Controller和　Pod的更新。
 
 \-\- Job Controller
-　　　　管理维护Job，为Jod创建一次性任务Pod，保证完成Job指定完成的任务数目
+  管理维护Job，为Jod创建一次性任务Pod，保证完成Job指定完成的任务数目
 
 \-\- Pod Autoscaler Controller
-　　　　实现Pod的自动伸缩，定时获取监控数据，进行策略匹配，当满足条件时执行Pod的伸缩动作。
+  实现Pod的自动伸缩，定时获取监控数据，进行策略匹配，当满足条件时执行Pod的伸缩动作。
 
   4.Kubernetes Node运行节点，运行管理业务容器，包含如下组件:
 
