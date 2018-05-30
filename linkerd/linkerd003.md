@@ -113,5 +113,5 @@
   b.)Kubernetes Proxy
   负责为Pod创建代理服务，Kubernetes Proxy会从Kubernetes API Server获取所有的Service信息，并根据Service的信息创建代理服务，实现Service到Pod的请求路由和转发，从而实现Kubernetes层级的虚拟转发网络。
 
-　c.)Docker
+  c.)Docker
   Node上需要运行容器服务。
