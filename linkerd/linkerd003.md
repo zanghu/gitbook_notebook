@@ -59,10 +59,13 @@
 * **组件:**
 
 　　Kubernetes Master控制组件，调度管理整个系统（集群），包含如下组件:
+
 　　1.Kubernetes API Server
 　　　　作为Kubernetes系统的入口，其封装了核心对象的增删改查操作，以RESTful API接口方式提供给外部客户和内部组件调用。维护的REST对象持久化到Etcd中存储。
+
 　　2.Kubernetes Scheduler
 　　　　为新建立的Pod进行节点(node)选择(即分配机器)，负责集群的资源调度。组件抽离，可以方便替换成其他调度器。
+
 　　3.Kubernetes Controller
 　　　　负责执行各种控制器，目前已经提供了很多控制器来保证Kubernetes的正常运行。
 
@@ -90,9 +93,15 @@
 　　　　实现Pod的自动伸缩，定时获取监控数据，进行策略匹配，当满足条件时执行Pod的伸缩动作。
 
 　　Kubernetes Node运行节点，运行管理业务容器，包含如下组件:
+
 　　1.Kubelet
+
 　　　　负责管控容器，Kubelet会从Kubernetes API Server接收Pod的创建请求，启动和停止容器，监控容器运行状态并汇报给Kubernetes API Server。
+
 　　2.Kubernetes Proxy
+
 　　　　负责为Pod创建代理服务，Kubernetes Proxy会从Kubernetes API Server获取所有的Service信息，并根据Service的信息创建代理服务，实现Service到Pod的请求路由和转发，从而实现Kubernetes层级的虚拟转发网络。
+
 　　3.Docker
+
 　　　　Node上需要运行容器服务。
