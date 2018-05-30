@@ -63,7 +63,7 @@
 
 　　Kubernetes Master控制组件，调度管理整个系统（集群），包含如下组件:
 
-　　1.Kubernetes API Server
+  1.Kubernetes API Server
   作为Kubernetes系统的入口，其封装了核心对象的增删改查操作，以RESTful API接口方式提供给外部客户和内部组件调用。维护的REST对象持久化到Etcd中存储。
 
 　　2.Kubernetes Scheduler
