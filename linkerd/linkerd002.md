@@ -2,9 +2,11 @@
 
 ### 1.Consul概述
 
-官方网站：https://www.consul.io/
+官方网站：[https://www.consul.io/](https://www.consul.io/)
 
-google开源的、Go语言编写的软件。  
+![](/assets/linkerd002_001.PNG)
+
+Consul是google开源的、Go语言编写的软件。  
 主要用于（1）分布式集群动态配置;（2）自动服务发现. 除此之外还有节点健康检查等功能.
 
 consul的基本架构  
