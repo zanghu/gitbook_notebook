@@ -8,12 +8,15 @@
 　　　　- IaaS
 　　　　- PaaS
 　　　　- SaaS
+
 　　Docker技术突飞猛进
 　　　　- 一次构建，到处运行
 　　　　- 容器的快速轻量
 　　　　- 完整的生态环境
 
 ### 2.什么是kubernetes
+
+#### 2.1.概念
 
 　　Kubernetes(k8s)是Google开源的容器集群管理系统（谷歌内部:Borg）。在Docker技术的基础上，为容器化的应用提供部署运行、资源调度、服务发现和动态伸缩等一系列完整功能，提高了大规模容器集群管理的便捷性。
 　　Kubernetes优势:
@@ -23,8 +26,9 @@
 　　　　- 弹性伸缩
 　　　　- 负载均衡
 
-•Kubernetes的核心概念
-1.Pod
+#### 2.2.Kubernetes的核心概念
+
+* **Pod**
 　　运行于Node节点上，若干相关容器的组合。Pod内包含的容器运行在同一宿主机上，使用相同的网络命名空间、IP地址和端口，能够通过localhost进行通。Pod是Kurbernetes进行创建、调度和管理的最小单位，它提供了比容器更高层次的抽象，使得部署和管理更加灵活。一个Pod可以包含一个容器或者多个相关容器。
 2.Replication Controller
 　　Replication Controller用来管理Pod的副本，保证集群中存在指定数量的Pod副本。集群中副本的数量大于指定数量，则会停止指定数量之外的多余容器数量，反之，则会启动少于指定数量个数的容器，保证数量不变。Replication Controller是实现弹性伸缩、动态扩容和滚动升级的核心。
