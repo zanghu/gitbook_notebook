@@ -48,14 +48,15 @@
 
 　　Node是Kubernetes集群架构中运行Pod的服务节点（亦叫agent或minion）。Node是Kubernetes集群操作的单元，用来承载被分配Pod的运行，是Pod运行的宿主机。
 
-•Kubernetes架构和组件
-架构:
+### 3.Kubernetes架构和组件
 
+* **架构:**
 　　
 主从分布式架构，Master/Node
 　　- 服务分组，小集群，多集群
 　　- 服务分组，大集群，单集群
-组件:
+
+* **组件:**
 　　Kubernetes Master控制组件，调度管理整个系统（集群），包含如下组件:
 　　1.Kubernetes API Server
 　　　　作为Kubernetes系统的入口，其封装了核心对象的增删改查操作，以RESTful API接口方式提供给外部客户和内部组件调用。维护的REST对象持久化到Etcd中存储。
