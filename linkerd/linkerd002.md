@@ -1,15 +1,15 @@
-Consul介绍
+## 开源软件 Consul 简介
 
 ### 1.Consul概述
 
-google开源的、Go语言编写的软件。
+google开源的、Go语言编写的软件。  
 主要用于（1）分布式集群动态配置;（2）自动服务发现. 除此之外还有节点健康检查等功能.
 
-consul的基本架构
-agent-server
-api需要在consul上注册，注册方式有两种：（1）http接口协议注册;（2）json文件注册.
-agent用于节点健康检查，收集信息
-server用于收集和存储信息。
+consul的基本架构  
+agent-server  
+api需要在consul上注册，注册方式有两种：（1）http接口协议注册;（2）json文件注册.  
+agent用于节点健康检查，收集信息  
+server用于收集和存储信息。  
 多个server构成一个集群，集群通过选举选出一个leader，leader负责集群的各个server间数据同步.
 
 当希望使用consul进行服务发现时，
@@ -51,3 +51,4 @@ consul支持两种方式实现服务发现，一种是通过http API来查询有
 @服务间的通信协议
 
 Consul使用gossip协议管理成员关系、广播消息到整个集群，他有两个gossip  pool（LAN pool和WAN pool），LAN pool是同一个数据中心内部通信的，WAN pool是多个数据中心通信的，LAN pool有多个，WAN pool只有一个。
+
