@@ -95,7 +95,7 @@
 　　　- Pod Autoscaler Controller
 　　　　实现Pod的自动伸缩，定时获取监控数据，进行策略匹配，当满足条件时执行Pod的伸缩动作。
 
-　　4.Kubernetes Node运行节点，运行管理业务容器，包含如下组件:
+  4.Kubernetes Node运行节点，运行管理业务容器，包含如下组件:
 
 　　a.)Kubelet
 
