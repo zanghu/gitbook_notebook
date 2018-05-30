@@ -66,10 +66,10 @@
   1.Kubernetes API Server
   作为Kubernetes系统的入口，其封装了核心对象的增删改查操作，以RESTful API接口方式提供给外部客户和内部组件调用。维护的REST对象持久化到Etcd中存储。
 
-　　2.Kubernetes Scheduler
+  2.Kubernetes Scheduler
   为新建立的Pod进行节点(node)选择(即分配机器)，负责集群的资源调度。组件抽离，可以方便替换成其他调度器。
 
-　　3.Kubernetes Controller
+  3.Kubernetes Controller
   负责执行各种控制器，目前已经提供了很多控制器来保证Kubernetes的正常运行。
 
 　　　- Replication Controller
