@@ -72,8 +72,10 @@
   3.Kubernetes Controller
   负责执行各种控制器，目前已经提供了很多控制器来保证Kubernetes的正常运行。
 
-  - Replication Controller
+  \-\- Replication Controller
+  
   管理维护Replication Controller，关联Replication Controller和Pod，保证Replication Controller定义的副本数量与实际运行Pod数量一致。
+  
 　　　- Node Controller
 　　　　管理维护Node，定期检查Node的健康状态，标识出(失效|未失效)的Node节点。
 　　　- Namespace Controller
