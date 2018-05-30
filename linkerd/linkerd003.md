@@ -106,7 +106,7 @@
   实现Pod的自动伸缩，定时获取监控数据，进行策略匹配，当满足条件时执行Pod的伸缩动作。
 
   4.Kubernetes Node运行节点，运行管理业务容器，包含如下组件:
-
+  
   a.)Kubelet
   负责管控容器，Kubelet会从Kubernetes API Server接收Pod的创建请求，启动和停止容器，监控容器运行状态并汇报给Kubernetes API Server。
 
