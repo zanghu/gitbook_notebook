@@ -75,34 +75,34 @@
   \-\- Replication Controller
   管理维护Replication Controller，关联Replication Controller和Pod，保证Replication Controller定义的副本数量与实际运行Pod数量一致。
   
-\-\- Node Controller
+  \-\- Node Controller
   管理维护Node，定期检查Node的健康状态，标识出(失效|未失效)的Node节点。
 
-\-\- Namespace Controller
+  \-\- Namespace Controller
   管理维护Namespace，定期清理无效的Namespace，包括Namesapce下的API对象，比如Pod、Service等。
 
-\-\- Service Controller
+  \-\- Service Controller
   管理维护Service，提供负载以及服务代理。
 
-\-\- EndPoints Controller
+  \-\- EndPoints Controller
   管理维护Endpoints，关联Service和Pod，创建Endpoints为Service的后端，当Pod发生变化时，实时更新Endpoints。
 
-\-\- Service Account Controller
+  \-\- Service Account Controller
   管理维护Service Account，为每个Namespace创建默认的Service Account，同时为Service Account创建Service Account Secret。
 
-\-\- Persistent Volume Controller
+  \-\- Persistent Volume Controller
    管理维护Persistent Volume和Persistent Volume Claim，为新的Persistent Volume Claim分配Persistent Volume进行绑定，为释放的Persistent Volume执行清理回收。
 
-\-\- Daemon Set Controller
+  \-\- Daemon Set Controller
   管理维护Daemon Set，负责创建Daemon Pod，保证指定的Node上正常的运行Daemon Pod。
 
-\-\- Deployment Controller
+  \-\- Deployment Controller
   管理维护Deployment，关联Deployment和Replication Controller，保证运行指定数量的Pod。当Deployment更新时，控制实现Replication Controller和　Pod的更新。
 
-\-\- Job Controller
+  \-\- Job Controller
   管理维护Job，为Jod创建一次性任务Pod，保证完成Job指定完成的任务数目
 
-\-\- Pod Autoscaler Controller
+  \-\- Pod Autoscaler Controller
   实现Pod的自动伸缩，定时获取监控数据，进行策略匹配，当满足条件时执行Pod的伸缩动作。
 
   4.Kubernetes Node运行节点，运行管理业务容器，包含如下组件:
