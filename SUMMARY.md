@@ -46,6 +46,7 @@
   * [linkerd-examples: add-steps](linkerd/linkerd001.md)
   * [linkerd: 开源软件介绍——Consul](linkerd/linkerd002.md)
   * [linkerd: 开源软件介绍——Kubernates](linkerd/linkerd003.md)
+  * [linkerd: 官方六大特性分析](linkerd/linkerd004.md)
 * [Others](others/README.md)
   * [Others: 有价值的开源软件收集](others/others001.md)
   * [Others: 知识——交叉编译](others/others002.md)
