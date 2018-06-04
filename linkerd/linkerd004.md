@@ -5,7 +5,7 @@
 ### 1.linkerd六大特性
 * FAST, SCALABLE, AND PERFORMANT——快速、可伸缩和高性能
   
-* RUNTIME TRAFFIC ROUTING——运行时交通路由
+* RUNTIME TRAFFIC ROUTING——运行时业务路由选择
 
 * ANY LANGUAGE, ANY ENVIRONMENT——任意语言、任意环境
 
