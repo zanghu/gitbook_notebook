@@ -14,6 +14,8 @@
 
 * PRODUCTION-TESTED AND PROVEN AT SCALE——已经过生产环境规模的测试和验证
 
+上述溜达特性的官网描述如下图所示：
+
   ![](/assets/linkerd004_001.PNG)
 
   **小知识：关于“at scale”的准确含义**
