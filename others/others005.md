@@ -37,7 +37,7 @@
 
 * 如版本 2 测试正常，就删除版本 1 正在使用的资源（例如实例），从此正式用版本 2。
 
-<div align=center>![](/assets/others005_001.png)    ![](/assets/others005_002.png)</div>
+[](/assets/others005_001.png)    ![](/assets/others005_002.png)
 
 #### 4. 小结
 
