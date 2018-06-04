@@ -1,6 +1,7 @@
 ## 微服务发布模式
 
-参考资料：[http://tshare365.com/archives/2805.html](http://tshare365.com/archives/2805.html)
+参考资料1：[http://tshare365.com/archives/2805.html](http://tshare365.com/archives/2805.html)
+参考资料2：[https://blog.csdn.net/zyqduron/article/details/59507525](https://blog.csdn.net/zyqduron/article/details/59507525)
 
 在项目迭代的过程中，不可避免需要进行项目上线。上线对应着部署或者重新部署，部署对应着修改，修改则意味着风险。
 
