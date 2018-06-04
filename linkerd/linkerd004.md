@@ -5,7 +5,7 @@
 ### 1.linkerd六大特性
 * FAST, SCALABLE, AND PERFORMANT——快速、可伸缩和高性能
   
-* RUNTIME TRAFFIC ROUTING——运行时业务路由选择
+* RUNTIME TRAFFIC ROUTING——运行时流量路由选择
 
 * ANY LANGUAGE, ANY ENVIRONMENT——任意语言、任意环境
 
@@ -25,7 +25,7 @@
   
   ![](/assets/linkerd004_002.PNG)
   
-  但是原句"PRODUCTION-TESTED AND PROVEN AT SCALE"翻译成“经过按比例的生产测试和验证”显然有些别扭，于是Google之，得到如下答案：
+  但是原句"PRODUCTION-TESTED AND PROVEN AT SCALE"翻译成“经过按比例的生产测试和验证”显然有些别扭，于是Google之，得到如下答案：[https://english.stackexchange.com/questions/116601/what-does-at-scale-mean](https://english.stackexchange.com/questions/116601/what-does-at-scale-mean)
   
   ![](/assets/linkerd004_003.PNG)
   
