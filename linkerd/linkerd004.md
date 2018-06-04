@@ -24,8 +24,4 @@
   
   但是原句"PRODUCTION-TESTED AND PROVEN AT SCALE"翻译成“经过按比例的生产测试和验证”显然有些别扭，于是Google之，得到如下答案：
   
-  ```
-  Whats does the expression at scale mean?
-
-  Does it mean "on a larger scale" or does it mean "at a level appropriate to the what's available"? I came up with these two definitions by looking the expression up on the internet, but I still feel very confused.
-  ```
+  ![](/assets/linkerd004_003.PNG)
