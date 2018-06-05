@@ -1,4 +1,4 @@
-## DockerFilede的概念和简单例子
+## DockerFile的概念和简单例子
 
 ### 1.定义
 
@@ -21,18 +21,18 @@ WORKDIR /go/src/github.com/linkerd/linkerd-examples/add-steps/
 
 # 安装一些必要的软件
 RUN apk update && apk add git
-RUN go get -d -v github.com/prometheus/client\_golang/prometheus
+RUN go get -d -v github.com/prometheus/client_golang/prometheus
 
 # 从宿主机复制文件或目录到镜像内, 语法：COPY <src> <dst>，注意区分COPY与ADD的区别
 COPY server.go . 
-RUN CGO\_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
 
 # 如果不以任何镜像为基础，那么写法为：FROM scratch
 FROM scratch  
 COPY --from=0 /go/src/github.com/linkerd/linkerd-examples/add-steps/app /app
 
 # 基于镜像启动容器后首先执行的命令，注意与RUN和CMD区分
-ENTRYPOINT \["/app"\]
+ENTRYPOINT ["/app"]
 ```
 
 
