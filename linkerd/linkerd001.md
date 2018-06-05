@@ -17,7 +17,7 @@ Let’s take a look at a dramatic example of this behavior with some poorly-beha
 * 集群A和B各包含10个独立服务器1-10，每个服务器上部署的都是相同的服务，人工设置节点延迟随着服务编号逐渐递增（0s-2s）；
 
 * 两个发压客户端，每个客户端启动50个并发，一个客户端访问服务集群A（不使用linkerd），一个客户端访问服务集群B（使用linkerd），对比平均访问速度；
-* 服务端程序使用Go语言编写，客_\*\*_户端使用bouyant公司开发的slow\_cooker（也是Go语言编写），性能数据收集和展示使用 prometheus + grafana
+* 服务端程序使用Go语言编写，客户端使用bouyant公司开发的slow\_cooker（也是Go语言编写），性能数据收集和展示使用 prometheus + grafana
 
   实验内容示意图如下：
 
