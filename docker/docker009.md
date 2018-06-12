@@ -2,7 +2,13 @@
 
 参考资料: [https://www.cnblogs.com/hanxing/p/7832178.html](https://www.cnblogs.com/hanxing/p/7832178.html)
 
-将已存在的用户添加到指定用户组
+具有sudo权限的用户都保存在/etc/sudoers文件中，可以使用 
+···shell
+cat /etc/sudoers
+```
+
+
+使用usemod命令将已存在的用户添加到指定用户组
 
 ```shell
 # 给已有的用户增加工作组
