@@ -89,7 +89,13 @@ $ docker commit d6e78c47ed9d zanghu/ubuntu/bionic1804:v1.3 # 把版本号变了
 $ docker images
 ```
 
+退出docker
 
+```
+$ docker ps # 查看容器特征码
+...
+$ docker stop 容器特征码 # 停止正在运行的容器
+```
 
 
 
