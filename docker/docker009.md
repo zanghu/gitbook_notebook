@@ -6,6 +6,7 @@ Linux下有两个命令可以用来创建新用户：useradd和adduser
 
 
 docker的linux镜像root用户没有默认密码，需要使用passwd命令手动设置
+
 ```shell
 $ passwd
 Enter new UNIX password:
