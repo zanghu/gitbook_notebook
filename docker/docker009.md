@@ -2,6 +2,8 @@
 
 参考资料: [https://www.cnblogs.com/hanxing/p/7832178.html](https://www.cnblogs.com/hanxing/p/7832178.html)
 
+Linux下有两个命令可以用来创建新用户：useradd和adduser
+
 具有sudo权限的用户都保存在/etc/sudoers文件中，可以使用下面的命令查看其中内容
 ```shell
 $ cat /etc/sudoers
