@@ -2,7 +2,13 @@
 
 参考资料: [https://www.cnblogs.com/hanxing/p/7832178.html](https://www.cnblogs.com/hanxing/p/7832178.html)
 
-在当前容器的命令行内，按键: Ctrl + P + Q 退出容器保持后台运行（先按住ctrl和P，再按Q），即可将容器切换到后台运行状态。
+将已存在的用户添加到指定用户组
 
-再用 docker ps 进行查看
+```shell
+# 给已有的用户增加工作组
+usermod -G groupname username
+
+# 例子，将用户zanghu添加到sudo用户组
+usermod -G sudo zanghu
+```
 
