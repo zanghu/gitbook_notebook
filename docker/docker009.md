@@ -76,6 +76,12 @@ CONTAINER ID        IMAGE                           COMMAND             CREATED 
 d6e78c47ed9d        zanghu/ubuntu/bionic1804:v1.2   "/bin/sh"           21 minutes ago      Up 21 minutes                           sharp_aryabhata
 ```
 
+保存当前正在运行的容器
+
+```shell
+$ docker commit d6e78c47ed9d zanghu/ubuntu/bionic1804:v1.3 # 把版本号变了
+```
+
 
 
 
