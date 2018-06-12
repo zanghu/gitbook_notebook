@@ -4,7 +4,7 @@
 
 具有sudo权限的用户都保存在/etc/sudoers文件中，可以使用 
 ```shell
-cat /etc/sudoers
+$ cat /etc/sudoers
 ```
 
 
@@ -12,9 +12,9 @@ cat /etc/sudoers
 
 ```shell
 # 给已有的用户增加工作组
-usermod -G groupname username
+$ usermod -G groupname username
 
 # 例子，将用户zanghu添加到sudo用户组
-usermod -G sudo zanghu
+$ usermod -G sudo zanghu
 ```
 
