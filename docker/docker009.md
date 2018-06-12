@@ -1,6 +1,6 @@
 ## Docker: 当前容器切换到后台运行
 
-参考资料: [https://www.cnblogs.com/hanxing/p/7832178.html](https://www.cnblogs.com/hanxing/p/7832178.html)
+参考资料: 
 
 ### 1.添加新用户
 
