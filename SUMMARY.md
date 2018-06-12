@@ -35,7 +35,7 @@
   * [Linux: 使用双小于号实现内联重定向](linux_tips/lin013.md)
   * [Linux: 快速释放本地端口](linux_tips/lin014.md)
   * [Linux: 新建用户和加入用户组](linux_tips/lin015.md)
-  * [Linux: ubuntu apt-cache search 搜索相关安装包](linux_tips/lin016.md)
+  * [Ubuntu: apt-cache search 搜索相关安装包](linux_tips/lin016.md)
 * [Statistics](statistics/README.md)
   * [Static: N sigma 准则](statistics/static001.md)
 * [C Programming](c/README.md)
