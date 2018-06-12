@@ -12,6 +12,7 @@ Enter new UNIX password:
 Retype new UNIX password:
 $
 ```
+
 ![](/assets/docker009_001.PNG)
 
 有资料显示有可能系统上没有自带passwd命令，需要先安装之（ubuntu18.04上没有遇到此问题）。
