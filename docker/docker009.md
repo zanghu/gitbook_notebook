@@ -4,7 +4,7 @@
 
 ### 1.添加新用户
 
-Linux下有两个命令可以用来创建新用户：useradd和adduser
+Linux下有两个命令可以用来创建新用户：`useradd`和`adduser`
 
 * **useradd**
 
