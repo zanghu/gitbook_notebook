@@ -2,6 +2,8 @@
 
 参考资料: [https://www.cnblogs.com/hanxing/p/7832178.html](https://www.cnblogs.com/hanxing/p/7832178.html)
 
+### 1.添加新用户
+
 Linux下有两个命令可以用来创建新用户：useradd和adduser
 
 * **useradd**
