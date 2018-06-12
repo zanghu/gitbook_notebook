@@ -72,6 +72,8 @@ $ su 用户名
 
 ```shell
 $ docker ps
+CONTAINER ID        IMAGE                           COMMAND             CREATED             STATUS              PORTS               NAMES
+d6e78c47ed9d        zanghu/ubuntu/bionic1804:v1.2   "/bin/sh"           21 minutes ago      Up 21 minutes                           sharp_aryabhata
 ```
 
 
