@@ -66,6 +66,14 @@ $ cat /etc/sudoers
 $ su 用户名
 ```
 
+### 5.保存镜像
+
+检查当前正在运行的容器（经过修改的，比如通过apt-get install安装了某些软件）的名称
+
+```shell
+$ docker ps
+```
+
 
 
 
