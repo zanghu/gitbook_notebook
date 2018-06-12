@@ -4,7 +4,7 @@
 
 Linux下有两个命令可以用来创建新用户：useradd和adduser
 
-* useradd
+* **useradd**
 
 在root权限下，useradd只是创建了一个用户名，并没有在/home目录下创建同名文件夹，也没有创建密码，因此利用这个用户登录系统，是登录不了的，为了避免这样的情况出现，可以用 （useradd -m +用户名）的方式创建，它会在/home目录下创建同名文件夹，然后利用（ passwd + 用户名）为指定的用户名设置密码。
 
@@ -14,7 +14,7 @@ Linux下有两个命令可以用来创建新用户：useradd和adduser
 $ useradd -m 用户名  然后设置密码  passwd 用户名
 ```
 
-* adduser
+* **adduser**
 
 adduser创建新用户时在/home目录下会自动创建同名文件夹（创建用户的家目录），会建立同名组，建立新用户密码，还会从/etc/SKEL目录下拷贝文件到家目录，完成初始化、是否加密主目录等等。
 
