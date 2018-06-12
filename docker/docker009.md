@@ -79,6 +79,7 @@ d6e78c47ed9d        zanghu/ubuntu/bionic1804:v1.2   "/bin/sh"           21 minut
 保存当前正在运行的容器为一个新的镜像
 
 ```shell
+# 语法: docker commit [options] 要保存的容器特征码 保存后的镜像名称
 $ docker commit d6e78c47ed9d zanghu/ubuntu/bionic1804:v1.3 # 把版本号变了
 ```
 
