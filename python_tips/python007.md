@@ -2,13 +2,9 @@
 
 参考资料:
 
-#### 1.生成本地配置文件
+#### 1.实现思路
 
-执行下面的命令后, 会生成~/.jupyter目录, 其中有jupyter notebook的配置文件jupyter\_notebook\_config.py
 
-```python
-jupyter notebook --generate-config
-```
 
 #### 2.生成sha1密码
 
