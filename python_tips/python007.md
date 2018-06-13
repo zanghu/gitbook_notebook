@@ -63,10 +63,19 @@ def show_attr_detail(obj, fmt=2, filter_prefix=[], filter_suffix=[],
         for pre, suf in filter_surrounding:
             attr_name_list = [name for name in attr_name_list if ((not name.endswith(suf)) and \
              (not name.startswith(pre)))]
+             
+     # 获取变量的名称字符串, 其实就是'obj'
+    obj_name = None
+    var_names = copy.copy(locals())
+    for k, v in var_names.iteritems():
+        if id(v) == id(obj):
+            obj_name = k
+            break
+    assert obj_name is not None
     
     if fmt == 1:
         for attr_name in attr_name_list:
-            full_name = '.'.join(['obj', attr_name])
+            full_name = '.'.join([obj_name, attr_name])
             res_list = []
             for tool in tools:
                 if isinstance(eval(full_name), tool):
@@ -76,7 +85,7 @@ def show_attr_detail(obj, fmt=2, filter_prefix=[], filter_suffix=[],
             print '{0}: {1}'.format(full_name, res_list)
     else:
         for attr_name in attr_name_list:
-            full_name = '.'.join(['obj', attr_name])
+            full_name = '.'.join([obj_name, attr_name])
             res_list = []
             for n, tool in enumerate(tools):
                 if isinstance(eval(full_name), tool):
