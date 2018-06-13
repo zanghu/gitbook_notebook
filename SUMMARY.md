@@ -69,4 +69,4 @@
   * [docker: 常用操作命令](docker/docker007.md)
   * [docker: 容器切换到后台运行](docker/docker008.md)
   * [docker: 为镜像配置非root用户](docker/docker009.md)
-
+  * [docker: 弱隔离机制](docker/docker010.md)
