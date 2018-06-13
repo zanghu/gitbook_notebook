@@ -2,7 +2,7 @@
 
 参考资料: [http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html](http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html)
 
-#### 1.实现思路
+#### 1.例子
 
 * 首先，利用内建函数dir()列出对象的所有成员名称
 
