@@ -145,3 +145,11 @@ if __name__ == '__main__':
 * 如何遍历一个类或模块的全部成员的**句柄**
 
 将内建函数`dir()`和`getattr()`搭配使用。
+
+举例来说:
+
+```python
+attr_names = dir(a)
+for attr_name in attr_names:
+    print getattr(a, attr_name)
+```
