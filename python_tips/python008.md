@@ -151,5 +151,5 @@ if __name__ == '__main__':
 ```python
 attr_names = dir(a)
 for attr_name in attr_names:
-    print getattr(a, attr_name)
+    print getattr(a, attr_name) # getattr()返回的是a.attr_name句柄
 ```
