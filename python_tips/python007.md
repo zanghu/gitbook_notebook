@@ -15,7 +15,8 @@ import types
 import numpy
 import copy
 
-def show_attr_detail(obj, fmt=2, filter_prefix=[], filter_suffix=[], filter_surrounding=[('__', '__')]):
+def show_attr_detail(obj, fmt=2, filter_prefix=[], filter_suffix=[], 
+            filter_surrounding=[('__', '__')]):
     """展示输入对象的所有成员的类型, 可以帮助用户判断哪些成员是方法，那些成员是属性。
     
     Args:
