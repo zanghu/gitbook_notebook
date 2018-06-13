@@ -20,6 +20,11 @@
 
 　　/proc、/sys等未完全隔离
 
+```shell
+# 在docker内执行如下命令查到的信息不是容器系统的信息，耳屎宿主机的信息
+$ cat /proc/version
+```
+
 　　Top, free, iostat等命令展示的信息未隔离
 
 　　Root用户未隔离
