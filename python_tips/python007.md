@@ -2,7 +2,7 @@
 
 参考资料: [https://stackoverflow.com/questions/23119413/how-do-i-install-python-opencv-through-conda](https://stackoverflow.com/questions/23119413/how-do-i-install-python-opencv-through-conda)
 
-#### 方法
+#### 安装方法
 
 目前Anaconda默认安装后不包含opencv, 即`import cv2`会失败。
 
