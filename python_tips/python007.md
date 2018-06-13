@@ -1,6 +1,6 @@
-# \[python\]快速配置 jupyter notebook 服务器
+# \[python\]展示对象所有属性的类型的方法
 
-参考资料（官网）: http://jupyter-notebook.readthedocs.io/en/latest/public\_server.html
+参考资料:
 
 #### 1.生成本地配置文件
 
