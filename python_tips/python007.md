@@ -56,7 +56,8 @@ def show_attr_detail(obj, fmt=2, filter_prefix=[], filter_suffix=[],
     if (filter_surrounding is not None) and (len(filter_surrounding) > 0): # 过滤包围项
         #print '过滤包围项'
         for pre, suf in filter_surrounding:
-            attr_name_list = [name for name in attr_name_list if ((not name.endswith(suf)) and (not name.startswith(pre)))]
+            attr_name_list = [name for name in attr_name_list if ((not name.endswith(suf)) and \
+             (not name.startswith(pre)))]
     
     if fmt == 1:
         for attr_name in attr_name_list:
