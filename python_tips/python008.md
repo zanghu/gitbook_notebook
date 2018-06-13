@@ -132,7 +132,6 @@ class A(object):
         print '{0}, {1}, {2}'.format(self.a_0, self.b_0, content)
 
 if __name__ == '__main__':
-    #test_type(numpy)
     a = A()
     dir(a)
     show_attr_detail(a)
