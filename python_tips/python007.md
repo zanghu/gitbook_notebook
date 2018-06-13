@@ -1,6 +1,6 @@
 ## Python: 使用conda安装opencv
 
-参考资料:
+参考资料: [https://stackoverflow.com/questions/23119413/how-do-i-install-python-opencv-through-conda](https://stackoverflow.com/questions/23119413/how-do-i-install-python-opencv-through-conda)
 
 #### 方法
 
