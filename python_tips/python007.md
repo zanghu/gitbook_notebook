@@ -24,7 +24,8 @@ def show_attr_detail(obj, fmt=2, filter_prefix=[], filter_suffix=[],
         fmt: 结果显示格式
         filter_prefix: 指出具有哪些特定前缀的成员无需展示
         filter_suffix: 指出具有哪些特定后缀的成员无需展示
-        filter_surrounding: 指出具有哪些特定"前缀+后缀"的成员无需展示, 默认会过滤__xx__形式的成员
+        filter_surrounding: 指出具有哪些特定"前缀+后缀"的成员无需展示, 
+                默认会过滤__xx__形式的成员
     
     """
     # 参数检查
