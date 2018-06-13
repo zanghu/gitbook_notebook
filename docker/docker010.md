@@ -21,8 +21,12 @@
 　　/proc、/sys等未完全隔离
 
 ```shell
-# 在docker内执行如下命令查到的信息不是容器系统的信息，耳屎宿主机的信息
-$ cat /proc/version
+# 在docker内执行如下命令查到的信息不是容器系统的信息，而是宿主机的信息
+$ cat /proc/version # 返回宿主机操作系统版本信息
+$ uname -a # 也返回宿主机操作系统版本信息
+
+# 下面的命令能够正确返回容器系统信息
+$ lsb_release -a
 ```
 
 　　Top, free, iostat等命令展示的信息未隔离
