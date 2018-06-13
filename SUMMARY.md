@@ -7,6 +7,7 @@
   * [Python：关于classmethod和staticmethod的区别](python_tips/python004.md)
   * [Python：元类与metaclass](python_tips/python005.md)
   * [Python：jupyter notebook服务器快速配置](python_tips/python006.md)
+  * [Python：展示对象所有属性的类型](python_tips/python007.md)
 * [Pytorch](pytorch_note/README.md)
   * [Pytorch: 关于自动求梯度的原理](pytorch_note/pytorch001.md)
   * [Pytorch: permute与transpose的区别](pytorch_note/pytorch002.md)
