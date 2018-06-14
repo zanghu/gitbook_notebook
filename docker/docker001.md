@@ -11,7 +11,7 @@
 
 docker分为社区版（CE）和企业版（EE），其中前者免费使用而后者收费使用。
 
-不管是CE版还是EE版，docker都只支持少数几种主流操作系统的主流版本，例如：Windows环境只支持Win10。
+不管是CE版还是EE版，docker都只支持有限的几种主流操作系统的主流版本，例如：Windows环境只支持Win10。
 
 docker（CE）目前支持的操作系统如下图：  
 ![](/assets/docker001_002.png)
