@@ -48,28 +48,3 @@ input: torch.Tensor, 作为置换“基础”的原张量，被置换的一方
 
 dim: 置换切面所垂直的轴向的索引号
 
-
-```shell
-CUDA_VISIBLE_DEVICES=1 python main.py
-```
-
-python代码中设定：
-
-```python
-import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
-```
-
-参考网址：[http://www.cnblogs.com/darkknightzh/p/6591923.html](http://www.cnblogs.com/darkknightzh/p/6591923.html)
-
-### 2.使用函数 set\_device
-
-```python
-import torch
-torch.cuda.set_device(id)
-```
-
-该函数见 pytorch-master\torch\cuda\__init\__.py。
-
-不过官方建议使用CUDA\_VISIBLE\_DEVICES，不建议使用 set\_device 函数。
-
