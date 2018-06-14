@@ -1,14 +1,18 @@
-## pytorch中设定使用指定的GPU
+## Pytorch: 难懂函数——torch.gather
 
 参考资料：[http://www.cnblogs.com/darkknightzh/p/6836568.html](http://www.cnblogs.com/darkknightzh/p/6836568.html)
 
-PyTorch默认使用从0开始的GPU，如果GPU0正在运行程序，需要指定其他GPU。
+torch.gather函数的官方文档中解释比较复杂，而例子有关于简单
 
-有如下两种方法来指定需要使用的GPU。
+### 1.torch.gather的作用
 
-### 1.类似tensorflow指定GPU的方式，使用CUDA\_VISIBLE\_DEVICES。
+其实从torch.gather子啊官方文档中的例子可以看出，起本质上是用于对torch.Tensor类对象独享进行元素置换的函数。
 
-直接终端中设定：
+### 2.torch.gather参数说明
+
+* 函数原型
+
+`torch.gather(input, dim, index, out=None) → Tenso`
 
 ```shell
 CUDA_VISIBLE_DEVICES=1 python main.py
