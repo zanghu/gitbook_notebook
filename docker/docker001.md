@@ -3,7 +3,7 @@
 本文目的是介绍如何在Ubuntu上安装Docker  
 本文内容的实验环境为：Ubuntu14.04LTS（win7上用VMware运行的虚拟机）
 
--------------------------------------------------------------
+---
 
 ### 1.本地安装docker
 
@@ -23,6 +23,7 @@ docker一般只支持操作系统的最新几个主流版本，具体到Ubuntu�
 除了操作系统外，还有一些其他要求，但一般的Ubuntu都能满足。
 
 **STEP 1: 前驱安装**  
+
 （1）安装依赖库
 
 ```shell
@@ -78,6 +79,10 @@ $ sudo add-apt-repository \
 ```shell
 $ sudo docker version
 ```
+
+**STEP 2: 安装 docker-ce**
+
+
 
 ### 2.其他设置
 
