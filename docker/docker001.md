@@ -82,7 +82,25 @@ $ sudo docker version
 
 **STEP 2: 安装 docker-ce**
 
+（1）更新源
 
+```shell
+$ sudo apt-get update
+```
+
+（2）安装最新版本的docker-ce（官网上也有安装指定版本的方法）：
+
+```shell
+$ sudo apt-get install docker-ce
+```
+
+（3）验证安装（Hello World）
+
+Verify that Docker CE is installed correctly by running the hello-world image.
+
+```shell
+$ sudo docker run hello-world
+```
 
 ### 2.其他设置
 
