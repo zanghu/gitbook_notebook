@@ -92,13 +92,13 @@ $ sudo apt-get install docker-ce
 
 Verify that Docker CE is installed correctly by running the hello-world image.
 
-（5）检查安装
+检查版本
 
 ```shell
 $ sudo docker version
 ```
 
-
+运行hello world
 
 ```shell
 $ sudo docker run hello-world
