@@ -11,8 +11,9 @@
 
 使用`-v`参数可以显示一次 http 通信的整个过程，包括端口连接和 http request 头信息。甚至可以在使用代理的情况下打印出看到调用代理的过程。
 
+下面的例子是service mesh软件envoy官方给出的通过docker运行envoy例子，用到了curl -v
+
 ```
-# 下面的例子是service mesh软件envoy官方给出的通过docker运行envoy例子，用到了curl -v
 $ docker pull envoyproxy/envoy:latest
 $ docker run --rm -d -p 10000:10000 envoyproxy/envoy:latest
 $ curl -v localhost:10000
@@ -23,6 +24,10 @@ $ curl -v localhost:10000
 使用`-o`参数在获取资源的同时保存到指定文件，相当于“指定保存路径 + 重命名”
 
 下面的例子
+
 ```
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 ```
+
+
+
