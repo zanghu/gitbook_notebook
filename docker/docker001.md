@@ -155,6 +155,19 @@ $ docker run hello-world
 容器Hub控制台：
 [https://cr.console.aliyun.com/?spm=a2c4e.11153940.blogcont29941.10.43e069d65X5dzN](https://cr.console.aliyun.com/?spm=a2c4e.11153940.blogcont29941.10.43e069d65X5dzN)
 
+可复制的添加内容:
+
+```shell
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://n494vrfv.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
 按照上图网页中的内容配置即可。配置完成后，可以通过
 
 ```shell
@@ -190,6 +203,7 @@ sudo docker info
   **解决办法：**  
   将解析uname命令返回值后的地址手动复制到浏览器下载  
   [https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86\_64](https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86_64手动复制到浏览器下载)  
+  
   之后将下载到的文件docker-compose-Linux-x86\_64拷贝到目标目录，重命名为docker-compose
 
   ```shell
