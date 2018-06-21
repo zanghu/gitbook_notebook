@@ -46,7 +46,5 @@ $ curl http://codebelief.com
 $
 ```
 
-会得到如下提示：
-
 
 
