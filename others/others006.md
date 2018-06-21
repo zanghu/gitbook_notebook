@@ -32,7 +32,7 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 
 ### 3.访问时跟随链接重定向
 
-如果直接使用 curl 打开某些被重定向后的链接，这种情况下就无法获取我们想要的网页内容。例如： 
+如果直接使用`curl`打开某些被重定向后的链接，这种情况下就无法获取我们想要的网页内容。例如： 
 
 ```shell
 $ curl http://codebelief.com
@@ -46,5 +46,14 @@ $ curl http://codebelief.com
 $
 ```
 
+而当我们通过浏览器打开该链接时，会自动跳转到 http://www.codebelief.com。此时我们想要 curl 做的，就是像浏览器一样跟随链接的跳转，获取最终的网页内容。我们可以在命令中添加 -L 选项来跟随链接重定向：
+
+```shell
+$ curl -L http://codebelief.com
+```
+
+由于重定向非常常见，因此`-L`参数几乎是`curl`最常见的参数。
+
+### 4.自定义HTTP请求报文头字段
 
 
