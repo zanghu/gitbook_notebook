@@ -55,4 +55,16 @@ $ curl -L http://codebelief.com
 
 ### 4.自定义HTTP请求报文头字段
 
+当我们需要传递特定的 header 的时候，可以仿照以下命令来写： 
 
+```shell
+curl -H “Referer: www.example.com” -H “User-Agent: Custom-User-Agent” http://www.baidu.com
+```
+
+可以看到，当我们使用 -H 来自定义 User-Agent 时，需要使用 “User-Agent: xxx” 的格式。
+
+下面的例子是Linkerd官方的helloworld例子中的一部分，使用`-H`参数。
+
+```shell
+
+```
