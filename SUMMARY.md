@@ -62,7 +62,7 @@
   * [Others: 知识——编译器自举](others/others003.md)
   * [Others: 如何在markdown语法中显示尖括号](others/others004.md)
   * [Others: 微服务常见发布模式介绍](others/others005.md)
-  * [软件: curl常用命令](others/others006.md)
+  * [常用软件: curl常用命令](others/others006.md)
 * [docker](docker/README.md)
   * [docker: 安装与配置](docker/docker001.md)
   * [docker: 使用 docker-compose工具](docker/docker002.md)
