@@ -70,4 +70,10 @@ $ curl -H "Host: web" http://localhost:4140/
 It works!
 ```
 
-### 5.
+### 5.显示HTTP头信息
+
+`-i`参数可以显示http response的头信息，连同网页代码一起。
+
+```shell
+$ curl -i www.sina.com
+```
