@@ -22,6 +22,7 @@ $ curl -v localhost:10000
 
 使用`-o`参数在获取资源的同时保存到指定文件，相当于“指定保存路径 + 重命名”
 
+下面的例子
 ```
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 ```
