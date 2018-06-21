@@ -1,7 +1,6 @@
 ## 微服务常见发布模式介绍
 
-参考资料1：[http://tshare365.com/archives/2805.html](http://tshare365.com/archives/2805.html)  
-参考资料2：[https://blog.csdn.net/zyqduron/article/details/59507525](https://blog.csdn.net/zyqduron/article/details/59507525)
+参考资料1：[https://blog.csdn.net/chenliaoyuanjv/article/details/79689028](https://blog.csdn.net/chenliaoyuanjv/article/details/79689028) 
 
 `curl`是一个非常有用的命令，可以用来模拟http请求，用来检查网络是否联通、服务是否正常等等。
 
