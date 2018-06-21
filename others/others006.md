@@ -32,7 +32,11 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 
 ### 3.访问时跟随链接重定向
 
-
+如果直接使用 curl 打开某些被重定向后的链接，这种情况下就无法获取我们想要的网页内容。例如： 
+```shell
+curl http://codebelief.com 
+```
+会得到如下提示：
 
 
 
