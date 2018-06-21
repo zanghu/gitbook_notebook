@@ -92,7 +92,7 @@ $ curl -X POST www.example.com
 $ curl -X DELETE www.example.com
 ```
 
-### 7.发送POST请求
+### 7.发送POST请求获取指定数据
 
 发送表单信息有GET和POST两种方法。GET方法相对简单，只要把数据附在网址后面就行。
 
