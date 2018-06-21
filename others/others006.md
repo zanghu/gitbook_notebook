@@ -30,5 +30,9 @@ $ curl -v localhost:10000
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 ```
 
+### 3.访问时跟随链接重定向
+
+
+
 
 
