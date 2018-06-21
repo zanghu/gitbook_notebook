@@ -43,6 +43,7 @@ $ curl http://codebelief.com
 <hr><center>nginx/1.10.3</center>
 </body>
 </html>
+$
 ```
 
 会得到如下提示：
