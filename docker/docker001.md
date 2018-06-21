@@ -142,13 +142,16 @@ $ docker run hello-world
 
 #### 2.2.设置阿里云加速镜像
 
-打开阿里云网页：[https://account.aliyun.com/login/login.htm](https://account.aliyun.com/login/login.htm)
+打开阿里云网页：[https://account.aliyun.com/login/login.htm](https://account.aliyun.com/login/login.htm
 
 登录后在主页右上方的搜索栏内输入搜索内容“docker镜像加速器”  
 ![](/assets/docker001_004.png)
 
 之后选择第一个搜索结果，进入后点击左侧边栏最下面一项“镜像加速器”  
 ![](/assets/docker001_005.png)
+
+容器Hub控制台：
+[https://cr.console.aliyun.com/?spm=a2c4e.11153940.blogcont29941.10.43e069d65X5dzN](https://cr.console.aliyun.com/?spm=a2c4e.11153940.blogcont29941.10.43e069d65X5dzN)
 
 按照上图网页中的内容配置即可。配置完成后，可以通过
 
