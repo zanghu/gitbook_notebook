@@ -2,6 +2,8 @@
 
 参考资料1：[https://blog.csdn.net/chenliaoyuanjv/article/details/79689028](https://blog.csdn.net/chenliaoyuanjv/article/details/79689028) 
 
+参考资料2: [http://www.ruanyifeng.com/blog/2011/09/curl.html](http://www.ruanyifeng.com/blog/2011/09/curl.html)
+
 `curl`是一个非常有用的命令，可以用来模拟http请求，用来检查网络是否联通、服务是否正常等等。
 
 很多情况下，`curl`远比`ping`或`telnet`更为简单有效。
@@ -29,7 +31,7 @@ $ curl -v localhost:10000
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 ```
 
-### 3.访问时跟随链接重定向
+### 3.访问时跟随链接重定向（自动跳转）
 
 如果直接使用`curl`打开某些被重定向后的链接，这种情况下就无法获取我们想要的网页内容。例如： 
 
