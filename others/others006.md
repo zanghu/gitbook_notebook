@@ -80,7 +80,7 @@ It works!
 $ curl -i www.sina.com
 ```
 
-### 6.使用POST请求（HTTP动词）
+### 6.使用GET以外的HTTP动词
 
 curl默认的HTTP动词是GET，使用`-X`参数可以支持其他动词。
 
@@ -90,4 +90,18 @@ $ curl -X POST www.example.com
 
 ```shell
 $ curl -X DELETE www.example.com
+```
+
+### 7.发送POST请求
+
+发送表单信息有GET和POST两种方法。GET方法相对简单，只要把数据附在网址后面就行。
+
+```shell
+$ curl example.com/form.cgi?data=xxx
+```
+
+POST方法必须把数据和网址分开，curl就要用到--data参数。
+
+```shell
+$ curl -X POST --data "data=xxx" example.com/form.cgi
 ```
