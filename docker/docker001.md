@@ -74,12 +74,6 @@ $ sudo add-apt-repository \
    stable"
 ```
 
-（5）检查安装
-
-```shell
-$ sudo docker version
-```
-
 **STEP 2: 安装 docker-ce**
 
 （1）更新源
@@ -97,6 +91,14 @@ $ sudo apt-get install docker-ce
 （3）验证安装（Hello World）
 
 Verify that Docker CE is installed correctly by running the hello-world image.
+
+（5）检查安装
+
+```shell
+$ sudo docker version
+```
+
+
 
 ```shell
 $ sudo docker run hello-world
