@@ -22,7 +22,7 @@ docker一般只支持操作系统的最新几个主流版本，具体到Ubuntu�
 
 除了操作系统外，还有一些其他要求，但一般的Ubuntu都能满足。
 
-**STEP 1: 前驱安装**  
+**STEP 1: 前驱安装**
 
 （1）安装依赖库
 
@@ -142,20 +142,20 @@ $ docker run hello-world
 
 #### 2.2.设置阿里云加速镜像
 
-打开阿里云网页：[https://account.aliyun.com/login/login.htm](https://account.aliyun.com/login/login.htm
+打开阿里云网页：\[[https://account.aliyun.com/login/login.htm\]\(https://account.aliyun.com/login/login.htm](https://account.aliyun.com/login/login.htm]%28https://account.aliyun.com/login/login.htm)
 
-登录后在主页右上方的搜索栏内输入搜索内容“docker镜像加速器”  
+登录后在主页右上方的搜索栏内输入搜索内容“docker镜像加速器”
 
 ![](/assets/docker001_004.png)
 
-之后选择第一个搜索结果，进入后点击左侧边栏最下面一项“镜像加速器” 
- 
+之后选择第一个搜索结果，进入后点击左侧边栏最下面一项“镜像加速器”
+
 ![](/assets/docker001_005.png)
 
-容器Hub控制台：
+容器Hub控制台：  
 [https://cr.console.aliyun.com/?spm=a2c4e.11153940.blogcont29941.10.43e069d65X5dzN](https://cr.console.aliyun.com/?spm=a2c4e.11153940.blogcont29941.10.43e069d65X5dzN)
 
-可复制的添加内容:
+上图中可复制的添加内容:
 
 ```shell
 sudo mkdir -p /etc/docker
@@ -202,8 +202,8 @@ sudo docker info
 
   **解决办法：**  
   将解析uname命令返回值后的地址手动复制到浏览器下载  
-  [https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86\_64](https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86_64手动复制到浏览器下载)  
-  
+  [https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86\_64](https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86_64手动复制到浏览器下载)
+
   之后将下载到的文件docker-compose-Linux-x86\_64拷贝到目标目录，重命名为docker-compose
 
   ```shell
