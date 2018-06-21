@@ -66,5 +66,6 @@ curl -H “Referer: www.example.com” -H “User-Agent: Custom-User-Agent” ht
 下面的例子是Linkerd官方的helloworld例子中的一部分，使用`-H`参数。
 
 ```shell
-
+$ curl -H "Host: web" http://localhost:4140/
+It works!
 ```
