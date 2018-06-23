@@ -42,6 +42,7 @@
   * [Ubuntu: apt-cache search 搜索相关安装包](linux_tips/lin016.md)
   * [Linux: 内核版本号含义解析](linux_tips/lin017.md)
   * [Linux: chmod修改文件权限指南](linux_tips/lin018.md)
+  * [Linux: ubuntu自动更新相关的三个命令](linux_tips/lin019.md)
 * [Statistics](statistics/README.md)
   * [Static: N sigma 准则](statistics/static001.md)
 * [C Programming](c/README.md)
