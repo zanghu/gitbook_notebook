@@ -10,7 +10,7 @@
   * [Python：jupyter notebook服务器快速配置](python_tips/python006.md)
   * [Python：使用conda安装opencv](python_tips/python007.md)
   * [Python：展示对象所有属性的类型的方法](python_tips/python008.md)
-  * [Python：获得变量名称字符串的方法](python_tips/python009.md)
+  * [Python：函数默认参数不应是list类型](python_tips/python009.md)
 * [Pytorch](pytorch_note/README.md)
   * [Pytorch: 关于自动求梯度的原理](pytorch_note/pytorch001.md)
   * [Pytorch: permute与transpose的区别](pytorch_note/pytorch002.md)
