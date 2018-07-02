@@ -339,4 +339,6 @@ PyInit_cscore(void)       //模块外部名称为--CppClass
 
 将上面的元那么编译成动态库`cscore.so`，注意动态库的名字必须与导出的Python模块名字保持一致，这里假设导出的Python模块名是cscore
 
+```shell
+
 ```
