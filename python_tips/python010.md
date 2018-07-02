@@ -8,6 +8,11 @@
 
 2.动态库有一系列C/C++源码文件和头文件编程，其中有一个源文件中包含以下内容
 
+* Part 1: 函数封装
+* Part 2: 方法封装
+* Part 3: 模块封装
+* Part 4: 模块导出
+
 ```cpp
 #include <python3.6m/Python.h>
 
