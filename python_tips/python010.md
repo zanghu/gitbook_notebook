@@ -70,9 +70,6 @@ PyMODINIT_FUNC PyInit_[python模块名]()
 }
 ```
 
-
-
-
 ### 2.扩展部分的C++程序
 
 * **说明**
