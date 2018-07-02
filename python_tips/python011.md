@@ -2,9 +2,7 @@
 
 参考资料: [http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html](http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html)
 
-#### 1.使用C/C++编写Python类
-
-##### 1.1 基本步骤与格式约束
+#### 1.基本步骤与格式约束
 
 * **第零部分**：定义C结构体
 
@@ -81,4 +79,12 @@ PyMODINIT_FUNC PyInit_导出Python模块名(void)
 
     return pReturn;
 }
+```
+
+### 2.示例代码
+
+#### 2.1 C++源码
+
+```cpp
+
 ```
