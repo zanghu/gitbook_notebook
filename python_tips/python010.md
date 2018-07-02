@@ -127,7 +127,8 @@ static PyMethodDef MathMethods[] = {
 static struct PyModuleDef MathModule =
 {
     PyModuleDef_HEAD_INIT,
-    "cmathapi", // 对应于“模块名.__name__”, 这里的名字似乎其实不重要, 填写其他字符串(与模块名称不一致)也不会影响编译好的动态库在使用时的模块名称
+    "cmathapi", // 对应于“模块名.__name__”, 这里的名字似乎其实不重要
+    // 填写其他字符串(与模块名称不一致)也不会影响编译好的动态库在使用时的模块名称
     "example module doc string", // 对应于“模块名.__doc__”, 也不是一个很重要的字段
     -1,
     MathMethods,
