@@ -156,5 +156,11 @@ PyMODINIT_FUNC PyInit_cmathapi()
 #### 2.2 扩展部分编译指令
 
 ```shell
-
+g++ \
+-fPIC -shared -Wall -g \
+test.cpp \
+-I $ANACONDA3_HOME/include \
+-L $ANACONDA3_HOME/lib \
+-lpython3.6m \
+-o cmathapi.so
 ```
