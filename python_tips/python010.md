@@ -2,6 +2,10 @@
 
 参考资料: [http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html](http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html)
 
+### 1.C/C++扩展Python的一般编程范式
+
+1.提供一个动态库，该动态库名称与Python中import的模块名一致，例如：如果希望在python中使用`import torch`来导入模块，那么该模块的动态库文件的名称应该是`torch.so`。类似的例子可以回想下`cv2.so`
+
 ### 2.扩展部分的C++程序
 
 * **说明**
