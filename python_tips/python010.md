@@ -23,6 +23,11 @@ static 返回值类型 函数名称(形参类型1 形参名1, 形参类型2 形�
 }
 
 /* 第二部分: 模块封装 */
+static PyMethodDef MathMethods[] = {
+    { "Python中模块方法名称", 封装函数名称, METH_VARARGS, 方法说明 },
+    // 若干格式相同的行...
+    { NULL, NULL }
+};
 ```
 
 
