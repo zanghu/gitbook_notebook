@@ -13,7 +13,7 @@
 一般范式：
 
 ```cpp
-static [void|PythonObject *] 方法名(结构体名称 * Self, PyObject *参数1, PyObject *参数2, ...)
+static [void | PythonObject *] 方法名(结构体名称 * Self, PyObject *参数1, PyObject *参数2, ...)
 {
     // 函数体
 }
@@ -28,7 +28,8 @@ static [void|PythonObject *] 方法名(结构体名称 * Self, PyObject *参数1
 
 static PyMemberDef 方法数组变量名称[] = 
 {
-    {(char *)"m_szName",   T_STRING, offsetof(CScore, m_szName),   READONLY, (char *)"The Name of instance"},
+    // {导出Python类属性名, 数据类型, offsetof(C结构体名称, C结构体属性名), 访问控制标识, 字段描述}
+    {(char *)"m_szName",   T_STRING, offsetof(CScore, m_szName), READONLY, (char *)"The Name of instance"}, 
     
     /* 每个类属性占一行 *
     /
@@ -40,15 +41,9 @@ static PyMemberDef 方法数组变量名称[] =
 static PyMethodDef CScore_MethodMembers[] =      //类的所有成员函数结构列表.
 {
     {"GetName",    (PyCFunction)CScore_GetName, METH_NOARGS,     "Get the name of instance."},
-    {"GetMath",    (PyCFunction)CScore_GetMath, METH_NOARGS,     "Get the math score of instance."},
-    {"GetEnglish", (PyCFunction)CScore_GetEnglish, METH_NOARGS,  "Get the english score of isntance."},
-
-    {"SetMath",    (PyCFunction)CScore_SetMath, METH_VARARGS,    "Set the math score of instance."},
-    {"SetEnglish", (PyCFunction)CScore_SetEnglish, METH_VARARGS, "Set the english of instance."},
-
-    {"CalTotalScore",  (PyCFunction)CScore_CalTotalScore, METH_NOARGS,   "Print the total score and all information of instance."},
-
-    //{NULL, NULL, NULL, NULL}
+   
+    /* 每个类方法一行 */
+   
     {NULL, NULL}
 };
 
