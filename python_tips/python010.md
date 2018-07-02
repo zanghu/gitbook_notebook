@@ -12,6 +12,7 @@
 #include <python3.6m/Python.h>
 
 /* 第一部分：C/C++函数 */
+/* 此部分可以在其他源文件中 */
 
 /* 第一部分：方法封装 */
 /* 注意：函数的返回值类型只能为void或PyObject *，形参类型只能是PyObject * */
