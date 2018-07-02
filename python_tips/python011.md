@@ -10,7 +10,7 @@
 
 * 第一部分：包装C/C++类方法
 
-一般范式：
+一般范式如下：
 
 ```cpp
 static [void | PythonObject *] 方法名(结构体名称 * Self, PyObject *参数1, PyObject *参数2, ...)
@@ -19,18 +19,16 @@ static [void | PythonObject *] 方法名(结构体名称 * Self, PyObject *参�
 }
 ```
 
-
 * 第二部分：定义Python类成员
 
 一般范式如下：
 
 ```cpp
-
 static PyMemberDef 方法数组变量名称[] = 
 {
     // {导出Python类属性名, 数据类型, offsetof(C结构体名称, C结构体属性名), 访问控制标识, 属性描述}
     {(char *)"m_szName",   T_STRING, offsetof(CScore, m_szName), READONLY, (char *)"The Name of instance"}, 
-    
+
     /* 每个类属性占一行 *
     /
     {NULL}
@@ -46,9 +44,9 @@ static PyMethodDef CScore_MethodMembers[] =      //类的所有成员函数结�
 {
     // {导出Python类属性名, C结构体方法名, 方法参数类型, 方法描述}
     {"GetName", (PyCFunction)CScore_GetName, METH_NOARGS, "Get the name of instance."},
-   
+
     /* 每个类方法一行 */
-   
+
     {NULL, NULL}
 };
 ```
@@ -64,18 +62,18 @@ static PyTypeObject CScore_ClassInfo =
 };
 ```
 
-/* 附加部分：定义Python模块 */
-////////////////////////////////////////////////////////////
-// 此模块的说明信息.
-//
-static PyModuleDef ModuleInfo =
-{
-    PyModuleDef_HEAD_INIT,
-    "My C++ Class Module",               //模块的内置名--__name__.
-    "This Module Created By C++--extension a class to Python!",                 //模块的DocString.__doc__
-    -1,
-    NULL, NULL, NULL, NULL, NULL
+/_ 附加部分：定义Python模块 _/  
+////////////////////////////////////////////////////////////  
+// 此模块的说明信息.  
+//  
+static PyModuleDef ModuleInfo =  
+{  
+    PyModuleDef_HEADINIT,  
+    "My C++ Class Module",               //模块的内置名--**name**.  
+    "This Module Created By C++--extension a class to Python!",                 //模块的DocString.\_\_doc_  
+    -1,  
+    NULL, NULL, NULL, NULL, NULL  
 };
 
+/_ 第五部分：导出Python模块 + 将类加入模块 _/
 
-/* 第五部分：导出Python模块 + 将类加入模块 */
