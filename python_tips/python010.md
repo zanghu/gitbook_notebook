@@ -159,6 +159,8 @@ PyMODINIT_FUNC PyInit_cmathapi()
 #### 2.2 扩展部分编译指令
 
 ```shell
+#!/bin/sh
+# command.sh
 g++ \
 -fPIC -shared -Wall -g \
 test.cpp \
@@ -187,3 +189,4 @@ def test(a, b):
 if __name__ == '__main__':
     test(5, 7)
 ```
+
