@@ -4,7 +4,7 @@
 
 #### 1.例子
 
-```c++
+```cpp
 // 该头文件一般位于 ananconda3/include下, 对应的动态库
 #include <python3.6m/Python.h>
 #include <iostream>
