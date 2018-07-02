@@ -37,7 +37,7 @@ static PyMemberDef 方法数组变量名称[] =
 };
 
 
-/* 第三部分：定义Python类方法 */
+* 第三部分：定义Python类方法
 static PyMethodDef CScore_MethodMembers[] =      //类的所有成员函数结构列表.
 {
     // {导出Python类属性名, C结构体方法名, 方法参数类型, 方法描述}
@@ -49,7 +49,7 @@ static PyMethodDef CScore_MethodMembers[] =      //类的所有成员函数结�
 };
 
 
-/* 第四部分：配置Python类定义 */
+* 第四部分：配置Python类定义
 
 ////////////////////////////////////////////////////////////
 // 类/结构的所有成员、内置属性的说明信息.
