@@ -1,6 +1,6 @@
 ## Python: 为什么函数默认参数不应该是list类型
 
-参考资料: [http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html](http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html)
+参考资料: PYTHON编程（第4版，下册）、Python核心编程（第3版）
 
 ### 1.C/C++扩展Python的一般编程范式
 
