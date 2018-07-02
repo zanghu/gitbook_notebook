@@ -11,10 +11,10 @@
 ```cpp
 #include <python3.6m/Python.h>
 
-/* 第一部分：C/C++函数 */
+/* 第零部分：C/C++函数 */
 /* 此部分可以在其他源文件中 */
 
-/* 第一部分：方法封装 */
+/* 第一部分：函数封装 */
 /* 注意：函数的返回值类型只能为void或PyObject *，形参类型只能是PyObject * */
 static 返回值类型 函数名称(形参类型1 形参名1, 形参类型2 形参名2, ...)
 {
@@ -25,7 +25,7 @@ static 返回值类型 函数名称(形参类型1 形参名1, 形参类型2 形�
     /* 将结果包装成PyObject类型返回(如果有返回值的话) */
 }
 
-/* 第二部分: 模块封装 */
+/* 第二部分: 方法定义 */
 static PyMethodDef MathMethods[] = {
     { "Python中模块方法名称", 封装函数名称, METH_VARARGS, 方法说明 },
     
@@ -34,7 +34,7 @@ static PyMethodDef MathMethods[] = {
     { NULL, NULL } // 结束行
 };
 
-/* 第三部分：
+/* 第三部分：模块定义 */
 ```
 
 
