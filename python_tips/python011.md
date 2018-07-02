@@ -8,7 +8,7 @@
 
 * 第零部分：定义C结构体，Python没有C++接口, 所以定义C语言的struct而不是C++的class
 
-* 第一部分：包装C/C++类方法
+* **第一部分**：包装C/C++类方法
 
 一般范式如下：
 
@@ -19,7 +19,7 @@ static [void | PythonObject *] 方法名(结构体名称 * Self, PyObject *参�
 }
 ```
 
-* 第二部分：定义Python类成员
+* **第二部分**：定义Python类成员
 
 一般范式如下：
 
@@ -35,7 +35,7 @@ static PyMemberDef 方法数组变量名称[] =
 };
 ```
 
-* 第三部分：定义Python类方法
+* **第三部分**：定义Python类方法
 
 一般范式如下：
 
@@ -51,7 +51,7 @@ static PyMethodDef CScore_MethodMembers[] =      //类的所有成员函数结�
 };
 ```
 
-* 第四部分：配置Python类定义
+* **第四部分**：配置Python类定义
 
 示例代码如下:
 
@@ -62,18 +62,5 @@ static PyTypeObject CScore_ClassInfo =
 };
 ```
 
-/_ 附加部分：定义Python模块 _/  
-////////////////////////////////////////////////////////////  
-// 此模块的说明信息.  
-//  
-static PyModuleDef ModuleInfo =  
-{  
-    PyModuleDef_HEADINIT,  
-    "My C++ Class Module",               //模块的内置名--**name**.  
-    "This Module Created By C++--extension a class to Python!",                 //模块的DocString.\_\_doc_  
-    -1,  
-    NULL, NULL, NULL, NULL, NULL  
-};
-
-/_ 第五部分：导出Python模块 + 将类加入模块 _/
+* **第五部分**：将类加入模块
 
