@@ -2,7 +2,7 @@
 
 参考资料: [http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html](http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html)
 
-#### 1.例子
+### 1.扩展部分的C++源码
 
 ```cpp
 // 该头文件<python3.6m/Python.h>
@@ -76,3 +76,5 @@ PyMODINIT_FUNC PyInit_cmathapi()
     return module;
 }
 ```
+
+### 2.
