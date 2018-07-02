@@ -8,7 +8,7 @@
 
 * **第零部分**：定义C结构体
 
-Python没有C++接口, 所以定义C语言的struct而不是C++的class
+由于Python没有提供C++类的接口, 所以定义C语言的struct而不是C++的class
 
 * **第一部分**：包装C/C++类方法
 
