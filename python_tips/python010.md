@@ -75,49 +75,4 @@ PyMODINIT_FUNC PyInit_cmathapi()
     PyModule_AddObject(module, "error", __mathError);
     return module;
 }
-
- /**
-// 调用Add函数,传两个int型参数
-void Add()
-{
-        Py_Initialize();
-        PyObject* pModule = NULL;
-        PyObject* pFunc = NULL;
-        pModule = PyImport_ImportModule("cmathapi");    // Test:Python文件名
-        pFunc = PyObject_GetAttrString(pModule, "add");   // Add:Python文件中的函数名
-        Py_DECREF(pModule);
-
-        // 创建参数
-        PyObject* pArgs = PyTuple_New(2);                 // 函数调用的参数传递均是以元组的形式打包的,2表示参数个数
-        PyTuple_SetItem(pArgs, 0, Py_BuildValue("i", 5)); // 0---序号  i表示创建int型变量 
-        PyTuple_SetItem(pArgs, 1, Py_BuildValue("i", 7)); // 1---序号
-
-        // 返回值
-        PyObject* pReturn = NULL;
-        pReturn = PyEval_CallObject(pFunc, pArgs);        // 调用函数
-
-        // 将返回值转换为int类型.
-        int result;
-        PyArg_Parse(pReturn, "i", &result);               // i表示转换成int型变量
-        cout << "5+7 = " << result << endl;
-        Py_Finalize(); 
-}
-
- 
-int main(int argc, char *argv[])   
-{
-    PyImport_AppendInittab("cmathapi", PyInit_cmathapi);
-    //Py_Initialize();
-
-    // 传递argv[0]给Python解释器  
-    //Py_SetProgramName(argv[0]);   
-     
-    cout << "Start Test==========" << endl;
-    cout << "Add()--------------------" << endl;
-    Add();
-    cout << "Finish Test==========" << endl;
-
-    return 0;
-}
-*/
 ```
