@@ -64,3 +64,19 @@ static PyTypeObject CScore_ClassInfo =
 
 * **第五部分**：将类加入模块
 
+示例代码如下：
+
+```cpp
+PyMODINIT_FUNC PyInit_导出Python模块名(void)
+{
+    ...
+    pReturn = PyModule_Create(&ModuleInfo); // 根据模块信息创建模块.
+    ...
+
+    // 类加入模块
+    Py_INCREF(&ModuleInfo);
+    PyModule_AddObject(pReturn, "CScore", (PyObject*)&CScore_ClassInfo); 
+
+    return pReturn;
+}
+```
