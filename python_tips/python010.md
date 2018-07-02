@@ -139,7 +139,8 @@ static struct PyModuleDef MathModule =
  
 static PyObject* __mathError;
 
-// 这里的函数名称似乎非常重要, 必须采用“pyInit_模块名”的模式命名, 斗则无法从编译得到的动态库中import指定模块名称
+// 这里的函数名称似乎非常重要, 必须采用“pyInit_模块名”的模式命名
+// 否则无法从编译得到的动态库中import指定模块名称
 PyMODINIT_FUNC PyInit_cmathapi()
 {
     PyObject* module = PyModule_Create(&MathModule);
