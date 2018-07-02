@@ -2,42 +2,115 @@
 
 参考资料: [http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html](http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html)
 
-#### 1.例子
+#### 1.使用C/C++编写Python类
 
-```python
->>> def foo(x=[]):
-...     x.append(1)
-...     print x
-... 
->>> foo()
-[1]
->>> foo()
-[1, 1]
->>> foo()
-[1, 1, 1]
+##### 1.1 基本步骤
+
+* 第零部分：定义C结构体，Python没有C++接口, 所以定义C语言的struct而不是C++的class
+
+* 第一部分：包装C/C++类方法
+
+一般范式：
+
+```cpp
+static [void|PythonObject *] 方法名(结构体名称 * Self, PyObject *参数1, PyObject *参数2, ...)
+{
+    // 函数体
+}
 ```
 
-#### 2.问题原因
 
-python解释器在解析函数定义时，会为每个默认参数创建一个对象，并进行一次绑定。之后再程序调用时，解释器不会在每次调用时都重新创建一次默认参数对象。
+* 第二部分：定义Python类成员
 
-这就导致当函数默认参数不是不可变类型时，可能因为被修改而导致产生错误的结果。
+一般范式如下：
+
+```cpp
+
+static PyMemberDef 方法数组变量名称[] = 
+{
+    {(char *)"m_szName",   T_STRING, offsetof(CScore, m_szName),   READONLY, (char *)"The Name of instance"},
+    
+    /* 每个类属性占一行 *
+    /
+    {NULL}
+};
 
 
-### 3.解决办法
+/* 第三部分：定义Python类方法 */
+static PyMethodDef CScore_MethodMembers[] =      //类的所有成员函数结构列表.
+{
+    {"GetName",    (PyCFunction)CScore_GetName, METH_NOARGS,     "Get the name of instance."},
+    {"GetMath",    (PyCFunction)CScore_GetMath, METH_NOARGS,     "Get the math score of instance."},
+    {"GetEnglish", (PyCFunction)CScore_GetEnglish, METH_NOARGS,  "Get the english score of isntance."},
 
-对于上面示例代码的问题，建议改为：
+    {"SetMath",    (PyCFunction)CScore_SetMath, METH_VARARGS,    "Set the math score of instance."},
+    {"SetEnglish", (PyCFunction)CScore_SetEnglish, METH_VARARGS, "Set the english of instance."},
 
-```python
->>> def foo(x=None):
-...     if x is None:
-...         x = []
-...     x.append(1)
-...     print x
->>> foo()
-[1]
->>> foo()
-[1]
-```
+    {"CalTotalScore",  (PyCFunction)CScore_CalTotalScore, METH_NOARGS,   "Print the total score and all information of instance."},
 
-除此之外，根本的解决办法是：用不可变类型替换可变类型作为函数的默认参数。例如使用元组类型作为默认参数而不是使用列表类型。
+    //{NULL, NULL, NULL, NULL}
+    {NULL, NULL}
+};
+
+
+/* 第四部分：配置Python类定义 */
+
+////////////////////////////////////////////////////////////
+// 类/结构的所有成员、内置属性的说明信息.
+//
+static PyTypeObject CScore_ClassInfo =
+{
+    PyVarObject_HEAD_INIT(NULL, 0)"Module.MyCppClass",                 //可以通过__class__获得这个字符串. CPP可以用类.__name__获取.
+    sizeof(CScore),                 //类/结构的长度.调用PyObject_New时需要知道其大小.
+    0,
+    (destructor)CScore_Destruct,    //类的析构函数.
+    0,
+    0,
+    0,
+    0,
+    (reprfunc)CScore_Repr,          //repr 内置函数调用。
+    0,
+    0,
+    0,
+    0,
+    0,
+    (reprfunc)CScore_Str,          //Str/print内置函数调用.
+    0,
+    0,
+    0,
+    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,                 //如果没有提供方法的话，为Py_TPFLAGS_DEFAULE
+    "MyCppClass Objects---Extensioned by C++!",                   //__doc__,类/结构的DocString.
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    CScore_MethodMembers,        //类的所有方法集合.
+    CScore_DataMembers,          //类的所有数据成员集合.
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    (initproc)CScore_init,      //类的构造函数.
+    0,
+};
+
+
+/* 附加部分：定义Python模块 */
+////////////////////////////////////////////////////////////
+// 此模块的说明信息.
+//
+static PyModuleDef ModuleInfo =
+{
+    PyModuleDef_HEAD_INIT,
+    "My C++ Class Module",               //模块的内置名--__name__.
+    "This Module Created By C++--extension a class to Python!",                 //模块的DocString.__doc__
+    -1,
+    NULL, NULL, NULL, NULL, NULL
+};
+
+
+/* 第五部分：导出Python模块 + 将类加入模块 */
