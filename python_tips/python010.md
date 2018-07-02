@@ -81,6 +81,7 @@ PyMODINIT_FUNC PyInit_[python模块名]()
 * **源码**
 
 ```cpp
+/* test.cpp */
 // 该头文件<python3.6m/Python.h>
 一般位于 ananconda3/include下, 对应的动态库
 #include <python3.6m/Python.h>
@@ -166,3 +167,5 @@ test.cpp \
 -lpython3.6m \
 -o cmathapi.so
 ```
+
+#### 2.3.Python测试代码
