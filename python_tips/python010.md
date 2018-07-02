@@ -161,6 +161,7 @@ PyMODINIT_FUNC PyInit_cmathapi()
 ```shell
 #!/bin/sh
 # command.sh
+
 set -ex
 
 if [ $# -nq 1 ]
