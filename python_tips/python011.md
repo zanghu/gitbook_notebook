@@ -249,7 +249,7 @@ static PyMethodDef CScore_MethodMembers[] =      //类的所有成员函数结�
 //
 static PyTypeObject CScore_ClassInfo =
 {
-    PyVarObject_HEAD_INIT(NULL, 0)"Module.MyCppClass",                 //可以通过__class__获得这个字符串. CPP可以用类.__name__获取.
+    PyVarObject_HEAD_INIT(NULL, 0)"Module.MyCppClass", //可以通过__class__获得这个字符串. CPP可以用类.__name__获取.
     sizeof(CScore),                 //类/结构的长度.调用PyObject_New时需要知道其大小.
     0,
     (destructor)CScore_Destruct,    //类的析构函数.
@@ -267,8 +267,8 @@ static PyTypeObject CScore_ClassInfo =
     0,
     0,
     0,
-    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,                 //如果没有提供方法的话，为Py_TPFLAGS_DEFAULE
-    "MyCppClass Objects---Extensioned by C++!",                   //__doc__,类/结构的DocString.
+    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE, //如果没有提供方法的话，为Py_TPFLAGS_DEFAULE
+    "MyCppClass Objects---Extensioned by C++!", //__doc__,类/结构的DocString.
     0,
     0,
     0,
@@ -296,7 +296,7 @@ static PyModuleDef ModuleInfo =
 {
     PyModuleDef_HEAD_INIT,
     "My C++ Class Module",               //模块的内置名--__name__.
-    "This Module Created By C++--extension a class to Python!",                 //模块的DocString.__doc__
+    "This Module Created By C++--extension a class to Python!", //模块的DocString.__doc__
     -1,
     NULL, NULL, NULL, NULL, NULL
 };
