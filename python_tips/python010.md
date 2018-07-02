@@ -2,7 +2,7 @@
 
 参考资料: [http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html](http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html)
 
-### 1.扩展部分的C++程序
+### 2.扩展部分的C++程序
 
 * **说明**
 
