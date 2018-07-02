@@ -368,3 +368,34 @@ else
   exit 1
 fi
 ```
+
+#### 2.3 Python测试用例
+
+```python
+#coding=utf-8
+#!/bin/env python
+"""
+test.py
+"""
+
+import cscore
+
+if __name__ == '__main__':
+
+    StuScore = cscore.CScore("Kobe Bryant", 88, 100)
+
+    StuScore.GetName()
+
+    StuScore.GetMath()
+
+    StuScore.GetEnglish()
+
+    StuScore.CalTotalScore()
+```
+
+#### 2.4 运行测试用例
+
+```shell
+$ sh command.sh lib
+$ python test.py
+```
