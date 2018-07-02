@@ -1,4 +1,4 @@
-## Python: 为什么函数默认参数不应该是list类型
+## Python: 用C/C++编写Python类
 
 参考资料: [http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html](http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html)
 
