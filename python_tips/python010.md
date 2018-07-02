@@ -2,7 +2,13 @@
 
 参考资料: [http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html](http://satran.in/2012/01/12/python-dangerous-default-value-as-argument.html)
 
-### 1.扩展部分的C++源码
+### 1.扩展部分的C++程序
+
+* 说明
+
+增加了一个自定义的数学库模块，名称是cmathapi。该模块对外提供有两个方法，其一是两个整数的假发，另一个是两个整数的减法。
+
+* 源码
 
 ```cpp
 // 该头文件<python3.6m/Python.h>
