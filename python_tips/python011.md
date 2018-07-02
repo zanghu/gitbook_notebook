@@ -28,7 +28,7 @@ static [void | PythonObject *] 方法名(结构体名称 * Self, PyObject *参�
 
 static PyMemberDef 方法数组变量名称[] = 
 {
-    // {导出Python类属性名, 数据类型, offsetof(C结构体名称, C结构体属性名), 访问控制标识, 字段描述}
+    // {导出Python类属性名, 数据类型, offsetof(C结构体名称, C结构体属性名), 访问控制标识, 属性描述}
     {(char *)"m_szName",   T_STRING, offsetof(CScore, m_szName), READONLY, (char *)"The Name of instance"}, 
     
     /* 每个类属性占一行 *
@@ -40,7 +40,8 @@ static PyMemberDef 方法数组变量名称[] =
 /* 第三部分：定义Python类方法 */
 static PyMethodDef CScore_MethodMembers[] =      //类的所有成员函数结构列表.
 {
-    {"GetName",    (PyCFunction)CScore_GetName, METH_NOARGS,     "Get the name of instance."},
+    // {导出Python类属性名, C结构体方法名, 方法参数类型, 方法描述}
+    {"GetName", (PyCFunction)CScore_GetName, METH_NOARGS, "Get the name of instance."},
    
     /* 每个类方法一行 */
    
