@@ -215,10 +215,14 @@ static PyObject* CScore_CalTotalScore(CScore* Self)
 /* 第二部分：定义Python类成员 */
 static PyMemberDef CScore_DataMembers[] =         //类/结构的数据成员的说明.
 {
-    // 注意: 下面的每一行的第一个参数和最后一个参数必须强制转化为(char *), 否则编译报警(但不会报错 ), 使用编译出的库运行测试用例会失败
-    {(char *)"m_szName",   T_STRING, offsetof(CScore, m_szName),   READONLY, (char *)"The Name of instance"},
-    {(char *)"m_dMath",    T_FLOAT,  offsetof(CScore, m_dMath),    READONLY, (char *)"The Math score of instance."},
-    {(char *)"m_dEnglish", T_FLOAT,  offsetof(CScore, m_dEnglish), READONLY, (char *)"The English score of instance."},
+    // 注意: 下面的每一行的第一个参数和最后一个参数必须强制转化为(char *),
+    // 否则编译报警(但不会报错 ), 使用编译出的库运行测试用例会失败
+    {(char *)"m_szName",   T_STRING, offsetof(CScore, m_szName),   READONLY, \
+    (char *)"The Name of instance"},
+    {(char *)"m_dMath",    T_FLOAT,  offsetof(CScore, m_dMath),    READONLY, \
+    (char *)"The Math score of instance."},
+    {(char *)"m_dEnglish", T_FLOAT,  offsetof(CScore, m_dEnglish), READONLY, \
+    (char *)"The English score of instance."},
 
     //{NULL, NULL, NULL, 0, NULL}
     {NULL}
@@ -235,7 +239,8 @@ static PyMethodDef CScore_MethodMembers[] =      //类的所有成员函数结�
     {"SetMath",    (PyCFunction)CScore_SetMath, METH_VARARGS,    "Set the math score of instance."},
     {"SetEnglish", (PyCFunction)CScore_SetEnglish, METH_VARARGS, "Set the english of instance."},
 
-    {"CalTotalScore",  (PyCFunction)CScore_CalTotalScore, METH_NOARGS,   "Print the total score and all information of instance."},
+    {"CalTotalScore",  (PyCFunction)CScore_CalTotalScore, METH_NOARGS,   \
+        "Print the total score and all information of instance."},
 
     //{NULL, NULL, NULL, NULL}
     {NULL, NULL}
@@ -249,7 +254,8 @@ static PyMethodDef CScore_MethodMembers[] =      //类的所有成员函数结�
 //
 static PyTypeObject CScore_ClassInfo =
 {
-    PyVarObject_HEAD_INIT(NULL, 0)"Module.MyCppClass", //可以通过__class__获得这个字符串. CPP可以用类.__name__获取.
+    PyVarObject_HEAD_INIT(NULL, 0)"Module.MyCppClass", //可以通过__class__获得这个字符串. 
+    // CPP可以用类.__name__获取.
     sizeof(CScore),                 //类/结构的长度.调用PyObject_New时需要知道其大小.
     0,
     (destructor)CScore_Destruct,    //类的析构函数.
