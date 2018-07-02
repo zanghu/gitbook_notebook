@@ -153,4 +153,8 @@ PyMODINIT_FUNC PyInit_cmathapi()
 }
 ```
 
-### 2.
+#### 2.2 扩展部分编译指令
+
+```makefile
+
+```
