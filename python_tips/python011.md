@@ -400,3 +400,4 @@ $ sh command.sh lib
 $ python test.py
 ```
 
+![](/assets/python011_001.PNG)
