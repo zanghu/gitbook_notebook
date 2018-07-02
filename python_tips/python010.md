@@ -12,7 +12,7 @@
 #include <python3.6m/Python.h>
 
 /* 第一部分：方法封装 */
-static 返回值类型 函数名称(PyObject *形参名1, PyObject *形参名2, ...)
+static 返回值类型 函数名称(形参类型1 形参名1, 形参类型2 形参名2, ...)
 {
     /* 将PyObject参数转换成C类型参数 */
     
