@@ -182,7 +182,7 @@ def test(a, b):
     print("{0} + {1} = {2}".format(a, b, c))
     
     d = cmathapi.sub(a, b)
-print("{0} + {1} = {2}".format(a, b, c))
+    print("{0} - {1} = {2}".format(a, b, c))
 
 if __name__ == '__main__':
     test(5, 7)
