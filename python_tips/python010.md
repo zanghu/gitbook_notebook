@@ -170,7 +170,7 @@ test.cpp \
 -o cmathapi.so
 ```
 
-#### 2.3.Python测试代码
+#### 2.3 Python测试代码
 
 ```python
 #!coding=utf-8
@@ -190,3 +190,6 @@ if __name__ == '__main__':
     test(5, 7)
 ```
 
+#### 2.4 使用方法
+
+先将C++源码编译成`cmathapi.so`动态库，之后执行`python test.py`
