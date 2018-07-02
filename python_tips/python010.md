@@ -26,7 +26,7 @@ static 返回值类型 函数名称(形参类型1 形参名1, 形参类型2 形�
 }
 
 /* 第二部分: 方法定义 */
-static PyMethodDef MathMethods[] = {
+static PyMethodDef 方法定义数组名称[] = {
     { "Python中模块方法名称", 封装函数名称, METH_VARARGS, 方法说明 },
     
     // 若干格式相同的行...
@@ -35,6 +35,31 @@ static PyMethodDef MathMethods[] = {
 };
 
 /* 第三部分：模块定义 */
+static struct PyModuleDef 模块定义变量名称 =
+{
+    PyModuleDef_HEAD_INIT,
+    "cmathapi", // 对应于“模块名.__name__”, 这里的名字似乎其实不重要, 填写其他字符串(与模块名称不一致)也不会影响编译好的动态库在使用时的模块名称
+    "example module doc string", // 对应于“模块名.__doc__”, 也不是一个很重要的字段
+    -1,
+    MathMethods, // 方法定义数组名称
+    NULL,
+    NULL,
+    NULL,
+    NULL
+};
+
+/* 第四部分: 模块导出 */
+PyMODINIT_FUNC PyInit_[python模块名]()
+{
+    PyObject* module = PyModule_Create(&模块定义变量名称);
+    if (NULL == module) {
+        return NULL;
+    }
+    
+    /* 其他内容 */
+    
+    return module;
+}
 ```
 
 
