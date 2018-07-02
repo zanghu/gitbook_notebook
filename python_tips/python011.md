@@ -335,10 +335,36 @@ PyInit_cscore(void)       //模块外部名称为--CppClass
 }
 ```
 
-#### 2.2 编译C++源码
+#### 2.2 编译C++源码的shell脚本
 
 将上面的元那么编译成动态库`cscore.so`，注意动态库的名字必须与导出的Python模块名字保持一致，这里假设导出的Python模块名是cscore
 
 ```shell
+#!/bin/sh
+# command.sh
 
+set -ex
+
+if [ $# -nq 1 ]
+then
+  echo "legal number of params is 1, but now is $#"
+  exit 1
+else
+  echo "ok, param number is $#"
+fi
+
+BUILD_COMMAND="g++ -Wall -g test.cpp -I $ANACONDA3_HOME/include  -Wl,-rpath,$ANACONDA3_HOME/lib -lpython3.6m -o Test"
+
+LIB_COMMAND="g++ -fPIC -shared -Wall -g test.cpp -I $ANACONDA3_HOME/include -Wl,-rpath,$ANACONDA3_HOME/lib -lpython3.6m -o cmathapi.so"
+
+if [ "$1" = build ]
+then
+  $BUILD_COMMAND
+elif [ "$1" = lib ]
+then
+  $LIB_COMMAND
+else
+  echo "unknow command param $1, error"
+  exit 1
+fi
 ```
