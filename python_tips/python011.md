@@ -400,4 +400,6 @@ $ sh command.sh lib
 $ python test.py
 ```
 
+运行结果如下：
+
 ![](/assets/python011_001.PNG)
