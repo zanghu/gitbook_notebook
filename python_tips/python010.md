@@ -13,6 +13,8 @@
 * Part 3: 模块封装
 * Part 4: 模块导出
 
+下面是大体源码结构
+
 ```cpp
 #include <python3.6m/Python.h>
 
