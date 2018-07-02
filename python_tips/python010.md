@@ -1,4 +1,4 @@
-## Python: 用C/C++扩展Python（原创）
+## Python: 用C/C++扩展Python——模块（原创）
 
 参考资料: PYTHON编程（第4版，下册）、Python核心编程（第3版）
 
