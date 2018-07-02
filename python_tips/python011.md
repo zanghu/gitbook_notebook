@@ -35,9 +35,13 @@ static PyMemberDef 方法数组变量名称[] =
     /
     {NULL}
 };
-
+```
 
 * 第三部分：定义Python类方法
+
+一般范式如下：
+
+```cpp
 static PyMethodDef CScore_MethodMembers[] =      //类的所有成员函数结构列表.
 {
     // {导出Python类属性名, C结构体方法名, 方法参数类型, 方法描述}
@@ -47,53 +51,18 @@ static PyMethodDef CScore_MethodMembers[] =      //类的所有成员函数结�
    
     {NULL, NULL}
 };
-
+```
 
 * 第四部分：配置Python类定义
 
-////////////////////////////////////////////////////////////
-// 类/结构的所有成员、内置属性的说明信息.
-//
+示例代码如下:
+
+```cpp
 static PyTypeObject CScore_ClassInfo =
 {
-    PyVarObject_HEAD_INIT(NULL, 0)"Module.MyCppClass",                 //可以通过__class__获得这个字符串. CPP可以用类.__name__获取.
-    sizeof(CScore),                 //类/结构的长度.调用PyObject_New时需要知道其大小.
-    0,
-    (destructor)CScore_Destruct,    //类的析构函数.
-    0,
-    0,
-    0,
-    0,
-    (reprfunc)CScore_Repr,          //repr 内置函数调用。
-    0,
-    0,
-    0,
-    0,
-    0,
-    (reprfunc)CScore_Str,          //Str/print内置函数调用.
-    0,
-    0,
-    0,
-    Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,                 //如果没有提供方法的话，为Py_TPFLAGS_DEFAULE
-    "MyCppClass Objects---Extensioned by C++!",                   //__doc__,类/结构的DocString.
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    CScore_MethodMembers,        //类的所有方法集合.
-    CScore_DataMembers,          //类的所有数据成员集合.
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    (initproc)CScore_init,      //类的构造函数.
-    0,
+ ...
 };
-
+```
 
 /* 附加部分：定义Python模块 */
 ////////////////////////////////////////////////////////////
