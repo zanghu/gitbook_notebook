@@ -84,7 +84,7 @@ pytorch的torch.gather函数的做法是，限制置换时置换后的新张量�
 
 `（a1, a2, ..., a(k-1), index\[a1\]\[a2\]...\[aN\], a(k+1), ..., aN）`
 
-上的元素
+上的元素。
 
 ### 3.torch.gather说明
 
