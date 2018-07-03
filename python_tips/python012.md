@@ -4,4 +4,6 @@
 
 参考资料: [2. Defining Extension Types: Tutorial](https://docs.python.org/3/extending/newtypes_tutorial.html)
 
+参考资料：[3. Defining Extension Types: Assorted Topics](https://docs.python.org/3/extending/newtypes.html)
+
 #### 1.基本步骤与格式约束
