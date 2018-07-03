@@ -6,9 +6,9 @@ torch.gather函数的官方文档中解释比较复杂，而例子有关于简�
 
 ### 1.torch.gather的作用
 
-其实从torch.gather子啊官方文档中的例子可以看出，起本质上是用于对torch.Tensor类对象进行元素置换的函数。
+其实从torch.gather子啊官方文档中的例子可以看出，其功能是用于对torch.Tensor类对象进行一类受限的元素置换。
 
-numpy中的元素置换函数有`numpy.transpose()`
+numpy中因该也有的元素置换函数有，但尚未找到（`numpy.transpose`是轴置换函数，并非元素置换）。
 
 ### 2.张量置换的分析
 
