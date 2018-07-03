@@ -100,3 +100,10 @@ dim: 置换切面所垂直的轴向的索引号
 
 index: 索引张量
 
+* 功能说明
+
+```
+out[i][j][k] = input[index[i][j][k]][j][k]  # if dim == 0
+out[i][j][k] = input[i][index[i][j][k]][k]  # if dim == 1
+out[i][j][k] = input[i][j][index[i][j][k]]  # if dim == 2
+```
