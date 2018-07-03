@@ -115,6 +115,10 @@ index: 索引张量
 * 功能说明
 
 ```
+# 以dim=1为例
+# (1)坐标(i, j, k)确定了out的唯一一个元素；
+# (2)out[i][j][k]只能在input[:, j, k]上取值, 唯一的不确定方向是轴向dim；
+# (3)轴向dim上的位置由index[i][j][k]确定。
 out[i][j][k] = input[index[i][j][k]][j][k]  # if dim == 0
 out[i][j][k] = input[i][index[i][j][k]][k]  # if dim == 1
 out[i][j][k] = input[i][j][index[i][j][k]]  # if dim == 2
