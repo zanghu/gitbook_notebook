@@ -50,6 +50,7 @@
   * [Static: N sigma 准则](statistics/static001.md)
 * [C Programming](c/README.md)
   * [C: 类Unix系统下获取IP、MAC和掩码](c/c001.md)
+  * [C: c99-style designated initializer](c/c002.md)
 * [Java Programming](java/README.md)
   * [Maven: Linux环境安装maven](java/java001.md)
   * [Maven: Linux环境maven创建项目](java/java002.md)
