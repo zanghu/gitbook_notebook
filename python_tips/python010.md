@@ -33,7 +33,7 @@ static 返回值类型 函数名称(形参类型1 形参名1, 形参类型2 形�
 }
 
 /* 第二部分: 方法定义 */
-static struct PyMethodDef 方法定义数组名称[] = {
+static PyMethodDef 方法定义数组名称[] = {
     { "Python中模块方法名称", 封装函数名称, METH_VARARGS, 方法说明 },
     
     // 若干格式相同的行...
