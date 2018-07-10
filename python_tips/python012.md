@@ -1,5 +1,7 @@
 ## Python: 用C/C++编写Python——官方文档
 
+### 1.官方教程
+
 参考资料：[官方教程目录](https://docs.python.org/3/extending/index.html)
 
 参考资料: [1. Extending Python with C or C++](https://docs.python.org/3/extending/extending.html)
@@ -12,6 +14,8 @@
 
 参考资料：[5. Building C and C++ Extensions on Windows](https://docs.python.org/3/extending/windows.html)
 
+### 2.Python C/C++ API
+
 参考资料: [Python/C API Reference Manual](https://docs.python.org/3/c-api/index.html#c-api-index)
 
-#### 1.基本步骤与格式约束
+
