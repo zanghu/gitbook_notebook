@@ -26,15 +26,17 @@ Python提供了一系列API，包含了用来定义各种不同类型异常的�
 
 * **异常的三要素**
 
-异常被保存在解释器内部的全局静态变量中；当没有异常发生时该变量是NULL.
+(1) 异常被保存在解释器内部的一个全局静态变量中；当没有异常发生时该变量是NULL.
 
-此外还有一个全局变量存储异常的“伴随值”（即Python中raise函数的第二个参数）。
+(2) 此外还有一个全局变量存储异常的“伴随值”（即Python中raise函数的第二个参数）。
 
 ```python
 raise [Exception [, args [, traceback]]] # 附注：Python中的raise函数的原型
 ```
 
-Exceptions are stored in a static global variable inside the interpreter; if this variable is NULL no exception has occurred. A second global variable stores the “associated value” of the exception (the second argument to raise). A third variable contains the stack traceback in case the error originated in Python code. These three variables are the C equivalents of the result in Python of sys.exc_info() (see the section on module sys in the Python Library Reference). It is important to know about them to understand how errors are passed around.
+(3) 此外还有第三个变量，用来在错误由Python代码引起的情况下保存堆栈信息。
+
+这三个变量是Python函数`sys.exc_info()`返回值的C语言下的等价物。
 
 
 
