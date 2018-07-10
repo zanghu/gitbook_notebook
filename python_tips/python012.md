@@ -34,9 +34,11 @@
 
 * 如果当前模块是一个程序包的某个子模块，那么程序包全名就是模块全名的一部分。举例来说：一个名为T的类型，定义在模块M中，该模块M包含在程序包Q中，而Q又是程序包P的子程序包，那么类型T的`tp_name`属性应初始化为“P.Q.M.T”。
 
-对于动态分配的类型对象，`tp_name`应该只包含类型名，而模块名则显示的作为键'__module__'的值保存在类型字典中。
+对于动态分配的类型对象，其`tp_name`属性值应该只包含类型名，而模块名则显示的作为键'__module__'的值保存在类型字典中。
 
 For statically allocated type objects, the tp_name field should contain a dot. Everything before the last dot is made accessible as the __module__ attribute, and everything after the last dot is made accessible as the __name__ attribute.
+
+对于静态分配的类型对象，其`tp_name`属性值应该是一个由若干个由'.'分割的子串组成的字符串。`tp_name`最后一个'.'之前的部分就是类型对象的`__module__`属性的值（即可以通过类型对象的`__module__`属性访问），而最后一个'.'后面的部分则是类型对象的`__name__`的值（即可以通过类型对象的`__name__`属性访问）。
 
 If no dot is present, the entire tp_name field is made accessible as the __name__ attribute, and the __module__ attribute is undefined (unless explicitly set in the dictionary, as explained above). This means your type will be impossible to pickle. Additionally, it will not be listed in module documentations created with pydoc.
 
