@@ -37,8 +37,6 @@ static PyObject *myfunction(PyObject *self, PyObject *args) {
 
 这样一来，顶层调用者（一般是Python解释器）收到的异常信息就是最底层那个首先发生异常的函数所报告的最细致（这里的“detail”应该是指粒度最小、最底层和最基础）的异常信息。一旦错误到达Python解释器的主循环，就会立即中断当前正在执行的Python代码同时开始尝试找到程序中指定的该类型异常的处理句柄。
 
-\(There are situations where a module can actually give a more detailed error message by calling another PyErr\_\*\(\) function, and in such cases it is fine to do so. As a general rule, however, this is not necessary, and can cause information about the cause of the error to be lost: most operations can fail for a variety of reasons.\)
-
 * **异常处理API**
 
 Python提供了一系列API，包含了用来定义各种不同类型异常的函数。此类函数中最常用的那些包括：
