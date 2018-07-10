@@ -10,11 +10,11 @@
 
 When a function f that calls another function g detects that the latter fails, f should itself return an error value (usually NULL or -1). It should not call one of the PyErr_*() functions — one has already been called by g. f’s caller is then supposed to also return an error indication to its caller, again without calling PyErr_*(), and so on — the most detailed cause of the error was already reported by the function that first detected it. Once the error reaches the Python interpreter’s main loop, this aborts the currently executing Python code and tries to find an exception handler specified by the Python programmer.
 
-
-
 C/C++编写的所有扩展Python函数都应该返回一个指向PyObject对象的指针，只有一种情况是例外，即当函数希望主动引发异常的时候。
 
 一个重要的、从始至终贯彻于Python解释器设计的的原则是：当一个函数失败时，它应该设置异常条件并但会错误码（在C/C++编写的Python函数中，对应的行为一般是返回NULL指针）。
+
+* 异常处理API
 
 Python提供了一系列API，包含了用来定义各种不同类型异常的函数。此类函数中最常用的那些包括：
 
@@ -22,7 +22,7 @@ Python提供了一系列API，包含了用来定义各种不同类型异常的�
 `PyErr_SetFromErrno()`
 `PyErr_SetObject()`
 
-异常的三要素：
+* 异常的三要
 
 The Python API defines a number of functions to set various types of exceptions.
 
