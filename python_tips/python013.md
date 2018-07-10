@@ -15,8 +15,7 @@ C/C++编写的所有扩展Python函数都应该返回一个指向PyObject对象�
 如果一个函数本身并没有发生任何错误，也没有收到任何它所调用的函数返回的错误信息，那么如果该函数返回NULL，Python解释器就会发生异常，并提示下面的异常信息：`SystemError: error return without exception set`。这种问题往往出现在函数设计者想要返回`None`但却错误的反回了`NULL`的情况下，正确的做法是返回一个Python的None对象，例如：
 
 ```python
-static PyObject *
-myfunction(PyObject *self, PyObject *args){
+static PyObject * myfunction(PyObject *self, PyObject *args){
     if (!PyArg_ParseTuple(args, "i", ...))
         return NULL;
     /* .... */
