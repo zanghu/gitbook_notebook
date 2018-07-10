@@ -2,13 +2,13 @@
 
 本文内容主要针对实践中实际遇到的问题，在解决过程中查阅资料发现的知识点的笔记。文中的很多知识点事实上已经在Python官方参考资料中有提到。
 
-#### 1.正确设计函数返回值: None和NULL
+#### 1.正确设计C/C++扩展函数的返回值: None和NULL
 
 参考资料: [Method without return value in python c extension module](https://stackoverflow.com/questions/8450481/method-without-return-value-in-python-c-extension-module)
 
 参考资料: [Intermezzo: Errors and Exceptions](https://docs.python.org/3/extending/extending.html#intermezzo-errors-and-exceptions)
 
-* **函数返回值**
+* C**函数返回值**
 
 C/C++编写的所有扩展Python函数都应该返回一个指向PyObject对象的指针，只有一种情况是例外，即当函数希望主动引发异常的时候。
 
