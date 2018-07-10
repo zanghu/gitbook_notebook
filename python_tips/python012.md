@@ -12,4 +12,6 @@
 
 参考资料：[5. Building C and C++ Extensions on Windows](https://docs.python.org/3/extending/windows.html)
 
+参考资料: [Python/C API Reference Manual](https://docs.python.org/3/c-api/index.html#c-api-index)
+
 #### 1.基本步骤与格式约束
