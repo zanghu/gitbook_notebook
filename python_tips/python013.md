@@ -66,3 +66,7 @@ raise [Exception [, args [, traceback]]] # 附注：Python中的raise函数的�
 参考资料: [官方文档中的note](https://docs.python.org/3/extending/newtypes_tutorial.html)
 
 If you want your type to be subclassable from Python, and your type has the same tp_basicsize as its base type, you may have problems with multiple inheritance. A Python subclass of your type will have to list your type first in its __bases__, or else it will not be able to call your type’s __new__() method without getting an error. You can avoid this problem by ensuring that your type has a larger value for tp_basicsize than its base type does. Most of the time, this will be true anyway, because either your base type will be object, or else you will be adding data members to your base type, and therefore increasing its size.
+
+使用C/C++扩展Python类型时，如果扩展子类与其Phython基类具有相同的`tp_basicsize`属性值，那么可能会在多重继承时出现问题。
+
+避免此问题的方法是：确保自定义类型的tp_basicsize值大于其基类的值。大多数情况下，无论如何都是如此，因为您的基类型将是对象，否则您将向基类型添加数据成员，从而增加其大小。
