@@ -6,7 +6,7 @@
 
 参考资料: (Method without return value in python c extension module)[https://stackoverflow.com/questions/8450481/method-without-return-value-in-python-c-extension-module]
 
-* 异常的一般处理范式
+* **异常的一般处理范式**
 
 When a function f that calls another function g detects that the latter fails, f should itself return an error value (usually NULL or -1). It should not call one of the PyErr_*() functions — one has already been called by g. f’s caller is then supposed to also return an error indication to its caller, again without calling PyErr_*(), and so on — the most detailed cause of the error was already reported by the function that first detected it. Once the error reaches the Python interpreter’s main loop, this aborts the currently executing Python code and tries to find an exception handler specified by the Python programmer.
 
@@ -16,7 +16,7 @@ C/C++编写的所有扩展Python函数都应该返回一个指向PyObject对象�
 
 一个重要的、从始至终贯彻于Python解释器设计的的原则是：当一个函数失败时，它应该设置异常条件并但会错误码（在C/C++编写的Python函数中，对应的行为一般是返回NULL指针）。
 
-* 异常处理API
+* **异常处理API**
 
 Python提供了一系列API，包含了用来定义各种不同类型异常的函数。此类函数中最常用的那些包括：
 
@@ -24,7 +24,7 @@ Python提供了一系列API，包含了用来定义各种不同类型异常的�
 `PyErr_SetFromErrno()`
 `PyErr_SetObject()`
 
-* 异常的三要素
+* **异常的三要素**
 
 An important convention throughout the Python interpreter is the following: when a function fails, it should set an exception condition and return an error value (usually a NULL pointer). Exceptions are stored in a static global variable inside the interpreter; if this variable is NULL no exception has occurred. A second global variable stores the “associated value” of the exception (the second argument to raise). A third variable contains the stack traceback in case the error originated in Python code. These three variables are the C equivalents of the result in Python of sys.exc_info() (see the section on module sys in the Python Library Reference). It is important to know about them to understand how errors are passed around.
 
