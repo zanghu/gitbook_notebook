@@ -26,7 +26,16 @@ Python提供了一系列API，包含了用来定义各种不同类型异常的�
 
 * **异常的三要素**
 
-An important convention throughout the Python interpreter is the following: when a function fails, it should set an exception condition and return an error value (usually a NULL pointer). Exceptions are stored in a static global variable inside the interpreter; if this variable is NULL no exception has occurred. A second global variable stores the “associated value” of the exception (the second argument to raise). A third variable contains the stack traceback in case the error originated in Python code. These three variables are the C equivalents of the result in Python of sys.exc_info() (see the section on module sys in the Python Library Reference). It is important to know about them to understand how errors are passed around.
+异常被保存在解释器内部的全局静态变量中；当没有异常发生时该变量是NULL.
+
+此外还有一个全局变量存储异常的“伴随值”（即Python中raise函数的第二个参数）。
+
+```python
+# 附注：Python中的raise函数的原型
+raise [Exception [, args [, traceback]]]
+```
+
+Exceptions are stored in a static global variable inside the interpreter; if this variable is NULL no exception has occurred. A second global variable stores the “associated value” of the exception (the second argument to raise). A third variable contains the stack traceback in case the error originated in Python code. These three variables are the C equivalents of the result in Python of sys.exc_info() (see the section on module sys in the Python Library Reference). It is important to know about them to understand how errors are passed around.
 
 
 
