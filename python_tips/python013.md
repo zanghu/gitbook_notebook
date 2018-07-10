@@ -24,18 +24,9 @@ Python提供了一系列API，包含了用来定义各种不同类型异常的�
 `PyErr_SetFromErrno()`
 `PyErr_SetObject()`
 
-* 异常的三要
+* 异常的三要素
 
-The Python API defines a number of functions to set various types of exceptions.
-
-The most common one is PyErr_SetString(). Its arguments are an exception object and a C string. The exception object is usually a predefined object like PyExc_ZeroDivisionError. The C string indicates the cause of the error and is converted to a Python string object and stored as the “associated value” of the exception.
-
-Another useful function is PyErr_SetFromErrno(), which only takes an exception argument and constructs the associated value by inspection of the global variable errno. The most general function is PyErr_SetObject(), which takes two object arguments, the exception and its associated value. You don’t need to Py_INCREF() the objects passed to any of these functions.
-
-You can test non-destructively whether an exception has been set with PyErr_Occurred(). This returns the current exception object, or NULL if no exception has occurred. You normally don’t need to call PyErr_Occurred() to see whether an error occurred in a function call, since you should be able to tell from the return value.
-
-
-
+An important convention throughout the Python interpreter is the following: when a function fails, it should set an exception condition and return an error value (usually a NULL pointer). Exceptions are stored in a static global variable inside the interpreter; if this variable is NULL no exception has occurred. A second global variable stores the “associated value” of the exception (the second argument to raise). A third variable contains the stack traceback in case the error originated in Python code. These three variables are the C equivalents of the result in Python of sys.exc_info() (see the section on module sys in the Python Library Reference). It is important to know about them to understand how errors are passed around.
 
 
 
