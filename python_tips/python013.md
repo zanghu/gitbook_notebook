@@ -6,6 +6,14 @@
 
 参考资料: (Method without return value in python c extension module)[https://stackoverflow.com/questions/8450481/method-without-return-value-in-python-c-extension-module]
 
+* **函数返回值**
+
+C/C++编写的所有扩展Python函数都应该返回一个指向PyObject对象的指针，只有一种情况是例外，即当函数希望主动引发异常的时候。
+
+一个重要的、从始至终贯彻于Python解释器设计的的原则是：当一个函数失败时，它应该设置异常条件并但会错误码（在C/C++编写的Python函数中，对应的行为一般是返回NULL指针）。
+
+
+
 * **异常的一般处理范式**（非常重要）
 
 假设有一个函数f内部调用了另一个函数g，调用后f发现g调用失败（比如：通过检查到g的返回值是某个约定的错误码），那么正确的做法是：
@@ -16,14 +24,12 @@
 
 (3) 以此类推（整个函数调用链上的函数都应该按照f的做法将错误信息逐级返回给自身调用者）。
 
-这样一来，顶层调用者（一般是Python解释器）收到的异常信息就是最底层那个首先发生异常的函数所报告的最细致（这里的“detail”应该是指粒度最小、最底层和最基础）的异常信息。一旦错误到达Python解释器的主循环，就会立即中断当前正在执行的Python代码同时开始尝试找到程序中指定的该类型异常的处理句柄
-When a function f that calls another function g detects that the latter fails, f should itself return an error value (usually NULL or -1). It should not call one of the PyErr_*() functions — one has already been called by g. f’s caller is then supposed to also return an error indication to its caller, again without calling PyErr_*(), and so on — the most detailed cause of the error was already reported by the function that first detected it. Once the error reaches the Python interpreter’s main loop, this aborts the currently executing Python code and tries to find an exception handler specified by the Python programmer.
+这样一来，顶层调用者（一般是Python解释器）收到的异常信息就是最底层那个首先发生异常的函数所报告的最细致（这里的“detail”应该是指粒度最小、最底层和最基础）的异常信息。一旦错误到达Python解释器的主循环，就会立即中断当前正在执行的Python代码同时开始尝试找到程序中指定的该类型异常的处理句柄。
+
 
 (There are situations where a module can actually give a more detailed error message by calling another PyErr_*() function, and in such cases it is fine to do so. As a general rule, however, this is not necessary, and can cause information about the cause of the error to be lost: most operations can fail for a variety of reasons.)
 
-C/C++编写的所有扩展Python函数都应该返回一个指向PyObject对象的指针，只有一种情况是例外，即当函数希望主动引发异常的时候。
 
-一个重要的、从始至终贯彻于Python解释器设计的的原则是：当一个函数失败时，它应该设置异常条件并但会错误码（在C/C++编写的Python函数中，对应的行为一般是返回NULL指针）。
 
 * **异常处理API**
 
