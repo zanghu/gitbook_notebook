@@ -61,3 +61,8 @@ raise [Exception [, args [, traceback]]] # 附注：Python中的raise函数的�
 
 这三个变量是Python函数`sys.exc_info()`返回值的C语言下的等价物。
 
+### 2.继承C/C++扩展类需要注意的一件事
+
+参考资料: []()
+
+If you want your type to be subclassable from Python, and your type has the same tp_basicsize as its base type, you may have problems with multiple inheritance. A Python subclass of your type will have to list your type first in its __bases__, or else it will not be able to call your type’s __new__() method without getting an error. You can avoid this problem by ensuring that your type has a larger value for tp_basicsize than its base type does. Most of the time, this will be true anyway, because either your base type will be object, or else you will be adding data members to your base type, and therefore increasing its size.
