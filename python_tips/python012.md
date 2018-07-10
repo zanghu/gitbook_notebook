@@ -38,7 +38,7 @@
 
 &emsp&emsp对于静态分配的类型对象，其`tp_name`属性值应该是一个由若干个由'.'分割的子串组成的字符串。`tp_name`最后一个'.'之前的部分就是类型对象的`__module__`属性的值（即可以通过类型对象的`__module__`属性访问），而最后一个'.'之后的部分则是类型对象的`__name__`的值（即可以通过类型对象的`__name__`属性访问）。
 
-如果类型对象的`tp_name`值中没有'.'，那么类型对象的`__name__`属性值就是`tp_name`的值，同时`__module__`属性处于未定义状态*(unless explicitly set in the dictionary, as explained above)。这意味着该类型对象将无法被pickle，另外也不会出现在由pydoc创建的模块文档中。
+&emsp&emsp如果类型对象的`tp_name`值中没有'.'，那么类型对象的`__name__`属性值就是`tp_name`的值，同时`__module__`属性处于未定义状态*(unless explicitly set in the dictionary, as explained above)。这意味着该类型对象将无法被pickle，另外也不会出现在由pydoc创建的模块文档中。
 
 类型的`tp_name`属性不会被派生类型所继承。
 
