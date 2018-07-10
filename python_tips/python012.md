@@ -30,11 +30,11 @@ Pointer to a NUL-terminated string containing the name of the type. For types th
 
 `PyTypeObject.tp_name`指向一个表示类型的名字的C风格字符串。
 
-对于那些可被作为模块全局变量访问的类型来说，字符串`tp_name`应该是：模块全名.类型名；
+* 对于那些可被作为模块全局变量访问的类型来说，字符串`tp_name`应该是：模块全名.类型名；
 
-对于那些内建类型来说，字符串`tp_name`应该只包含类型名。
+* 对于那些内建类型来说，字符串`tp_name`应该只包含类型名。
 
-如果当前模块是一个程序包的某个子模块，那么程序包全名就是模块全名的一部分。举例来说：一个名为T的类型，定义在模块M中，该模块M包含在程序包Q中，而Q又是程序包P的子程序包，那么类型T的`tp_name`属性应初始化为“P.Q.M.T”。
+* 如果当前模块是一个程序包的某个子模块，那么程序包全名就是模块全名的一部分。举例来说：一个名为T的类型，定义在模块M中，该模块M包含在程序包Q中，而Q又是程序包P的子程序包，那么类型T的`tp_name`属性应初始化为“P.Q.M.T”。
 
 For dynamically allocated type objects, this should just be the type name, and the module name explicitly stored in the type dict as the value for key '__module__'.
 
