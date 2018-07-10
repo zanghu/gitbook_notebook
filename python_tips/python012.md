@@ -26,7 +26,7 @@
 
 参考资料：[const char* PyTypeObject.tp_name](https://docs.python.org/3.7/c-api/typeobj.html#c.PyTypeObject.tp_name)
 
-`PyTypeObject.tp_name`指向一个表示类型的名字的C风格字符串。
+`PyTypeObject.tp_name`指向一个表示类型的名字的C风格字符串。`tp_name`赋值应遵循下面三条原则：
 
 * 对于那些可被作为模块全局变量访问的类型来说，字符串`tp_name`应该是：模块全名.类型名；
 
