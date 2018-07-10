@@ -60,13 +60,3 @@ raise [Exception [, args [, traceback]]] # 附注：Python中的raise函数的�
 (3) 此外还有第三个变量，用来在错误由Python代码引起的情况下保存堆栈信息。
 
 这三个变量是Python函数`sys.exc_info()`返回值的C语言下的等价物。
-
-
-
-
-
-The error message you get SystemError: error return without exception set, is trying to tell you that your function returned NULL (=error, raise an exception) but did not inform the python interpreter what exception you wanted to raise.
-
-When you don't want to return a value from a python function you make it return None (which is same thing that happens if you in python code have a function that runs to the end or does a simple return without any value).
-
-In the cpython api you do this by returning the Py_None object, and don't forget to increment its refcount. To help you not forgetting the refcount there is a macro to do it for you: http://docs.python.org/c-api/none.html#Py_RETURN_NONE.
