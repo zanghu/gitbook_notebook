@@ -2,7 +2,7 @@
 
 本文内容主要针对实践中实际遇到的问题，在解决过程中查阅资料发现的知识点的笔记。文中的很多知识点事实上已经在Python官方参考资料中有提到。
 
-#### 1.返回值: None和NULL
+#### 1.正确设计函数返回值: None和NULL
 
 参考资料: [Method without return value in python c extension module](https://stackoverflow.com/questions/8450481/method-without-return-value-in-python-c-extension-module)
 
