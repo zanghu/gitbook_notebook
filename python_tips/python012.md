@@ -1,6 +1,6 @@
 ## Python: 用C/C++编写Python——官方文档
 
-参考资料：[教程目录](https://docs.python.org/3/extending/index.html)
+参考资料：[官方教程目录](https://docs.python.org/3/extending/index.html)
 
 参考资料: [1. Extending Python with C or C++](https://docs.python.org/3/extending/extending.html)
 
