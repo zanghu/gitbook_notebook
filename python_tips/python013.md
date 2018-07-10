@@ -6,7 +6,7 @@
 
 参考资料: [Method without return value in python c extension module](https://stackoverflow.com/questions/8450481/method-without-return-value-in-python-c-extension-module)
 
-参考资料: [1.2. Intermezzo: Errors and Exceptions](https://docs.python.org/3/extending/extending.html#intermezzo-errors-and-exceptions)
+参考资料: [Intermezzo: Errors and Exceptions](https://docs.python.org/3/extending/extending.html#intermezzo-errors-and-exceptions)
 
 * **函数返回值**
 
