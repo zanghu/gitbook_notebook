@@ -18,4 +18,7 @@
 
 参考资料: [Python/C API Reference Manual](https://docs.python.org/3/c-api/index.html#c-api-index)
 
+### 3.格式串
+
+参考资料：[Parsing arguments and building values](https://docs.python.org/3.7/c-api/arg.html)
 
