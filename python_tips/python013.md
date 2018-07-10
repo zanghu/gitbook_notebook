@@ -12,7 +12,17 @@ C/C++编写的所有扩展Python函数都应该返回一个指向PyObject对象�
 
 一个重要的、从始至终贯彻于Python解释器设计的的原则是：当一个函数失败时，它应该设置异常条件并但会错误码（在C/C++编写的Python函数中，对应的行为一般是返回NULL指针）。
 
+如果一个函数本身并没有发生任何错误，也没有收到任何它所调用的函数返回的错误信息，那么如果该函数返回NULL，Python解释器就会发生异常，并提示下面的异常信息：`SystemError: error return without exception set`。这种问题往往出现在函数设计者想要返回`None`但却错误的反回了`NULL`的情况下，正确的做法是返回一个Python的None对象，例如：
 
+```python
+static PyObject *
+myfunction(PyObject *self, PyObject *args){
+    if (!PyArg_ParseTuple(args, "i", ...))
+        return NULL;
+    /* .... */
+    Py_RETURN_NONE;
+}
+```
 
 * **异常的一般处理范式**（非常重要）
 
@@ -25,7 +35,6 @@ C/C++编写的所有扩展Python函数都应该返回一个指向PyObject对象�
 (3) 以此类推（整个函数调用链上的函数都应该按照f的做法将错误信息逐级返回给自身调用者）。
 
 这样一来，顶层调用者（一般是Python解释器）收到的异常信息就是最底层那个首先发生异常的函数所报告的最细致（这里的“detail”应该是指粒度最小、最底层和最基础）的异常信息。一旦错误到达Python解释器的主循环，就会立即中断当前正在执行的Python代码同时开始尝试找到程序中指定的该类型异常的处理句柄。
-
 
 (There are situations where a module can actually give a more detailed error message by calling another PyErr_*() function, and in such cases it is fine to do so. As a general rule, however, this is not necessary, and can cause information about the cause of the error to be lost: most operations can fail for a variety of reasons.)
 
@@ -52,7 +61,6 @@ raise [Exception [, args [, traceback]]] # 附注：Python中的raise函数的�
 (3) 此外还有第三个变量，用来在错误由Python代码引起的情况下保存堆栈信息。
 
 这三个变量是Python函数`sys.exc_info()`返回值的C语言下的等价物。
-
 
 
 
