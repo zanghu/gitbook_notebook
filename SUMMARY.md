@@ -14,6 +14,7 @@
   * [Python：用C扩展python——模块](python_tips/python010.md)
   * [Python：用C扩展python——类](python_tips/python011.md)
   * [Python：用C扩展python——官方文档](python_tips/python012.md)
+  * [Python：用C扩展python——实践注意事项](python_tips/python013.md)
 * [Pytorch](pytorch_note/README.md)
   * [Pytorch: 关于自动求梯度的原理](pytorch_note/pytorch001.md)
   * [Pytorch: permute与transpose的区别](pytorch_note/pytorch002.md)
