@@ -22,3 +22,7 @@
 
 参考资料：[Parsing arguments and building values](https://docs.python.org/3.7/c-api/arg.html)
 
+### 4.PyTypeObject的tp_name属性
+
+参考资料：[const char* PyTypeObject.tp_name](https://docs.python.org/3.7/c-api/typeobj.html#c.PyTypeObject.tp_name)
+
