@@ -125,7 +125,8 @@ static PyMethodDef MathMethods[] = {
     { NULL, NULL }
 };
 
-// 这里并不是定义了一个结构体类型, 而是定义并初始化了一个struct PyModuleDef类型的静态变量MathModule
+// 定义并初始化了一个struct PyModuleDef类型的静态变量MathModule
+// 注意: 这里并不是定义了一个结构体类型
 static struct PyModuleDef MathModule =
 {
     PyModuleDef_HEAD_INIT,
