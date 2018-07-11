@@ -26,18 +26,18 @@
 static 返回值类型 函数名称(形参类型1 形参名1, 形参类型2 形参名2, ...)
 {
     /* 将PyObject参数转换成C类型参数 */
-    
+
     /* 函数操作 */
-    
+
     /* 将结果包装成PyObject类型返回(如果有返回值的话) */
 }
 
 /* 第二部分: 方法定义 */
 static PyMethodDef 方法定义数组名称[] = {
     { "Python中模块方法名称", 封装函数名称, METH_VARARGS, 方法说明 },
-    
+
     // 若干格式相同的行...
-    
+
     { NULL, NULL } // 结束行
 };
 
@@ -63,9 +63,9 @@ PyMODINIT_FUNC PyInit_[python模块名]()
     if (NULL == module) {
         return NULL;
     }
-    
+
     /* 其他内容 */
-    
+
     return module;
 }
 ```
@@ -86,19 +86,19 @@ PyMODINIT_FUNC PyInit_[python模块名]()
 // 一般位于 ananconda3/include下, 对应的动态库
 #include <python3.6m/Python.h>
 #include <iostream>
- 
+
 using namespace std;
 
 int add(int arg1, int arg2)
 {
     return arg1 + arg2;
 }
- 
+
 int sub(int arg1, int arg2)
 {
     return arg1 - arg2;
 }
- 
+
 static PyObject* math_add(PyObject* self, PyObject* args)
 {
     int arg1, arg2;
@@ -108,7 +108,7 @@ static PyObject* math_add(PyObject* self, PyObject* args)
     int result = add(arg1, arg2);
     return (PyObject*)Py_BuildValue("i", result);
 }
- 
+
 static PyObject* math_sub(PyObject* self, PyObject* args)
 {
     int arg1, arg2;
@@ -118,13 +118,14 @@ static PyObject* math_sub(PyObject* self, PyObject* args)
     int result = sub(arg1, arg2);
     return (PyObject*)Py_BuildValue("i", result);
 }
- 
+
 static PyMethodDef MathMethods[] = {
     { "add", math_add, METH_VARARGS, "Execute math command:add." },
     { "sub", math_sub, METH_VARARGS, "Execute math command:sub." },
     { NULL, NULL }
 };
- 
+
+// 注意这里并不是定义了一个struct, 而是定义并初始化了一个struct PyModuleDef类型的静态变量MathModule
 static struct PyModuleDef MathModule =
 {
     PyModuleDef_HEAD_INIT,
@@ -138,7 +139,7 @@ static struct PyModuleDef MathModule =
     NULL,
     NULL
 };
- 
+
 static PyObject* __mathError;
 
 // 这里的函数名称似乎非常重要, 必须采用“pyInit_模块名”的模式命名
@@ -200,7 +201,7 @@ def test(a, b):
     """hello"""
     c = cmathapi.add(a, b)
     print("{0} + {1} = {2}".format(a, b, c))
-    
+
     d = cmathapi.sub(a, b)
     print("{0} - {1} = {2}".format(a, b, d))
 
@@ -218,3 +219,6 @@ $ python test.py
 5 + 7 = 12
 5 - 7 = -2
 ```
+
+
+
