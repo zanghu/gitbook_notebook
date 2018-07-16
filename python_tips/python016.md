@@ -30,7 +30,7 @@ Out[2]: 'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed'
 $ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
 ```
 
-### 3.修改配置文件
+### 4.修改配置文件
 
 打开配置文件`jupyter_notebook_config.py`，修改以下项：
 
@@ -48,7 +48,7 @@ c.NotebookApp.password = u'sha1:f72472bc8463:1cadf26cdd31accce99aef90e178bb67a1f
 c.NotebookApp.notebook_dir = '/home/zanghu/workspaces/jupyter_workspace'
 ```
 
-### 4.验证安装
+### 5.验证安装
 
 首先，在服务器端启动jupyter notebook server
 
