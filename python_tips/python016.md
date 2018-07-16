@@ -59,6 +59,12 @@ $ jupyter notebook --certfile=mycert.pem --keyfile mykey.key
 建议把`mykey.key`保存在指定的自定义目录下，同时在`~/.bashrc`中配置
 
 ```shell
+$ vim ~/.bashrc
+```
+
+加入以下内容：
+
+```shell
 alias ipynb="jupyter notebook --certfile=/path/to/your/mycert.pem --keyfile /path/to/your/mykey.key"
 ```
 
