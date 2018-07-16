@@ -27,7 +27,8 @@ Out[2]: 'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed'
 ### 3.生成本地证书
 
 ```shell
-$ jupyter notebook --certfile=mycert.pem --keyfile mykey.key
+$ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
+
 $ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
 ```
 
@@ -54,7 +55,8 @@ c.NotebookApp.notebook_dir = '/home/zanghu/workspaces/jupyter_workspace'
 首先，在服务器端启动jupyter notebook server
 
 ```shell
-$ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
+$ jupyter notebook --certfile=mycert.pem --keyfile mykey.key
+
 ```
 
 之后，从其他机器上打开浏览器（建议使用IE，使用chrome会在输入密码后无法打开新页面导致进入密码输入页面的死循环，应该是由于chrome的安全机制导致），在地址栏输入：
