@@ -1,4 +1,4 @@
-## Python: Linux下搭建Jupyter notebook Server（非SSL方式）
+## Python: Linux下搭建Jupyter notebook Server（SSL方式）
 
 参考资料: [官方在线文档：Running a notebook server](http://jupyter-notebook.readthedocs.io/en/latest/public_server.htm)
 
