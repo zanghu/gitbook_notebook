@@ -28,6 +28,7 @@ Out[2]: 'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed'
 
 ```shell
 $ jupyter notebook --certfile=mycert.pem --keyfile mykey.key
+$ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
 ```
 
 ### 3.修改配置文件
