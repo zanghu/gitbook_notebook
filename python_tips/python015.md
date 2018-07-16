@@ -41,3 +41,9 @@ c.NotebookApp.password = u'sha1:f72472bc8463:1cadf26cdd31accce99aef90e178bb67a1f
 # 可选配置项
 c.NotebookApp.notebook_dir = '/home/zanghu/workspaces/jupyter_workspace'
 ```
+
+### 4.验证安装
+
+从其他机器上打开浏览器，在地址栏输入：
+
+`https://192.168.3.7:9999`
