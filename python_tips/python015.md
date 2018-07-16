@@ -4,7 +4,9 @@
 
 ### 1.生成jupyter配置文件
 
-xlrd主要是用来读取excel文件
+```python
+jupyter notebook --generate-config
+```
 
 ```python
 import xlrd
