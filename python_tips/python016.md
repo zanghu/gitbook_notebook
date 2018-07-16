@@ -59,7 +59,7 @@ $ jupyter notebook --certfile=mycert.pem --keyfile mykey.key
 建议把`mykey.key`保存在指定的自定义目录下，同时在`~/.bashrc`中配置
 
 ```shell
-alias ipynb="jupyter notebook --certfile=mycert.pem --keyfile /path/to/your/mykey.key"
+alias ipynb="jupyter notebook --certfile=/path/to/your/mycert.pem --keyfile /path/to/your/mykey.key"
 ```
 
 这样今后每次启动只要在命令行输入`ipy`即可。
