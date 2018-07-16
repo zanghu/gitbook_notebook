@@ -30,7 +30,7 @@ Out[2]: 'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed'
 
 ```python
 # 必填配置项
-c.NotebookApp.ip = '192.168.3.7' # Server所在机器的ip
+c.NotebookApp.ip = '*' # Server所在机器的ip
 
 c.NotebookApp.port = 9999 # 远程访问端口
 
@@ -50,9 +50,9 @@ c.NotebookApp.notebook_dir = '/home/zanghu/workspaces/jupyter_workspace'
 $ jupyter notebook
 ```
 
-之后，从其他机器上打开浏览器（建议使用IE，使用chrome会在输入密码后无法打开新页面导致进入密码输入页面的死循环，应该是由于chrome的安全机制导致），在地址栏输入：
+之后，从其他机器上打开浏览器（建议使用IE，使用chrome会在输入密码后无法打开新页面导致进入密码输入页面的死循环，应该是由于chrome的安全机制导致），在地址栏输入“服务器所在机器的ip:监听的端口”：
 
-`http://192.168.3.7:9999`
+`http://192.168.3.7:9999` 
 
 回车
 
