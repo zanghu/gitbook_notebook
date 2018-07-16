@@ -98,10 +98,11 @@ ws = wb.active
 ws['A1'] = 4
 
 wb.save("新歌检索失败.xlsx") 
-
+```
      
+5.x写excel文件并加上图表
 
-5.xlsxwriter可以写excel文件并加上图表
+xlsxwriter可以写excel文件并加上图表
 
 import xlsxwriter
 
