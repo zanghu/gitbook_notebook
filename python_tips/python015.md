@@ -12,6 +12,10 @@ $ jupyter notebook --generate-config
 
 ### 2.生成密码
 
+```shell
+$ ipython
+```
+
 ```python
 In [1]: from notebook.auth import passwd
 In [2]: passwd()
