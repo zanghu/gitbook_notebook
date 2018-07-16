@@ -7,6 +7,7 @@
 ``shell
 $ jupyter notebook --generate-config
 ```
+
 生成的配置文件位于: `/home/USERNAME/.jupyter/jupyter_notebook_config.py`
 
 workbook = xlrd.open_workbook(u'有趣装逼每日数据及趋势.xls')
