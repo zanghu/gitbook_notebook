@@ -68,7 +68,7 @@ $ vim ~/.bashrc
 alias ipynb="jupyter notebook --certfile=/path/to/your/mycert.pem --keyfile /path/to/your/mykey.key"
 ```
 
-刷新
+刷新`~/.bashrc`
 
 ```shell
 $ source ~/.bashrc
