@@ -44,7 +44,7 @@ c.NotebookApp.notebook_dir = '/home/zanghu/workspaces/jupyter_workspace'
 
 ### 4.验证安装
 
-从其他机器上打开浏览器，在地址栏输入：
+从其他机器上打开浏览器（建议使用IE，使用chrome会在输入密码后无法打开新页面导致进入密码输入页面的死循环，应该是由于chrome的安全机制导致），在地址栏输入：
 
 `http://192.168.3.7:9999`
 
