@@ -64,12 +64,11 @@ ws.write(3, 0, 'changed!')
 workbooknew.save(u'有趣装逼每日数据及趋势copy.xls')
 ```
 
-4.openpyxl可以对excel文件进行读写操作
+4.对excel文件进行读写操作
 
 openpyxl可以对excel文件进行读写操作
 
-
-
+```python
 from openpyxl import Workbook
 
 from openpyxl import load_workbook
