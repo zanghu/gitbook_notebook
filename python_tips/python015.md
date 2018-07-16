@@ -46,6 +46,6 @@ c.NotebookApp.notebook_dir = '/home/zanghu/workspaces/jupyter_workspace'
 
 从其他机器上打开浏览器，在地址栏输入：
 
-`https://192.168.3.7:9999`
+`http://192.168.3.7:9999`
 
 回车
