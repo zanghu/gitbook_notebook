@@ -1,4 +1,4 @@
-## Python: Linux下搭建Jupyter notebook Server（SSL方式）
+## Python: Linux下搭建Jupyter notebook Server（SSL方式、HTTPS服务）
 
 参考资料: [官方在线文档：Running a notebook server](http://jupyter-notebook.readthedocs.io/en/latest/public_server.htm)
 
@@ -69,3 +69,4 @@ alias ipynb="jupyter notebook --certfile=/path/to/your/mycert.pem --keyfile /pat
 `https://192.168.3.7:9999`
 
 回车
+
