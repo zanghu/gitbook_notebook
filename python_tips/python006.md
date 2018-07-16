@@ -1,4 +1,4 @@
-# \[python\]快速配置 jupyter notebook 服务器
+# \[python\]快速配置 jupyter notebook 服务器（本文废弃，请参考最新版文章）
 
 参考资料（官网）: http://jupyter-notebook.readthedocs.io/en/latest/public\_server.html
 
