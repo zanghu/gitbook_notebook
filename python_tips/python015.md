@@ -4,8 +4,8 @@
 
 ### 1.生成jupyter配置文件
 
-```python
-jupyter notebook --generate-config
+``shell
+$ jupyter notebook --generate-config
 ```
 
 ```python
