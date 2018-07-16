@@ -36,7 +36,7 @@ $ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out myc
 
 ```python
 # 必填配置项
-c.NotebookApp.ip = '192.168.3.7' # Server所在机器的ip
+c.NotebookApp.ip = '*' # Server所在机器的ip
 
 c.NotebookApp.port = 9999 # 远程访问端口
 
