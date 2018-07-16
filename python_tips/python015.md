@@ -1,4 +1,4 @@
-## Python: Linux下搭建Jupyter notebook Server（非SSL方式）
+## Python: Linux下搭建Jupyter notebook Server（非SSL方式、HTTP服务）
 
 参考资料: [官方在线文档：Running a notebook server](http://jupyter-notebook.readthedocs.io/en/latest/public_server.htm)
 
@@ -55,3 +55,4 @@ $ jupyter notebook
 `http://192.168.3.7:9999`
 
 回车
+
