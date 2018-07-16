@@ -1,6 +1,6 @@
 ## Python: 操作excel表格
 
-参考资料: [Running a notebook server](http://jupyter-notebook.readthedocs.io/en/latest/public_server.htm)
+参考资料: [官方在线文档：Running a notebook server](http://jupyter-notebook.readthedocs.io/en/latest/public_server.htm)
 
 ### 1.x读取excel文件
 
