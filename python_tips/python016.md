@@ -62,7 +62,7 @@ $ jupyter notebook --certfile=mycert.pem --keyfile mykey.key
 alias ipynb="jupyter notebook --certfile=/path/to/your/mycert.pem --keyfile /path/to/your/mykey.key"
 ```
 
-这样今后每次启动只要在命令行输入`ipy`即可。
+这样今后每次启动只要在命令行输入`ipynb`即可。
 
 之后，从其他机器上打开浏览器（建议使用IE，使用chrome会在输入密码后无法打开新页面导致进入密码输入页面的死循环，应该是由于chrome的安全机制导致），在地址栏输入：
 
