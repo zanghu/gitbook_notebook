@@ -104,9 +104,8 @@ wb.save("新歌检索失败.xlsx")
 
 xlsxwriter可以写excel文件并加上图表
 
+```python
 import xlsxwriter
-
- 
 
 def get_chart(series):
 
@@ -162,4 +161,5 @@ if __name__ == '__main__':
 
     worksheet.insert_chart('H7', chart)
 
-    workbook.close()
+    workbook.close() 
+```
