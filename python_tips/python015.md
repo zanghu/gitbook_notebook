@@ -11,3 +11,11 @@ $ jupyter notebook --generate-config
 生成的配置文件位于: `/home/USERNAME/.jupyter/jupyter_notebook_config.py`
 
 ### 2.生成密码
+
+```python
+In [1]: from notebook.auth import passwd
+In [2]: passwd()
+Enter password:
+Verify password:
+Out[2]: 'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed'
+```
