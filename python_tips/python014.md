@@ -31,6 +31,7 @@ for sheet_name in sheet_names:
 
 xlwt主要是用来写excel文件
 
+```python
 import xlwt
 
 wbk = xlwt.Workbook()
@@ -40,7 +41,7 @@ sheet = wbk.add_sheet('sheet 1')
 sheet.write(0,1,'test text')#第0行第一列写入内容
 
 wbk.save('test.xls')
-
+```
  
 
 3.xlutils结合xlrd可以达到修改excel文件目的
