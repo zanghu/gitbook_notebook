@@ -16,7 +16,7 @@
   * [Python：用C扩展python——官方文档](python_tips/python012.md)
   * [Python：用C扩展python——实践注意事项](python_tips/python013.md)
   * [Python：编辑excel表格](python_tips/python014.md)
-  * [Python：搭建jupyter sevrer](python_tips/python015.md)
+  * [Python：搭建jupyter sevrer（非SSL方式）](python_tips/python015.md)
 * [Pytorch](pytorch_note/README.md)
   * [Pytorch: 关于自动求梯度的原理](pytorch_note/pytorch001.md)
   * [Pytorch: permute与transpose的区别](pytorch_note/pytorch002.md)
