@@ -4,7 +4,7 @@
 
 ### 1.生成jupyter配置文件
 
-``shell
+```shell
 $ jupyter notebook --generate-config
 ```
 
