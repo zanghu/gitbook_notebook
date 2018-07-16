@@ -2,7 +2,7 @@
 
 参考资料: [python操作Excel的几种方式](https://www.cnblogs.com/lingwang3/p/6416023.html)
 
-### 1.x读取excel文件
+### 1.读取excel文件
 
 xlrd主要是用来读取excel文件
 
