@@ -93,9 +93,7 @@ def get_chart(series):
 
     return chart
 
- 
-
-if __name__ == '__main__':
+ if __name__ == '__main__':
 
     workbook = xlsxwriter.Workbook(u'H5应用中心关键数据及趋势.xlsx') 
     worksheet = workbook.add_worksheet(u"每日PV,UV")
