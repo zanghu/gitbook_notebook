@@ -24,6 +24,10 @@ Verify password:
 Out[2]: 'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed'
 ```
 
+### 3.生成本地证书
+
+$ jupyter notebook --certfile=mycert.pem --keyfile mykey.key
+
 ### 3.修改配置文件
 
 打开配置文件`jupyter_notebook_config.py`，修改以下项：
