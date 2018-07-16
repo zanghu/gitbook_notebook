@@ -2,7 +2,7 @@
 
 参考资料: [官方在线文档：Running a notebook server](http://jupyter-notebook.readthedocs.io/en/latest/public_server.htm)
 
-### 1.x读取excel文件
+### 1.生成jupyter配置文件
 
 xlrd主要是用来读取excel文件
 
