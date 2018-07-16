@@ -66,7 +66,7 @@ alias ipynb="jupyter notebook --certfile=/path/to/your/mycert.pem --keyfile /pat
 
 之后，从其他机器上打开浏览器（建议使用IE，使用chrome会在输入密码后无法打开新页面导致进入密码输入页面的死循环，应该是由于chrome的安全机制导致），在地址栏输入：
 
-`https://192.168.3.7:9999` # 服务器所在机器的ip
+`https://192.168.3.7:9999` # 服务器所在机器的ip:监听的端口
 
 回车
 
