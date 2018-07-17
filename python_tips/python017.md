@@ -39,6 +39,8 @@ sheet.write(..., style=style) # 写入时使用指定对齐模式
 
 * 单元格尺寸
 
+参考资料：[python之xlwt模块列宽width、行高Heights详解](https://www.cnblogs.com/landhu/p/4978705.html)
+
 sheet.col(1).width = 256 * 4
 sheet.col(1).width = 256 * 20
 
