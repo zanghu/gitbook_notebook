@@ -82,6 +82,8 @@ workbook.save('Excel_Workbook.xls')
 
 * 字体类型
 
+参考资料：[Python xlwt设置excel单元格字体及格式](https://blog.csdn.net/u013400654/article/details/50284983)
+
 ```python
 fnt = xlwt.Font()                        # 创建一个文本格式，包括字体、字号和颜色样式特性                              
 fnt.name = u'微软雅黑'                # 设置其字体为微软雅黑                                 
