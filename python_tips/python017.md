@@ -7,13 +7,26 @@
 
 * 编码设置
 
+```python
+wbk = xlwt.Workbook(encoding='utf-8') # 设置编码后, 当excel内有中文时，保存不会报错
+```
+
 ### 2.单元格调整
 
 * 合并单元格
 
-* 设置文字对齐
+```python
+sheet = wbk.add_sheet('sheet1')
+sheet.write_merge(row_start, row_end, col_start, col_end, content, [style]) # 向圈出的区域内写入内容，实际效果等同于合并圈出区域的单元格
+```
 
-* 设置单元格尺寸
+* 文字对齐
+
+* 单元格尺寸
+
+* 单元格边框
+
+* 单元格背景色
 
 ### 3.字体调整
 
@@ -21,7 +34,7 @@
 
 * 字体类型
 
-### 5.单元格加边框
+
 
 xlrd主要是用来读取excel文件
 
