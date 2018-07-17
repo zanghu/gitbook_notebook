@@ -91,21 +91,6 @@ style.font = fnt                    #将赋值好的模式参数导入Style
 sheet.write_merge(i,i,3,5,Line_data,style)  #以合并单元格形式写入数据，即将数据写入以第4/5/6列合并德单元
 ```
 
-```python
-import xlrd
-
-workbook = xlrd.open_workbook(u'有趣装逼每日数据及趋势.xls')
-sheet_names= workbook.sheet_names()
-
-for sheet_name in sheet_names:
-　　 sheet2 = workbook.sheet_by_name(sheet_name)
-　　 print sheet_name rows = sheet2.row_values(3) # 获取第四行内容
-　　 cols = sheet2.col_values(1) # 获取第二列内容
-　　 print rows
-　　 print cols
-```python
- 
-
 ### 2.写excel文件
 
 xlwt主要是用来写excel文件
