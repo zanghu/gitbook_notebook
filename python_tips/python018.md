@@ -25,6 +25,8 @@ subtitle.text = "pip install python-pptx"
 prs.save("test.pptx")
 ```
 
+效果图
+
 ### 2.单元格调整
 
 * 合并单元格
