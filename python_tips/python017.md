@@ -23,9 +23,15 @@ sheet.write_merge(row_start, row_end, col_start, col_end, content, [style]) # �
 * 文字对齐
 
 ```python
-alignment_hv_center = xlwt.Alignment()
-alignment_hv_center.horz = xlwt.Alignment.HORZ_CENTER
-alignment_hv_center.vert = xlwt.Alignment.VERT_CENTER
+# 创建Alignment对象
+alignment = xlwt.Alignment()
+alignment.horz = xlwt.Alignment.HORZ_CENTER # 水平对齐
+alignment.vert = xlwt.Alignment.VERT_CENTER # 垂直对齐
+
+# 创建Style对象
+style = xlwt.XFStyle()
+style.alignment = alignment # alignment加入style
+
 ```
 
 * 单元格尺寸
