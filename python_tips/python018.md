@@ -3,12 +3,26 @@
 参考资料: [python-pptx模块官方文档](http://python-pptx.readthedocs.io/en/latest/index.html)
 
 
-### 1.全局设置
+### 1.简单例子
 
-* 编码设置
+* 文字输出到pptx
 
 ```python
-wbk = xlwt.Workbook(encoding='utf-8') # 设置编码后, 当excel内有中文时，保存不会报错
+from pptx import Presentation
+ 
+# 创建幻灯片 ------
+prs = Presentation()
+title_slide_layout = prs.slide_layouts[0]
+slide = prs.slides.add_slide(title_slide_layout)
+ 
+title = slide.shapes.title
+subtitle = slide.placeholders[1]
+ 
+# 设置标题和副标题
+title.text = "Hello, World!"
+subtitle.text = "pip install python-pptx"
+ 
+prs.save("test.pptx")
 ```
 
 ### 2.单元格调整
