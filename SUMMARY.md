@@ -15,7 +15,7 @@
   * [Python：用C/C++扩展python——类](python_tips/python011.md)
   * [Python：用C/C++扩展python——官方文档](python_tips/python012.md)
   * [Python：用C/C++扩展python——实践注意事项](python_tips/python013.md)
-  * [Python：编辑excel表格](python_tips/python014.md)
+  * [Python：编辑excel表格——基本读写操作](python_tips/python014.md)
   * [Python：搭建jupyter sevrer（非SSL方式）](python_tips/python015.md)
   * [Python：搭建jupyter sevrer（SSL方式）](python_tips/python016.md)
 * [Pytorch](pytorch_note/README.md)
