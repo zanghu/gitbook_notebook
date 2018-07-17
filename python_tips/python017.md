@@ -23,9 +23,9 @@ sheet.write_merge(row_start, row_end, col_start, col_end, content, [style]) # �
 * 文字对齐
 
 ```python
-    alignment_hv_center = xlwt.Alignment()
-    alignment_hv_center.horz = xlwt.Alignment.HORZ_CENTER
-    alignment_hv_center.vert = xlwt.Alignment.VERT_CENTER
+alignment_hv_center = xlwt.Alignment()
+alignment_hv_center.horz = xlwt.Alignment.HORZ_CENTER
+alignment_hv_center.vert = xlwt.Alignment.VERT_CENTER
 ```
 
 * 单元格尺寸
