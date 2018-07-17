@@ -55,6 +55,11 @@ slide.shapes.add_chart(
 prs.save('chart-01.pptx')
 ```
 
+效果图：
+
+![](/assets/python018_002.PNG)
+
+
 ### 2.单元格调整
 
 * 合并单元格
