@@ -1,7 +1,7 @@
 ## Python: 操作excel表格——基本读写操作
 
 参考资料: [python-pptx模块官方文档](http://python-pptx.readthedocs.io/en/latest/index.html)
-
+参考资料：[使用python生成pptx](https://blog.csdn.net/huuinn/article/details/78965725)
 
 ### 1.简单例子
 
