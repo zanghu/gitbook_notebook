@@ -62,6 +62,22 @@ sheet.write(0, 0, 'Firstname',style)
 
 * 字体加粗
 
+```python
+import xlwt
+workbook = xlwt.Workbook(encoding = 'ascii')
+worksheet = workbook.add_sheet('My Worksheet')
+font = xlwt.Font() # Create the Font
+font.name = 'Times New Roman'
+font.bold = True
+font.underline = True
+font.italic = True
+style = xlwt.XFStyle() # Create the Style
+style.font = font # Apply the Font to the Style
+worksheet.write(0, 0, label = 'Unformatted value')
+worksheet.write(1, 0, label = 'Formatted value', style) # Apply the Style to the Cell
+workbook.save('Excel_Workbook.xls')
+```
+
 * 字体类型
 
 
