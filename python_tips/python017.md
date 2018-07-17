@@ -32,12 +32,29 @@ alignment.vert = xlwt.Alignment.VERT_CENTER # 垂直对齐
 style = xlwt.XFStyle()
 style.alignment = alignment # alignment加入style
 
-sheet.write(..., style=style)
+sheet.write(..., style=style) # 写入时使用指定对齐模式
 ```
 
 * 单元格尺寸
 
+sheet.col(1).width = 256 * 4
+sheet.col(1).width = 256 * 20
+
 * 单元格边框
+
+```python
+borders = xlwt.Borders()
+borders.left = 1
+borders.right = 1
+borders.top = 1
+borders.bottom = 1
+borders.bottom_colour=0x3A    
+ 
+style = xlwt.XFStyle()
+style.borders = borders 
+ 
+sheet.write(0, 0, 'Firstname',style)
+```
 
 * 单元格背景色
 
