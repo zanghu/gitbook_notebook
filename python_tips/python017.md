@@ -31,6 +31,8 @@ alignment.vert = xlwt.Alignment.VERT_CENTER # 垂直对齐
 # 创建Style对象
 style = xlwt.XFStyle()
 style.alignment = alignment # alignment加入style
+
+sheet.write(..., style)
 ```
 
 * 单元格尺寸
