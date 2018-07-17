@@ -1,6 +1,6 @@
 ## Python: 操作excel表格——基本读写操作
 
-参考资料: [python操作Excel的几种方式](https://www.cnblogs.com/lingwang3/p/6416023.html)
+参考资料: [python-pptx模块官方文档](http://python-pptx.readthedocs.io/en/latest/index.html)
 
 
 ### 1.全局设置
