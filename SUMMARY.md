@@ -59,6 +59,7 @@
   * [C: C99风格初始化（结构体和数组）](c/c002.md)
   * [C: dlopen、dlclose等函数的用法](c/c003.md)
   * [C: 用dlopen调用动态库的设计实践](c/c004.md)
+  * [C: 用nm命令查看lib库中符号](c/c005.md)
 * [Java](java/README.md)
   * [Maven: Linux环境安装maven](java/java001.md)
   * [Maven: Linux环境maven创建项目](java/java002.md)
