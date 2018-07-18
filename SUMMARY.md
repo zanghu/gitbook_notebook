@@ -56,7 +56,7 @@
   * [Static: N sigma 准则](statistics/static001.md)
 * [C Langusage](c/README.md)
   * [C: 类Unix系统下获取IP、MAC和掩码](c/c001.md)
-  * [C: c99-style designated initializer](c/c002.md)
+  * [C: C99风格初始化（结构体和数组）](c/c002.md)
   * [C: dlopen、dlclose等函数的用法](c/c003.md)
 * [Java](java/README.md)
   * [Maven: Linux环境安装maven](java/java001.md)
