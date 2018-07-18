@@ -58,6 +58,7 @@
   * [C: 类Unix系统下获取IP、MAC和掩码](c/c001.md)
   * [C: C99风格初始化（结构体和数组）](c/c002.md)
   * [C: dlopen、dlclose等函数的用法](c/c003.md)
+  * [C: 用dlopen调用动态库实践](c/c004.md)
 * [Java](java/README.md)
   * [Maven: Linux环境安装maven](java/java001.md)
   * [Maven: Linux环境maven创建项目](java/java002.md)
