@@ -59,6 +59,7 @@
   * [C: C99风格初始化（结构体和数组）](c/c002.md)
   * [C: dlopen、dlclose等函数的基本用法](c/c003.md)
   * [C: 用dlopen调用动态库的设计实践](c/c004.md)
+  * [C: 存在链式依赖的动态库的dlopen调用方法](c/c008.md)
   * [C: 用nm命令查看lib库中符号](c/c005.md)
   * [C: Linux动态库的源与流](c/c006.md)
   * [C: Linux动态库一般命名规范](c/c007.md)
