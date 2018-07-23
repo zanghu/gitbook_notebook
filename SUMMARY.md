@@ -57,7 +57,7 @@
 * [C Langusage](c/README.md)
   * [C: 类Unix系统下获取IP、MAC和掩码](c/c001.md)
   * [C: C99风格初始化（结构体和数组）](c/c002.md)
-  * [C: dlopen、dlclose等函数的用法](c/c003.md)
+  * [C: dlopen、dlclose等函数的基本用法](c/c003.md)
   * [C: 用dlopen调用动态库的设计实践](c/c004.md)
   * [C: 用nm命令查看lib库中符号](c/c005.md)
   * [C: Linux动态库的源与流](c/c006.md)
