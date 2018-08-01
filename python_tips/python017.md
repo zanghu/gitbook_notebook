@@ -77,13 +77,15 @@ style = xlwt.XFStyle()
 style.alignment = alignment # alignment加入style
 ```
 
-* 对齐模式
+* 对齐方式
 
 ```python
+# 水平方向
 alignment.horz = xlwt.Alignment.HORZ_CENTER # 水平居中 0x02
 alignment.horz= xlwt.Alignment.HORZ_LEFT # 左端对齐 0x01
 alignment.horz= xlwt.Alignment.HORZ_RIGHT # 右端对齐 0x03
 
+# 垂直方向
 alignment.vert = xlwt.Alignment.VERT_CENTER # 垂直居中 0x01
 alignment.vert = xlwt.Alignment.VERT_TOP # 顶端对齐, 0x00
 alignment.vert = xlwt.Alignment.VERT_BOTTOM # 低端对齐 0x02
