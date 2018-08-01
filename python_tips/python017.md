@@ -41,7 +41,6 @@ borders = xlwt.Borders()
 
 style = xlwt.XFStyle()
 style.borders = borders 
-
 ```
 
 * 设置实线边框
