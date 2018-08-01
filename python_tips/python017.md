@@ -58,6 +58,8 @@ style.borders = borders
 
 ```
 
+* 设置实线边框
+
 ```python
 borders.left = xlwt.Borders.THIN
 borders.right = xlwt.Borders.THIN
