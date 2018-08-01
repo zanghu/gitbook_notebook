@@ -73,13 +73,15 @@ sheet.write(0, 0, 'Firstname',style)
 workbook = xlwt.Workbook(encoding = 'ascii')
 worksheet = workbook.add_sheet('My Worksheet') # 创建sheet
 
+# 创建Font对象
 font = xlwt.Font() # Create the Font
-font.name = 'Times New Roman'
-font.bold = True
-font.underline = True
-font.italic = True
+... # 设置Font对象
+
+# Font对象加入Style
 style = xlwt.XFStyle() # Create the Style
 style.font = font # Apply the Font to the Style
+
+# 按照指定Style书写单元格内容
 worksheet.write(1, 0, label = 'Formatted value', style) # Apply the Style to the Cell
 ```
 
