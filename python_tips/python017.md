@@ -88,14 +88,14 @@ worksheet.write(1, 0, label = 'Formatted value', style) # Apply the Style to the
 * 字体加粗
 
 ```python
-font.name = 'Times New Roman'
+font.bold = True
 ```
 
 * 文字加下划线
 
 ```python
-
 font.underline = True
+```
 font.italic = True
 style = xlwt.XFStyle() # Create the Style
 style.font = font # Apply the Font to the Style
