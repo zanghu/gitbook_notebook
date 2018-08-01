@@ -63,7 +63,7 @@
     * [Linux: sudo运行程序搜索路径变化原因的研究](linux_tips/cmd_advanced/lin009.md)
     * [Linux: 快速释放本地端口](linux_tips/cmd_advanced/lin014.md)
   * [Linux: shell编程](linux_tips/shell/README.md)
-    * [Linux: 脚本编程001——字符串排序](linux_tips/lin005.md)
+    * [Linux: 脚本编程001——字符串排序](linux_tips/shell/lin005.md)
   * [Linux: Ubuntu知识](linux_tips/ubuntu/README.md)
     * [Linux: ubuntu源列表结构分析](linux_tips/lin008.md)
     * [Linux: ubuntu自动更新相关的三个命令](linux_tips/lin019.md)
