@@ -77,15 +77,6 @@ style = xlwt.XFStyle()
 style.alignment = alignment # alignment加入style
 ```
 
-# 创建Alignment对象
-alignment.horz = xlwt.Alignment.HORZ_CENTER # 水平对齐
-alignment.vert = xlwt.Alignment.VERT_CENTER # 垂直对齐
-
-# 创建Style对象
-
-
-
-
 * 对齐模式
 
 ```python
