@@ -30,19 +30,24 @@ ws.write(2, 2, xlwt.Formula("A3+B3"))
 wb.save('example.xls')
 ```
 
-Examples Generating Excel Documents Using Python’s xlwt
+### Examples Generating Excel Documents Using Python’s xlwt
 Here are some simple examples using Python’s xlwt library to dynamically generate Excel documents.
 
 Please note a useful alternative may be ezodf, which allows you to generate ODS (Open Document Spreadsheet) files for LibreOffice / OpenOffice. You can check them out at:http://packages.python.org/ezodf/index.html
 
-The Simplest Example
+#### The Simplest Example
+
+```python
 import xlwt
 workbook = xlwt.Workbook(encoding = 'ascii')
 worksheet = workbook.add_sheet('My Worksheet')
 worksheet.write(0, 0, label = 'Row 0, Column 0 Value')
 workbook.save('Excel_Workbook.xls')
+```
 
-Formatting the Contents of a Cell
+#### Formatting the Contents of a Cell
+
+```python
 import xlwt
 workbook = xlwt.Workbook(encoding = 'ascii')
 worksheet = workbook.add_sheet('My Worksheet')
@@ -56,8 +61,11 @@ style.font = font # Apply the Font to the Style
 worksheet.write(0, 0, label = 'Unformatted value')
 worksheet.write(1, 0, label = 'Formatted value', style) # Apply the Style to the Cell
 workbook.save('Excel_Workbook.xls')
+```
 
-Attributes of the Font Object
+#### Attributes of the Font Object
+
+```python
 font.bold = True # May be: True, False
 font.italic = True # May be: True, False
 font.struck_out = True # May be: True, False
@@ -71,16 +79,22 @@ font.height = 0x00C8 # C8 in Hex (in decimal) = 10 points in height.
 font.name = ?
 font.outline = ?
 font.shadow = ?
+```
 
-Setting the Width of a Cell
+#### Setting the Width of a Cell
+
+```python
 import xltw
 workbook = xlwt.Workbook()
 worksheet = workbook.add_sheet('My Sheet')
 worksheet.write(0, 0, 'My Cell Contents')
 worksheet.col(0).width = 3333 # 3333 = 1" (one inch).
 workbook.save('Excel_Workbook.xls')
+```
 
-Entering a Date into a Cell
+#### Entering a Date into a Cell
+
+```python
 import xlwt
 import datetime
 workbook = xlwt.Workbook()
@@ -89,8 +103,11 @@ style = xlwt.XFStyle()
 style.num_format_str = 'M/D/YY' # Other options: D-MMM-YY, D-MMM, MMM-YY, h:mm, h:mm:ss, h:mm, h:mm:ss, M/D/YY h:mm, mm:ss, [h]:mm:ss, mm:ss.0
 worksheet.write(0, 0, datetime.datetime.now(), style)
 workbook.save('Excel_Workbook.xls')
+```
 
-Adding a Formula to a Cell
+#### Adding a Formula to a Cell
+
+```python
 import xlwt
 workbook = xlwt.Workbook()
 worksheet = workbook.add_sheet('My Sheet')
@@ -99,15 +116,21 @@ worksheet.write(0, 1, 2) # Outputs 2
 worksheet.write(1, 0, xlwt.Formula('A1*B1')) # Should output "10" (A1[5] * A2[2])
 worksheet.write(1, 1, xlwt.Formula('SUM(A1,B1)')) # Should output "7" (A1[5] + A2[2])
 workbook.save('Excel_Workbook.xls')
+```
 
-Adding a Hyperlink to a Cell
+#### Adding a Hyperlink to a Cell
+
+```python
 import xlwt
 workbook = xlwt.Workbook()
 worksheet = workbook.add_sheet('My Sheet')
 worksheet.write(0, 0, xlwt.Formula('HYPERLINK("http://www.google.com";"Google")')) # Outputs the text "Google" linking to http://www.google.com
 workbook.save('Excel_Workbook.xls')
+```
 
-Merging Columns and Rows
+#### Merging Columns and Rows
+
+```python
 import xlwt
 workbook = xlwt.Workbook()
 worksheet = workbook.add_sheet('My Sheet')
@@ -118,8 +141,11 @@ style = xlwt.XFStyle() # Create Style
 style.font = font # Add Bold Font to Style
 worksheet.write_merge(1, 2, 0, 3, 'Second Merge', style) # Merges row 1 through 2's columns 0 through 3.
 workbook.save('Excel_Workbook.xls')
+```
 
-Setting the Alignment for the Contents of a Cell
+#### Setting the Alignment for the Contents of a Cell
+
+```python
 import xlwt
 workbook = xlwt.Workbook()
 worksheet = workbook.add_sheet('My Sheet')
@@ -130,8 +156,13 @@ style = xlwt.XFStyle() # Create Style
 style.alignment = alignment # Add Alignment to Style
 worksheet.write(0, 0, 'Cell Contents', style)
 workbook.save('Excel_Workbook.xls')
+```
 
-Adding Borders to a Cell
+#### Adding Borders to a Cell
+
+
+
+```python
 # Please note: While I was able to find these constants within the source code, on my system (using LibreOffice,) I was only presented with a solid line, varying from thin to thick; no dotted or dashed lines.
 import xlwt
 workbook = xlwt.Workbook()
@@ -149,6 +180,7 @@ style = xlwt.XFStyle() # Create Style
 style.borders = borders # Add Borders to Style
 worksheet.write(0, 0, 'Cell Contents', style)
 workbook.save('Excel_Workbook.xls')
+```
 
 Setting the Background Color of a Cell
 import xlwt
