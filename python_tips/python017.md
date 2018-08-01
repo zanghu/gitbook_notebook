@@ -20,23 +20,6 @@ sheet = wbk.add_sheet('sheet1')
 sheet.write_merge(row_start, row_end, col_start, col_end, content, [style]) # 向圈出的区域内写入内容，实际效果等同于合并圈出区域的单元格
 ```
 
-* 文字对齐
-
-
-
-```python
-# 创建Alignment对象
-alignment = xlwt.Alignment()
-alignment.horz = xlwt.Alignment.HORZ_CENTER # 水平对齐
-alignment.vert = xlwt.Alignment.VERT_CENTER # 垂直对齐
-
-# 创建Style对象
-style = xlwt.XFStyle()
-style.alignment = alignment # alignment加入style
-
-sheet.write(..., style=style) # 写入时使用指定对齐模式
-```
-
 * 单元格尺寸
 
 sheet.col(1).width = 256 * 4
