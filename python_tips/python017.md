@@ -119,6 +119,12 @@ worksheet.write(1, 0, label = 'Formatted value', style) # Apply the Style to the
 font.bold = True
 ```
 
+* 字体大小
+
+```python
+font.height = 320 # 16 * 20, for 16 point
+```
+
 * 文字加下划线
 
 ```python
