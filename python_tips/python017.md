@@ -62,6 +62,23 @@ sheet.write(0, 0, 'Firstname',style)
 
 参考资料：[Python xlwt如何设置单元格的自定义背景颜色](https://cloud.tencent.com/developer/ask/34882)
 
+### 3.对齐调整
+
+* 对齐模式
+
+```python
+alignment.horz = xlwt.Alignment.HORZ_CENTER # 水平对齐
+alignment.vert = xlwt.Alignment.VERT_CENTER # 垂直对齐
+
+
+```
+
+* 自动换行
+
+```python
+alignment.wrap = xlwt.Alignment.WRAP_AT_RIGHT # 自动换行
+```
+
 ### 4.字体调整
 
 参考资料：[python xlwt写excel格式控制](https://blog.csdn.net/kk123a/article/details/49813559)
