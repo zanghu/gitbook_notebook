@@ -75,10 +75,6 @@ alignment = xlwt.Alignment()
 # Alignment对象加入Style
 style = xlwt.XFStyle()
 style.alignment = alignment # alignment加入style
-
-
-
-
 ```
 
 # 创建Alignment对象
