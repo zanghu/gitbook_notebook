@@ -69,8 +69,10 @@ sheet.write(0, 0, 'Firstname',style)
 字体的所有设置应该通过`xlwt.Font`对象设置
 
 ```python
+# 创建excel文件对象
 workbook = xlwt.Workbook(encoding = 'ascii')
-worksheet = workbook.add_sheet('My Worksheet')
+worksheet = workbook.add_sheet('My Worksheet') # 创建sheet
+
 font = xlwt.Font() # Create the Font
 font.name = 'Times New Roman'
 font.bold = True
