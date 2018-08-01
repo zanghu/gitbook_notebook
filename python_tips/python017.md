@@ -62,7 +62,7 @@ sheet.write(0, 0, 'Firstname',style)
 
 参考资料：[Python xlwt如何设置单元格的自定义背景颜色](https://cloud.tencent.com/developer/ask/34882)
 
-### 3.字体调整
+### 4.字体调整
 
 参考资料：[python xlwt写excel格式控制](https://blog.csdn.net/kk123a/article/details/49813559)
 参考资料：[Python xlwt设置excel单元格字体及格式](https://blog.csdn.net/u013400654/article/details/50284983)
