@@ -5,7 +5,7 @@
 
 ### 1.全局设置
 
-* 编码设置
+* 编码类型设置
 
 ```python
 wbk = xlwt.Workbook(encoding='utf-8') # 设置编码后, 当excel内有中文时，保存不会报错
