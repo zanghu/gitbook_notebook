@@ -64,6 +64,32 @@ sheet.write(0, 0, 'Firstname',style)
 
 ### 3.对齐调整
 
+对齐相关设置在`xlwt.Alignment`对象中进行设置，使用的一般方法如下：
+
+```python
+# 创建Alignment对象
+alignment = xlwt.Alignment()
+
+... # 设置Alignment对象
+
+# Alignment对象加入Style
+style = xlwt.XFStyle()
+style.alignment = alignment # alignment加入style
+
+
+
+
+```
+
+# 创建Alignment对象
+alignment.horz = xlwt.Alignment.HORZ_CENTER # 水平对齐
+alignment.vert = xlwt.Alignment.VERT_CENTER # 垂直对齐
+
+# 创建Style对象
+
+
+
+
 * 对齐模式
 
 ```python
