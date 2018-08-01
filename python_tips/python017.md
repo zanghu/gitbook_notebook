@@ -109,7 +109,7 @@ font.italic = True
 
 ```python
 font.name = 'Times New Roman'
-fnt.name = u'微软雅黑'                # 设置其字体为微软雅黑
+fnt.name = u'微软雅黑' # 设置其字体为微软雅黑
 ```
 
 * 字体颜色
