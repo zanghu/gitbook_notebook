@@ -67,10 +67,6 @@ borders.top = xlwt.Borders.THIN
 borders.bottom = xlwt.Borders.THIN
 ```
 
-* 单元格背景色
-
-参考资料：[Python xlwt如何设置单元格的自定义背景颜色](https://cloud.tencent.com/developer/ask/34882)
-
 ### 4.对齐调整
 
 对齐相关设置在`xlwt.Alignment`对象中进行设置，使用的一般方法如下：
@@ -169,4 +165,27 @@ fnt.bold = True
 style.font = fnt                    #将赋值好的模式参数导入Style                                   
 sheet.write_merge(i,i,3,5,Line_data,style)  #以合并单元格形式写入数据，即将数据写入以第4/5/6列合并德单元
 ```
+
+#### 7.单元格模式设置
+
+通过设置`xlwt.Pattern`对象实现， 一般过程如下
+
+```python
+pattern = xlwt.Pattern()
+
+... 
+
+style.pattern = pattern
+```
+
+* 单元格背景色
+
+```python
+pattern.pattern = xlwt.Pattern.SOLID_PATTERN
+pattern.pattern_fore_colour = xlwt.Style.colour_map['dark_purple']
+```
+
+参考资料：[Python xlwt如何设置单元格的自定义背景颜色](https://cloud.tencent.com/developer/ask/34882)
+
+
 
