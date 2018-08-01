@@ -6,7 +6,7 @@
     * [Python：关于函数定义形参表的形参前面的星号和双星号](python_tips/basic/python001.md)
     * [Python：关于classmethod和staticmethod的区别](python_tips/basic/python004.md)
     * [Python：元类与metaclass](python_tips/basic/python005.md)
-  * [Python：实践经验](python_tips/practice/README.md)
+  * [Python：进阶经验](python_tips/practice/README.md)
     * [Python：使用functools.update\_wrapper保持被装饰器修饰的函数的自省/反射属性](python_tips/practice/python002.md)
     * [Python：展示对象所有属性的类型的方法](python_tips/practice/python008.md)
     * [Python：函数默认参数不应是list类型](python_tips/practice/python009.md)
