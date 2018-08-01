@@ -87,8 +87,7 @@ alignment.horzHORZ_RIGHT  = 0x03    右端对齐
 
 alignment.vert = xlwt.Alignment.VERT_CENTER # 垂直居中 0x01
 alignment.vert = xlwt.Alignment.VERT_TOP # 顶端对齐, 0x00
-alignment.vert = xlwt.Alignment.VERT_CENTER =     居中对齐（垂直方向上）
-alignment.vert = xlwt.Alignment.VERT_BOTTOM =     低端对齐 0x02
+alignment.vert = xlwt.Alignment.VERT_BOTTOM # 低端对齐 0x02
 ```
 
 * 自动换行
