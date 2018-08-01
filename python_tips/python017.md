@@ -67,8 +67,8 @@ sheet.write(0, 0, 'Firstname',style)
 * 对齐模式
 
 ```python
-alignment.horz = xlwt.Alignment.HORZ_CENTER # 水平对齐
-alignment.vert = xlwt.Alignment.VERT_CENTER # 垂直对齐
+alignment.horz = xlwt.Alignment.HORZ_CENTER # 水平居中
+alignment.vert = xlwt.Alignment.VERT_CENTER # 垂直居中
 ```
 
 * 自动换行
