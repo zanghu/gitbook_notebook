@@ -102,14 +102,8 @@ font.underline = True
 ```python
 font.italic = True
 ```
-style = xlwt.XFStyle() # Create the Style
-style.font = font # Apply the Font to the Style
-worksheet.write(0, 0, label = 'Unformatted value')
-worksheet.write(1, 0, label = 'Formatted value', style) # Apply the Style to the Cell
-workbook.save('Excel_Workbook.xls')
-```
 
-* 字体类型
+* 设置字体
 
 参考资料：[Python xlwt设置excel单元格字体及格式](https://blog.csdn.net/u013400654/article/details/50284983)
 
