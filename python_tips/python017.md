@@ -118,7 +118,9 @@ fnt.name = u'微软雅黑'                # 设置其字体为微软雅黑
 ```python
 # 0 = Black, 1 = White, 2 = Red, 3 = Green, 4 = Blue, 5 = Yellow, 6 = Magenta,  the list goes on...
 fnt.colour_index = i                # 设置其字体颜色
-```                                   
+```
+
+```python
 fnt.bold = True                                             
 style.font = fnt                    #将赋值好的模式参数导入Style                                   
 sheet.write_merge(i,i,3,5,Line_data,style)  #以合并单元格形式写入数据，即将数据写入以第4/5/6列合并德单元
