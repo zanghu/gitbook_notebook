@@ -65,6 +65,7 @@ sheet.write(0, 0, 'Firstname',style)
 ### 3.字体调整
 
 参考资料：[python xlwt写excel格式控制](https://blog.csdn.net/kk123a/article/details/49813559)
+参考资料：[](https://blog.csdn.net/u013400654/article/details/50284983)
 
 字体的所有设置应该通过`xlwt.Font`对象设置，一般步骤如下：
 
