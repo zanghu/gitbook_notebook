@@ -42,15 +42,17 @@ sheet.write(..., style=style) # 写入时使用指定对齐模式
 sheet.col(1).width = 256 * 4
 sheet.col(1).width = 256 * 20
 
-* 单元格边框
+
+
+# 3.边框设置
 
 ```python
 borders = xlwt.Borders()
-borders.left = 1
-borders.right = 1
-borders.top = 1
-borders.bottom = 1
-borders.bottom_colour=0x3A    
+borders.left = xlwt.Borders.THIN
+borders.right = xlwt.Borders.THIN
+borders.top = xlwt.Borders.THIN
+borders.bottom = xlwt.Borders.THIN
+```
  
 style = xlwt.XFStyle()
 style.borders = borders 
@@ -62,7 +64,7 @@ sheet.write(0, 0, 'Firstname',style)
 
 参考资料：[Python xlwt如何设置单元格的自定义背景颜色](https://cloud.tencent.com/developer/ask/34882)
 
-### 3.对齐调整
+### 4.对齐调整
 
 对齐相关设置在`xlwt.Alignment`对象中进行设置，使用的一般方法如下：
 
@@ -97,7 +99,7 @@ alignment.vert = xlwt.Alignment.VERT_BOTTOM # 低端对齐 0x02
 alignment.wrap = xlwt.Alignment.WRAP_AT_RIGHT # 自动换行
 ```
 
-### 4.字体调整
+### 5.字体调整
 
 参考资料：[python xlwt写excel格式控制](https://blog.csdn.net/kk123a/article/details/49813559)
 参考资料：[Python xlwt设置excel单元格字体及格式](https://blog.csdn.net/u013400654/article/details/50284983)
