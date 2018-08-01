@@ -52,7 +52,7 @@
     * [Linux: 安装Matlab（命令行界面）](linux_tips/soft_setup/lin012.md)
     * [Linux: 安装Tensorflow\(From Source\)](linux_tips/soft_setup/lin004.md)
     * [Linux: 安装caffe](linux_tips/soft_setup/lin007.md)
-  * [Linux: 命令详解](linux_tips/cmd_basic/README.md)
+  * [Linux: 基础命令](linux_tips/cmd_basic/README.md)
     * [Linux: chmod修改文件权限](linux_tips/cmd_basic/lin001.md)
     * [Linux: mount命令挂载移动硬盘](linux_tips/cmd_basic/lin002.md)
     * [Linux: chmod修改文件权限指南](linux_tips/cmd_basic/lin018.md)
