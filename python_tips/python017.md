@@ -17,7 +17,9 @@ wbk = xlwt.Workbook(encoding='utf-8') # 设置编码后, 当excel内有中文时
 
 ```python
 sheet = wbk.add_sheet('sheet1')
-sheet.write_merge(row_start, row_end, col_start, col_end, content, [style]) # 向圈出的区域内写入内容，实际效果等同于合并圈出区域的单元格
+
+# 向圈出的区域内写入内容，实际效果等同于合并圈出区域的单元格
+sheet.write_merge(row_start, row_end, col_start, col_end, content, [style])
 ```
 
 * 单元格尺寸
