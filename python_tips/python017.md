@@ -96,7 +96,12 @@ font.bold = True
 ```python
 font.underline = True
 ```
+
+* 文字加斜体
+
+```python
 font.italic = True
+```
 style = xlwt.XFStyle() # Create the Style
 style.font = font # Apply the Font to the Style
 worksheet.write(0, 0, label = 'Unformatted value')
