@@ -69,7 +69,16 @@ sheet.write(0, 0, 'Firstname',style)
 字体的所有设置应该通过`xlwt.Font`对象设置
 
 ```python
-
+workbook = xlwt.Workbook(encoding = 'ascii')
+worksheet = workbook.add_sheet('My Worksheet')
+font = xlwt.Font() # Create the Font
+font.name = 'Times New Roman'
+font.bold = True
+font.underline = True
+font.italic = True
+style = xlwt.XFStyle() # Create the Style
+style.font = font # Apply the Font to the Style
+worksheet.write(1, 0, label = 'Formatted value', style) # Apply the Style to the Cell
 ```
 
 * 字体加粗
