@@ -46,16 +46,26 @@ sheet.col(1).width = 256 * 20
 
 # 3.边框设置
 
+边框通过`xlwt.Borders`对象进行设置，一般方法如下：
+
 ```python
 borders = xlwt.Borders()
+
+... # 设置Borders对象
+
+style = xlwt.XFStyle()
+style.borders = borders 
+
+```
+
+```python
 borders.left = xlwt.Borders.THIN
 borders.right = xlwt.Borders.THIN
 borders.top = xlwt.Borders.THIN
 borders.bottom = xlwt.Borders.THIN
 ```
  
-style = xlwt.XFStyle()
-style.borders = borders 
+
  
 sheet.write(0, 0, 'Firstname',style)
 ```
