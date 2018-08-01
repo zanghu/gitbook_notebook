@@ -66,11 +66,6 @@ borders.right = xlwt.Borders.THIN
 borders.top = xlwt.Borders.THIN
 borders.bottom = xlwt.Borders.THIN
 ```
- 
-
- 
-sheet.write(0, 0, 'Firstname',style)
-```
 
 * 单元格背景色
 
