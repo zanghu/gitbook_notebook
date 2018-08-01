@@ -122,6 +122,7 @@ font.bold = True
 * 字体大小
 
 ```python
+# 查阅资料并未发现font.width
 font.height = 320 # 16 * 20, for 16 point
 ```
 
