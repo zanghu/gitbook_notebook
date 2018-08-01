@@ -182,10 +182,6 @@ style.pattern = pattern
 
 参考资料：[Python xlwt如何设置单元格的自定义背景颜色](https://cloud.tencent.com/developer/ask/34882)
 
-
-
-
-
 ```python
 pattern.pattern = xlwt.Pattern.SOLID_PATTERN
 pattern.pattern_fore_colour = xlwt.Style.colour_map['dark_purple']
