@@ -30,7 +30,6 @@ sheet.col(1).width = 256 * 4
 sheet.col(1).width = 256 * 20
 ```
 
-
 ### 3.边框设置
 
 边框通过`xlwt.Borders`对象进行设置，一般方法如下：
@@ -145,7 +144,7 @@ fnt.name = u'微软雅黑' # 设置其字体为微软雅黑
 
 ```python
 # 0 = Black, 1 = White, 2 = Red, 3 = Green, 4 = Blue, 5 = Yellow, 6 = Magenta,  the list goes on...
-fnt.colour_index = i # 设置其字体颜色
+fnt.colour_index = i # 设置其字体颜色, 支持0-127
 ```
 
 ```python
