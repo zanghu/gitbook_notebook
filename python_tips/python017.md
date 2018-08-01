@@ -82,7 +82,7 @@ style = xlwt.XFStyle()
 style.alignment = alignment # alignment加入style
 ```
 
-* 对齐方式
+* 文字对齐方式
 
 ```python
 # 水平方向
