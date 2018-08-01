@@ -22,9 +22,10 @@ sheet.write_merge(row_start, row_end, col_start, col_end, content, [style]) # �
 
 * 单元格尺寸
 
+```python
 sheet.col(1).width = 256 * 4
 sheet.col(1).width = 256 * 20
-
+```
 
 
 ### 3.边框设置
