@@ -110,8 +110,14 @@ workbook.save('Excel_Workbook.xls')
 
 ```python
 font.name = 'Times New Roman'
-fnt.name = u'微软雅黑'                # 设置其字体为微软雅黑                                 
-fnt.colour_index = i                # 设置其字体颜色                                    
+fnt.name = u'微软雅黑'                # 设置其字体为微软雅黑
+```
+
+* 字体颜色
+
+```python
+fnt.colour_index = i                # 设置其字体颜色
+```                                   
 fnt.bold = True                                             
 style.font = fnt                    #将赋值好的模式参数导入Style                                   
 sheet.write_merge(i,i,3,5,Line_data,style)  #以合并单元格形式写入数据，即将数据写入以第4/5/6列合并德单元
