@@ -86,8 +86,6 @@ style.alignment = alignment # alignment加入style
 
 参考资料：[python导出excel常用格式样式设置](https://blog.csdn.net/qq_32502511/article/details/53463743)
 
-
-
 ```python
 # 水平方向
 alignment.horz = xlwt.Alignment.HORZ_CENTER # 水平居中 0x02
