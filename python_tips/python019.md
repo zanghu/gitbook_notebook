@@ -1,34 +1,6 @@
 ## Python: 操作excel表格——英文总结存档
 
-python xlwt写excel格式控制 颜色、模式、编码、背景色
-关于写excel的格式控制，比如颜色等等
-
-```python
-import xlwt
-from datetime import datetime
-  
-font0 = xlwt.Font()
-font0.name = 'Times New Roman'
-font0.colour_index = 2
-font0.bold = True
-  
-style0 = xlwt.XFStyle()
-style0.font = font0
-   
-style1 = xlwt.XFStyle()
-style1.num_format_str = 'D-MMM-YY'
-  
-wb = xlwt.Workbook()
-ws = wb.add_sheet('A Test Sheet')
-  
-ws.write(0, 0, 'Test', style0)
-ws.write(1, 0, datetime.now(), style1)
-ws.write(2, 0, 1)
-ws.write(2, 1, 1)
-ws.write(2, 2, xlwt.Formula("A3+B3"))
-  
-wb.save('example.xls')
-```
+一篇不错的英文文章，保存备查。
 
 ### Examples Generating Excel Documents Using Python’s xlwt
 Here are some simple examples using Python’s xlwt library to dynamically generate Excel documents.
