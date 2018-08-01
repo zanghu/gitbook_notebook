@@ -1,68 +1,173 @@
-## Python: 操作excel表格——基本读写操作
+## Python: 操作excel表格——英文总结存档
 
-参考资料: [python-pptx模块官方文档](http://python-pptx.readthedocs.io/en/latest/index.html)
-参考资料：[使用python生成pptx](https://blog.csdn.net/huuinn/article/details/78965725)
-
-### 1.简单例子
-
-* **文字输出到pptx**
+python xlwt写excel格式控制 颜色、模式、编码、背景色
+关于写excel的格式控制，比如颜色等等
 
 ```python
-from pptx import Presentation
- 
-# 创建幻灯片 ------
-prs = Presentation()
-title_slide_layout = prs.slide_layouts[0]
-slide = prs.slides.add_slide(title_slide_layout)
- 
-title = slide.shapes.title
-subtitle = slide.placeholders[1]
- 
-# 设置标题和副标题
-title.text = "Hello, World!"
-subtitle.text = "pip install python-pptx"
- 
-prs.save("test.pptx")
+import xlwt
+from datetime import datetime
+  
+font0 = xlwt.Font()
+font0.name = 'Times New Roman'
+font0.colour_index = 2
+font0.bold = True
+  
+style0 = xlwt.XFStyle()
+style0.font = font0
+   
+style1 = xlwt.XFStyle()
+style1.num_format_str = 'D-MMM-YY'
+  
+wb = xlwt.Workbook()
+ws = wb.add_sheet('A Test Sheet')
+  
+ws.write(0, 0, 'Test', style0)
+ws.write(1, 0, datetime.now(), style1)
+ws.write(2, 0, 1)
+ws.write(2, 1, 1)
+ws.write(2, 2, xlwt.Formula("A3+B3"))
+  
+wb.save('example.xls')
 ```
 
-效果图：
+Examples Generating Excel Documents Using Python’s xlwt
+Here are some simple examples using Python’s xlwt library to dynamically generate Excel documents.
 
-![](/assets/python018_001.PNG)
+Please note a useful alternative may be ezodf, which allows you to generate ODS (Open Document Spreadsheet) files for LibreOffice / OpenOffice. You can check them out at:http://packages.python.org/ezodf/index.html
 
-* ***绘制柱状图**
+The Simplest Example
+import xlwt
+workbook = xlwt.Workbook(encoding = 'ascii')
+worksheet = workbook.add_sheet('My Worksheet')
+worksheet.write(0, 0, label = 'Row 0, Column 0 Value')
+workbook.save('Excel_Workbook.xls')
 
-```python
-from pptx import Presentation
-from pptx.chart.data import ChartData
-from pptx.enum.chart import XL_CHART_TYPE
-from pptx.util import Inches
- 
-# 创建幻灯片 ------
-prs = Presentation()
-slide = prs.slides.add_slide(prs.slide_layouts[5])
- 
-# 定义图表数据 ---------------------
-chart_data = ChartData()
-chart_data.categories = ['East', 'West', 'Midwest']
-chart_data.add_series('Series 1', (19.2, 21.4, 16.7))
- 
-# 将图表添加到幻灯片 --------------------
-x, y, cx, cy = Inches(2), Inches(2), Inches(6), Inches(4.5)
-slide.shapes.add_chart(
-    XL_CHART_TYPE.COLUMN_CLUSTERED, x, y, cx, cy, chart_data
-)
- 
-prs.save('chart-01.pptx')
-```
+Formatting the Contents of a Cell
+import xlwt
+workbook = xlwt.Workbook(encoding = 'ascii')
+worksheet = workbook.add_sheet('My Worksheet')
+font = xlwt.Font() # Create the Font
+font.name = 'Times New Roman'
+font.bold = True
+font.underline = True
+font.italic = True
+style = xlwt.XFStyle() # Create the Style
+style.font = font # Apply the Font to the Style
+worksheet.write(0, 0, label = 'Unformatted value')
+worksheet.write(1, 0, label = 'Formatted value', style) # Apply the Style to the Cell
+workbook.save('Excel_Workbook.xls')
 
-效果图：
+Attributes of the Font Object
+font.bold = True # May be: True, False
+font.italic = True # May be: True, False
+font.struck_out = True # May be: True, False
+font.underline = xlwt.Font.UNDERLINE_SINGLE # May be: UNDERLINE_NONE, UNDERLINE_SINGLE, UNDERLINE_SINGLE_ACC, UNDERLINE_DOUBLE, UNDERLINE_DOUBLE_ACC
+font.escapement = xlwt.Font.ESCAPEMENT_SUPERSCRIPT # May be: ESCAPEMENT_NONE, ESCAPEMENT_SUPERSCRIPT, ESCAPEMENT_SUBSCRIPT
+font.family = xlwt.Font.FAMILY_ROMAN # May be: FAMILY_NONE, FAMILY_ROMAN, FAMILY_SWISS, FAMILY_MODERN, FAMILY_SCRIPT, FAMILY_DECORATIVE
+font.charset = xlwt.Font.CHARSET_ANSI_LATIN # May be: CHARSET_ANSI_LATIN, CHARSET_SYS_DEFAULT, CHARSET_SYMBOL, CHARSET_APPLE_ROMAN, CHARSET_ANSI_JAP_SHIFT_JIS, CHARSET_ANSI_KOR_HANGUL, CHARSET_ANSI_KOR_JOHAB, CHARSET_ANSI_CHINESE_GBK, CHARSET_ANSI_CHINESE_BIG5, CHARSET_ANSI_GREEK, CHARSET_ANSI_TURKISH, CHARSET_ANSI_VIETNAMESE, CHARSET_ANSI_HEBREW, CHARSET_ANSI_ARABIC, CHARSET_ANSI_BALTIC, CHARSET_ANSI_CYRILLIC, CHARSET_ANSI_THAI, CHARSET_ANSI_LATIN_II, CHARSET_OEM_LATIN_I
+font.colour_index = ?
+font.get_biff_record = ?
+font.height = 0x00C8 # C8 in Hex (in decimal) = 10 points in height.
+font.name = ?
+font.outline = ?
+font.shadow = ?
 
-![](/assets/python018_002.PNG)
+Setting the Width of a Cell
+import xltw
+workbook = xlwt.Workbook()
+worksheet = workbook.add_sheet('My Sheet')
+worksheet.write(0, 0, 'My Cell Contents')
+worksheet.col(0).width = 3333 # 3333 = 1" (one inch).
+workbook.save('Excel_Workbook.xls')
 
+Entering a Date into a Cell
+import xlwt
+import datetime
+workbook = xlwt.Workbook()
+worksheet = workbook.add_sheet('My Sheet')
+style = xlwt.XFStyle()
+style.num_format_str = 'M/D/YY' # Other options: D-MMM-YY, D-MMM, MMM-YY, h:mm, h:mm:ss, h:mm, h:mm:ss, M/D/YY h:mm, mm:ss, [h]:mm:ss, mm:ss.0
+worksheet.write(0, 0, datetime.datetime.now(), style)
+workbook.save('Excel_Workbook.xls')
 
-### 2.官方支持
+Adding a Formula to a Cell
+import xlwt
+workbook = xlwt.Workbook()
+worksheet = workbook.add_sheet('My Sheet')
+worksheet.write(0, 0, 5) # Outputs 5
+worksheet.write(0, 1, 2) # Outputs 2
+worksheet.write(1, 0, xlwt.Formula('A1*B1')) # Should output "10" (A1[5] * A2[2])
+worksheet.write(1, 1, xlwt.Formula('SUM(A1,B1)')) # Should output "7" (A1[5] + A2[2])
+workbook.save('Excel_Workbook.xls')
 
-[python-pptx模块官方文档](http://python-pptx.readthedocs.io/en/latest/index.html)
+Adding a Hyperlink to a Cell
+import xlwt
+workbook = xlwt.Workbook()
+worksheet = workbook.add_sheet('My Sheet')
+worksheet.write(0, 0, xlwt.Formula('HYPERLINK("http://www.google.com";"Google")')) # Outputs the text "Google" linking to http://www.google.com
+workbook.save('Excel_Workbook.xls')
 
-[项目的github主页](https://github.com/scanny/python-pptx)
+Merging Columns and Rows
+import xlwt
+workbook = xlwt.Workbook()
+worksheet = workbook.add_sheet('My Sheet')
+worksheet.write_merge(0, 0, 0, 3, 'First Merge') # Merges row 0's columns 0 through 3.
+font = xlwt.Font() # Create Font
+font.bold = True # Set font to Bold
+style = xlwt.XFStyle() # Create Style
+style.font = font # Add Bold Font to Style
+worksheet.write_merge(1, 2, 0, 3, 'Second Merge', style) # Merges row 1 through 2's columns 0 through 3.
+workbook.save('Excel_Workbook.xls')
 
+Setting the Alignment for the Contents of a Cell
+import xlwt
+workbook = xlwt.Workbook()
+worksheet = workbook.add_sheet('My Sheet')
+alignment = xlwt.Alignment() # Create Alignment
+alignment.horz = xlwt.Alignment.HORZ_CENTER # May be: HORZ_GENERAL, HORZ_LEFT, HORZ_CENTER, HORZ_RIGHT, HORZ_FILLED, HORZ_JUSTIFIED, HORZ_CENTER_ACROSS_SEL, HORZ_DISTRIBUTED
+alignment.vert = xlwt.Alignment.VERT_CENTER # May be: VERT_TOP, VERT_CENTER, VERT_BOTTOM, VERT_JUSTIFIED, VERT_DISTRIBUTED
+style = xlwt.XFStyle() # Create Style
+style.alignment = alignment # Add Alignment to Style
+worksheet.write(0, 0, 'Cell Contents', style)
+workbook.save('Excel_Workbook.xls')
+
+Adding Borders to a Cell
+# Please note: While I was able to find these constants within the source code, on my system (using LibreOffice,) I was only presented with a solid line, varying from thin to thick; no dotted or dashed lines.
+import xlwt
+workbook = xlwt.Workbook()
+worksheet = workbook.add_sheet('My Sheet')
+borders = xlwt.Borders() # Create Borders
+borders.left = xlwt.Borders.DASHED # May be: NO_LINE, THIN, MEDIUM, DASHED, DOTTED, THICK, DOUBLE, HAIR, MEDIUM_DASHED, THIN_DASH_DOTTED, MEDIUM_DASH_DOTTED, THIN_DASH_DOT_DOTTED, MEDIUM_DASH_DOT_DOTTED, SLANTED_MEDIUM_DASH_DOTTED, or 0x00 through 0x0D.
+borders.right = xlwt.Borders.DASHED
+borders.top = xlwt.Borders.DASHED
+borders.bottom = xlwt.Borders.DASHED
+borders.left_colour = 0x40
+borders.right_colour = 0x40
+borders.top_colour = 0x40
+borders.bottom_colour = 0x40
+style = xlwt.XFStyle() # Create Style
+style.borders = borders # Add Borders to Style
+worksheet.write(0, 0, 'Cell Contents', style)
+workbook.save('Excel_Workbook.xls')
+
+Setting the Background Color of a Cell
+import xlwt
+workbook = xlwt.Workbook()
+worksheet = workbook.add_sheet('My Sheet')
+pattern = xlwt.Pattern() # Create the Pattern
+pattern.pattern = xlwt.Pattern.SOLID_PATTERN # May be: NO_PATTERN, SOLID_PATTERN, or 0x00 through 0x12
+pattern.pattern_fore_colour = 5 # May be: 8 through 63. 0 = Black, 1 = White, 2 = Red, 3 = Green, 4 = Blue, 5 = Yellow, 6 = Magenta, 7 = Cyan, 16 = Maroon, 17 = Dark Green, 18 = Dark Blue, 19 = Dark Yellow , almost brown), 20 = Dark Magenta, 21 = Teal, 22 = Light Gray, 23 = Dark Gray, the list goes on...
+style = xlwt.XFStyle() # Create the Pattern
+style.pattern = pattern # Add Pattern to Style
+worksheet.write(0, 0, 'Cell Contents', style)
+workbook.save('Excel_Workbook.xls')
+
+TODO: Things Left to Document
+- Panes -- separate views which are always in view
+- Border Colors (documented above, but not taking effect as it should)
+- Border Widths (document above, but not working as expected)
+- Protection
+- Row Styles
+- Zoom / Manification
+- WS Props?
+Source Code for reference available at: https://secure.simplistix.co.uk/svn/xlwt/trunk/xlwt/
