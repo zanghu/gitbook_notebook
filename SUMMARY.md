@@ -22,7 +22,7 @@
     * [Python：编辑excel表格——英文总结存档](python_tips/python019.md)
     * [Python：使用pptx模块制作幻灯片](python_tips/python_office/python018.md)
   * [Python：环境和工具](python_tips/env_and_tools/README.md)
-    * [Python：jupyter](python_tips/env_and_tools/anaconda/README.md)
+    * [Python：anaconda](python_tips/env_and_tools/anaconda/README.md)
       * [Python：使用conda安装opencv](python_tips/env_and_tools/anaconda/python007.md)
     * [Python：jupyter](python_tips/env_and_tools/jupyter/README.md)
       * [Python：搭建jupyter sevrer（非SSL方式）](python_tips/env_and_tools/jupyter/python015.md)
