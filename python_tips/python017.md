@@ -80,10 +80,10 @@ style.alignment = alignment # alignment加入style
 * 对齐模式
 
 ```python
-alignment.horz = xlwt.Alignment.HORZ_CENTER # 水平居中
-alignment.horzHORZ_LEFT   = 0x01    左端对齐
-alignment.horzHORZ_CENTER = 0x02    居中对齐（水平方向上）
-alignment.horzHORZ_RIGHT  = 0x03    右端对齐
+alignment.horz = xlwt.Alignment.HORZ_CENTER # 水平居中 0x02
+alignment.horz= xlwt.Alignment.HORZ_LEFT #  = 0x01    左端对齐
+alignment.horz= xlwt.Alignment.HORZ_CENTER #     居中对齐（水平方向上）
+alignment.horz= xlwt.Alignment.HORZ_RIGHT # 0x03    右端对齐
 
 alignment.vert = xlwt.Alignment.VERT_CENTER # 垂直居中 0x01
 alignment.vert = xlwt.Alignment.VERT_TOP # 顶端对齐, 0x00
