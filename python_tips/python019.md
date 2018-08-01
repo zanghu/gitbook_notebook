@@ -160,8 +160,6 @@ workbook.save('Excel_Workbook.xls')
 
 #### Adding Borders to a Cell
 
-
-
 ```python
 # Please note: While I was able to find these constants within the source code, on my system (using LibreOffice,) I was only presented with a solid line, varying from thin to thick; no dotted or dashed lines.
 import xlwt
@@ -182,7 +180,9 @@ worksheet.write(0, 0, 'Cell Contents', style)
 workbook.save('Excel_Workbook.xls')
 ```
 
-Setting the Background Color of a Cell
+#### Setting the Background Color of a Cell
+
+```python
 import xlwt
 workbook = xlwt.Workbook()
 worksheet = workbook.add_sheet('My Sheet')
@@ -193,8 +193,9 @@ style = xlwt.XFStyle() # Create the Pattern
 style.pattern = pattern # Add Pattern to Style
 worksheet.write(0, 0, 'Cell Contents', style)
 workbook.save('Excel_Workbook.xls')
+```
 
-TODO: Things Left to Document
+#### TODO: Things Left to Document
 - Panes -- separate views which are always in view
 - Border Colors (documented above, but not taking effect as it should)
 - Border Widths (document above, but not working as expected)
