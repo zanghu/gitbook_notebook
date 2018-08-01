@@ -53,7 +53,7 @@
     * [Linux: mount命令挂载移动硬盘](linux_tips/cmd_basic/lin002.md)
     * [Linux: chmod修改文件权限指南](linux_tips/cmd_basic/lin018.md)
     * [Linux: dd命令制作Ubuntu安装U盘](linux_tips/cmd_basic/lin010.md)
-  * [Linux: 命令经验](linux_tips/cmd_advanced/README.md)
+  * [Linux: 高级经验](linux_tips/cmd_advanced/README.md)
     * [Linux: copy命令赋值符号链接](linux_tips/cmd_advanced/lin006.md)
     * [Linux: sudo运行程序搜索路径变化原因的研究](linux_tips/cmd_advanced/lin009.md)
   * [Linux: shell编程](linux_tips/shell/README.md)
