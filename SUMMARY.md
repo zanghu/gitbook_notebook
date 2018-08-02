@@ -82,6 +82,7 @@
   * [C: Linux动态库一般命名规范](c/c007.md)
   * [C: 命令行工具](c/tools/README.md)
     * [C: 用nm命令查看lib库中符号](c/tools/c005.md)
+    * [C: objdump命令常见用法](c/tools/c009.md)
 * [Java](java/README.md)
   * [Maven: Linux环境安装maven](java/java001.md)
   * [Maven: Linux环境maven创建项目](java/java002.md)
