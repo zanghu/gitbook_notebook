@@ -63,6 +63,7 @@
     * [Linux: sudo运行程序搜索路径变化原因的研究](linux_tips/advanced/lin009.md)
     * [Linux: 快速释放本地端口](linux_tips/advanced/lin014.md)
     * [Linux: 内核模式与用户模式探讨](linux_tips/advanced/lin020.md)
+    * [参考文献: Understanding User and Kernel Mode](linux_tips/advanced/lin021.md)
   * [Linux: shell编程](linux_tips/shell/README.md)
     * [Linux: 脚本编程001——字符串排序](linux_tips/shell/lin005.md)
   * [Linux: Ubuntu知识](linux_tips/ubuntu/README.md)
