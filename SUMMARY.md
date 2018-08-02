@@ -72,7 +72,7 @@
     * [Ubuntu: apt-cache search 搜索相关安装包](linux_tips/ubuntu/lin016.md)
 * [Statistics](statistics/README.md)
   * [Static: N sigma 准则](statistics/static001.md)
-* [C Langusage](c/README.md)
+* [C](c/README.md)
   * [C: 类Unix系统下获取IP、MAC和掩码](c/c001.md)
   * [C: C99风格初始化（结构体和数组）](c/c002.md)
   * [C: dlopen、dlclose等函数的基本用法](c/c003.md)
