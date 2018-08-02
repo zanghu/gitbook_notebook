@@ -42,7 +42,7 @@
   * [CV: 图像的仿射变换](cv/cv002.md)
   * [CV: 「计算机视觉必读干货」图像分类、检测，语义分割等方法梳理](cv/cv003.md)
   * [CV: 图像样本膨胀之Jitter（抖动）](cv/cv004.md)
-* [Linux](linux_tips/README.md)
+* [Linux/Unix](linux_tips/README.md)
   * [Linux: 环境设置](linux_tips/config/README.md)
     * [Linux: 格式化和挂载SSD](linux_tips/config/lin011.md)
     * [Linux: 新建用户和加入用户组](linux_tips/config/lin015.md)
