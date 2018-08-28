@@ -84,6 +84,8 @@
   * [C: 命令行工具](c/tools/README.md)
     * [C: 用nm命令查看lib库中符号](c/tools/c005.md)
     * [C: objdump命令常见用法](c/tools/c009.md)
+* [C++](c++/README.md)
+  * [C++: 模板元编程](c++/cpp001.md)
 * [Java](java/README.md)
   * [Maven: Linux环境安装maven](java/java001.md)
   * [Maven: Linux环境maven创建项目](java/java002.md)
@@ -112,6 +114,5 @@
   * [docker: 容器切换到后台运行](docker/docker008.md)
   * [docker: 为镜像配置非root用户](docker/docker009.md)
   * [docker: 隔离机制及其局限性](docker/docker010.md)
-* [C++](c++/README.md)
-  * [C++: 模板元编程](c++/cpp001.md)
+
 
