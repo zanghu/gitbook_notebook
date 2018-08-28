@@ -46,7 +46,7 @@
   * [Linux: 环境设置](linux_tips/config/README.md)
     * [Linux: 格式化和挂载SSD](linux_tips/config/lin011.md)
     * [Linux: 新建用户和加入用户组](linux_tips/config/lin015.md)
-    * [Linux: 内核版本号含义解析](linux_tips/config/lin017.md)
+    * [Linux: 内核版本号查看方式](linux_tips/config/lin017.md)
   * [Linux: 软件安装](linux_tips/soft_setup/README.md)
     * [Linux: 安装Matlab（图形化界面）](linux_tips/soft_setup/lin003.md)
     * [Linux: 安装Matlab（命令行界面）](linux_tips/soft_setup/lin012.md)
@@ -107,7 +107,6 @@
   * [docker: 容器切换到后台运行](docker/docker008.md)
   * [docker: 为镜像配置非root用户](docker/docker009.md)
   * [docker: 隔离机制及其局限性](docker/docker010.md)
-
 * [Others](others/README.md)
   * [Others: 有价值的开源软件收集](others/others001.md)
   * [Others: 知识——交叉编译](others/others002.md)
