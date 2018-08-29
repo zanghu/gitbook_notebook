@@ -79,6 +79,7 @@
   * [C: 用dlopen调用动态库的设计实践](c/c004.md)
   * [C: 存在链式依赖的动态库的dlopen调用方法](c/c008.md)
   * [C: 编译链接与库](c/lib_compile_link/README.md)
+    * [C: 常用编译与链接参数汇总](c/c011.md)
     * [C: 动态库的源与流](c/lib_compile_link/c006.md)
     * [C: Linux动态库一般命名规范](c/lib_compile_link/c007.md)
     * [C: 动态库相关知识学习资料小结](c/lib_compile_link/c010.md)
