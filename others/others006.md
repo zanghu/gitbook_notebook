@@ -6,7 +6,7 @@
 
 ##### 1.1.1.C/C++
 
-[1] C++ Primer（第五版），Stanley B.Lippman 等著，王刚 等译，电子工业出版社，2013
+\[1\] C++ Primer（第五版），Stanley B.Lippman 等著，王刚 等译，电子工业出版社，2013
 
 [2] Effective C++（第三版），Scott Mayers 著，侯捷 译，电子工业出版社，2006
 
@@ -20,6 +20,8 @@
 
 
 ##### 1.1.3.shell
+
+[1] 
 
 #### 1.2.操作系统
 
