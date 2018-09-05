@@ -86,7 +86,7 @@
     * [C: Linux动态库一般命名规范](c/lib_compile_link/c007.md)
     * [C: 动态库相关知识学习资料小结](c/lib_compile_link/c010.md)
     * [C: 内部链接和外部链接](c/lib_compile_link/c012.md)
-    * [C: 强符号和弱符号](c/lib_compile_link/c014.md)
+    * [C: 符号的知识](c/lib_compile_link/c014.md)
   * [C: 命令行工具](c/tools/README.md)
     * [C: 用nm命令查看lib库中符号](c/tools/c005.md)
     * [C: objdump命令常见用法](c/tools/c009.md)
@@ -123,3 +123,4 @@
   * [Others: 微服务常见发布模式介绍](others/others005.md)
   * [Others: 有价值的开源软件收集](others/others001.md)
   * [Others: 有价值的参考书](others/others006.md)
+
