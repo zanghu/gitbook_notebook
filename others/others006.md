@@ -6,7 +6,7 @@
 
 ##### 1.1.1.C/C++
 
-[1] C++ Primer（第五版），Stanley B.Lippman 等著
+[1] C++ Primer（第五版），Stanley B.Lippman 等著，王刚 等译，2013
 
 [1] 大规模C++程序设计，John lakos 著  刘冰 等译，机械工业出版社，2014
 
