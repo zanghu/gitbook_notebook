@@ -76,7 +76,7 @@
 * [C](c/README.md)
   * [C: 类Unix系统下获取IP、MAC和掩码](c/c001.md)
   * [C: C99风格初始化（结构体和数组）](c/c002.md)
-  * [C: dlopen、dlclose等函数的基本用法](c/c003.md)
+  * [C: dlopen等函数的基本用法](c/c003.md)
   * [C: 用dlopen调用动态库的设计实践](c/c004.md)
   * [C: 存在链式依赖的动态库的dlopen调用方法](c/c008.md)
   * [C: 多关键字修饰的类型声明](c/c013.md)
