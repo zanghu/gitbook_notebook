@@ -115,8 +115,7 @@
   * [docker: 容器切换到后台运行](docker/docker008.md)
   * [docker: 为镜像配置非root用户](docker/docker009.md)
   * [docker: 隔离机制及其局限性](docker/docker010.md)
-* [Others](others/README.md)
-  * [Others: 有价值的开源软件收集](others/others001.md)
+* [Others](others/README.md)s
   * [Others: 知识——交叉编译](others/others002.md)
   * [Others: 知识——编译器自举](others/others003.md)
   * [Others: 如何在markdown语法中显示尖括号](others/others004.md)
