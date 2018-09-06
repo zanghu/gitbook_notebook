@@ -80,6 +80,7 @@
   * [C: 用dlopen调用动态库的设计实践](c/c004.md)
   * [C: 存在链式依赖的动态库的dlopen调用方法](c/c008.md)
   * [C: 多关键字修饰的类型声明](c/c013.md)
+  * [C: 标准C和POSIX](c/c015.md)
   * [C: 编译链接与库](c/lib_compile_link/README.md)
     * [C: 常用GCC参数汇总](c/lib_compile_link/c011.md)
     * [C: 动态库的源与流](c/lib_compile_link/c006.md)
