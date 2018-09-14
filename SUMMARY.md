@@ -91,6 +91,7 @@
   * [C: 命令行工具](c/tools/README.md)
     * [C: 用nm命令查看lib库中符号](c/tools/c005.md)
     * [C: objdump命令常见用法](c/tools/c009.md)
+    * [C: readelf命令常见用法](c/tools/c016.md)
 * [C++](c++/README.md)
   * [C++: 模板元编程](c++/cpp001.md)
 * [Java](java/README.md)
