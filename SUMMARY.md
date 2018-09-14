@@ -84,7 +84,7 @@
   * [C: 编译链接与库](c/lib_compile_link/README.md)
     * [C: 常用GCC参数汇总](c/lib_compile_link/c011.md)
     * [C: 动态库的源与流](c/lib_compile_link/c006.md)
-    * [C: Linux动态库命名规范](c/lib_compile_link/c007.md)
+    * [C: Linux动态库版本规范](c/lib_compile_link/c007.md)
     * [C: 动态库相关知识学习资料小结](c/lib_compile_link/c010.md)
     * [C: 内部链接和外部链接](c/lib_compile_link/c012.md)
     * [C: 符号的知识](c/lib_compile_link/c014.md)
