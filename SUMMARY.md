@@ -60,7 +60,7 @@
     * [Linux: chmod修改文件权限指南](linux/basic/lin018.md)
     * [Linux: dd命令制作Ubuntu安装U盘](linux/basic/lin010.md)
     * [Linux: 使用双小于号实现内联重定向](linux/basic/lin013.md)
-    * [Linux: copy命令赋值符号链接](linux/basic/lin006.md)
+    * [Linux: copy命令复制符号链接](linux/basic/lin006.md)
     * [Linux: curl命令常用参数](linux/basic/lin019.md)
     * [Linux: top命令显示所有进程](linux/basic/lin022.md)
   * [Linux: 高级技术](linux/advanced/README.md)
