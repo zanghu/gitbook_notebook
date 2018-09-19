@@ -63,6 +63,7 @@
     * [Linux: copy命令复制符号链接](linux/basic/lin006.md)
     * [Linux: curl命令常用参数](linux/basic/lin019.md)
     * [Linux: top命令显示所有进程](linux/basic/lin022.md)
+    * [Linux: du命令显示目录和文件大小](linux/basic/lin023.md)
   * [Linux: 高级技术](linux/advanced/README.md)
     * [Linux: sudo运行程序搜索路径变化原因的研究](linux/advanced/lin009.md)
     * [Linux: 快速释放本地端口](linux/advanced/lin014.md)
