@@ -87,6 +87,7 @@
   * [C: C标准库和POSIX标准库的关系](c/c015.md)
   * [C: 编写信号处理函数的注意事项](c/c020.md)
   * [C: 返回值是函数指针的函数的正确写法](c/c021.md)
+  * [C: 线程安全函数与可重入函数汇总](c/c026.md)
   * [C: 编译链接](c/lib_compile_link/README.md)
     * [C: 常用GCC参数汇总](c/lib_compile_link/c011.md)
     * [C: 动态库的源与流](c/lib_compile_link/c006.md)
