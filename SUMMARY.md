@@ -64,7 +64,7 @@
     * [Linux: curl命令常用参数](linux/basic/lin019.md)
     * [Linux: top命令查看进程状态](linux/basic/lin022.md)
     * [Linux: du命令查看目录和文件大小](linux/basic/lin023.md)
-    * [Linux: /proc目录查看进程状态](linux/advanced/lin024.md)
+    * [Linux: /proc目录查看进程状态](linux/basic/lin024.md)
   * [Linux: 高级技术](linux/advanced/README.md)
     * [Linux: sudo运行程序搜索路径变化原因的研究](linux/advanced/lin009.md)
     * [Linux: 快速释放本地端口](linux/advanced/lin014.md)
