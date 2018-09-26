@@ -100,7 +100,7 @@
     * [C: readelf命令常见用法](c/tools/c016.md)
     * [C: valgrind工具常见用法](c/tools/c017.md)
   * [C: 调试](c/debug/README.md)
-    * [C: gdb实践总结](c/tools/c019.md)
+    * [C: gdb实践总结](c/debug/c019.md)
 * [C++](c++/README.md)
   * [C++: 模板元编程](c++/cpp001.md)
 * [Java](java/README.md)
