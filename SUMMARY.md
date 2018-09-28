@@ -49,7 +49,7 @@
   * [Linux: 环境设置](linux/config/README.md)
     * [Linux: 格式化和挂载SSD](linux/config/lin011.md)
     * [Linux: 新建用户和加入用户组](linux/config/lin015.md)
-    * [Linux: 修改core文件配置](linux/config/lin027.md)
+    * [Linux: 修改core文件相关配置](linux/config/lin027.md)
   * [Linux: 软件安装](linux/soft_setup/README.md)
     * [Linux: 安装Matlab（图形化界面）](linux/soft_setup/lin003.md)
     * [Linux: 安装Matlab（命令行界面）](linux/soft_setup/lin012.md)
