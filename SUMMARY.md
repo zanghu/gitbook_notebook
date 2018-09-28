@@ -103,6 +103,7 @@
     * [C: objdump命令常见用法](c/tools/c009.md)
     * [C: readelf命令常见用法](c/tools/c016.md)
     * [C: valgrind工具常见用法](c/tools/c017.md)
+    * [C: calgrind性能测试工具用法](c/tools/c022.md)
   * [C: 调试](c/debug/README.md)
     * [C: gdb实践总结](c/debug/c019.md)
 * [C++](c++/README.md)
