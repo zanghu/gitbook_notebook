@@ -104,7 +104,7 @@
     * [C: callgrind性能测试工具用法](c/tools/c022.md)
   * [C: 调试](c/debug/README.md)
     * [C: gdb实践总结](c/debug/c019.md)
-    * [C: 修改core文件配置](linux/config/lin027.md)
+    * [C: 修改core文件相关配置](linux/config/lin027.md)
   * [C: 代码实例](c/example/README.md)
     * [C: 类Unix系统下获取IP、MAC和掩码](c/example/c001.md)
     * [C: 用dlopen调用动态库的设计实践](c/example/c004.md)
