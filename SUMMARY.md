@@ -110,6 +110,7 @@
     * [C: 用dlopen调用动态库的设计实践](c/example/c004.md)
     * [C: 返回值是函数指针的函数的正确写法](c/example/c021.md)
     * [C: 获取errno语义信息的便捷方法](c/example/c024.md)
+    * [C: Linux下send和recv超时的研究](c/example/c025.md)
     * [C: 常用调试宏](c/example/c023.md)
 * [C++](c++/README.md)
   * [C++: 模板元编程](c++/cpp001.md)
