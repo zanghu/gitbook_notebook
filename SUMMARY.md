@@ -68,6 +68,7 @@
     * [Linux: du命令查看目录和文件大小](linux/basic/lin023.md)
     * [Linux: /proc目录查看进程状态](linux/basic/lin024.md)
     * [Linux: ps命令查看进程状态](linux/basic/lin025.md)
+    * [Linux: telnet命令](linux/basic/lin028.md)
     * [Linux: man命令查询手册](linux/basic/lin026.md)
   * [Linux: 高级技术](linux/advanced/README.md)
     * [Linux: sudo运行程序搜索路径变化原因的研究](linux/advanced/lin009.md)
