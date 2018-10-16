@@ -91,7 +91,7 @@
     * [C: 线程安全与可重入函数汇总](c/basic/c026.md)
     * [C: 编写信号处理函数的注意事项](c/basic/c020.md)
   * [C: 网络编程](c/net/README.md)
-    * [C: connect、send和recv超时（阻塞模式）](c/net/c025.md)
+    * [C: connect、send和recv超时](c/net/c025.md)
     * [C: epoll用法基础](c/net/c026.md)
   * [C: 编译链接](c/lib_compile_link/README.md)
     * [C: 常用GCC参数汇总](c/lib_compile_link/c011.md)
