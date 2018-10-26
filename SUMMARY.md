@@ -150,4 +150,5 @@
   * [Others: 有价值的开源软件收集](others/others001.md)
   * [Others: 有价值的参考书](others/others006.md)
   * [Others: vscode编辑远程文件](others/others007.md)
+  * [Others: vscode远程工作区](others/others008.md)
 
