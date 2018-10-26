@@ -8,7 +8,15 @@
 
 ### 1.安装
 
-#### 1.1.windows需要安装openSSH
+#### 1.1.windows安装openSSH
+
+从下面的超链接下载安装包后安装：
+
+https://www.mls-software.com/files/setupssh-7.6p1-1.exe
+
+安装完成后，打开一个命令行，输入ssh后回车检查是否安装成功。
+
+#### 1.2.VSCode插件
 
 VSCode需要安装插件Remote VSCode，安装方法是直接在查监控中搜索并安装。
 
