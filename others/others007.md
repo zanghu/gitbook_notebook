@@ -20,3 +20,28 @@ https://www.mls-software.com/files/setupssh-7.6p1-1.exe
 
 VSCode需要安装插件Remote VSCode，安装方法是直接在查监控中搜索并安装。
 
+#### 1.3.服务端安装rmate
+
+首先，安装gem
+
+```shell
+$ sudo apt-get install gem
+```
+
+之后，使用gem安装rmate
+
+```shell
+$ gem install rmate
+```
+
+### 2.使用VSCode修改远程文件
+
+#### 2.1.VSCode终端远程连接远程服务器
+
+在VSCode中: 查看 -> 终端，之后在窗口底部出现的终端中输入：ssh -R 52698:127.0.0.1:52698 远程服务器用户名@远程服务器地址
+
+
+```shell
+$ ssh -R 52698:127.0.0.1:52698 zanghu@192.168.0.104
+```
+
