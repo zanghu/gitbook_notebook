@@ -34,7 +34,7 @@ VSCode将后缀名为`code-workspace`的文件作为工作区记录文件，VSCo
 // URL Format: sftp://[user:password@]host[:port][/path/to/a/folder][?param1=value1&param2=value2]
 {
     "folders": [{
-        "uri": "sftp://zanghu:zanghu@192.168.0.104/home/zanghu/code_box/c_code/hello_world/",
+        "uri": "sftp://zanghu:zanghu@192.168.0.104/home/zanghu/code_box/caffe",
         "name": "My SFTP folder"
     }]
 }
