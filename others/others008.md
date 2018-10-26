@@ -1,6 +1,6 @@
 ## VSCode编辑远程文件
 
-参考资料：[Remote Workspace](https://davidham3.github.io/blog/2018/06/15/vscode-remote-workspace/)
+参考资料：[Remote Workspace](https://marketplace.visualstudio.com/items?itemName=mkloubert.vscode-remote-workspace)
 
 参考资料：[vscode-remote-workspace](https://davidham3.github.io/blog/2018/06/15/vscode-remote-workspace/)
 
