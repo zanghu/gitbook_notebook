@@ -149,4 +149,5 @@
   * [Others: 微服务常见发布模式介绍](others/others005.md)
   * [Others: 有价值的开源软件收集](others/others001.md)
   * [Others: 有价值的参考书](others/others006.md)
+  * [Others: vscode编辑远程文件](others/others007.md)
 
