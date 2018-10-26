@@ -53,3 +53,7 @@ $ rmate -p 52698 /home/zanghu/record
 ```
 
 VSCode编辑窗中会打开该远程文件。
+
+### 3.总结
+
+由于需要执行两次VSCode命令行操作，该方法实际效率并不比通过WinSCP把文件拉到本地再使用VSCode打开编辑效率来得高。
