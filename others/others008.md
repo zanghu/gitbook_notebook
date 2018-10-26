@@ -1,8 +1,8 @@
 ## VSCode编辑远程文件
 
-参考资料：[Remote Workspace](https://marketplace.visualstudio.com/items?itemName=mkloubert.vscode-remote-workspace)
+官方资料：[Remote Workspace](https://marketplace.visualstudio.com/items?itemName=mkloubert.vscode-remote-workspace)
 
-参考资料：[vscode-remote-workspace](https://davidham3.github.io/blog/2018/06/15/vscode-remote-workspace/)
+中文资料：[vscode-remote-workspace](https://davidham3.github.io/blog/2018/06/15/vscode-remote-workspace/)
 
 实现使用本地IDE编辑远程服务器上的项目代码、利用远程服务器运行程序并将运行结果返回到本地IDE，这是程序开发者长久的追求。
 
