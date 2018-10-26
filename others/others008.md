@@ -44,4 +44,5 @@ VSCode将后缀名为`code-workspace`的文件作为工作区记录文件，VSCo
 
 VSCode中选择：文件 -> 打开工作区，选中“1.code-workspace”文件打开。
 
-VSCode自动在左侧边栏中递归打开目录下所有文件
+VSCode自动在左侧边栏中递归打开目录下所有文件，如下图所示：
+
