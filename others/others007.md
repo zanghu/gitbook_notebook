@@ -52,3 +52,4 @@ $ ssh -R 52698:127.0.0.1:52698 zanghu@192.168.0.104
 $ rmate -p 52698 /home/zanghu/record
 ```
 
+VSCode编辑窗中会打开该远程文件。
