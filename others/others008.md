@@ -46,3 +46,4 @@ VSCode中选择：文件 -> 打开工作区，选中“1.code-workspace”文件
 
 VSCode自动在左侧边栏中递归打开目录下所有文件，如下图所示：
 
+![](/assets/others007_001.PNG)
