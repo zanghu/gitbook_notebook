@@ -55,6 +55,7 @@
     * [Linux: 安装Matlab（命令行界面）](linux/soft_setup/lin012.md)
     * [Linux: 安装Tensorflow\(From Source\)](linux/soft_setup/lin004.md)
     * [Linux: 安装caffe](linux/soft_setup/lin007.md)
+    * [Linux: 安装git](linux/soft_setup/lin030.md)
   * [Linux: 基础知识](linux/basic/README.md)
     * [Linux: 内核版本号查看方式](linux/basic/lin017.md)
     * [Linux: chmod修改文件权限](linux/basic/lin001.md)
