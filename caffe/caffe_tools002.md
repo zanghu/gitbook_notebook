@@ -241,7 +241,7 @@ int main(int argc, char** argv)
     ::google::InitGoogleLogging(argv[0]); // 初始化参数一般是第一个命令行参数--即程序的名称
 
     // 日志配置
-    ::google::SetLogDestination(::google::INFO, "./my_log/glog_"); //第一个参数为日志级别，第二个参数表示输出目录及日志文件名前缀
+    ::google::SetLogDestination(::google::INFO, "./my_log/glog_"); //参数1为日志级别，参数2表示输出目录及日志文件名前缀
     ::google::InstallFailureSignalHandler(); // CoreDump发生时会通过stderr输出堆栈信息
     //::google::InstallFailureWriter(&FatalMessageDump);
 
