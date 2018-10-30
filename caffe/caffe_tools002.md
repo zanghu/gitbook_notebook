@@ -222,5 +222,7 @@ const int INFO = GLOG_INFO, WARNING = GLOG_WARNING,
   LOG(INFO) << "Running for " << FLAGS_iterations << " iterations.";
 ```
 
+**注意**：其中FATAL等级的日志会在记录以后终止程序运行，要谨慎使用。
+
 
 
