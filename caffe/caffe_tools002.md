@@ -274,7 +274,7 @@ g++ -g -Wall test.cpp -lglog -lgflags -o Test
 
 ![](/assets/google002_001.PNG)
 
-日志文件内容:
+日志文件内容：
 
 ![](/assets/google002_002.PNG)
 
