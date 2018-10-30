@@ -1,75 +1,69 @@
-## C: c99-style designated initializer
+## 谷歌工具——gflags
 
-C90标准要求结构体对象或数组的初始化器（应是指对象创建时用花括号初始化方法）中的元素按照固定顺序出现，这个顺序对于结构体对象来说就是结构体属性成员的定义顺序，对于数组来说就是数组的元素顺序。
-
-`ISO C99`标准中提供了一种允许用户在使用花括号`{}`初始化结构体对象或数组元素时，不需要严格按照结构体成员的定义顺序队成员进行赋值、也不需要按照数组元素的索引序对元素进行赋值的对象初始化方法。
-
-
-* **情况1**: 数组初始化
-
-对于数组初始化，可以使用下面例子中的方式明确指定初始化值赋给数组的那个元素。
+gflags是一种用来在代码中简化处理程序启动时命令行输入参数的工具库。
 
 ```c
-// 花括号中每个等号表达式左侧方括号内的索引必须是常量表达式，
-// 即便数组是自动（猜想应该是指数组大小是自动初始化的，即int a[]=...）初始化的
-int a[6] = { [4] = 29, [2] = 15 };
+// test.cpp
+#include <iostream>
+#include <cstdlib>
+#include <cstdio>
+#include <cstring>
+#include <string>
+
+#include <gflags/gflags.h>
+
+DEFINE_string(gpu, "",
+    "Optional; run in GPU mode on given device IDs separated by ','."
+    "Use '-gpu all' to run on all available GPUs. The effective training "
+    "batch size is multiplied by the number of devices.");
+DEFINE_string(solver, "",
+    "The solver definition protocol buffer text file.");
+DEFINE_string(model, "",
+    "The model definition protocol buffer text file.");
+DEFINE_string(phase, "",
+    "Optional; network phase (TRAIN or TEST). Only used for 'time'.");
+DEFINE_int32(level, 0,
+    "Optional; network level.");
+DEFINE_string(stage, "",
+    "Optional; network stages (not to be confused with phase), "
+    "separated by ','.");
+DEFINE_string(snapshot, "",
+    "Optional; the snapshot solver state to resume training.");
+DEFINE_string(weights, "",
+    "Optional; the pretrained weights to initialize finetuning, "
+    "separated by ','. Cannot be set simultaneously with snapshot.");
+DEFINE_int32(iterations, 50,
+    "The number of iterations to run.");
+DEFINE_string(sigint_effect, "stop",
+             "Optional; action to take when a SIGINT signal is received: "
+              "snapshot, stop or none.");
+DEFINE_string(sighup_effect, "snapshot",
+             "Optional; action to take when a SIGHUP signal is received: "
+             "snapshot, stop or none.");
+
+/**
+ * 编译出的可执行文件是Test，运行命令如下：
+ * ./Test -gpu=cuda -solver=sgd -model=cnn -phase=train -level=10 -stage=unknow -snapshot=snapshot -weights=weights -iterations=50 -sigint_effect=yes -sighup_effect=yes
+ */
+int main(int argc, char **argv)
+{
+    ::google::ParseCommandLineFlags(&argc, &argv, true);
+    std::cout << "finish" << std::endl;
+
+    std::cout << "gpu: " << FLAGS_gpu << std::endl; // string
+    std::cout << "solver: " << FLAGS_solver << std::endl; // string
+    std::cout << "model: " << FLAGS_model << std::endl; // string
+    std::cout << "phase: " << FLAGS_phase << std::endl; // string
+    std::cout << "level: " << FLAGS_level << std::endl; // int32
+    std::cout << "stage: " << FLAGS_stage << std::endl; // string
+    std::cout << "snapshot: " << FLAGS_snapshot << std::endl; // string
+    std::cout << "weights: " << FLAGS_weights << std::endl; // string
+    std::cout << "iterations: " << FLAGS_iterations << std::endl; // int32
+    std::cout << "sigint_effect: " << FLAGS_sigint_effect << std::endl; // string
+    std::cout << "sighup_effct: " << FLAGS_sighup_effect << std::endl; // string
+
+    ::google::ShutDownCommandLineFlags();
+
+    return 0;
+}
 ```
-
-上面的初始化式等价于
-
-```c
-int a[6] = { 0, 0, 15, 0, 29, 0 };
-```
-
-* **情况2**：结构体初始化
-
-对于结构体初始化器，在花括号内部通过‘.fieldname = ’的方式指明每个要赋值的属性成员的名字来对制定属性赋值。
-
-```c
-struct point { int x, y; };
-```
-
-可以按照如下方式初始化
-
-```c
-struct point p = { .y = yvalue, .x = xvalue };
-```
-
-上面的代码等价于
-
-```c
-struct point p = { xvalue, yvalue };
-```
-
-这一新特性可以与之前的初始化方法混用，即初始化表达式花括号内的一部分元素用`c99-style designated initializer`，而另外一部分仍使用传统的方式。举例来说：
-
-```c
-int a[6] = { [1] = v1, v2, [4] = v4 };
-```
-
-上面的初始化语句等价于
-
-```c
-int a[6] = { 0, v1, v2, 0, v4, 0 };
-```
-
-* **情况3**：索引为枚举类型的数组的初始化
-
-当被初始化的数组的索引下表是枚举类型时，`c99-style designated initializer`的初始化方式将变得特别有用。举例来说:
-
-```c
-int whitespace[256]
-  = { [' '] = 1, ['\t'] = 1, ['\h'] = 1,
-      ['\f'] = 1, ['\n'] = 1, ['\r'] = 1 };
-```
-
-* **情况4**：元素是结构体对象的数组的初始化
-
-当数组元素是自定义结构体对象时，可以用如下方法：
-
-```c
-// 数组元素是上面例子中的struct point
-struct point ptarray[10] = { [2].y = yv2, [2].x = xv2, [0].x = xv0 };
-```
-
-
