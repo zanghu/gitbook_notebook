@@ -108,8 +108,37 @@ inline unsigned long long GetReferenceableValue(unsigned long long t) {
 
 * 最后剩下的只需要跟踪`Check##name##Impl`：
 
-```c
+在头文件`glog/logging.h`中搜索会发现其实找不到形如`Check_EQImpl`的定义，其实他们是宏定义通过函数模板自动生成的实例化的模板函数，其模板如下面的代码所示：
 
+```c
+// 模板函数的宏
+// Helper functions for CHECK_OP macro.
+// The (int, int) specialization works around the issue that the compiler
+// will not instantiate the template version of the function on values of
+// unnamed enum type - see comment below.
+#define DEFINE_CHECK_OP_IMPL(name, op) \
+  template <typename T1, typename T2> \
+  inline std::string* name##Impl(const T1& v1, const T2& v2,    \
+                            const char* exprtext) { \
+    if (GOOGLE_PREDICT_TRUE(v1 op v2)) return NULL; \
+    else return MakeCheckOpString(v1, v2, exprtext); \
+  } \
+  inline std::string* name##Impl(int v1, int v2, const char* exprtext) { \
+    return name##Impl<int, int>(v1, v2, exprtext); \
+  }
+
+// 基于上面的模板实例化出若干个具体的模板函数
+// We use the full name Check_EQ, Check_NE, etc. in case the file including
+// base/logging.h provides its own #defines for the simpler names EQ, NE, etc.
+// This happens if, for example, those are used as token names in a
+// yacc grammar.
+DEFINE_CHECK_OP_IMPL(Check_EQ, ==)  // Compilation error with CHECK_EQ(NULL, x)?
+DEFINE_CHECK_OP_IMPL(Check_NE, !=)  // Use CHECK(x == NULL) instead.
+DEFINE_CHECK_OP_IMPL(Check_LE, <=)
+DEFINE_CHECK_OP_IMPL(Check_LT, < )
+DEFINE_CHECK_OP_IMPL(Check_GE, >=)
+DEFINE_CHECK_OP_IMPL(Check_GT, > )
+#undef DEFINE_CHECK_OP_IMPL
 ```
 
 #### 1.2.
