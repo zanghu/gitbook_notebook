@@ -161,16 +161,7 @@ if (GOOGLE_PREDICT_TRUE(val1 == val2)) {} // 如果用于比较的逻辑表达�
 else {
     google::LogMessageFatal(__FILE__, __LINE__, 
         google::CheckOpString(MakeCheckOpString(v1, v2, "val1 == val2"))).stream() << "两个值不相等，错误！";
-}
-
-  while (google::_Check_string* _result = \
-    google::Check##name##Impl( \ // 形如Check_EQImpl，生成某种关于比较内容的消息
-google::GetReferenceableValue(val1), \ // 将全局变量变量等编程临时变量
-google::GetReferenceableValue(val2), \
-#val1 " " #op " " #val2)) \
-log(__FILE__, __LINE__, \
-google::CheckOpString(_result)).stream()
-  
+} 
 ```
 
 #### 1.2.
