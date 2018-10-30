@@ -118,7 +118,7 @@ inline unsigned long long GetReferenceableValue(unsigned long long t) {
 // unnamed enum type - see comment below.
 #define DEFINE_CHECK_OP_IMPL(name, op) \
   template <typename T1, typename T2> \
-  inline std::string* name##Impl(const T1& v1, const T2& v2,    \
+  inline std::string* name##Impl(const T1& v1, const T2& v2,    \ // 如果name是Check_EQ那么就定义了名为Check_EQImpl的函数
                             const char* exprtext) { \
     if (GOOGLE_PREDICT_TRUE(v1 op v2)) return NULL; \
     else return MakeCheckOpString(v1, v2, exprtext); \
