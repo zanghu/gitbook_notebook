@@ -44,7 +44,7 @@
   CHECK_OP_LOG(name, op, val1, val2, google::LogMessageFatal)
 ```
 
-上面的代码可见`CHECK_OP`就是`CHECK_OP_LOG`接下来需要跟踪两个分支：`CHECK_OP_LOG`宏函数和`google::LogMessageFatal`，先跟踪后者。
+上面的代码可见`CHECK_OP`就是`CHECK_OP_LOG`，接下来需要跟踪两个分支：`CHECK_OP_LOG`宏函数和`google::LogMessageFatal`，先跟踪后者。
 
 * 跟踪第二层定义中的google::LogMessageFatal：
 
