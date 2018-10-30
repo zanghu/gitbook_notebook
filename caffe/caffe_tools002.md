@@ -283,13 +283,22 @@ g++ -g -Wall test.cpp -lglog -lgflags -o Test
 
 ```cpp
 logtostderr (bool, default=false)    //是否将所有日志输出到 stderr，而非文件
+
 alsologtostderr(bool,default=false)　　//是否同时将日志输出到文件和stderr
+
 minloglevel (int, default=google::INFO)　　//限制输出到 stderr 的部分信息，包括此错误级别和更高错误级别的日志信息 
 stderrthreshold (int, default=google::ERROR)　　//除了将日志输出到文件之外，还将此错误级别和更高错误级别的日志同时输出到 stderr，这个只能使用 -stderrthreshold=1 或代码中设置，而不能使用环境变量的形式。（这个参数可以替代上面两个参数）
+
 colorlogtostderr(bool, default=false)　　//将输出到 stderr 上的错误日志显示相应的颜色 
+
 v (int, default=0)　　//只记录此错误级别和更高错误级别的 VLOG 日志信息
+
 log_dir (string, default="")　　//设置日志文件输出目录 
-v (int, default=0)　　//只有当自定义日志（VLOG）级别值小于此值时，才进行输出，默认为0(注：自定义日志的优先级与GLOG内置日志优级相反，值越小优先级越高！！！)。
-vmodule (string, default="")　　//分文件（不包括文件名后缀，支持通配符）设置自定义日志的可输出级别，如：GLOG_vmodule=server=2,client=3 表示文件名为server.* 的只输出小于 2 的日志，文件名为 client.* 的只输出小于 3 的日志。如果同时使用 GLOG_v 选项，将覆盖 GLOG_v 选项。
+
+v (int, default=0)　　//只有当自定义日志（VLOG）级别值小于此值时，才进行输出，默认为0(注：自定义日志的优
+先级与GLOG内置日志优级相反，值越小优先级越高！！！)。
+
+//分文件（不包括文件名后缀，支持通配符）设置自定义日志的可输出级别，如：GLOG_vmodule=server=2,client=3 表示文件名为server.* 的只输出小于 2 的日志，文件名为 client.* 的只输出小于 3 的日志。如果同时使用 GLOG_v 选项，将覆盖 GLOG_v 选项。
+vmodule (string, default="")
 ```
 
