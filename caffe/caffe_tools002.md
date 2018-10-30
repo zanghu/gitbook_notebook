@@ -268,6 +268,9 @@ set -ex
 g++ -g -Wall test.cpp -lglog -lgflags -o Test
 ```
 
+* 运行结果（不含fatal日志）
+
+
 
 
 
