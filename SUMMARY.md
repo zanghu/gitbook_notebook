@@ -11,7 +11,7 @@
 * [CAFFE](caffe/README.md)
   * [tools: gflags](caffe/caffe_tools001.md)
   * [tools: glog](caffe/caffe_tools002.md)
-  * [example: mnist](caffe/caffe_example002.md)
+  * [example: mnist](caffe/caffe_example001.md)
 * [CV](pytorch/README.md)
   * [CV: 非最大压制方法\(NMS\)过滤重叠boundiung box](cv/cv001.md)
   * [CV: 图像的仿射变换](cv/cv002.md)
