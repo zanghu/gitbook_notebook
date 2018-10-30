@@ -35,16 +35,16 @@
 #define CHECK_GT(val1, val2) CHECK_OP(_GT, > , val1, val2)
 ```
 
-上面的源码可见日志记录的关键是CHECK\_OP宏函数。
+上面的源码可见日志记录的关键是`CHECK_OP`宏函数。
 
-* 跟踪第一层定义：CHECK\_OP
+* 跟踪第一层定义：`CHECK_OP`
 
 ```c
 #define CHECK_OP(name, op, val1, val2) \
   CHECK_OP_LOG(name, op, val1, val2, google::LogMessageFatal)
 ```
 
-上面的代码可见接下来需要跟踪两个分支：`CHECK_OP_LOG`宏函数和`google::LogMessageFatal`，先跟踪后者。
+上面的代码可见`CHECK_OP`就是`CHECK_OP_LOG`接下来需要跟踪两个分支：`CHECK_OP_LOG`宏函数和`google::LogMessageFatal`，先跟踪后者。
 
 * 跟踪第二层定义中的google::LogMessageFatal：
 
