@@ -216,8 +216,10 @@ const int INFO = GLOG_INFO, WARNING = GLOG_WARNING,
 
 `glog`最基本、最常用的日志宏是`LOG(日志级别)`，其返回一个流句柄，用户可以使用该流句柄记录信息。
 
+例如：
+
 ```cpp
-LOG(INFO) << "Running for " << FLAGS_iterations << " iterations.";
+  LOG(INFO) << "Running for " << FLAGS_iterations << " iterations.";
 ```
 
 
