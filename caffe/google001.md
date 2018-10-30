@@ -60,7 +60,6 @@ DEFINE_string(sighup_effect, "snapshot",
 int main(int argc, char **argv)
 {
     ::google::ParseCommandLineFlags(&argc, &argv, true); // 初始化gflags
-    std::cout << "finish" << std::endl;
 
     std::cout << "gpu: " << FLAGS_gpu << std::endl; // string
     std::cout << "solver: " << FLAGS_solver << std::endl; // string
@@ -76,6 +75,7 @@ int main(int argc, char **argv)
 
     ::google::ShutDownCommandLineFlags(); // 释放gflags占用资源, 执行后用valgrind检测确认没有资源泄露
 
+    std::cout << "finish" << std::endl;
     return 0;
 }
 ```
