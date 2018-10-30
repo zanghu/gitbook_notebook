@@ -148,7 +148,9 @@ DEFINE_CHECK_OP_IMPL(Check_GT, > )
 
 
 
-最终可知下面的代码
+* 最终结果
+
+可知下面的代码
 
 ```c
 CHECK_EQ(val1, val2) << "两个值不相等，错误！";
