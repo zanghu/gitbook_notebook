@@ -2,7 +2,7 @@
 
 ### 1.源码分析
 
-本节出现的源码及源码中的英文注释全部来自于`glog`的头文件`glog/logging.h`，部分代码中有本人添加的中文注释。
+本节出现的源码及源码中的英文注释全部来自于`glog`的头文件`glog/logging.h`，部分代码中有本人添加的中文注释，所用`glog`本本是0.3.5。
 
 #### 1.1.检查宏
 
@@ -202,12 +202,15 @@ const int GLOG_INFO = 0, GLOG_WARNING = 1, GLOG_ERROR = 2, GLOG_FATAL = 3,
   NUM_SEVERITIES = 4;
 #ifndef GLOG_NO_ABBREVIATED_SEVERITIES
 # ifdef ERROR
-#  error ERROR macro is defined. Define GLOG_NO_ABBREVIATED_SEVERITIES before including logging.h. See the document for detail.
+#  error ERROR macro is defined. Define GLOG_NO_ABBREVIATED_SEVERITIES before including logging.h. 
+#  See the document for detail.
 # endif
 const int INFO = GLOG_INFO, WARNING = GLOG_WARNING,
   ERROR = GLOG_ERROR, FATAL = GLOG_FATAL;
 #endif
 ```
+
+
 
 
 
