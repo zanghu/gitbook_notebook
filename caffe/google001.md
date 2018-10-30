@@ -1,4 +1,4 @@
-## 谷歌工具——gflags
+## 谷歌命令行参数处理工具——gflags
 
 gflags是一种用来在代码中简化处理程序启动时命令行输入参数的工具库。
 
@@ -83,3 +83,4 @@ int main(int argc, char **argv)
 * 运行结果：
 
 ![](/assets/google001_001.PNG)
+
