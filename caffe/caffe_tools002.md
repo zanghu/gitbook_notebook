@@ -50,7 +50,7 @@ CHECK_OP_LOG(name, op, val1, val2, google::LogMessageFatal) // 实际被调用�
 typedef std::string _Check_string;
 #define CHECK_OP_LOG(name, op, val1, val2, log)                         \
   while (google::_Check_string* _result =                \
-         google::Check##name##Impl(                      \
+         google::Check##name##Impl(                      \ //  形如Check_EQImpl
              google::GetReferenceableValue(val1),        \
              google::GetReferenceableValue(val2),        \
              #val1 " " #op " " #val2))                                  \
