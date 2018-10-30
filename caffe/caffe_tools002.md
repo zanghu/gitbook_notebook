@@ -226,6 +226,7 @@ const int INFO = GLOG_INFO, WARNING = GLOG_WARNING,
 
 ### 3.代码示例
 
+* test.cpp
 
 ```cpp
 #include <iostream>
@@ -257,6 +258,14 @@ int main(int argc, char** argv)
 
     return 0;
 }
+```
+
+* build.sh
+
+```shell
+#!/bin/sh
+set -ex
+g++ -g -Wall test.cpp -lglog -lgflags -o Test
 ```
 
 
