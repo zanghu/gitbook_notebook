@@ -3,7 +3,7 @@
 gflags是一种用来在代码中简化处理程序启动时命令行输入参数的工具库。
 
 ```c
-// test.cpp
+/* test.cpp */
 #include <iostream>
 #include <cstdlib>
 #include <cstdio>
