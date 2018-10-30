@@ -77,14 +77,14 @@ typedef std::string _Check_string;
         google::CheckOpString(_result)).stream()
 ```
 
-* 这里又产生了三个跟踪分支：`Check##name##Impl`、`GetReferenceableValue`和`log.stream()`
+* 这里又产生了三个跟踪分支：`Check##name##Impl`、`GetReferenceableValue`和`log.stream()`，这里先来看最后一个：
 
 logMessage类的stream方法的实际定义并未出现在`glog/logging.h`中，但大体可以猜出`log(__FILE__, __LINE__, google::CheckOpString(_result)).stream()`的含义是：  
 （1）创建一个`google::LogMessageFatal`类对象；  
 （2）将调用当前日志语句的原文件的文件名（`__FILE__`）、行号（`__LINE__`）和比较（EQ、NE、LE等等）结果（应该是由`google::CheckOpString(_result)`生成的）组成一个字符串输入一个流中；  
 （3）将该流的句柄通过`stream()`方法返回，以便用户继续向该流中记录其他用来详细描述本次比较结果的信息。
 
-* 接下来再跟踪第三层`GetReferenceableValue`：
+* 接下来再跟踪`GetReferenceableValue`：
 
 ```c
 // Function is overloaded for integral types to allow static const
