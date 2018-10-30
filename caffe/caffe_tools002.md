@@ -11,8 +11,7 @@ CHECK_NE(val1, val2)
 CHECK_LE(val1, val2)
 CHECK_LT(val1, val2)
 CHECK_GE(val1, val2)
-CHECK_GT(val1, val2)\
-
+CHECK_GT(val1, val2)
 
 #### 1.1.1.检查宏源码跟踪
 
