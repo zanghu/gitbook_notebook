@@ -74,7 +74,7 @@ typedef std::string _Check_string;
         google::CheckOpString(_result)).stream()
 ```
 
-* 这里又产生了三个跟踪分支：Check\#\#\#name\#\#Impl、GetReferenceableValue和log.stream\(\)
+* 这里又产生了三个跟踪分支：`Check##name##Impl`、`GetReferenceableValue`和`log.stream()`
 
 logMessage类的stream方法的实际定义并未出现在`glog/logging.h`中，但大体可以猜出`log(__FILE__, __LINE__, google::CheckOpString(_result)).stream()`的含义是：  
 （1）创建一个`google::LogMessageFatal`类对象；  
@@ -103,6 +103,10 @@ inline unsigned long long GetReferenceableValue(unsigned long long t) {
   return t;
 }
 ```
+
+上面代码的英文注释中已经说明这些函数的用途，不再赘述。
+
+最后剩下的只需要跟踪Check##name##Impl
 
 #### 1.2.
 
