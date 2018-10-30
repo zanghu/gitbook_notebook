@@ -4,7 +4,17 @@
 
 本节出现的源码及源码中的英文注释全部来自于`glog`的头文件`glog/logging.h`，部分代码中有本人添加的中文注释。
 
-#### 1.1.日志宏
+#### 1.1.检查宏
+
+CHECK_EQ(val1, val2)
+CHECK_NE(val1, val2)
+CHECK_LE(val1, val2)
+CHECK_LT(val1, val2)
+CHECK_GE(val1, val2)
+CHECK_GT(val1, val2)\
+
+
+#### 1.1.1.检查宏源码跟踪
 
 * 检查宏定义
 
@@ -148,7 +158,7 @@ DEFINE_CHECK_OP_IMPL(Check_GT, > )
 
 
 
-* 最终结果
+* 结论
 
 可知下面的代码
 
@@ -162,7 +172,7 @@ CHECK_EQ(val1, val2) << "两个值不相等，错误！";
 if (GOOGLE_PREDICT_TRUE(val1 == val2)) {} // 如果用于比较的逻辑表达式为真，则不进行任何操作
 else {
     google::LogMessageFatal(__FILE__, __LINE__, \
-      <基于逻辑比较内容的错误信息描述>).stream() << "两个值不相等，错误！";
+      <基于逻辑比较内容(val1 == val2的错误信息描述>).stream() << "两个值不相等，错误！";
 } 
 ```
 
