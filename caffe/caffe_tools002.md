@@ -181,11 +181,11 @@ else {
 
 #### 1.2.日志宏
 
-| 宏函数名称 | 功能说明 |
+| 日志级别 | 说明 |
 | :---: | :---: |
-| LOG(INFO) | |
-| LOG(WARNING) | |
-| LOG(ERROR) | |
-| LOG(FATAL) | |
+| INFO | |
+| WARNING | |
+| ERROR | |
+| FATAL | |
 
 
