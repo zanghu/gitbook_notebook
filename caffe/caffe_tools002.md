@@ -44,7 +44,7 @@
   CHECK_OP_LOG(name, op, val1, val2, google::LogMessageFatal)
 ```
 
-上面的代码可见接下来需要跟踪两个分支：CHECK\_OP\_LOG宏函数和google::LogMessageFatal，先跟踪后者。
+上面的代码可见接下来需要跟踪两个分支：`CHECK_OP_LOG`宏函数和`google::LogMessageFatal`，先跟踪后者。
 
 * 跟踪第二层定义中的google::LogMessageFatal：
 
@@ -60,9 +60,9 @@ class GOOGLE_GLOG_DLL_DECL LogMessageFatal : public LogMessage {
 };
 ```
 
-可见google::LogMessageFatal是一个类名，其派生自LogMessage类。
+可见`google::LogMessageFatal`是一个类名，其派生自`LogMessage`类。
 
-* 跟踪第二层定义中的CHECK\_OP\_LOG：
+* 跟踪第二层定义中的`CHECK_OP_LOG`：
 
 ```c
 // CHECK_OP_LOG有三个#if...#else分支的定义，这里选取最简单的一个
@@ -82,9 +82,9 @@ typedef std::string _Check_string;
 logMessage类的stream方法的实际定义并未出现在`glog/logging.h`中，但大体可以猜出`log(__FILE__, __LINE__, google::CheckOpString(_result)).stream()`的含义是：  
 （1）创建一个`google::LogMessageFatal`类对象；  
 （2）将调用当前日志语句的原文件的文件名（`__FILE__`）、行号（`__LINE__`）和比较（EQ、NE、LE等等）结果（应该是由`google::CheckOpString(_result)`生成的）组成一个字符串输入一个流中；  
-（3）将该流的句柄通过stream\(\)方法返回，以便用户继续向该流中记录其他用来详细描述本次比较结果的信息。
+（3）将该流的句柄通过`stream()`方法返回，以便用户继续向该流中记录其他用来详细描述本次比较结果的信息。
 
-* 接下来再跟踪第三层GetReferenceableValue：
+* 接下来再跟踪第三层`GetReferenceableValue`：
 
 ```c
 // Function is overloaded for integral types to allow static const
