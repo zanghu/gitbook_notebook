@@ -40,7 +40,8 @@
 * 跟踪第一层定义：CHECK\_OP
 
 ```c
-CHECK_OP_LOG(name, op, val1, val2, google::LogMessageFatal) // 实际被调用的
+#define CHECK_OP(name, op, val1, val2) \
+  CHECK_OP_LOG(name, op, val1, val2, google::LogMessageFatal)
 ```
 
 上面的代码可见接下来需要跟踪两个分支：CHECK\_OP\_LOG宏函数和google::LogMessageFatal，先跟踪后者。
