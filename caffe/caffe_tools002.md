@@ -270,7 +270,13 @@ g++ -g -Wall test.cpp -lglog -lgflags -o Test
 
 * 运行结果（不含fatal日志）
 
+屏幕输出：
 
+![](/assets/google002_001.PNG)
+
+日志文件内容:
+
+![](/assets/google002_002.PNG)
 
 
 
