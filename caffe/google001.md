@@ -2,6 +2,8 @@
 
 gflags是一种用来在代码中简化处理程序启动时命令行输入参数的工具库。
 
+用一个代码例子来说明gflags的用法：
+
 * build.sh
 
 ```shell
@@ -57,7 +59,7 @@ DEFINE_string(sighup_effect, "snapshot",
  */
 int main(int argc, char **argv)
 {
-    ::google::ParseCommandLineFlags(&argc, &argv, true);
+    ::google::ParseCommandLineFlags(&argc, &argv, true); // 初始化gflags
     std::cout << "finish" << std::endl;
 
     std::cout << "gpu: " << FLAGS_gpu << std::endl; // string
@@ -72,7 +74,7 @@ int main(int argc, char **argv)
     std::cout << "sigint_effect: " << FLAGS_sigint_effect << std::endl; // string
     std::cout << "sighup_effct: " << FLAGS_sighup_effect << std::endl; // string
 
-    ::google::ShutDownCommandLineFlags();
+    ::google::ShutDownCommandLineFlags(); // 释放gflags占用资源, 执行后用valgrind检测确认没有资源泄露
 
     return 0;
 }
