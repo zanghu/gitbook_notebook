@@ -69,6 +69,9 @@ DEFINE_string(sighup_effect, "snapshot",
  */
 int main(int argc, char **argv)
 {
+    ::google::SetVersionString("1.0.0"); // ./Test --version
+    ::google::SetUsageMessage("Usage : ./demo "); // ./Test --help
+    
     ::google::ParseCommandLineFlags(&argc, &argv, true); // 初始化gflags
 
     std::cout << "gpu: " << FLAGS_gpu << std::endl; // string
