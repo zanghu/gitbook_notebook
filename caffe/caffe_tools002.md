@@ -33,22 +33,20 @@
 #define CHECK_GT(val1, val2) CHECK_OP(_GT, > , val1, val2)
 ```
 
+上面的源码可见日志记录的关键是CHECK_OP宏函数。
+
 * 跟踪第一层定义：CHECK_OP
 
 ```c
-// GOOGLE_STRIP_LOG默认值是0
-#if GOOGLE_STRIP_LOG <= 3
-#define CHECK_OP(name, op, val1, val2) \
-  CHECK_OP_LOG(name, op, val1, val2, google::LogMessageFatal) // 实际被调用的
-#else
-#define CHECK_OP(name, op, val1, val2) \
-  CHECK_OP_LOG(name, op, val1, val2, google::NullStreamFatal)
-#endif // STRIP_LOG <= 3
+CHECK_OP_LOG(name, op, val1, val2, google::LogMessageFatal) // 实际被调用的
 ```
+
+上面的代码可见接下来需要跟踪两个分支：CHECK_OP_LOG宏函数和google::LogMessageFatal
 
 * 跟踪第二层定义：
 
 ```c
+// CHECK_OP_LOG有三个#if...#else分支的定义，这里选取最简单的一个
 typedef std::string _Check_string;
 #define CHECK_OP_LOG(name, op, val1, val2, log)                         \
   while (google::_Check_string* _result =                \
@@ -58,17 +56,6 @@ typedef std::string _Check_string;
              #val1 " " #op " " #val2))                                  \
     log(__FILE__, __LINE__,                                             \
         google::CheckOpString(_result)).stream()
-#else
-// In optimized mode, use CheckOpString to hint to compiler that
-// the while condition is unlikely.
-#define CHECK_OP_LOG(name, op, val1, val2, log)                         \
-  while (google::CheckOpString _result =                 \
-         google::Check##name##Impl(                      \
-             google::GetReferenceableValue(val1),        \
-             google::GetReferenceableValue(val2),        \
-             #val1 " " #op " " #val2))                                  \
-    log(__FILE__, __LINE__, _result).stream()
-#endif  // STATIC_ANALYSIS, DCHECK_IS_ON()
 ```
 
 #### 1.2.
