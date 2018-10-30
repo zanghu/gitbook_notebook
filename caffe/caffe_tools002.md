@@ -227,7 +227,37 @@ const int INFO = GLOG_INFO, WARNING = GLOG_WARNING,
 ### 3.代码示例
 
 
+```cpp
+#include <iostream>
+#include <gflags/gflags.h> // 为了调用关闭gflags的方法
+#include <glog/logging.h>
 
+int main(int argc, char** argv)
+{
+    // 所有级别日志除了输出到日志文件之外也同时输出到stderr, 默认只有ERROR和FATAL也输出到stderr
+    FLAGS_alsologtostderr = 1;
+
+    // 日志初始化
+    ::google::InitGoogleLogging(argv[0]); // 初始化参数一般是第一个命令行参数--即程序的名称
+
+    // 日志配置
+    ::google::SetLogDestination(::google::INFO, "./my_log/glog_"); //第一个参数为日志级别，第二个参数表示输出目录及日志文件名前缀
+    ::google::InstallFailureSignalHandler(); // CoreDump发生时会通过stderr输出堆栈信息
+    //::google::InstallFailureWriter(&FatalMessageDump);
+
+    // 记录日志
+    LOG(INFO) << "I am INFO!";
+    LOG(WARNING) << "I am WARNING!";
+    LOG(ERROR) << "I am ERROR!";
+    //LOG(FATAL) << "I am FATAL!"; // 会主动引发段错误
+
+    // 关闭日志
+    ::google::ShutdownGoogleLogging();
+    ::google::ShutDownCommandLineFlags(); // 不关闭此语句会发生内存泄漏，不知道是不是glog的bug
+
+    return 0;
+}
+```
 
 
 
