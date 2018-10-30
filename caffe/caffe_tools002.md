@@ -49,7 +49,26 @@
 * 跟踪第二层定义：
 
 ```c
-
+typedef std::string _Check_string;
+#define CHECK_OP_LOG(name, op, val1, val2, log)                         \
+  while (google::_Check_string* _result =                \
+         google::Check##name##Impl(                      \
+             google::GetReferenceableValue(val1),        \
+             google::GetReferenceableValue(val2),        \
+             #val1 " " #op " " #val2))                                  \
+    log(__FILE__, __LINE__,                                             \
+        google::CheckOpString(_result)).stream()
+#else
+// In optimized mode, use CheckOpString to hint to compiler that
+// the while condition is unlikely.
+#define CHECK_OP_LOG(name, op, val1, val2, log)                         \
+  while (google::CheckOpString _result =                 \
+         google::Check##name##Impl(                      \
+             google::GetReferenceableValue(val1),        \
+             google::GetReferenceableValue(val2),        \
+             #val1 " " #op " " #val2))                                  \
+    log(__FILE__, __LINE__, _result).stream()
+#endif  // STATIC_ANALYSIS, DCHECK_IS_ON()
 ```
 
 #### 1.2.
