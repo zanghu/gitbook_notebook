@@ -2,6 +2,16 @@
 
 gflags是一种用来在代码中简化处理程序启动时命令行输入参数的工具库。
 
+#### 1.官方文档
+
+* 官方文档网站：[https://gflags.github.io/gflags/](https://gflags.github.io/gflags/)
+
+内容不多，介绍的也不太全面，整体印象较差。
+
+* 推荐文档：gflags的头文件gflags.h，其中每个接口都有详细的功能说明。
+
+#### 2.示例代码
+
 用一个代码例子来说明gflags的用法：
 
 * build.sh
