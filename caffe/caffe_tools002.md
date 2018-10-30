@@ -136,7 +136,7 @@ inline unsigned long long GetReferenceableValue(unsigned long long t) {
   template <typename T1, typename T2> \
   inline std::string* name##Impl(const T1& v1, const T2& v2,    \ // 如果name是Check_EQ那么就定义了名为Check_EQImpl的函数
                             const char* exprtext) { \
-    if (GOOGLE_PREDICT_TRUE(v1 op v2)) return NULL; \ // 如果用于比较的逻辑表达式为真，则不进行任何操作
+    if (GOOGLE_PREDICT_TRUE(v1 op v2)) return NULL; \ // 如果逻辑表达式为真，则不进行任何操作
     else return MakeCheckOpString(v1, v2, exprtext); \ // 逻辑表达式为假，则返回一个说明错误信息的“字符串”
   } \
   inline std::string* name##Impl(int v1, int v2, const char* exprtext) { \
