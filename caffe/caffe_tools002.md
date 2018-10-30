@@ -33,7 +33,7 @@
 #define CHECK_GT(val1, val2) CHECK_OP(_GT, > , val1, val2)
 ```
 
-* CHECK_OP
+* 跟踪第一层定义：CHECK_OP
 
 ```c
 // GOOGLE_STRIP_LOG默认值是0
@@ -45,5 +45,7 @@
   CHECK_OP_LOG(name, op, val1, val2, google::NullStreamFatal)
 #endif // STRIP_LOG <= 3
 ```
+
+* 跟踪第二层定义：
 
 #### 1.2.
