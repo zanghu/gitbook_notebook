@@ -106,7 +106,7 @@ inline unsigned long long GetReferenceableValue(unsigned long long t) {
 
 上面代码的英文注释中已经说明这些函数的用途，不再赘述。
 
-最后剩下的只需要跟踪Check##name##Impl
+最后剩下的只需要跟踪`Check##name##Impl`
 
 #### 1.2.
 
