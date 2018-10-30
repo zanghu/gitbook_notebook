@@ -8,8 +8,9 @@
 
 本小节分析以下检查宏函数的实现原理以及实际做了什么。
 
-```c
-CHECK_EQ(val1, val2)
+| 宏函数名称 | 功能说明 |
+| :---: | :---: |
+| CHECK_EQ(val1, val2)
 CHECK_NE(val1, val2)
 CHECK_LE(val1, val2)
 CHECK_LT(val1, val2)
