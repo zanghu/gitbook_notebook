@@ -185,6 +185,7 @@ else {
 | :---: | :---: |
 | LOG(INFO) | |
 | LOG(WARNING) | |
-| CHECK_LE(val1,| |
-| CHECK_LT(val1, val2)| |
+| LOG(ERROR) | |
+| LOG(FATAL) | |
+
 
