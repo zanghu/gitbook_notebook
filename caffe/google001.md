@@ -2,6 +2,16 @@
 
 gflags是一种用来在代码中简化处理程序启动时命令行输入参数的工具库。
 
+* build.sh
+
+```shell
+#!/bin/sh
+set -ex
+g++ -g -Wall test.cpp -lgflags -o Test
+```
+
+* test.cpp
+
 ```c
 /* test.cpp */
 #include <iostream>
