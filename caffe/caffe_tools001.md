@@ -69,8 +69,8 @@ DEFINE_string(sighup_effect, "snapshot",
  */
 int main(int argc, char **argv)
 {
-    ::google::SetVersionString("1.0.0"); // ./Test --version
-    ::google::SetUsageMessage("Usage : ./demo "); // ./Test --help
+    ::google::SetVersionString("1.0.0"); // ./Test --version 查看版本信息
+    ::google::SetUsageMessage("Usage : ./demo "); // ./Test --help 查看用法
     
     ::google::ParseCommandLineFlags(&argc, &argv, true); // 初始化gflags
 
