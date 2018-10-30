@@ -194,7 +194,20 @@ glog提供四个级别的日志，具体如下：
 其宏定义位于`glog/log_severity.h`，内容如下是：
 
 ```cpp
+// Variables of type LogSeverity are widely taken to lie in the range
+// [0, NUM_SEVERITIES-1].  Be careful to preserve this assumption if
+// you ever need to change their values or add a new severity.
+typedef int LogSeverity;
 
+const int GLOG_INFO = 0, GLOG_WARNING = 1, GLOG_ERROR = 2, GLOG_FATAL = 3,
+  NUM_SEVERITIES = 4;
+#ifndef GLOG_NO_ABBREVIATED_SEVERITIES
+# ifdef ERROR
+#  error ERROR macro is defined. Define GLOG_NO_ABBREVIATED_SEVERITIES before including logging.h. See the document for detail.
+# endif
+const int INFO = GLOG_INFO, WARNING = GLOG_WARNING,
+  ERROR = GLOG_ERROR, FATAL = GLOG_FATAL;
+#endif
 ```
 
 
