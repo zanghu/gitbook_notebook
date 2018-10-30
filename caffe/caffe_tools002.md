@@ -111,7 +111,7 @@ inline unsigned long long GetReferenceableValue(unsigned long long t) {
 在头文件`glog/logging.h`中搜索会发现其实找不到形如`Check_EQImpl`的定义，其实他们是宏定义通过函数模板自动生成的实例化的模板函数，其模板如下面的代码所示：
 
 ```c
-// 模板函数的宏
+// 函数模板的宏，每次调用该宏函数实质上实例化了一个具体模板函数定义
 // Helper functions for CHECK_OP macro.
 // The (int, int) specialization works around the issue that the compiler
 // will not instantiate the template version of the function on values of
