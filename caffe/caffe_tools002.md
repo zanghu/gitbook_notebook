@@ -161,7 +161,8 @@ CHECK_EQ(val1, val2) << "两个值不相等，错误！";
 ```c
 if (GOOGLE_PREDICT_TRUE(val1 == val2)) {} // 如果用于比较的逻辑表达式为真，则不进行任何操作
 else {
-    google::LogMessageFatal(__FILE__, __LINE__, <基于逻辑比较内容的错误信息描述>).stream() << "两个值不相等，错误！";
+    google::LogMessageFatal(__FILE__, __LINE__, \
+      <基于逻辑比较内容的错误信息描述>).stream() << "两个值不相等，错误！";
 } 
 ```
 
