@@ -81,7 +81,7 @@ logMessage类的stream方法的实际定义并未出现在`glog/logging.h`中，
 （2）将调用当前日志语句的原文件的文件名（`__FILE__`）、行号（`__LINE__`）和比较（EQ、NE、LE等等）结果（应该是由`google::CheckOpString(_result)`生成的）组成一个字符串输入一个流中；  
 （3）将该流的句柄通过stream\(\)方法返回，以便用户继续向该流中记录其他用来详细描述本次比较结果的信息。
 
-接下来再跟踪第三层GetReferenceableValue：
+* 接下来再跟踪第三层GetReferenceableValue：
 
 ```c
 // Function is overloaded for integral types to allow static const
@@ -106,7 +106,11 @@ inline unsigned long long GetReferenceableValue(unsigned long long t) {
 
 上面代码的英文注释中已经说明这些函数的用途，不再赘述。
 
-最后剩下的只需要跟踪`Check##name##Impl`
+* 最后剩下的只需要跟踪`Check##name##Impl`：
+
+```c
+
+```
 
 #### 1.2.
 
