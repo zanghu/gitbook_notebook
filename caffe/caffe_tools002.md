@@ -10,12 +10,12 @@
 
 | 宏函数名称 | 功能说明 |
 | :---: | :---: |
-| CHECK_EQ(val1, val2) | |
-| CHECK_NE(val1, val2) | |
-| CHECK_LE(val1, val2) | |
-| CHECK_LT(val1, val2) | |
-| CHECK_GE(val1, val2) | |
-| CHECK_GT(val1, val2) | |
+| CHECK\_EQ\(val1, val2\) |  |
+| CHECK\_NE\(val1, val2\) |  |
+| CHECK\_LE\(val1, val2\) |  |
+| CHECK\_LT\(val1, val2\) |  |
+| CHECK\_GE\(val1, val2\) |  |
+| CHECK\_GT\(val1, val2\) |  |
 
 #### 1.1.1.检查宏源码跟踪
 
@@ -160,8 +160,6 @@ DEFINE_CHECK_OP_IMPL(Check_GT, > )
 
 这里实际上还可以继续跟踪`MakeCheckOpString(v1, v2, exprtext)`，但是从理解基本日志记录逻辑的角度看已经没有必要了。
 
-
-
 * 结论
 
 可知下面的代码
@@ -177,7 +175,7 @@ if (GOOGLE_PREDICT_TRUE(val1 == val2)) {} // 如果用于比较的逻辑表达�
 else {
     google::LogMessageFatal(__FILE__, __LINE__, \
       <基于逻辑比较内容(val1 == val2的错误信息描述>).stream() << "两个值不相等，错误！";
-} 
+}
 ```
 
 #### 1.2.日志宏
@@ -186,10 +184,10 @@ glog提供四个级别的日志，具体如下：
 
 | 日志级别 | 功能说明 |
 | :---: | :---: |
-| INFO | |
-| WARNING | |
-| ERROR | |
-| FATAL | |
+| INFO |  |
+| WARNING |  |
+| ERROR |  |
+| FATAL |  |
 
 其宏定义位于`glog/log_severity.h`，内容如下是：
 
@@ -199,6 +197,7 @@ glog提供四个级别的日志，具体如下：
 // you ever need to change their values or add a new severity.
 typedef int LogSeverity;
 
+// 四个日志级别，这里没有使用enum，而是使用了整型
 const int GLOG_INFO = 0, GLOG_WARNING = 1, GLOG_ERROR = 2, GLOG_FATAL = 3,
   NUM_SEVERITIES = 4;
 #ifndef GLOG_NO_ABBREVIATED_SEVERITIES
@@ -209,5 +208,6 @@ const int INFO = GLOG_INFO, WARNING = GLOG_WARNING,
   ERROR = GLOG_ERROR, FATAL = GLOG_FATAL;
 #endif
 ```
+
 
 
