@@ -69,7 +69,7 @@ class GOOGLE_GLOG_DLL_DECL LogMessageFatal : public LogMessage {
 typedef std::string _Check_string;
 #define CHECK_OP_LOG(name, op, val1, val2, log)                         \
   while (google::_Check_string* _result =                \
-         google::Check##name##Impl(                      \ //  形如Check_EQImpl
+         google::Check##name##Impl(                      \ //  形如Check_EQImpl，生成某种关于比较内容的消息
              google::GetReferenceableValue(val1),        \ // 将全局变量变量等编程临时变量
              google::GetReferenceableValue(val2),        \
              #val1 " " #op " " #val2))                                  \
@@ -84,7 +84,7 @@ logMessage类的stream方法的实际定义并未出现在`glog/logging.h`中，
 （2）将调用当前日志语句的原文件的文件名（`__FILE__`）、行号（`__LINE__`）和比较（EQ、NE、LE等等）结果（应该是由`google::CheckOpString(_result)`生成的）组成一个字符串输入一个流中；  
 （3）将该流的句柄通过`stream()`方法返回，以便用户继续向该流中记录其他用来详细描述本次比较结果的信息。
 
-* 接下来再跟踪`GetReferenceableValue`：
+* 接下来再跟踪倒数第二个的`GetReferenceableValue`：
 
 ```c
 // Function is overloaded for integral types to allow static const
@@ -145,6 +145,14 @@ DEFINE_CHECK_OP_IMPL(Check_GT, > )
 ```
 
 这里实际上还可以继续跟踪`MakeCheckOpString(v1, v2, exprtext)`，但是从理解基本日志记录逻辑的角度看已经没有必要了。
+
+
+
+最终得到的代码：
+
+```c
+
+```
 
 #### 1.2.
 
