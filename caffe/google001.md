@@ -81,3 +81,5 @@ int main(int argc, char **argv)
 ```
 
 * 运行结果：
+
+![](/assets/google001_001.PNG)
