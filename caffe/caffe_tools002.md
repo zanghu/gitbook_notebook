@@ -41,9 +41,15 @@
 CHECK_OP_LOG(name, op, val1, val2, google::LogMessageFatal) // 实际被调用的
 ```
 
-上面的代码可见接下来需要跟踪两个分支：CHECK_OP_LOG宏函数和google::LogMessageFatal
+上面的代码可见接下来需要跟踪两个分支：CHECK_OP_LOG宏函数和google::LogMessageFatal，先跟踪后者。
 
-* 跟踪第二层定义：
+* 跟踪第二层定义中的google::LogMessageFatal：
+
+```c
+
+```
+
+* 跟踪第二层定义中的CHECK_OP_LOG：
 
 ```c
 // CHECK_OP_LOG有三个#if...#else分支的定义，这里选取最简单的一个
@@ -51,11 +57,15 @@ typedef std::string _Check_string;
 #define CHECK_OP_LOG(name, op, val1, val2, log)                         \
   while (google::_Check_string* _result =                \
          google::Check##name##Impl(                      \ //  形如Check_EQImpl
-             google::GetReferenceableValue(val1),        \
+             google::GetReferenceableValue(val1),        \ // 将全局变量变量等编程临时变量
              google::GetReferenceableValue(val2),        \
              #val1 " " #op " " #val2))                                  \
     log(__FILE__, __LINE__,                                             \
         google::CheckOpString(_result)).stream()
 ```
+
+* 这里又产生了三个跟踪分支：Check###name##Impl、GetReferenceableValue和log.stream()
+
+
 
 #### 1.2.
