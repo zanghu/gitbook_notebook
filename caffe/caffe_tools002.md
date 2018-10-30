@@ -21,7 +21,7 @@
 
 * 检查宏定义
 
-```c
+```cpp
 // Equality/Inequality checks - compare two values, and log a FATAL message
 // including the two values when the result is not as expected.  The values
 // must have operator<<(ostream, ...) defined.
@@ -52,7 +52,7 @@
 
 * 跟踪第一层定义：`CHECK_OP`
 
-```c
+```cpp
 #define CHECK_OP(name, op, val1, val2) \
   CHECK_OP_LOG(name, op, val1, val2, google::LogMessageFatal)
 ```
@@ -61,7 +61,7 @@
 
 * 跟踪第二层定义中的google::LogMessageFatal：
 
-```c
+```cpp
 // This class happens to be thread-hostile because all instances share
 // a single data buffer, but since it can only be created just before
 // the process dies, we don't worry so much.
@@ -77,7 +77,7 @@ class GOOGLE_GLOG_DLL_DECL LogMessageFatal : public LogMessage {
 
 * 跟踪第二层定义中的`CHECK_OP_LOG`：
 
-```c
+```cpp
 // CHECK_OP_LOG有三个#if...#else分支的定义，这里选取最简单的一个
 typedef std::string _Check_string;
 #define CHECK_OP_LOG(name, op, val1, val2, log)                         \
@@ -99,7 +99,7 @@ logMessage类的stream方法的实际定义并未出现在`glog/logging.h`中，
 
 * 接下来再跟踪倒数第二个的`GetReferenceableValue`：
 
-```c
+```cpp
 // Function is overloaded for integral types to allow static const
 // integrals declared in classes and not defined to be used as arguments to
 // CHECK* macros. It's not encouraged though.
@@ -126,7 +126,7 @@ inline unsigned long long GetReferenceableValue(unsigned long long t) {
 
 在头文件`glog/logging.h`中搜索会发现其实找不到形如`Check_EQImpl`的定义，其实他们是宏定义通过函数模板自动生成的实例化的模板函数，其模板如下面的代码所示：
 
-```c
+```cpp
 // 函数模板的宏，每次调用该宏函数实质上实例化了一个具体模板函数定义
 // Helper functions for CHECK_OP macro.
 // The (int, int) specialization works around the issue that the compiler
@@ -165,13 +165,13 @@ DEFINE_CHECK_OP_IMPL(Check_GT, > )
 
 可知下面的代码
 
-```c
+```cpp
 CHECK_EQ(val1, val2) << "两个值不相等，错误！";
 ```
 
 等价于
 
-```c
+```cpp
 if (GOOGLE_PREDICT_TRUE(val1 == val2)) {} // 如果用于比较的逻辑表达式为真，则不进行任何操作
 else {
     google::LogMessageFatal(__FILE__, __LINE__, \
@@ -192,7 +192,7 @@ glog提供四个级别的日志，具体如下：
 
 其宏定义位于`glog/log_severity.h`，内容如下是：
 
-```c
+```cpp
 
 ```
 
