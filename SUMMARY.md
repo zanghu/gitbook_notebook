@@ -68,7 +68,7 @@
     * [Linux: chmod修改文件权限指南](linux/basic/lin018.md)
     * [Linux: dd命令制作Ubuntu安装U盘](linux/basic/lin010.md)
     * [Linux: 输入、输出、内联重定向](linux/basic/lin013.md)
-    * [Linux: copy命令复制符号链接](linux/basic/lin006.md)
+    * [Linux: cp命令复制符号链接](linux/basic/lin006.md)
     * [Linux: curl命令常用参数](linux/basic/lin019.md)
     * [Linux: top命令查看进程状态](linux/basic/lin022.md)
     * [Linux: du命令查看目录和文件大小](linux/basic/lin023.md)
