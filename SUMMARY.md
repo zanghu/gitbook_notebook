@@ -61,6 +61,7 @@
     * [Linux: 安装Matlab（图形化界面）](linux/soft_setup/lin003.md)
     * [Linux: 安装Matlab（命令行界面）](linux/soft_setup/lin012.md)
     * [Linux: 安装Tensorflow\(From Source\)](linux/soft_setup/lin004.md)
+    * [Linux: 安装caffe](linux/soft_setup/lin034.md)
     * [Linux: 安装caffe（Anaconda）](linux/soft_setup/lin007.md)
     * [Linux: 安装caffe（CPU版本）](linux/soft_setup/lin031.md)
     * [Linux: 安装git](linux/soft_setup/lin030.md)
