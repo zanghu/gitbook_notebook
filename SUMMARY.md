@@ -55,6 +55,7 @@
     * [Linux: 创建用户/配置用户组1](linux/config/lin015.md)
     * [Linux: 创建用户/配置用户组2](linux/config/lin033.md)
     * [Linux: 修改core文件相关配置](linux/config/lin027.md)
+    * [Linux: 常用环境变量](linux/config/lin034.md)
   * [Linux: 软件安装](linux/soft_setup/README.md)
     * [Linux: 安装opencv](linux/soft_setup/lin032.md)
     * [Linux: 安装Matlab（图形化界面）](linux/soft_setup/lin003.md)
