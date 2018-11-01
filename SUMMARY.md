@@ -77,7 +77,7 @@
     * [Linux: telnet命令](linux/basic/lin028.md)
     * [Linux: man命令查询手册](linux/basic/lin026.md)
     * [Linux: su命令切换用户](linux/basic/lin032.md)
-    * [Linux: 创建新用户](linux/basic/lin033.md)
+    * [Linux: 创建用户/配置用户组](linux/basic/lin033.md)
   * [Linux: 高级技术](linux/advanced/README.md)
     * [Linux: sudo运行程序搜索路径变化原因的研究](linux/advanced/lin009.md)
     * [Linux: 快速释放本地端口](linux/advanced/lin014.md)
