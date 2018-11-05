@@ -62,6 +62,8 @@
     * [Linux: 安装caffe](linux/soft_setup/lin034.md)
     * [Linux: 安装caffe（Anaconda）](linux/soft_setup/lin007.md)
     * [Linux: 安装caffe（CPU版本）](linux/soft_setup/lin031.md)
+    * [Linux：搭建jupyter sevrer（非SSL）](python/env_and_tools/python015.md)
+    * [Linux：搭建jupyter sevrer（SSL）](python/env_and_tools/python016.md)
     * [Linux: 安装git](linux/soft_setup/lin030.md)
   * [Linux: 基础知识](linux/basic/README.md)
     * [Linux: 简单常用命令](linux/basic/lin035.md)
