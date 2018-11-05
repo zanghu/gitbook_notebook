@@ -22,11 +22,13 @@ In [2]: passwd()
 Enter password:
 Verify password:
 Out[2]: 'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed'
+In [2]: exit()
 ```
 
 ### 3.生成本地证书
 
 ```shell
+# 执行后填写信息时一路回车即可
 $ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out mycert.pem
 ```
 
