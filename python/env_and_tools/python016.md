@@ -37,11 +37,8 @@ $ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mykey.key -out myc
 ```python
 # 必填配置项
 c.NotebookApp.ip = '*' # Server所在机器的ip
-
 c.NotebookApp.port = 9999 # 远程访问端口
-
 c.NotebookApp.open_browser = False
-
 c.NotebookApp.password = u'sha1:f72472bc8463:1cadf26cdd31accce99aef90e178bb67a1f6a8d3' # 第二步生成的hash密码
 
 # 可选配置项
