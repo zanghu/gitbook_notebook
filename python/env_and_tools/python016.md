@@ -61,7 +61,7 @@ $ jupyter notebook --certfile=mycert.pem --keyfile mykey.key
 $ vim ~/.bashrc
 ```
 
-加入以下内容：
+此外再加入以下内容：
 
 ```shell
 alias ipynb="jupyter notebook --certfile=/path/to/your/mycert.pem --keyfile /path/to/your/mykey.key"
