@@ -4,6 +4,8 @@ Python提供了Socket编程接口，使用时只需`import socket`。
 
 ### 1.UDP编程示例
 
+以下的代码都是基于python3，在python2下运行可能会有问题（客户端输入时加双引号似乎可以解决）。
+
 **服务端**
 
 ```python
@@ -44,3 +46,5 @@ if __name__ == '__main__':
     sk.close()
 
 ```
+
+### 2.TCP编程示例
