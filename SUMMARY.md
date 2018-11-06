@@ -32,6 +32,7 @@
   * [Python：模块学习](python/module/README.md)
     * [Python：矩阵计算模块numpy](python/module/numpy/README.md)
       * [Python：关于numpy.array和numpy.asarray的区别](python/module/numpy/python003.md)
+    * [Python：socket编程](python/module/python020.md)
   * [Python: 用C/C++扩展Python](python/c_cpp_python_extension/README.md)
     * [C/C++扩展Python: 模块](python/c_cpp_python_extension/python010.md)
     * [C/C++扩展Python: 类](python/c_cpp_python_extension/python011.md)
