@@ -126,7 +126,6 @@ if __name__ == '__main__':
 ```python
 #coding=utf-8
 #!/bin/env python
-
 import os
 import base64
 import socket
@@ -154,7 +153,6 @@ def send_socket(sk, b64, name):
     #sk.sendall(name)
     sk.sendall(b64) # 发送内容
     sk.close()
-
 
 def img_to_b64(img_path):
     """显示一副图片"""
