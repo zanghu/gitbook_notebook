@@ -4,7 +4,7 @@ Python提供了Socket编程接口，使用时只需`import socket`。
 
 ### 1.UDP编程示例
 
-服务端
+**服务端**
 
 ```python
 #coding=utf-8
@@ -23,7 +23,7 @@ if __name__ == '__main__':
         print(data.decode())
 ```
 
-客户端
+**客户端**
 
 ```python
 #coding=utf-8
