@@ -8,6 +8,8 @@
   * [Pytorch: detach\(\)与detach\_\(\)](pytorch/pytorch004.md)
   * [Pytorch: 使用指定的GPU](pytorch/pytorch005.md)
   * [Pytorch: 难懂函数解析之torch.gather](pytorch/pytorch006.md)
+* [Tensorflow](tensorflow/README.md)
+  * [TF: tf.app.run()的理解](tensorflow/tf001.md)
 * [CAFFE](caffe/README.md)
   * [tools: gflags](caffe/caffe_tools001.md)
   * [tools: glog](caffe/caffe_tools002.md)
