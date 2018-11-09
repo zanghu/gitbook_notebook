@@ -19,6 +19,7 @@
   * [CV: 图像的仿射变换](cv/cv002.md)
   * [CV: 「计算机视觉必读干货」图像分类、检测，语义分割等方法梳理](cv/cv003.md)
   * [CV: 图像样本膨胀之Jitter（抖动）](cv/cv004.md)
+  * [CV: im2col函数原理](cv/cv005.md)
 * [Math](math/README.md)
   * [Statistics](math/statistics/README.md)
     * [Static: N sigma 准则](math/statistics/static001.md)
