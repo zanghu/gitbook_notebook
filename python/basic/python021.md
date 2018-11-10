@@ -45,6 +45,12 @@ func = B.func
 
 ![](/assets/python021_002.png)
 
+打开上图绿框中指定位置的文件，果然查找到函数定义：
+
+![](/assets/python021_001.png)
+
+
+
 
 
 
