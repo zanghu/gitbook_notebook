@@ -41,6 +41,10 @@ func = B.func
 >>>help(slim.fully_connected)
 ```
 
+显示如下：
+
+![](/assets/python021_002.png)
+
 
 
 
