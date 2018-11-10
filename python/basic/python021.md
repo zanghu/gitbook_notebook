@@ -47,5 +47,5 @@ func = B.func
 
 打开上图绿框中指定位置的文件，果然查找到函数定义：
 
-![](/assets/python021_001.png)
+![](/assets/python021_001.PNG)
 
