@@ -2,7 +2,7 @@
 
 参考资料: [https://github.com/matplotlib/matplotlib/issues/3466](https://github.com/matplotlib/matplotlib/issues/3466)
 
-参考资料: [https://stackoverflow.com/questions/35737116/runtimeerror-invalid-display-variable](https://stackoverflow.com/questions/35737116/runtimeerror-invalid-display-variable)
+参考资料: [https://stackoverflow.com/questions/4706451/how-to-save-a-figure-remotely-with-pylab/4706614#4706614](https://stackoverflow.com/questions/4706451/how-to-save-a-figure-remotely-with-pylab/4706614#4706614)
 
 * **方法一**
 
