@@ -23,7 +23,9 @@ import matplotlib.pyplot as plt
 ...
 
 def main():
+
     ...
+    
     plt.title("Validation Accuracy vs. Number of Training Epochs")
     plt.xlabel("Training Epochs")
     plt.ylabel("Validation Accuracy")
