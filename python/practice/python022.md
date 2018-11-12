@@ -2,6 +2,8 @@
 
 参考资料: [https://github.com/matplotlib/matplotlib/issues/3466](https://github.com/matplotlib/matplotlib/issues/3466)
 
+参考资料: [https://stackoverflow.com/questions/35737116/runtimeerror-invalid-display-variable](https://stackoverflow.com/questions/35737116/runtimeerror-invalid-display-variable)
+
 * **方法一**
 
 下面的方法据称在Amazon的AWS云计算服务器上有效，但本人在ubuntu server 16.04LTS下测试无效。
