@@ -32,6 +32,7 @@
     * [Python：使用pptx模块制作幻灯片](python/python_office/python018.md)
 * [Tensorflow](tensorflow/README.md)
   * [TF: tf.app.run()的理解](tensorflow/tf001.md)
+  * [TF: slim构造和加载数据](tensorflow/tf002.md)
 * [Pytorch](pytorch/README.md)
   * [Pytorch: 关于自动求梯度的原理](pytorch/pytorch001.md)
   * [Pytorch: permute与transpose的区别](pytorch/pytorch002.md)
