@@ -22,6 +22,8 @@ import matplotlib.pyplot as plt
 
 ...
 
+def main():
+    ...
     plt.title("Validation Accuracy vs. Number of Training Epochs")
     plt.xlabel("Training Epochs")
     plt.ylabel("Validation Accuracy")
@@ -32,4 +34,7 @@ import matplotlib.pyplot as plt
     plt.legend()
     plt.show()
     plt.savefig('record.png')
+    
+if __name__ == '__main__':
+    main()
 ```
