@@ -2,6 +2,12 @@
 
 本文展示的是COU版本代码，GPU版本代码可以通过将文中所有行尾带有`# GPU`注释的行反注释实现。
 
+* **CPU版源码文件: ** assets\code\pytorch\cifar10_tutorial.py
+
+* **GPU版源码文件: ** assets\code\pytorch\cifar10_tutorial.py
+
+
+
 ```python
 # -*- coding: utf-8 -*-
 """
