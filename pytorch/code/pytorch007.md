@@ -4,7 +4,7 @@
 
 * **CPU版源码文件: ** assets\code\pytorch\cifar10_tutorial.py
 
-* **GPU版源码文件: ** assets\code\pytorch\cifar10_tutorial.py
+* **GPU版源码文件: ** assets\code\pytorch\cifar10_tutorial_gpu.py
 
 
 
