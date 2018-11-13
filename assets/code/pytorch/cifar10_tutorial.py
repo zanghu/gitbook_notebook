@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Training a classifier
+Training a Classifier
 =====================
 
 This is it. You have seen how to define neural networks, compute loss and make
@@ -59,20 +59,25 @@ import torch
 import torchvision
 import torchvision.transforms as transforms
 
+# 使用GPU训练和验证
+# device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu") # gpu
+# print(device) # gpu
 ########################################################################
 # The output of torchvision datasets are PILImage images of range [0, 1].
 # We transform them to Tensors of normalized range [-1, 1]
 
+# 指向cifar-10-batches-py目录的上一级目录
+data_dir='~/data_base'
 transform = transforms.Compose(
     [transforms.ToTensor(),
      transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 
-trainset = torchvision.datasets.CIFAR10(root='./data', train=True,
+trainset = torchvision.datasets.CIFAR10(root=data_dir, train=True,
                                         download=True, transform=transform)
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=4,
                                           shuffle=True, num_workers=2)
 
-testset = torchvision.datasets.CIFAR10(root='./data', train=False,
+testset = torchvision.datasets.CIFAR10(root=data_dir, train=False,
                                        download=True, transform=transform)
 testloader = torch.utils.data.DataLoader(testset, batch_size=4,
                                          shuffle=False, num_workers=2)
@@ -83,36 +88,20 @@ classes = ('plane', 'car', 'bird', 'cat',
 ########################################################################
 # Let us show some of the training images, for fun.
 
+import matplotlib
+matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import numpy as np
-import cv2 # 为了保存图像添加
-import sys
+
+
 
 # functions to show an image
 
-global cnt
-cnt = 0
-global dir_path
-dir_path = r'./img_records/'
-
-def get_name_str():
-    """"""
-    global cnt
-    global dir_path
-    name = ''.join([dir_path, 'cifar10_', str(cnt).zfill(3), '.jpg'])
-    cnt += 1
-    return name
 
 def imshow(img):
     img = img / 2 + 0.5     # unnormalize
     npimg = img.numpy() # 取值在[0, 1]之间的浮点数
-    #print(npimg.shape)
-    #print(npimg)
-    #sys.exit() # 加入此句会引发pytorchv0,4的一个资源回收的BUG(python3.6.4环境)?
-    #plt.imshow(np.transpose(npimg, (1, 2, 0))) # 此行在远程命令行操作模式下会引发异常
-    img_name = get_name_str()
-    cv2.imwrite(img_name, np.transpose(npimg * 255., (1, 2, 0))[:, :, ::-1])
-
+    plt.imshow(np.transpose(npimg, (1, 2, 0))) # 此行在远程命令行操作模式下会引发异常
 
 # get some random training images
 dataiter = iter(trainloader)
@@ -122,7 +111,6 @@ images, labels = dataiter.next()
 # 注释, 远程执行时会导致报错
 #imshow(torchvision.utils.make_grid(images))
 # print labels
-# 注释, 远程执行时会导致报错
 #print(' '.join('%5s' % classes[labels[j]] for j in range(4)))
 
 
@@ -189,6 +177,7 @@ class Net(nn.Module):
 
 # 创建特征提取部分的Module类对象
 net = Net()
+#net.to(device) # GPU
 
 ########################################################################
 # 3. Define a Loss function and optimizer
@@ -221,6 +210,7 @@ for epoch in range(100):  # loop over the dataset multiple times
         # 0.准备工作
         # get the inputs
         inputs, labels = data
+        #inputs, labels = inputs.to(device), labels.to(device) # GPU
 
         # wrap them in Variable
         #inputs, labels = Variable(inputs), Variable(labels) # v0.4版本开始此句消失
@@ -278,6 +268,7 @@ print('Finished Training')
 
 dataiter = iter(testloader)
 images, labels = dataiter.next()
+# images, labels = images.to(device), labels.to(device) # GPU
 
 # print images
 # 注释下面两句, 远程执行时会导致报错
@@ -296,8 +287,8 @@ outputs = net(images) # v0.4之前是: outputs = net(Variable(images))
 # So, let's get the index of the highest energy:
 _, predicted = torch.max(outputs, 1) # v0.4之前是: _, predicted = torch.max(outputs.data, 1)
 
-print('Predicted: ', ' '.join('%5s' % classes[predicted[j]]
-                              for j in range(4)))
+#print('Predicted: ', ' '.join('%5s' % classes[predicted[j]]
+#                              for j in range(4)))
 
 ########################################################################
 # The results seem pretty good.
@@ -309,6 +300,7 @@ total = 0
 with torch.no_grad(): # v0.4新增
     for data in testloader:
         images, labels = data
+        #images, labels = images.to(device), labels.to(device) # GPU
         outputs = net(images) # v0.4之前是: outputs = net(Variable(images))
         _, predicted = torch.max(outputs.data, 1)
         total += labels.size(0)
@@ -330,6 +322,7 @@ class_total = list(0. for i in range(10))
 with torch.no_grad(): # 此句在v0.4以前的例子中没有出现
     for data in testloader:
         images, labels = data
+        #images, labels = images.to(device), labels.to(device) # GPU
         outputs = net(images)
         _, predicted = torch.max(outputs, 1)
         c = (predicted == labels).squeeze()
@@ -356,11 +349,11 @@ for i in range(10):
 # Let's first define our device as the first visible cuda device if we have
 # CUDA available:
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+#device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 # Assume that we are on a CUDA machine, then this should print a CUDA device:
 
-print(device)
+#print(device)
 
 ########################################################################
 # The rest of this section assumes that `device` is a CUDA device.

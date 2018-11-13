@@ -59,9 +59,8 @@ import torch
 import torchvision
 import torchvision.transforms as transforms
 
-
+# 使用GPU训练和验证
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-
 print(device)
 
 ########################################################################
@@ -91,12 +90,12 @@ classes = ('plane', 'car', 'bird', 'cat',
 ########################################################################
 # Let us show some of the training images, for fun.
 
+import matplotlib
+matplotlib.use('agg')
 import matplotlib.pyplot as plt
 import numpy as np
 
 # functions to show an image
-
-
 def imshow(img):
     img = img / 2 + 0.5     # unnormalize
     npimg = img.numpy()
