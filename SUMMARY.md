@@ -7,6 +7,7 @@
     * [Python: 关于classmethod和staticmethod的区别](python/basic/python004.md)
     * [Python: 元类与metaclass](python/basic/python005.md)
     * [Python: 获得模块路径和函数所属文件路径](python/basic/python021.md)
+    * [Python: 带默认值的字典defaultdict](python/basic/python023.md)
   * [Python: 进阶经验](python/practice/README.md)
     * [Python: 远程终端执行matplotlib绘图命令不报错的小技巧](python/practice/python022.md)
     * [Python: 使用functools.update\_wrapper保持被装饰器修饰的函数的自省/反射属性](python/practice/python002.md)
