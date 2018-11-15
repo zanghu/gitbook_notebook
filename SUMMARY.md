@@ -75,7 +75,7 @@
     * [Linux: 搭建jupyter sevrer（SSL）](python/env_and_tools/python016.md)
     * [Linux: 安装git](linux/soft_setup/lin030.md)
   * [Linux: 基础知识](linux/basic/README.md)
-    * [Linux: 简单常用命令](linux/basic/lin035.md)
+    * [Linux: 显示目录下指定类型文件总数](linux/basic/lin035.md)
     * [Linux: 内核版本号查看方式](linux/basic/lin017.md)
     * [Linux: chmod修改文件权限](linux/basic/lin001.md)
     * [Linux: mount命令挂载移动硬盘](linux/basic/lin002.md)
