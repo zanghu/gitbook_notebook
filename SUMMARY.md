@@ -49,7 +49,7 @@
   * [tools: glog](caffe/caffe_tools002.md)
   * [example: mnist](caffe/caffe_example001.md)
 * [CV](pytorch/README.md)
-  * [CV: 非最大压制方法\(NMS\)过滤重叠boundiung box](cv/cv001.md)
+  * [CV: 非最大压制方法\(NMS\)](cv/cv001.md)
   * [CV: 图像的仿射变换](cv/cv002.md)
   * [CV: 「计算机视觉必读干货」图像分类、检测，语义分割等方法梳理](cv/cv003.md)
   * [CV: 图像样本膨胀之Jitter（抖动）](cv/cv004.md)
