@@ -102,7 +102,7 @@ def draw_ch():
     # 图像从OpenCV格式转换成PIL格式
     img_pil = PIL.Image.fromarray(cv2.cvtColor(img_cv2, cv2.COLOR_BGR2RGB))
  
-    # 字体存放路径一般是： /usr/share/fonts/chinese/TrueType
+    # 字体文件存放路径一般是： /usr/share/fonts/chinese/TrueType
     font = PIL.ImageFont.truetype('simhei.ttf', 20)
  
     draw = PIL.ImageDraw.Draw(img_pil)
