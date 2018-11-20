@@ -17,7 +17,7 @@
     * [Python: numpy](python/module/numpy/README.md)
       * [Python: 关于numpy.array和numpy.asarray的区别](python/module/numpy/python003.md)
     * [Python: cv2](python/module/cv2/README.md)
-      * [Python: 关于numpy.array和numpy.asarray的区别](python/module/cv2/python024.md)
+      * [Python: cv2.putText在图片写字](python/module/cv2/python024.md)
     * [Python: others](python/module/others/README.md)
       * [Python: socket编程](python/module/others/python020.md)
   * [Python: 用C/C++扩展Python](python/c_cpp_python_extension/README.md)
