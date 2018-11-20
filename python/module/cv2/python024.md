@@ -69,6 +69,12 @@ if __name__ == '__main__':
 
 #### 2.1 opencv + freetype
 
+* 安装`freetype`
+
+```shell
+$ pip install freetype-py
+```
+
 
 
 
