@@ -1,5 +1,7 @@
 ## CV2: putText在图片写字
 
+参考资料：[opencv 绘制不同图形并添加文字](https://www.jianshu.com/p/e99ede5103ed)
+
 ### 1.代码示例
 
 图片显示英文文字
