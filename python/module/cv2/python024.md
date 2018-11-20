@@ -120,8 +120,6 @@ if __name__ == '__main__':
     cv2.imshow("print chinese to image",img_OpenCV)
     cv2.waitKey()
     cv2.imwrite('03.jpg',img_OpenCV)
- 
-
 ```
 
 
