@@ -103,7 +103,7 @@ def draw_ch():
     img_pil = PIL.Image.fromarray(cv2.cvtColor(img_cv2, cv2.COLOR_BGR2RGB))
  
     # 字体文件存放路径一般是： /usr/share/fonts/chinese/TrueType
-    font = PIL.ImageFont.truetype('simhei.ttf', 20)
+    font = PIL.ImageFont.truetype('simhei.ttf', 20) # 指定字体类型
  
     draw = PIL.ImageDraw.Draw(img_pil)
     draw.text((100, 100), '在图片上输出中文', font=font, fill=(0, 255, 0))
@@ -128,3 +128,4 @@ if __name__ == '__main__':
 
 
 
+ 
