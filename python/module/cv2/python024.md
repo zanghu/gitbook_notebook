@@ -4,7 +4,7 @@
 
 ### 1.函数原型和代码示例
 
-* **函数原型**
+#### 1.1 函数原型
 
 ```python
 void cv::putText(
@@ -22,7 +22,7 @@ Python:
 img =cv.putText(img, text, org, fontFace,fontScale, color[, thickness[, lineType[, bottomLeftOrigin]]])
 ```
 
-* **代码示例**
+#### 1.2 代码示例
 
 图片显示英文文字
 
@@ -42,7 +42,7 @@ if __name__ == '__main__':
     assert b
 ```
 
-* **关于字体**
+#### 1.3 关于字体
 
 由于OpenCV原生函数putText是不支持中文字体，所以这里无法写入中文。
 
@@ -66,6 +66,9 @@ if __name__ == '__main__':
 由于OpenCV原生函数putText是不支持中文字体，所以这里无法写入中文。
 
 实现使用opencv在图片写中文有两个思路：`freetype`或者`PIL`
+
+
+
 
 
 
