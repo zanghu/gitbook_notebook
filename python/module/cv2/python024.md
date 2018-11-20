@@ -7,7 +7,6 @@
 #!/usr/bin/env python
 import os
 import cv2
-import numpy
 
 if __name__ == '__main__':
     img = cv2.imread('123.jpg')
