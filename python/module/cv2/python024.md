@@ -2,7 +2,23 @@
 
 参考资料：[opencv 绘制不同图形并添加文字](https://www.jianshu.com/p/e99ede5103ed)
 
-### 1.代码示例
+### 1.函数原型和代码示例
+
+```python
+void cv::putText(
+    InputOutputArray    img,
+    const String &  text,
+    Point   org,
+    int     fontFace,
+    double  fontScale,
+    Scalar  color,
+    int     thickness = 1,
+    int     lineType = LINE_8,
+    bool    bottomLeftOrigin = false 
+)       
+Python:
+img =cv.putText(img, text, org, fontFace,fontScale, color[, thickness[, lineType[, bottomLeftOrigin]]])
+```
 
 图片显示英文文字
 
