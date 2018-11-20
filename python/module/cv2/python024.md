@@ -18,22 +18,24 @@ if __name__ == '__main__':
     assert b
 ```
 
-由于OpenCV原生函数putText是不支持中文字体，所以这里无法写入中文。
-关于文字字体名称标识符，参见 Hershey 字体集 ，可供字体类型如下：
-FONT_HERSHEY_SIMPLEX 正常大小无衬线字体
-FONT_HERSHEY_PLAIN 小号无衬线字体
-FONT_HERSHEY_DUPLEX 正常大小无衬线字体，比FONT_HERSHEY_SIMPLEX更复杂
-FONT_HERSHEY_COMPLEX 正常大小有衬线字体
-FONT_HERSHEY_TRIPLEX 正常大小有衬线字体，比FONT_HERSHEY_COMPLEX更复杂
-FONT_HERSHEY_COMPLEX_SMALL 同FONT_HERSHEY_COMPLEX
-FONT_HERSHEY_SCRIPT_SIMPLEX 手写风格字体
-FONT_HERSHEY_SCRIPT_COMPLEX 比FONT_HERSHEY_SCRIPT_SIMPLEX 更复杂
-以上只是针对sanserif字体进行的设置。
+### 2.关于字体和中文
 
-作者：刑素素
-链接：https://www.jianshu.com/p/e99ede5103ed
-來源：简书
-简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+由于OpenCV原生函数putText是不支持中文字体，所以这里无法写入中文。
+
+关于文字字体名称标识符，参见 Hershey 字体集 ，可供字体类型如下：
+
+| 字体类型 | 说明 | 备注 |
+| :---: | --- | --- |
+| FONT_HERSHEY_SIMPLEX | 正常大小无衬线字体 | |
+| FONT_HERSHEY_PLAIN | 小号无衬线字体 | |
+| FONT_HERSHEY_DUPLEX | 正常大小无衬线字体 | 比FONT_HERSHEY_SIMPLEX更复杂 |
+| FONT_HERSHEY_COMPLEX | 正常大小有衬线字体 |
+| FONT_HERSHEY_TRIPLEX | 正常大小有衬线字体 | 比FONT_HERSHEY_COMPLEX更复杂
+| FONT_HERSHEY_COMPLEX_SMALL | 同FONT_HERSHEY_COMPLEX |
+| FONT_HERSHEY_SCRIPT_SIMPLEX | 手写风格字体 |
+| FONT_HERSHEY_SCRIPT_COMPLEX | 比FONT_HERSHEY_SCRIPT_SIMPLEX 更复杂 |
+
+以上只是针对sanserif字体进行的设置。
 
 
 
