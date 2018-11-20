@@ -89,7 +89,6 @@ $ pip install freetype-py
 # -*- coding: utf-8 -*-
 #coding=utf-8
 #!/usr/bin/env python
-
 import os
 import cv2
 import numpy
