@@ -4,6 +4,8 @@
 
 ### 1.函数原型和代码示例
 
+* **函数原型**
+
 ```python
 void cv::putText(
     InputOutputArray    img,
@@ -19,6 +21,8 @@ void cv::putText(
 Python:
 img =cv.putText(img, text, org, fontFace,fontScale, color[, thickness[, lineType[, bottomLeftOrigin]]])
 ```
+
+* **代码示例**
 
 图片显示英文文字
 
