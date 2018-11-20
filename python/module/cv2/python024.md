@@ -65,7 +65,9 @@ if __name__ == '__main__':
 
 由于OpenCV原生函数putText是不支持中文字体，所以这里无法写入中文。
 
-实现使用opencv在图片写中文有两个思路：`freetype`或者`PIL`
+实现使用opencv在图片写中文有两个思路：`freetype`或者`PIL`。
+
+#### 2.1 opencv + freetype
 
 
 
