@@ -2,66 +2,53 @@
 
 参考资料：[opencv 绘制不同图形并添加文字](https://www.jianshu.com/p/e99ede5103ed)
 
-### 1.函数原型和代码示例
-
-* **函数原型**
+* **画线段**
 
 ```python
-void cv::putText(
-    InputOutputArray    img,
-    const String &  text,
-    Point   org,
-    int     fontFace,
-    double  fontScale,
-    Scalar  color,
-    int     thickness = 1,
-    int     lineType = LINE_8,
-    bool    bottomLeftOrigin = false 
-)       
-Python:
-img =cv.putText(img, text, org, fontFace,fontScale, color[, thickness[, lineType[, bottomLeftOrigin]]])
+# cv2.line(图片, 起点, 终点, 颜色, 粗细（单位：像素）
+cv2.line(img, (0, 0), (511, 511), (255, 0, 0), 5)
 ```
 
-* **代码示例**
+画线条,起点和终点分别是(0, 0)，(511, 511)，线条颜色为 (255, 0, 0)，5像素粗细。
 
-图片显示英文文字
+* **画矩形**
 
-```python
-#coding=utf-8
-#!/usr/bin/env python
-import os
-import cv2
+cv2.rectangle(img, (384, 0), (510, 128), (0, 255, 0), 5)
 
-if __name__ == '__main__':
-    img = cv2.imread('123.jpg')
-    # 照片/添加的文字/左上角坐标/字体/字体大小/颜色/字体粗细（单位：像素）/是否改变默认起点
-    # 最后一个布尔参数为False时起点坐标是左上角，为True时起点坐标是左下角
-    # 经过测试，字体大小可以取浮点数（比如下面是0.5）
-    img_new = cv2.putText(img, "hello", (50, 150), cv2.FONT_HERSHEY_COMPLEX, 0.5, (0,255, 0), 1, False) 
-    b = cv2.imwrite('123_new.jpg', img_new)
-    assert b
-```
+画矩形，起点和终点分别为(384, 0)， (510, 128)，矩形颜色为 (0, 255, 0)，5像素粗细。
 
-### 2.关于字体
+* **圆形**
 
-由于OpenCV原生函数putText是不支持中文字体，所以这里无法写入中文。
+cv2.circle(img, (447, 63), 50, (0, 0, 255),-1)
 
-关于文字字体名称标识符，参见 Hershey 字体集 ，可供字体类型如下：
+画圆形，圆点坐标是(447, 63)，半径为50像素，颜色为(0, 0, 255)，-1表示圆内部将被用(0, 0, 255)色值填充。
 
-| 字体类型 | 说明 |
-| :---: | --- |
-| FONT_HERSHEY_SIMPLEX | 正常大小无衬线字体 |
-| FONT_HERSHEY_PLAIN | 小号无衬线字体 |
-| FONT_HERSHEY_DUPLEX | 正常大小无衬线字体，比FONT_HERSHEY_SIMPLEX更复杂 |
-| FONT_HERSHEY_COMPLEX | 正常大小有衬线字体 |
-| FONT_HERSHEY_TRIPLEX | 正常大小有衬线字体，比FONT_HERSHEY_COMPLEX更复杂
-| FONT_HERSHEY_COMPLEX_SMALL | 同FONT_HERSHEY_COMPLEX |
-| FONT_HERSHEY_SCRIPT_SIMPLEX | 手写风格字体 |
-| FONT_HERSHEY_SCRIPT_COMPLEX | 比FONT_HERSHEY_SCRIPT_SIMPLEX 更复杂 |
+* **画椭圆**
 
-以上只是针对sanserif字体进行的设置。
+cv2.ellipse(img, (256, 256), (100, 50), 90, 0,360, (0, 255, 0), -1)
 
+画椭圆，中心点坐标为(256, 256)，长轴和短轴的长度分别为100和 50像素，椭圆选转的角度为90度，开始到结束的角度分别为0,360，说明是整个椭圆，如果是0,180度，说明是半个椭圆，椭圆形的颜色为(0, 255, 0)并且填充整个椭圆。
 
+* **画不规则图形**
+
+pts = np.array([[10, 5], [20, 30], [70, 20], [50, 10], [50, 30], [70, 70]], np.int32)
+pts = pts.reshape((-1,1,2))
+cv2.polylines(img, [pts], False,(255, 255, 0),1)
+
+画不规则图形，首先定义不规则图形每个定点的坐标，6个顶点的坐标分别为[[10, 5], [20, 30], [70, 20], [50, 10], [50, 30], [70, 70]；
+
+reshape()函数创建一个改变尺寸的新数组，-1表示这一维的长度是根据后面的数组的维度计算出来的。
+
+reshape((-1,1,2))表示数组的维度是一行二列的新数组。其实这里可以不用reshape()函数，本来就是用的一行二列的数组表示每个点的坐标。
+
+最后用画多条线的函数polylines()连接各个定点，得到不规则图形，[pts]表示各个点的数组，True表示不规则图形是首尾相连闭合的，如果设为False，则图形不会闭合，(255, 255, 0)表示线段的颜色，粗细为1像素。
+
+写文字
+
+作者：刑素素
+链接：https://www.jianshu.com/p/e99ede5103ed
+來源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
 
 
 
