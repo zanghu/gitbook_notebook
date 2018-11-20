@@ -77,6 +77,12 @@ $ pip install freetype-py
 
 * **代码示例**
 
+略
+
+#### 2.2 opencv + PIL
+
+从目前查到的资料看，这种方法代码写起来比基于`freetype`的方案更简单。
+
 
 
 
