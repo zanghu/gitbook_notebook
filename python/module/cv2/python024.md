@@ -24,13 +24,13 @@ if __name__ == '__main__':
 
 关于文字字体名称标识符，参见 Hershey 字体集 ，可供字体类型如下：
 
-| 字体类型 | 说明 | 备注 |
-| :---: | --- | --- |
-| FONT_HERSHEY_SIMPLEX | 正常大小无衬线字体 | |
-| FONT_HERSHEY_PLAIN | 小号无衬线字体 | |
-| FONT_HERSHEY_DUPLEX | 正常大小无衬线字体 | 比FONT_HERSHEY_SIMPLEX更复杂 |
+| 字体类型 | 说明 |
+| :---: | --- |
+| FONT_HERSHEY_SIMPLEX | 正常大小无衬线字体 |
+| FONT_HERSHEY_PLAIN | 小号无衬线字体 |
+| FONT_HERSHEY_DUPLEX | 正常大小无衬线字体，比FONT_HERSHEY_SIMPLEX更复杂 |
 | FONT_HERSHEY_COMPLEX | 正常大小有衬线字体 |
-| FONT_HERSHEY_TRIPLEX | 正常大小有衬线字体 | 比FONT_HERSHEY_COMPLEX更复杂
+| FONT_HERSHEY_TRIPLEX | 正常大小有衬线字体，比FONT_HERSHEY_COMPLEX更复杂
 | FONT_HERSHEY_COMPLEX_SMALL | 同FONT_HERSHEY_COMPLEX |
 | FONT_HERSHEY_SCRIPT_SIMPLEX | 手写风格字体 |
 | FONT_HERSHEY_SCRIPT_COMPLEX | 比FONT_HERSHEY_SCRIPT_SIMPLEX 更复杂 |
