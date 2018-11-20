@@ -2,6 +2,8 @@
 
 ### 1.代码示例
 
+图片显示英文文字
+
 ```python
 #coding=utf-8
 #!/usr/bin/env python
