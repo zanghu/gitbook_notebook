@@ -82,6 +82,7 @@
   * [Linux: 基础知识](linux/basic/README.md)
     * [Linux: 目录下指定类型文件总数](linux/basic/lin035.md)
     * [Linux: 内核版本号查看方式](linux/basic/lin017.md)
+    * [Linux: which、whereis、locate、find命令查找文件](linux/basic/lin037.md)
     * [Linux: chmod修改文件权限](linux/basic/lin001.md)
     * [Linux: mount命令挂载移动硬盘](linux/basic/lin002.md)
     * [Linux: chmod修改文件权限指南](linux/basic/lin018.md)
