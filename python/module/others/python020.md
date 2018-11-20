@@ -123,7 +123,8 @@ def server():
         with open(save_path, 'wb') as f:
             f.write(''.join(contents))
         cnt += 1
-        print 'num finish: {0} finish, num bytes: {1}, time elapsed: {2}'.format(cnt, len_left, time.clock() - t0)
+        print 'num finish: {0} finish, \
+            num bytes: {1}, time elapsed: {2}'.format(cnt, len_left, time.clock() - t0)
 
 if __name__ == '__main__':
     server()
