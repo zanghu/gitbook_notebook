@@ -106,7 +106,7 @@ def draw_ch():
     font = PIL.ImageFont.truetype('simhei.ttf', 20) # 指定字体类型
  
     draw = PIL.ImageDraw.Draw(img_pil)
-    # 左上角坐标, 文字内容, 字体对象，字体颜色
+    # 输入参数：左上角坐标, 文字内容, 字体对象，字体颜色
     draw.text((100, 100), '在图片上输出中文', font=font, fill=(0, 255, 0))
     # 使用PIL中的save方法保存图片到本地
     # img_PIL.save('02.jpg', 'jpeg')
