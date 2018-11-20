@@ -118,8 +118,15 @@ if __name__ == '__main__':
     draw_ch()
 ```
 
-要想正确执行上述用例，必须首先安装所需字体
+* **安装字体文件**
 
+要想正确执行上述用例，必须首先安装所需字体，幸运的是，字体文件是跨操作系统的。
+
+首先，在win7下进入“控制面板 -> 字体”文件夹，旗下的文件后缀名为`*.ttc`或`*.ttf`，找到本次代码要用到的`simhei.ttf`文件。
+
+之后，将`simhei.ttf`文件拷贝到Linux的`/usr/share/fonts/chinese/TrueType`目录下，注意在Ubuntu下可能需要手动在`/usr/share/fonts/`目录下创建`chinese/TrueType`目录。
+
+如果还需要其他字体文件，可以参考上面的方法从windows系统下拷贝。
 
 
 
