@@ -1,14 +1,24 @@
-## im2col原理讲解
+## CV2: putText在图片写字
 
-参考资料：[https://www.cnblogs.com/hdk1993/p/8893944.html](https://www.cnblogs.com/hdk1993/p/8893944.html)
 
-### 1.思想起源
+```python
 
-现代卷积神经网络训练过程中，卷积计算占训练总计算时间的相当大部分，为了加速卷积计算速度，使用计算速度较快、优化较好的矩阵乘法替换在feature map上滑动卷积核并在每个位置上的先“点乘”后“累加”卷积的过程，这就是`im2col`函数的来源。
+#coding=utf-8
+#!/usr/bin/env python
 
-关于im2col的实现，我们沿着原始矩阵逐行计算，将得到的新的子矩阵展开成列，放置在列块矩阵中。
+import os
+import cv2
+import numpy
 
-### 2.原理分析
+if __name__ == '__main__':
+    img = cv2.imread('123.jpg')
+    # 照片/添加的文字/左上角坐标/字体/字体大小/颜色/字体粗细
+    img_new = cv2.putText(img, "hello", (50, 150), cv2.FONT_HERSHEY_COMPLEX, 0.5, (0,255, 0), 1) 
+    b = cv2.imwrite('123_new.jpg', img_new)
+    assert b
+```
+
+
 
 
 
