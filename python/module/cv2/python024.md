@@ -1,6 +1,6 @@
 ## CV2: putText在图片写字
 
-参考资料：[opencv 绘制不同图形并添加文字](https://www.jianshu.com/p/e99ede5103ed)
+参考资料：[python+opencv+PIL，在图片和视频中写入中文](https://blog.csdn.net/wyx100/article/details/80412101)
 
 ### 1.函数原型和代码示例
 
