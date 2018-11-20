@@ -97,7 +97,7 @@ import PIL.ImageDraw
 import PIL.ImageFont
 
 def draw_ch():
-    """"""
+    """在图片上写中文"""
     img_cv2 = cv2.imread('123.jpg')
     # 图像从OpenCV格式转换成PIL格式
     img_pil = PIL.Image.fromarray(cv2.cvtColor(img_cv2, cv2.COLOR_BGR2RGB))
