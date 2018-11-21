@@ -48,7 +48,7 @@
   * [Pytorch: 难懂函数解析之torch.gather](pytorch/pytorch006.md)
   * [Pytorch: 示例代码](pytorch/code/README.md)
     * [Pytorch: 官方cifar10教程注释版](pytorch/code/pytorch007.md)
-* [CAFFE](caffe/README.md)
+* [Caffe](caffe/README.md)
   * [tools: gflags](caffe/caffe_tools001.md)
   * [tools: glog](caffe/caffe_tools002.md)
   * [example: mnist](caffe/caffe_example001.md)
