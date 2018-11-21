@@ -161,7 +161,7 @@
   * [MD: 绘制简单表格](markdown/md001.md)
   * [MD: 如何在markdown语法中显示尖括号](markdown/md002.md)
   * [MD: 加入本地文件超链接](markdown/md003.md)
-  * [MD: 特殊格式](markdown/md004.md)
+  * [MD: “注意”的格式](markdown/md004.md)
 * [Software](software/README.md)
   * [linkerd](software/linkerd/README.md)
     * [linkerd-examples: add-steps](software/linkerd/linkerd001.md)
