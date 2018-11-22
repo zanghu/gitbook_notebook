@@ -8,7 +8,7 @@
     ...
     a.append({'bbox': bbox, 'text': text or '■', 'color': colormap[taken]})
     ...
-    ```
+```
 
 
 
