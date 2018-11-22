@@ -61,6 +61,7 @@
 
 and-or 结合了前面的两种语法，推理即可。
 
+```python
 >>> a='first'
 >>> b='second'
 >>> 1 and a or b
@@ -72,6 +73,8 @@ and-or 结合了前面的两种语法，推理即可。
 >>> (0 and a) or b
 'second'
 >>>
+```
+
 这个语法看起来类似于 C 语言中的 bool ? a : b 表达式。整个表达式从左到右进行演算，所以先进行 and 表达式的演算。 1 and 'first' 演算值为 'first'，然后 'first' or 'second' 的演算值为 'first'。
 0 and 'first' 演算值为 False，然后 0 or 'second' 演算值为 'second'。
 and-or主要是用来模仿 三目运算符 bool?a:b的，即当表达式bool为真，则取a否则取b。
