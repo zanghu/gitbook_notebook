@@ -8,6 +8,7 @@
     * [Python: 元类与metaclass](python/basic/python005.md)
     * [Python: 获得模块路径和函数所属文件路径](python/basic/python021.md)
     * [Python: 带默认值的字典defaultdict](python/basic/python023.md)
+    * [Python: 逻辑运算符and和or的返回值](python/basic/python026.md)
   * [Python: 进阶经验](python/practice/README.md)
     * [Python: 远程终端matplotlib绘图不报错的小技巧](python/practice/python022.md)
     * [Python: functools.update保持被装饰器修饰的函数的自省/反射属性](python/practice/python002.md)
