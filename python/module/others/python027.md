@@ -27,6 +27,7 @@ def last_backup(backup_root):
                 i = int(m.group(1)) 
                 all.append((filepath, i))
     # 这里用到了operator.itemgetter()
+    # max函数原型: max(iterable, *[, default=obj, key=func]) -> value
     return max(all, key=operator.itemgetter(1))[0] # 应该是先用operator.itemgetter定义的函数key对列表all中
 ```
 
