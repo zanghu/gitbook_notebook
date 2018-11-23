@@ -29,3 +29,6 @@ def last_backup(backup_root):
     # 这里用到了operator.itemgetter()
     return max(all, key=operator.itemgetter(1))[0] # 应该是先用operator.itemgetter定义的函数key对列表all中
 ```
+
+### 2.operator模块
+
