@@ -7,6 +7,7 @@
 ### 1.问题引出
 
 ```python
+# 函数来自ctw_baseline/detection/darknet/darknet_tools.py
 def last_backup(backup_root):
 
     ... # 其他代码
