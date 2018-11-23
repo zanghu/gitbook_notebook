@@ -33,3 +33,4 @@ def last_backup(backup_root):
 
 ### 2.operator模块
 
+自从引入labmda函数之后，Python中很多容器操作函数都支持类似上面的`max`函数的功能，即支持输入一个对容器元素进行操作的函数参数。 
