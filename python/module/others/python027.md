@@ -1,6 +1,6 @@
 ## Python: 使用operator模块提供的函数替代自定义lambda函数
 
-参考资料：[Python】operator 模块简单介绍](https://www.cnblogs.com/nju2014/p/5568139.html)
+参考资料：[【Python】operator 模块简单介绍](https://www.cnblogs.com/nju2014/p/5568139.html)
 
 `operator`模块为 Python 提供了一个 "功能性" 的标准操作符接口. 当使用`map`以及`filter`一类的函数的时候, `operator`模块中的函数可以替换一些自定义`lambda`函式.
 
