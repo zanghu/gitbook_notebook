@@ -23,6 +23,7 @@
     * [others](python/module/others/README.md)
       * [Python: socket编程](python/module/others/python020.md)
       * [Python: operator模块提供常用lambda函数](python/module/others/python027.md)
+      * [Python: re模块的group功能](python/module/others/python028.md)
   * [Python: 用C/C++扩展Python](python/c_cpp_python_extension/README.md)
     * [C/C++扩展Python: 模块](python/c_cpp_python_extension/python010.md)
     * [C/C++扩展Python: 类](python/c_cpp_python_extension/python011.md)
