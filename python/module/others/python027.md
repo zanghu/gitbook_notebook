@@ -23,6 +23,7 @@ def last_backup(backup_root):
                 # 注意: 按照规定group(0)返回的是正则表达式命中的字符串整体, group(1)返回其中第一个括号组
                 i = int(m.group(1)) 
                 all.append((filepath, i))
+    # 这里用到了operator.itemgetter()
     return max(all, key=operator.itemgetter(1))[0] # 应该是先用operator.itemgetter定义的函数key对列表all中
     ...
 ```
