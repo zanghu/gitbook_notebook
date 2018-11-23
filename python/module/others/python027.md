@@ -9,7 +9,8 @@
 ```python
     ...
     # 找不到首选权重文件时，用名为yolo-chinese_数字.weights的权重文件代替
-    r = re.compile(r'^{}_(\d+)\.weights$'.format(re.escape(basename))) # re.escape()的作用是将输入字符串内所有属于正则表达式特殊字符的字符作普通字符处理
+    # re.escape()的作用是将输入字符串内所有属于正则表达式特殊字符的字符作普通字符处理
+    r = re.compile(r'^{}_(\d+)\.weights$'.format(re.escape(basename)))
     all = [(None, -1)]
     for filename in os.listdir(backup_root):
         filepath = os.path.join(backup_root, filename)
