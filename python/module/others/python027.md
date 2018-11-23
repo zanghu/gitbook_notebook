@@ -7,6 +7,7 @@
 ### 1.问题引出
 
 ```python
+def last_backup(backup_root):
     ...
     # 找不到首选权重文件时，用名为yolo-chinese_数字.weights的权重文件代替
     # re.escape()的作用是将输入字符串内所有属于正则表达式特殊字符的字符作普通字符处理
