@@ -11,3 +11,9 @@
 
 其中唯一需要额外获取的就是预先训练好的模型，下载地址：[https://pjreddie.com/media/files/yolov3.weights](https://pjreddie.com/media/files/yolov3.weights)
 
+### 2.执行检测
+
+```shell
+$ ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
+```
+
