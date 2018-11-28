@@ -4,19 +4,19 @@
 
 
 ```Makefile
-GPU=1
-CUDNN=1
-OPENCV=1
-OPENMP=1
+GPU=1 # 默认是0
+CUDNN=1 # 默认是0
+OPENCV=1 # 默认是0
+OPENMP=1 # 默认是0, 个人对这项是否应该改为1持保留态度
 DEBUG=0
-INFO=1
+INFO=1 # 个人手动增加, 为了添加-g参数
 
 ARCH= -gencode arch=compute_30,code=sm_30 \
       -gencode arch=compute_35,code=sm_35 \
       -gencode arch=compute_50,code=[sm_50,compute_50] \
       -gencode arch=compute_52,code=[sm_52,compute_52] \
-      -gencode arch=compute_60,code=[sm_60,compute_60] \
-      -gencode arch=compute_61,code=[sm_61,compute_61]
+      -gencode arch=compute_60,code=[sm_60,compute_60] \ # 个人新增
+      -gencode arch=compute_61,code=[sm_61,compute_61] # 个人新增
 #      -gencode arch=compute_20,code=[sm_20,sm_21] \ This one is deprecated?
 
 # This is what I use, uncomment if you know your arch and want to specify
@@ -46,6 +46,7 @@ ifeq ($(DEBUG), 1)
 OPTS=-O0 -g
 endif
 
+# 下面这段为个人手动增加，目的是增加gcc的-g参数
 ifeq ($(INFO), 1) 
 CFLAGS+= -g
 endif
