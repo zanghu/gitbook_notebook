@@ -20,7 +20,7 @@ layer     filters    size              input                output
     1 conv     64  3 x 3 / 2   608 x 608 x  32   ->   304 x 304 x  64  3.407 BFLOPs
     2 conv     32  1 x 1 / 1   304 x 304 x  64   ->   304 x 304 x  32  0.379 BFLOPs
     3 conv     64  3 x 3 / 1   304 x 304 x  32   ->   304 x 304 x  64  3.407 BFLOPs
-...
+   ...
   105 conv    255  1 x 1 / 1    76 x  76 x 256   ->    76 x  76 x 255  0.754 BFLOPs
   106 yolo
 Loading weights from ../../model_zoo/darknet_models/yolo_v3/yolov3.weights...Done!
