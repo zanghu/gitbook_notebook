@@ -142,3 +142,9 @@ clean:
 $ make
 ```
 
+便以后会生成三个文件：
+
+可执行文件: darknet
+静态库: libdarknet.a
+动态库：libdarknet.so
+
