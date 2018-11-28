@@ -2,5 +2,10 @@
 
 参考资料：[https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)
 
+### 1.所需材料
 
+- 编译好的可执行文件：`darknet`；
+- 网络结构的配置文件：`yolov3.cfg`；
+- 预训练好的模型权值：`yolov3.weights`；
+- 待测试的图片：      `data/dog.jpg`
 
