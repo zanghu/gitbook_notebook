@@ -3,7 +3,7 @@
 参考资料：[https://pjreddie.com/darknet/install/](https://pjreddie.com/darknet/install/)
 
 
-```makefile
+```Makefile
 GPU=1
 CUDNN=1
 OPENCV=1
