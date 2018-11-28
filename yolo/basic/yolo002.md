@@ -9,7 +9,5 @@
 - 预训练好的模型权值：`yolov3.weights`；
 - 待测试的图片：      `data/dog.jpg`
 
-其中唯一需要额外获取的就是预先训练好的模型，下载地址：
-
-[https://pjreddie.com/media/files/yolov3.weights](https://pjreddie.com/media/files/yolov3.weights)
+其中唯一需要额外获取的就是预先训练好的模型，下载地址：[https://pjreddie.com/media/files/yolov3.weights](https://pjreddie.com/media/files/yolov3.weights)
 
