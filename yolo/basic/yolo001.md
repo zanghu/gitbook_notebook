@@ -3,6 +3,22 @@
 参考资料：[https://pjreddie.com/darknet/install/](https://pjreddie.com/darknet/install/)
 
 
+### 1.下载
+
+```shell
+$ git clone https://github.com/pjreddie/darknet
+```
+
+### 2.修改Makefile
+
+进入darknet代码库目录
+
+```shell
+$ cd darknet
+```
+
+darknet默认的编译脚本不使用GPU，为了加入对GPU的支持，将目录下的Makefile文件进行如下修改：
+
 ```Makefile
 GPU=1 # 默认是0
 CUDNN=1 # 默认是0
@@ -118,5 +134,11 @@ clean:
 	rm -rf $(OBJS) $(SLIB) $(ALIB) $(EXEC) $(EXECOBJ) $(OBJDIR)/*
 
 
+```
+
+### 3.编译
+
+```shell
+$ make
 ```
 
