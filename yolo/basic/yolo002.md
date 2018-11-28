@@ -36,3 +36,4 @@ bicycle: 99%
 
 检测后的效果：
 
+![](/assets/predictions.jpg)
