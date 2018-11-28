@@ -144,7 +144,9 @@ $ make
 
 便以后会生成三个文件：
 
-可执行文件: darknet
-静态库: libdarknet.a
-动态库：libdarknet.so
+| 序号 | 名称 | 备注 |
+| :-: | :-: | :-: |
+| 1 | darknet | 可执行文件: |
+| 2 | libdarknet.a | 静态库 |
+| 3 | libdarknet.so | 动态库 |
 
