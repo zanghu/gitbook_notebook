@@ -67,6 +67,7 @@
   * [CV: im2col函数原理](cv/cv005.md)
   * [CV: cv2.putText在图上写字](python/module/cv2/python024.md)
   * [CV: cv2绘制几何形状](python/module/cv2/python025.md)
+  * [OpenCV: 图像容器基本结构](cv/cv008.md)
   * [OpenCV: 图像容器相互转换](cv/cv006.md)
   * [OpenCV: 图像容器像素的遍历与随机访问](cv/cv007.md)
 * [Math](math/README.md)
