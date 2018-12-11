@@ -67,6 +67,7 @@
   * [CV: im2col函数原理](cv/cv005.md)
   * [CV: cv2.putText在图上写字](python/module/cv2/python024.md)
   * [CV: cv2绘制几何形状](python/module/cv2/python025.md)
+  * [CV: OpenCV中的图向容器](cv/cv006.md)
 * [Math](math/README.md)
   * [Statistics](math/statistics/README.md)
     * [Static: N sigma 准则](math/statistics/static001.md)
