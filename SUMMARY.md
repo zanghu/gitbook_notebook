@@ -5,6 +5,7 @@
   * [Yolo V3: 入门](yolo/basic/README.md)
     * [Y3: 下载和编译](yolo/basic/yolo001.md)
     * [Y3: 对单张图片进行检测](yolo/basic/yolo002.md)
+  * [Yolo V3: 源码阅读](yolo/source/README.md)
 * [Python](python/README.md)
   * [Python: 基础知识](python/basic/README.md)
     * [Python: 关于函数定义形参表的形参前面的星号和双星号](python/basic/python001.md)
