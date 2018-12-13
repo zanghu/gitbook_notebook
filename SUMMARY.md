@@ -9,6 +9,7 @@
     * [Y3: 数据配置文件与数据加载](yolo/source/yolo003.md)
     * [Y3: 网络配置文件与网络结构](yolo/source/yolo004.md)
     * [Y3: V3用到的layer介绍](yolo/source/yolo005.md)
+    * [Y3: 图像增强](yolo/source/yolo006.md)
 * [Python](python/README.md)
   * [Python: 基础知识](python/basic/README.md)
     * [Python: 关于函数定义形参表的形参前面的星号和双星号](python/basic/python001.md)
