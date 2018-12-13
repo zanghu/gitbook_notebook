@@ -108,6 +108,8 @@ products/trainval/labels/xxx.txt
 
 ##### 2.2.2.真值信息文件加载
 
+真值信息文件加载过程: src/data.c中的函数`fill_truth_detection()`
+
 ##### 2.3.darknet内存数据格式
 
 内存数据格式是指经过darknet的数据加载模块加载到内存中，准备输入给为网络的第一层的（内存中）数据格式。
