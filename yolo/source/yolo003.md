@@ -118,7 +118,7 @@ products/trainval/labels/xxx.txt
 
 - 数据加载函数调用链
 
-load_data_detection -> load_image_color + jitter + random_distort_image
+load_data_detection -> load_image_color + jitter + random_distort_image + random_flip
 
 (1) load_image_color: 读取样本图片，在opencv模式下使用`cv::imread`读取图片，之后将读取到的数据转换为`darknet`的`image`对象。
 
@@ -128,8 +128,11 @@ load_data_detection -> load_image_color + jitter + random_distort_image
 
 (3) random_distort_image: 将图片表示变换到HSV颜色空间中，,s,v三通道上在添加噪声扰动。
 
-* 最终加载到内存中的`image`对象的特性：
-图片每次加载的图像增强操作是随机的
+(4) random_flip: 50%概率对图片进行水平翻转。
+
+- 最终加载到内存中的`image`对象的特性：
+
+-- 图片每次加载的图像增强操作是随机的
 每张图片轴向是(c, 0, 1)
 其中"c"轴的三个元的顺序是BGR
 像素值是闭区间[0, 1]之间的浮点数（归一化用的是除以255）
