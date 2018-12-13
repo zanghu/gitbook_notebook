@@ -93,6 +93,12 @@ darknet允许类标文件和样本文件不在同一个目录下，但是二者�
 | JPEGImages | labels |
 | raw | labels |
 
+例如：
+
+products/trainval/images/xxx.jpg
+products/trainval/labels/xxx.txt
+
+
 
 #### 2.2.从输入数据文件到
 
