@@ -111,7 +111,8 @@ products/trainval/labels/xxx.txt
 真值信息文件加载过程: `src/data.c`中的函数：
 
 ```c
-void fill_truth_detection(char *path, int num_boxes, float *truth, int classes, int flip, float dx, float dy, float sx, float sy);
+void fill_truth_detection(char *path, int num_boxes, float *truth, int classes, \
+                          int flip, float dx, float dy, float sx, float sy);
 ```
 
 ##### 2.3.darknet内存数据格式
