@@ -116,15 +116,17 @@ products/trainval/labels/xxx.txt
 
 这里只研究·src/detector.c·中的`train_detector()`函数的图片数据加载过程，并且假定用户编译时开启了`OPENCV`编译选项。
 
-load_data_detection
+- 数据加载函数调用链
 
--> load_image_color + jitter + random_distort_image
+load_data_detection -> load_image_color + jitter + random_distort_image
 
 (1) load_image_color: 读取样本图片，在opencv模式下使用`cv::imread`读取图片，之后将读取到的数据转换为`darknet`的`image`对象。
 
 转换过程：*.jpg图片 -> `cv::Mat`对象 -> `cv::IplImage`对象 -> `image`对象
 
-最终得到
+(2) jitter: load_data_detection中的部分代码和`place_image()`函数共同实现了jitter，关于darknet中的jitter操作详情后续会专门论述；
+
+最终得到的内存中的`image`对象的特性：每张图片轴向是(c, 0, 1)，其中"c"轴的三个元的顺序是BGR，像素值是闭区间[0, 1]之间的浮点数（归一化用的是除以255）。
 
 ##### 2.2.2.真值信息文件加载
 
