@@ -102,14 +102,13 @@ products/trainval/images/xxx.jpg
 products/trainval/labels/xxx.txt
 ```
 
+##### 2.2.darknet数据加载模块
 
-#### 2.2.从输入数据文件到
+##### 2.2.1.图片数据加载
 
-##### 2.2.1.darknet数据加载模块
+##### 2.2.2.真值信息文件加载
 
-
-
-##### 2.2.2.darknet内存数据格式
+##### 2.3.darknet内存数据格式
 
 内存数据格式是指经过darknet的数据加载模块加载到内存中，准备输入给为网络的第一层的（内存中）数据格式。
 
