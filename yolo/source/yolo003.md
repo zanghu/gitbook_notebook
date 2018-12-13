@@ -126,7 +126,7 @@ load_data_detection -> load_image_color + jitter + random_distort_image + random
 
 (2) jitter: load_data_detection中的部分代码和`place_image()`函数共同实现了jitter，关于darknet中的jitter操作详情后续会专门论述；
 
-(3) random_distort_image: 将图片表示变换到HSV颜色空间中，,s,v三通道上在添加噪声扰动。
+(3) random_distort_image: 将图片表示变换到HSV颜色空间中，,s,v三通道上在添加噪声扰动；
 
 (4) random_flip: 50%概率对图片进行水平翻转。
 
