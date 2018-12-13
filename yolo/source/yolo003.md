@@ -104,7 +104,11 @@ products/trainval/labels/xxx.txt
 
 ##### 2.2.darknet数据加载模块
 
+`darknet`的数据加载模块有多个数据加载函数（`src/data.c`中的`load_thread()函数`），根据任务所需的数据类型（定义在`darknet.h`中的枚举类型`data_type`）来确定采用哪个函数加载数据。
+
 ##### 2.2.1.图片数据加载
+
+`darknet`图片数据加载
 
 ##### 2.2.2.真值信息文件加载
 
