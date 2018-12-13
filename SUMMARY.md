@@ -6,7 +6,7 @@
     * [Y3: 下载和编译](yolo/basic/yolo001.md)
     * [Y3: 对单张图片进行检测](yolo/basic/yolo002.md)
   * [Yolo V3: 源码阅读](yolo/source/README.md)
-    * [Y3: 数据配置文件与数据加载](yolo/source/yolo003.md)
+    * [Y3: 数据配置文件与数据格式](yolo/source/yolo003.md)
     * [Y3: 网络配置文件与网络结构](yolo/source/yolo004.md)
     * [Y3: v3用到的layer介绍](yolo/source/yolo005.md)
     * [Y3: 图像增强](yolo/source/yolo006.md)
