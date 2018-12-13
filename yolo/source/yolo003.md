@@ -110,7 +110,7 @@ products/trainval/labels/xxx.txt
 
 ##### 2.2.1.图片数据加载
 
-`darknet`图片数据加载
+图片数据加载
 
 ##### 2.2.2.真值信息文件加载
 
