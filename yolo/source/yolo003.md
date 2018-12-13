@@ -1,4 +1,4 @@
-## Yolo v3: 源码分析——配置文件
+## Yolo v3: 源码分析——数据配置文件与数据加载
 
 参考资料：[https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)
 
