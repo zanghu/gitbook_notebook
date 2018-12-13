@@ -120,6 +120,12 @@ load_data_detection
 
 -> load_image_color + jitter + random_distort_image
 
+(1) load_image_color: 读取样本图片，在opencv模式下使用`cv::imread`读取图片，之后将读取到的数据转换为`darknet`的`image`对象。
+
+转换过程：*.jpg图片 -> `cv::Mat`对象 -> `cv::IplImage`对象 -> `image`对象
+
+最终得到
+
 ##### 2.2.2.真值信息文件加载
 
 真值信息文件加载过程: `src/data.c`中的函数：
