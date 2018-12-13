@@ -108,7 +108,7 @@ products/trainval/labels/xxx.txt
 
 ##### 2.2.2.真值信息文件加载
 
-真值信息文件加载过程: src/data.c中的函数：
+真值信息文件加载过程: `src/data.c`中的函数：
 
 ```c
 void fill_truth_detection(char *path, int num_boxes, float *truth, int classes, int flip, float dx, float dy, float sx, float sy);
