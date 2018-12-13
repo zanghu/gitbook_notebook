@@ -115,6 +115,12 @@ void fill_truth_detection(char *path, int num_boxes, float *truth, int classes, 
                           int flip, float dx, float dy, float sx, float sy);
 ```
 
+加载真值信息时的处理主要包含几个：
+
+（1）对每个样本的bbox随机乱序；
+（2）你找加载对应样本时的随机样本增强操作，对bbox信息进行必要的变换；
+（3）按照网络配置文件中的配置，限制每个样本的bbox个数
+
 ##### 2.3.darknet内存数据格式
 
 内存数据格式是指经过darknet的数据加载模块加载到内存中，准备输入给为网络的第一层的（内存中）数据格式。
