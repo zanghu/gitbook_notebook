@@ -126,6 +126,8 @@ load_data_detection -> load_image_color + jitter + random_distort_image
 
 (2) jitter: load_data_detection中的部分代码和`place_image()`函数共同实现了jitter，关于darknet中的jitter操作详情后续会专门论述；
 
+(3) random_distort_image: 将图片表示变换到HSV颜色空间中，,s,v三通道上在添加噪声扰动。
+
 最终得到的内存中的`image`对象的特性：每张图片轴向是(c, 0, 1)，其中"c"轴的三个元的顺序是BGR，像素值是闭区间[0, 1]之间的浮点数（归一化用的是除以255）。
 
 ##### 2.2.2.真值信息文件加载
