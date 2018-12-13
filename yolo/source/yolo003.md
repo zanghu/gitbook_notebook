@@ -116,7 +116,9 @@ products/trainval/labels/xxx.txt
 
 这里只研究·src/detector.c·中的`train_detector()`函数的图片数据加载过程，并且假定用户编译时开启了`OPENCV`编译选项。
 
+load_data_detection
 
+-> load_image_color + jitter + random_distort_image
 
 ##### 2.2.2.真值信息文件加载
 
