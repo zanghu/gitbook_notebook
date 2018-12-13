@@ -87,7 +87,7 @@ products/trainval/xxx.txt
 
 darknet允许类标文件和样本文件不在同一个目录下，但是二者所在目录字符串相差只能是以下的对应关系：
 
-| 图片目录中的词 | 类标目录中的词 |
+| 图片目录中的被替换词 | 类标目录中的替换词 |
 | :---: | --- |
 | images | labels |
 | JPEGImages | labels |
