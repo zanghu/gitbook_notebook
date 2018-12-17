@@ -1,8 +1,8 @@
 ## Yolo v3: 源码分析——数据配置文件与数据格式
 
-参考资料：[https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)
+参考资料（YOLO官网）：[https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)
 
-参考资料: [https://github.com/yuantailing/ctw-baseline/blob/master/tutorial/3-detection.ipynb](https://github.com/yuantailing/ctw-baseline/blob/master/tutorial/3-detection.ipynb)
+参考资料（ctw-baseline）: [https://github.com/yuantailing/ctw-baseline/blob/master/tutorial/3-detection.ipynb](https://github.com/yuantailing/ctw-baseline/blob/master/tutorial/3-detection.ipynb)
 
 ### 1.两个配置文件
 
@@ -99,7 +99,7 @@ products/test/3045448_2_1_1.jpg
 
 ```
 
-**注意**：`ctw-baseline`中的每个样本图片都是从`ctw`样本集原始图中按照一定的方式（类似卷积过程的水平+垂直扫描）“抠”出来的、经过筛选（是否包含有效bbox）的裁剪图，所以`trainval.txt`和`test.txt`中的训练样本数远高于`ctw`数据集对应子集的样本数。
+**注意**：`ctw-baseline`中的每个样本图片都是从`ctw`样本集原始图中按照一定的方式（类似卷积过程的有交叠的水平+垂直扫描）“抠”出来的、经过筛选（是否包含有效bbox）的裁剪图，所以`trainval.txt`和`test.txt`中的训练样本数远高于`ctw`数据集对应子集的样本数。
 
 ### 2.数据加载模块和数据格式
 
