@@ -33,7 +33,7 @@ train = products/trainval.txt # 训练集样本图片路径信息文件
 valid = products/test.txt # 验证集样本图片路径信息文件
 ```
 
-- `chinese.names`文件内容示例
+- `chinese.names`文件内容示例（共1002行，包含1001个类标）
 
 ```
 0
@@ -53,7 +53,7 @@ valid = products/test.txt # 验证集样本图片路径信息文件
 
 ```
 
-- `trainval.txt`文件内容示例
+- `trainval.txt`文件内容示例（共2407025行，包含2407024个样本）
 
 ```
 products/trainval/0000172_6_0.jpg
