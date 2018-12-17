@@ -65,15 +65,13 @@ activation=leaky
 
 经过人工统计，`cfg/yolov3.cfg`包含各类型层如下:
 
-yolo: 3
-
-convolutional: 75
-
-route: 4
-
-upsample: 2
-
-shortcut: 23
+| 类型 | 出现次数 |
+| :-: | :-: |
+| yolo | 3 |
+| convolutional | 75 |
+| route | 4 |
+| upsample | 2 |
+| shortcut | 23 |
 
 合计: 107
 
