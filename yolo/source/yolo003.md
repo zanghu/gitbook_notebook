@@ -12,13 +12,26 @@ YOLO（v2、v3）使用两种类型的配置文件：
 
 #### 1.1.数据配置文件
 
-数据配置文件有以下特点：
+##### 1.1.1.数据配置文件的特点
 
 * 数据配置文件内容相对较少。
 
 * 数据配置文件推荐以`.data`作为数据配置文件的后缀名，例如：YOLOv3的训练配置文件`voc.data`和ctw-baseline的`chinese.data`。
 
 * 数据配置文件不包含以下内容：（1）预处理、样本增强、batch大小相关的信息；（2）不直接包含样本真值信息的路径（darknet默认样本图片路径与对应的真值信息文件的路径存在映射规则，训练时根据该规则有样本图片路径推断真值信息文件路径）；（3）不包含样本尺寸相关的信息（darknet的样本图片加载模块可以直接）
+
+##### 1.1.2.数据配置文件示例
+
+以ctw-baseline的数据配置文件为例。
+
+```
+backup = products/backup
+classes = 1001
+names = products/chinese.names
+results = products/results
+train = products/trainval.txt
+valid = products/test.txt
+```
 
 ### 2.数据加载模块和数据格式
 
