@@ -46,7 +46,9 @@ valid = products/test.txt # 验证集样本图片路径信息文件
 7
 8
 9
-... # 省略部分内容
+.
+. # 省略部分内容
+.
 1000
 
 ```
@@ -63,7 +65,9 @@ products/trainval/0000174_6_0.jpg
 products/trainval/0000174_6_1.jpg
 products/trainval/0000174_6_2.jpg
 products/trainval/0000174_6_3.jpg
-... # 省略部分内容
+.
+. # 省略部分内容
+.
 products/trainval/3045638_4_11.jpg
 
 ```
