@@ -26,7 +26,7 @@ YOLO（v2、v3）使用两种类型的配置文件：
 
 ```
 backup = products/backup # 训练期间模型参数备份路径
-classes = 1001 # 类标总数, ctw-baseline只训练识别训练集中出现频率最高的前1000个汉字，其余全部归入额外一类
+classes = 1001 # 类标总数, ctw-baseline只训练识别训练集中出现频率最高的前1000个汉字，其余全部归入额外一类. 训练阶段无用
 names = products/chinese.names # 类标数字索引
 results = products/results # 检测结果保存路径? 训练阶段无用
 train = products/trainval.txt # 训练集样本图片路径信息文件
