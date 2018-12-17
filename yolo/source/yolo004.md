@@ -22,9 +22,59 @@ YOLO（v2、v3）使用两种类型的配置文件：
 
 * 配置文件中第一个“段落”必须是[net]或者[network]，用来对网络的整体配置项和优化算法进行描述。之后的每段是网络中一个层的配置项描述。述；
 
-##### 1.1.2.网络配置文件解析机制
+##### 1.1.2.网络配置文件示例
+
+```
+[net]
+# Testing
+# batch=1
+# subdivisions=1
+# Training
+batch=64
+subdivisions=16
+width=608
+height=608
+channels=3
+momentum=0.9
+decay=0.0005
+angle=0
+saturation = 1.5
+exposure = 1.5
+hue=.1
+
+learning_rate=0.001
+burn_in=1000
+max_batches = 500200
+policy=steps
+steps=400000,450000
+scales=.1,.1
+
+# 包含各类型层个数:
+# yolo: 3
+# convolutional: 75
+# route: 4
+# upsample: 2
+# shortcut: 23
+# 合计: 107
+
+# 001
+[convolutional]
+batch_normalize=1
+filters=32
+size=3
+stride=1
+pad=1
+activation=leaky
+
+# 省略后面的内容
+...
+```
+
+##### 1.1.3.网络配置文件解析机制
 
 `darknet`将网络配置文件解析为一个"sections -- lines"结构的“二级嵌套链表”。
 
 所谓“二级嵌套链表”，即配置文件解析后在内存中是一个链表对象，链表的每个元素是配置文件的一个段落，该元素本身又是一个链表对象（称为段落链表）。每个段落链表的元素是该段落的一个配置项。
+
+
 
