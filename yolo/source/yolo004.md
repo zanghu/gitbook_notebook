@@ -86,7 +86,7 @@ activation=leaky
 
 ```c
 /**
- * @brief 链表结构体
+ * @brief 双向链表结构体
  */
 typedef struct list{
     int size;
