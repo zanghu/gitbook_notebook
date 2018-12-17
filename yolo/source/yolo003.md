@@ -35,7 +35,11 @@ train = products/trainval.txt # 训练集样本图片路径信息文件
 valid = products/test.txt # 验证集样本图片路径信息文件. 训练阶段无用
 ```
 
-**注意**: 训练阶段`train_detector()`函数实际上只用到了数据配置文件中的`backup`和`train`两个配置项。其余配置项应该是用于其他阶段（例如测试）。
+**注意**: 
+
+（1）`darknet`的训练阶段`train_detector()`函数实际上只用到了数据配置文件中的`backup`和`train`两个配置项。其余配置项应该是用于其他阶段（例如测试）；
+
+（2）`darknet`的训练过程中并未发现使用任何早停条件（early stopping），只是在训练主循环的每轮循环后会显示当前模型的loss值，训练结束条件是训练主循环达到预定次数。
 
 - `chinese.names`文件内容示例（共1002行，包含1001个类标）
 
