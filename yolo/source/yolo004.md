@@ -129,6 +129,8 @@ int used;
 
 #### 2.3.解析细节
 
+注意事项：
+
  1.文件中每个以[xxx]开始到下一个[yyy]之前的部分看作一个section, 返回值是一个section组成的list
  2.每个section中的一行是一个option, section的全部option组成一个list作为section的options属性
  3.解析config时会自动去掉空行和注释行, 每行中会自动滤掉空格、'\n'和'\t'
