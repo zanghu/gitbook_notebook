@@ -72,6 +72,25 @@ products/trainval/3045638_4_11.jpg
 
 ```
 
+- `test.txt`文件内容示例（共2407025行，包含2407024个样本）
+
+```
+products/test/0000238_0_0_0.jpg
+products/test/0000238_0_0_1.jpg
+products/test/0000238_0_0_2.jpg
+products/test/0000238_0_0_3.jpg
+products/test/0000238_0_0_4.jpg
+products/test/0000238_0_0_5.jpg
+products/test/0000238_0_0_6.jpg
+products/test/0000238_0_0_7.jpg
+products/test/0000238_0_1_0.jpg
+.
+. # 省略部分内容
+.
+products/test/3045448_2_1_1.jpg
+
+```
+
 ### 2.数据加载模块和数据格式
 
 机器学习模型的训练数据一般都要经过各种加工处理之后，才能制作成符合模型要求的输入数据格式。对于图片数据，各种预处理（缩放、像素值归一化等）和样本增强（平移、翻转、裁剪等等）也是必不可少的。
