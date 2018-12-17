@@ -85,23 +85,37 @@ activation=leaky
 `darknet`中与网络配置文件解析相关的结构共有四种：list, node, section, kvp
 
 ```c
+/**
+ * @brief 链表结构体
+ */
 typedef struct list{
     int size;
     node *front;
     node *back;
 } list;
 
+/**
+ * @brief 链表节点
+ */
 typedef struct node{
     void *val;
     struct node *next;
     struct node *prev;
 } node;
 
+/**
+ * @brief 第一级链表节点中val所指对象的类型
+ *        其内部又“嵌套”了一个链表对象options，指向当前段的各配置项组成的链表
+ */
 typedef struct{
     char *type;
     list *options;
-}section;
+} section;
 
+
+/**
+ * @brief
+ */
 typedef struct{
 char *key;
 char *val;
