@@ -129,6 +129,14 @@ int used;
 
 #### 2.3.解析细节
 
+   detector.c: train_detector()
+
+-> network.c: load_network()
+
+-> parser.c: parse_network_cfg() -> read_cfg()
+
+
+
 注意事项：
 
  1.文件中每个以[xxx]开始到下一个[yyy]之前的部分看作一个section, 返回值是一个section组成的list
