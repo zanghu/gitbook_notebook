@@ -33,7 +33,7 @@ train = products/trainval.txt # 训练集样本图片路径信息文件
 valid = products/test.txt # 验证集样本图片路径信息文件
 ```
 
-- `chinese.names`文件部分内容
+- `chinese.names`文件内容示例
 
 ```
 0
@@ -50,6 +50,8 @@ valid = products/test.txt # 验证集样本图片路径信息文件
 1000
 
 ```
+
+- `trainval.txt`文件内容示例
 
 ### 2.数据加载模块和数据格式
 
