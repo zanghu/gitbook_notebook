@@ -22,7 +22,7 @@ YOLO（v2、v3）使用两种类型的配置文件：
 
 ##### 1.1.2.数据配置文件示例
 
-以下是`ctw-baseline`的数据配置文件：
+- 以下是`ctw-baseline`的数据配置文件：
 
 ```
 backup = products/backup # 训练期间模型参数备份路径
@@ -31,6 +31,24 @@ names = products/chinese.names # 类标数字索引
 results = products/results # 检测结果保存路径？
 train = products/trainval.txt # 训练集样本图片路径信息文件
 valid = products/test.txt # 验证集样本图片路径信息文件
+```
+
+- `chinese.names`文件部分内容
+
+```
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+...
+1000
+
 ```
 
 ### 2.数据加载模块和数据格式
