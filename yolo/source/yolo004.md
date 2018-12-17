@@ -24,7 +24,7 @@ YOLO（v2、v3）使用两种类型的配置文件：
 
 ##### 1.1.2.网络配置文件示例
 
-下面给出的是`config/yolov3.cfg`配置文件的部分内容，其中加入了部分注释。
+下面给出的是`cfg/yolov3.cfg`配置文件的部分内容，其中加入了部分注释。
 
 ```
 [net]
@@ -51,15 +51,6 @@ policy=steps
 steps=400000,450000
 scales=.1,.1
 
-# 包含各类型层个数:
-# yolo: 3
-# convolutional: 75
-# route: 4
-# upsample: 2
-# shortcut: 23
-# 合计: 107
-
-# 001
 [convolutional]
 batch_normalize=1
 filters=32
@@ -71,6 +62,22 @@ activation=leaky
 # 省略后面的内容
 ...
 ```
+
+经过人工统计，`cfg/yolov3.cfg`包含各类型层如下:
+
+yolo: 3
+
+convolutional: 75
+
+route: 4
+
+upsample: 2
+
+shortcut: 23
+
+合计: 107
+
+
 
 ##### 1.1.3.网络配置文件解析机制
 
