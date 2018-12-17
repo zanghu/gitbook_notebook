@@ -69,10 +69,7 @@ activation=leaky
 | upsample | 2 |
 | shortcut | 23 |
 
-合计: 107
-
-
-
+合计: 1
 ##### 3.网络配置文件解析机制
 
 `darknet`将网络配置文件解析为一个"sections -- lines"结构的“二级嵌套链表”。
