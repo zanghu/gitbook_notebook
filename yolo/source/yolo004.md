@@ -80,6 +80,34 @@ activation=leaky
 所谓“二级嵌套链表”，即配置文件解析后在内存中是一个链表对象，链表的每个元素是配置文件的一个段落，该元素本身又是一个链表对象（称为段落链表）。每个段落链表的元素是该段落的一个配置项（使用key-value方式表示）。
 
 
+#### 2.2.相关结构
+
+`darknet`中与网络配置文件解析相关的结构共有四种：list, node, section, kvp
+
+```c
+typedef struct list{
+    int size;
+    node *front;
+    node *back;
+} list;
+
+typedef struct node{
+    void *val;
+    struct node *next;
+    struct node *prev;
+} node;
+
+typedef struct{
+    char *type;
+    list *options;
+}section;
+
+typedef struct{
+char *key;
+char *val;
+int used;
+} kvp;
+```
 
 
 
