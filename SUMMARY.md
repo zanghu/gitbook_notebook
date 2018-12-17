@@ -8,7 +8,7 @@
   * [Yolo V3: 源码阅读](yolo/source/README.md)
     * [Y3: 数据配置文件与数据加载](yolo/source/yolo003.md)
     * [Y3: ctw-baseline的训练数据生成](yolo/source/yolo008.md)
-    * [Y3: 网络配置文件与网络结构](yolo/source/yolo004.md)
+    * [Y3: 网络配置文件的结构与解析](yolo/source/yolo004.md)
     * [Y3: v3用到的layer介绍](yolo/source/yolo005.md)
     * [Y3: 图像增强——jitter](yolo/source/yolo006.md)
     * [Y3: 数据加载中的并发策略](yolo/source/yolo007.md)

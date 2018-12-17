@@ -1,4 +1,4 @@
-## Yolo v3: 使用训练好的模型对单张图片进行检测
+## Yolo v3: 网络配置文件的结构与解析机制
 
 参考资料（YOLO官网）：[https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)
 
