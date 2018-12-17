@@ -129,7 +129,7 @@ int used;
 
 #### 2.3.解析细节
 
-   detector.c: train_detector()
+    detector.c: train_detector()
 
 -> network.c: load_network()
 
