@@ -2,6 +2,8 @@
 
 参考资料：[https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)
 
+参考资料: [https://github.com/yuantailing/ctw-baseline/blob/master/tutorial/3-detection.ipynb](https://github.com/yuantailing/ctw-baseline/blob/master/tutorial/3-detection.ipynb)
+
 ### 1.两个配置文件
 
 YOLO（v2、v3）使用两种类型的配置文件：
