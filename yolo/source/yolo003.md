@@ -33,6 +33,8 @@ train = products/trainval.txt # 训练集样本图片路径信息文件
 valid = products/test.txt # 验证集样本图片路径信息文件. 训练阶段无用
 ```
 
+**注意**: 训练阶段`train_detector()`函数实际上只用到了数据配置文件中的`backup`和`train`两个配置项。
+
 - `chinese.names`文件内容示例（共1002行，包含1001个类标）
 
 ```
