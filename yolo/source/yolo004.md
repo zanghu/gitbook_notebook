@@ -104,8 +104,8 @@ typedef struct node{
 } node;
 
 /**
- * @brief 第一级链表节点中val所指对象的类型
- *        其内部又“嵌套”了一个链表对象options，指向当前段的各配置项组成的链表
+ * @brief 第一级链表节点node.val所指对象的类型
+ *        其内部又“嵌套”了一个第二级链表对象options，指向当前段的各配置项组成的链表
  */
 typedef struct{
     char *type;
@@ -114,7 +114,8 @@ typedef struct{
 
 
 /**
- * @brief
+ * @brief 第二级链表的节点node.val所指对象的类型
+ *        key是配置文件一行中等号前面的部分, val是等号后面的部分
  */
 typedef struct{
 char *key;
