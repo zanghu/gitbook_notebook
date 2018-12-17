@@ -22,10 +22,10 @@
 
 4.池化对于做动态routing也很差。我们需要route进入神经网络的输入的每一部分，好知道如何处理它。找到最好的 routing 相当于为图像做parsing。
 
-### 2.汇集层——route
+### 2.汇集拼接层——route
 
 
-### 3.捷径层——shortcut
+### 3.跨越传输层——shortcut
 
 
 ### 4.上/下采样层——upsample
