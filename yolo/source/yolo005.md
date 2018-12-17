@@ -2,16 +2,16 @@
 
 参考资料：[https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)
 
-### 1.convolutional
+### 1.卷积层——convolutional
 
 
-### 2.route
+### 2.汇集层——route
 
 
-### 3.shortcut
+### 3.捷径层——shortcut
 
 
-### 4.upsample
+### 4.上/下采样层——upsample
 
 
 ### 5.yolo
