@@ -2,6 +2,8 @@
 
 参考资料（YOLO官网）：[https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)
 
+参考资料（CTW官网）：[https://ctwdataset.github.io/](https://ctwdataset.github.io/)
+
 参考资料（ctw-baseline）: [https://github.com/yuantailing/ctw-baseline/blob/master/tutorial/3-detection.ipynb](https://github.com/yuantailing/ctw-baseline/blob/master/tutorial/3-detection.ipynb)
 
 ### 1.两个配置文件
