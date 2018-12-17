@@ -129,6 +129,8 @@ int used;
 
 #### 2.3.解析细节
 
+解析网络配置文件的函数调用链：
+
 &nbsp&nbspdetector.c: train_detector()
 
 -> network.c: load_network()
