@@ -53,6 +53,21 @@ valid = products/test.txt # 验证集样本图片路径信息文件
 
 - `trainval.txt`文件内容示例
 
+```
+products/trainval/0000172_6_0.jpg
+products/trainval/0000172_6_1.jpg
+products/trainval/0000172_6_2.jpg
+products/trainval/0000172_6_13.jpg
+products/trainval/0000172_7_0.jpg
+products/trainval/0000174_6_0.jpg
+products/trainval/0000174_6_1.jpg
+products/trainval/0000174_6_2.jpg
+products/trainval/0000174_6_3.jpg
+... # 省略部分内容
+products/trainval/3045638_4_11.jpg
+
+```
+
 ### 2.数据加载模块和数据格式
 
 机器学习模型的训练数据一般都要经过各种加工处理之后，才能制作成符合模型要求的输入数据格式。对于图片数据，各种预处理（缩放、像素值归一化等）和样本增强（平移、翻转、裁剪等等）也是必不可少的。
