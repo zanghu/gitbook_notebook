@@ -1,4 +1,4 @@
-## Yolo v3: 使用训练好的模型对单张图片进行检测
+## Yolo v3: ctw-baseline训练数据和测试数据生成
 
 参考资料（CTW官网）：[https://ctwdataset.github.io/](https://ctwdataset.github.io/)
 
