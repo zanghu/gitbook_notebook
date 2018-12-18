@@ -162,6 +162,7 @@
     * [C: 修改core文件相关配置](linux/config/lin027.md)
   * [C: 代码实例](c/example/README.md)
     * [C: 类Unix系统下获取IP、MAC和掩码](c/example/c001.md)
+    * [C: DNS域名解析](c/example/c028.md)
     * [C: 用dlopen调用动态库的设计实践](c/example/c004.md)
     * [C: 返回值是函数指针的函数的正确写法](c/example/c021.md)
     * [C: strerror获取errno语义信息的便捷方法](c/example/c024.md)
