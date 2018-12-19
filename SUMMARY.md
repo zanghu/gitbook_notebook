@@ -143,6 +143,7 @@
   * [C: 网络编程](c/net/README.md)
     * [C: connect、send和recv超时](c/net/c025.md)
     * [C: epoll用法基础](c/net/c026.md)
+    * [C: curl进行HTTP通讯](c/net/c031.md)
   * [C: 编译链接](c/lib_compile_link/README.md)
     * [C: 常用GCC参数汇总](c/lib_compile_link/c011.md)
     * [C: 动态库的源与流](c/lib_compile_link/c006.md)
