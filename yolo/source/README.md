@@ -1,4 +1,4 @@
-# gitbook\_notebook
+# YOLO: 源码阅读
 
-Anything about ML/PR/CV/NLP etc.Use Gitbook as recording tools.
+阅读YOLO作者开源的darknet源码，分析其结构
 
