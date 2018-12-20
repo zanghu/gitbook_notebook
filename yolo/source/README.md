@@ -2,3 +2,6 @@
 
 阅读YOLO作者开源的darknet源码，分析理解。
 
+
+参考资料（YOLO官网）：[https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)
+
