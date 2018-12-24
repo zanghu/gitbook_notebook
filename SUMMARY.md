@@ -140,6 +140,7 @@
     * [C: 多关键字修饰的类型声明](c/basic/c013.md)
     * [C: 线程安全与可重入函数汇总](c/basic/c026.md)
     * [C: 编写信号处理函数的注意事项](c/basic/c020.md)
+    * [C: 进程间通讯——共享内存](c/basic/c032.md)
   * [C: 网络编程](c/net/README.md)
     * [C: connect、send和recv超时](c/net/c025.md)
     * [C: epoll用法基础](c/net/c026.md)
