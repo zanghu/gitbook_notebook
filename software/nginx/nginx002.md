@@ -19,6 +19,10 @@ $ tar -zxvf pcre-8.40.tar.gz
 $ tar -zxvf zlib-1.2.11.tar.gz
 ```
 
+* 自定义模块源码放置在`~/code_box/nginx_code/test_helloword`目录下，包括以下两个文件
+ngx_http_mytest_module.c
+config
+
 ### 2.安装
 
 * 配置
