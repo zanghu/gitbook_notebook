@@ -57,7 +57,7 @@ $ make install
 
 进入安装目录
 ```shell
-$ cd /home/air/ProgramFiles/nginx/test_basic
+$ cd /home/zanghu/ProgramFiles/nginx/test_basic
 ```
 
 启动nginx服务
