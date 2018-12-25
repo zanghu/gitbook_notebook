@@ -65,6 +65,6 @@ $ ./nginx -s quit
 > nginx默认监听80端口，但是有时会由于权限问题导致启动失败. 解决方法: 将conf/nginx.conf中的监听端口由80改为8008，保存退出
 
 # 4.验证
-启动nginx服务后，在其他机器上打开浏览器，输入: http://nginx服务所在机器ip:8008
+启动nginx服务后，在其他机器上打开浏览器，输入: http://nginx服务所在机器ip:8008，显示如下页面：
 
 ![](/assets/nginx001.PNG)
