@@ -19,7 +19,7 @@ $ tar -zxvf pcre-8.40.tar.gz
 $ tar -zxvf zlib-1.2.11.tar.gz
 ```
 
-# 2.安装
+### 2.安装
 
 * 配置
 ```shell
@@ -37,14 +37,15 @@ $ make install
 ```
 
 注意：
-> --prefix的值中不能包含相对路径或~, 否则安装或运行时会出错
+> ./config的--prefix的值中不能包含相对路径或~, 否则安装或运行时会出错
 
 
-# 3.运行
+### 3.运行
 
-cd /home/air/ProgramFiles/nginx/test_basic
-
-nginx默认监听80端口，但是有时会由于权限问题导致启动失败. 解决方法: 将conf/nginx.conf中的监听端口由80改为8008，保存退出
+进入安装目录
+```shell
+$ cd /home/air/ProgramFiles/nginx/test_basic
+```
 
 # 启动nginx服务
 ./nginx
@@ -54,6 +55,11 @@ nginx默认监听80端口，但是有时会由于权限问题导致启动失败.
 
 # 优雅的关闭nginx服务
 ./nginx -s quit
+
+注意：
+> nginx默认监听80端口，但是有时会由于权限问题导致启动失败. 解决方法: 将conf/nginx.conf中的监听端口由80改为8008，保存退出
+
+
 
 # 4.验证
 启动nginx服务后，在其他机器上打开浏览器，输入: http://nginx服务所在机器ip:8008
