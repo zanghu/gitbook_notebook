@@ -4,7 +4,7 @@
 
 ### 1.准备
 
-* 安装包, 全部放置在`~/soft_setup`目录下
+* nginx安装包及其依赖库的安装包, 全部放置在`~/soft_setup`目录下
 nginx-1.14.2.tar.gz
 openssl-1.1.0h.tar.gz
 pcre-8.40.tar.gz
@@ -66,3 +66,5 @@ $ ./nginx -s quit
 
 # 4.验证
 启动nginx服务后，在其他机器上打开浏览器，输入: http://nginx服务所在机器ip:8008
+
+![](/assets/nginx001.PNG)
