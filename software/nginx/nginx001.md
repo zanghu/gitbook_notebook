@@ -21,7 +21,7 @@ $ tar -zxvf zlib-1.2.11.tar.gz
 
 # 2.安装
 
-注意：--prefix的值中不能包含相对路径或~, 否则安装或运行时会出错
+* 配置
 ```shell
 $ cd nginx-1.14.2/
 $ ./configure --prefix=/home/air/ProgramFiles/nginx/test_basic \
@@ -29,6 +29,15 @@ $ ./configure --prefix=/home/air/ProgramFiles/nginx/test_basic \
               --with-pcre=~/soft_setup/pcre-8.40 \
               --with-zlib=~/soft_setup/zlib-1.2.11
 ```
+
+* 编译安装
+```shell
+$ make -j4
+$ make install
+```
+
+注意：--prefix的值中不能包含相对路径或~, 否则安装或运行时会出错
+
 
 # 3.运行
 
