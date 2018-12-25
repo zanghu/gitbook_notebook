@@ -95,11 +95,11 @@ $ ./nginx
 
   启动nginx服务后，在其他机器上打开浏览器，输入: http://nginx服务所在机器ip:8008，显示如下页面：
   
-![](/assets/nginx001_1.PNG)
+![](/assets/nginx001_001.PNG)
 
 * **自定义模块服务**
 
   浏览器输入: http://nginx服务所在机器ip:8008/test，显示如下页面：
   
-![](/assets/nginx002_2.PNG)
+![](/assets/nginx002_002.PNG)
 
