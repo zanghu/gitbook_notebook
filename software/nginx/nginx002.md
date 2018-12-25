@@ -61,6 +61,8 @@ $ cd /home/zanghu/ProgramFiles/nginx/test_helloworld
 ```
 
 * 修改配置文件
+# (1)nginx默认监听80端口，但是有时会由于权限问题导致启动失败. 解决方法: 将配置文件conf/nginx.conf中的监听端口由80改为8008，保存退出
+# (2)在配置文件conf/nginx.conf的http->server下增加一个location段，内容如下：
 ```shell
 http {
     include       mime.types;
