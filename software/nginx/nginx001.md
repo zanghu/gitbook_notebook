@@ -1,6 +1,6 @@
 ## Nginx: 最简单的例子——不加入任何自定义模块的情况下编译Nginx
 
-参考资料: [https://linkerd.io/](https://linkerd.io/)
+参考资料: 《Nginx模块开发与架构解析》, 陶辉
 
 ### 1.准备
 
