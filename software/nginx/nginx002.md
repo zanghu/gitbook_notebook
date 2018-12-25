@@ -55,10 +55,12 @@ $ make install
 
 ### 3.运行
 
-进入安装目录
+* 进入安装目录
 ```shell
-$ cd /home/zanghu/ProgramFiles/nginx/test_basic
+$ cd /home/zanghu/ProgramFiles/nginx/test_helloworld
 ```
+
+* 修改配置文件
 
 启动nginx服务
 ```shell
