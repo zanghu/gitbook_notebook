@@ -24,7 +24,7 @@ $ tar -zxvf zlib-1.2.11.tar.gz
 * 配置
 ```shell
 $ cd nginx-1.14.2/
-$ ./configure --prefix=/home/air/ProgramFiles/nginx/test_basic \
+$ ./configure --prefix=/home/zanghu/ProgramFiles/nginx/test_basic \
               --with-openssl=~/soft_setup/openssl-1.1.0h \
               --with-pcre=~/soft_setup/pcre-8.40 \
               --with-zlib=~/soft_setup/zlib-1.2.11
