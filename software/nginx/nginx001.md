@@ -1,36 +1,50 @@
-## Linkerd官网宣称六大特性分析
+## Nginx: 最简单的例子——不加入任何自定义模块的情况下编译Nginx
 
 参考资料: [https://linkerd.io/](https://linkerd.io/)
 
-### 1.linkerd六大特性
-* FAST, SCALABLE, AND PERFORMANT——快速、可伸缩和高性能
-  
-* RUNTIME TRAFFIC ROUTING——运行时流量路由选择
+### 1.准备
 
-* ANY LANGUAGE, ANY ENVIRONMENT——任意语言、任意环境
+* 安装包, 全部放置在`~/soft_setup`目录下
+nginx-1.14.2.tar.gz
+openssl-1.1.0h.tar.gz
+pcre-8.40.tar.gz
+zlib-1.2.11.tar.gz
 
-* DROP-IN SERVICE DISCOVERY——附带（顺便）式服务发现
+* 将安装包依次解压
+```shell
+$ cd ~/soft_setup/
+$ tar -zxvf nginx-1.14.2.tar.gz
+$ tar -zxvf openssl-1.1.0h.tar.gz
+$ tar -zxvf pcre-8.40.tar.gz
+$ tar -zxvf zlib-1.2.11.tar.gz
+```
 
-* LATENCY-AWARE LOAD-BALANCING——延迟感知 + 负载均衡
+# 2.安装
 
-* PRODUCTION-TESTED AND PROVEN AT SCALE——已经过生产环境规模的测试和验证
+注意：--prefix的值中不能包含相对路径或~, 否则安装或运行时会出错
+```shell
+$ cd nginx-1.14.2/
+$ ./configure --prefix=/home/air/ProgramFiles/nginx/test_basic --with-openssl=~/soft_setup/openssl-1.1.0h --with-pcre=~/soft_setup/pcre-8.40 --with-zlib=~/soft_setup/zlib-1.2.11
+```
 
-上述六个特性的官网描述如下图所示：
+# 3.运行
 
-![](/assets/linkerd004_001.PNG)
+cd /home/air/ProgramFiles/nginx/test_basic
 
-  **小知识：关于“at scale”的准确含义**
-  
-  在百度搜索词组“at scale”，翻译为：
-  
-  ![](/assets/linkerd004_002.PNG)
-  
-  但是原句"PRODUCTION-TESTED AND PROVEN AT SCALE"翻译成“经过按比例的生产测试和验证”显然有些别扭，于是Google之，得到如下答案：[https://english.stackexchange.com/questions/116601/what-does-at-scale-mean](https://english.stackexchange.com/questions/116601/what-does-at-scale-mean)
-  
-  ![](/assets/linkerd004_003.PNG)
-  
-  答案大体上有两个有意思：
-  
-  含义一：at scale在上图中两个例子中表达的是“与真实一致的规模下”或“足够大的规模下”的意思。
-  
-  含义二：之所以使用 at scale 而不是直接用“on a large scale”是因为在例子的语境中所谓“大”的概念会随着时间退役而发生变化，at scale可以更准确的表达“始终与语境中描述的规模相一致”这一隐含意思，带有自适应的意味。
+nginx默认监听80端口，但是有时会由于权限问题导致启动失败. 解决方法: 将conf/nginx.conf中的监听端口由80改为8008，保存退出
+
+# 启动nginx服务
+./nginx
+
+# 关闭nginx服务
+./nginx -s stop
+
+# 优雅的关闭nginx服务
+./nginx -s quit
+
+# 4.验证
+启动nginx服务后，在其他机器上打开浏览器，输入: http://nginx服务所在机器ip:8008
+
+
+
+./configure --prefix=/home/air/ProgramFiles/nginx/test_basic --with-openssl=/home/air/soft_setup/openssl-1.1.0h --with-pcre=/home/air/soft_setup/pcre-8.40 --with-zlib=/home/air/soft_setup/zlib-1.2.11
