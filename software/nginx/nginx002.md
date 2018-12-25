@@ -95,7 +95,7 @@ $ ./nginx
 
   启动nginx服务后，在其他机器上打开浏览器，输入: http://nginx服务所在机器ip:8008，显示如下页面：
   
-![](/assets/nginx002_1.PNG)
+![](/assets/nginx001_1.PNG)
 
 * 验证自定义模块服务
 
