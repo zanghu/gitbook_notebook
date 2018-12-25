@@ -24,13 +24,13 @@ ngx_http_mytest_module.c
 config
 
 note
-> config文件内容
+> （1） config文件内容
 ```shell
 ngx_addon_name=ngx_http_mytest_module
 HTTP_MODULES="$HTTP_MODULES ngx_http_mytest_module"
 NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/ngx_http_mytest_module.c"
 ```
-> ngx_http_mytest_module.c文件内容见单独示例
+> （2） ngx_http_mytest_module.c文件内容见单独示例
 
 ### 2.安装
 
