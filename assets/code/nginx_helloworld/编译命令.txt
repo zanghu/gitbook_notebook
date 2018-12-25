@@ -1,0 +1,50 @@
+# 1.准备
+
+# 1.1.安装包, 全部放置在~/soft_setup目录下
+nginx-1.14.2.tar.gz
+openssl-1.1.0h.tar.gz
+pcre-8.40.tar.gz
+zlib-1.2.11.tar.gz
+
+# 1.2.将安装包依次解压
+cd ~/soft_setup/
+tar -zxvf nginx-1.14.2.tar.gz
+tar -zxvf openssl-1.1.0h.tar.gz
+tar -zxvf pcre-8.40.tar.gz
+tar -zxvf zlib-1.2.11.tar.gz
+
+# 2.安装
+# 加入简单的自定义helloworld模块的情况下编译Nginx
+# 用户可以通过在浏览器url下添加指定的路径名访问自定义helloworld模块提供的服务
+
+# 注意--prefix的值中不能包含相对路径或~, 否则安装或运行时会出错
+# 注意--add-module的值中不能包含相对路径或~, 否则安装或运行时会出错
+cd nginx-1.14.2/
+./configure --prefix=/home/air/ProgramFiles/nginx/test_basic --with-openssl=~/soft_setup/openssl-1.1.0h --with-pcre=~/soft_setup/pcre-8.40 --with-zlib=~/soft_setup/zlib-1.2.11 --add-module=/home/air/code_box/nginx_code/test_helloworld
+
+# 3.运行
+
+cd /home/air/ProgramFiles/nginx/test_basic
+
+# 修改配置文件
+# (1)nginx默认监听80端口，但是有时会由于权限问题导致启动失败. 解决方法: 将配置文件conf/nginx.conf中的监听端口由80改为8008，保存退出
+# (2)在配置文件conf/nginx.conf的http->server下增加一个location段，内容如下：
+        location /test {
+            mytest;
+        }
+# 修改后保存退出
+
+# 启动nginx服务
+./nginx
+
+# 关闭nginx服务
+./nginx -s stop
+
+# 4.验证
+
+# 验证nginx服务
+启动nginx服务后，在其他机器上打开浏览器，输入: http://nginx服务所在机器ip:8008
+
+# 验证自定义模块服务
+启动nginx服务后，在其他机器上打开浏览器，输入: http://nginx服务所在机器ip:8008/test
+
