@@ -46,17 +46,17 @@ $ make install
 $ cd /home/air/ProgramFiles/nginx/test_basic
 ```
 
-启动nginx服务
+* 启动nginx服务
 ```shell
 $ ./nginx
 ```
 
-关闭nginx服务
+* 关闭nginx服务
 ```shell
 $ ./nginx -s stop
 ```
 
-优雅的关闭nginx服务
+* 优雅的关闭nginx服务
 ```shell
 $ ./nginx -s quit
 ```
