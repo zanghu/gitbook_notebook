@@ -62,7 +62,6 @@ $ cd /home/zanghu/ProgramFiles/nginx/test_helloworld
 
 * 修改配置文件
 ```shell
-
 http {
     include       mime.types;
     default_type  application/octet-stream;
