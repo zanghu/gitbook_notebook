@@ -23,7 +23,8 @@ $ tar -zxvf zlib-1.2.11.tar.gz
 ngx_http_mytest_module.c
 config
 
-* config文件内容
+note
+> config文件内容
 ```
 ngx_addon_name=ngx_http_mytest_module
 HTTP_MODULES="$HTTP_MODULES ngx_http_mytest_module"
