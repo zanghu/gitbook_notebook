@@ -47,20 +47,22 @@ $ cd /home/air/ProgramFiles/nginx/test_basic
 ```
 
 # 启动nginx服务
-./nginx
+```shell
+$ ./nginx
+```
 
 # 关闭nginx服务
-./nginx -s stop
+```shell
+$ ./nginx -s stop
+```
 
 # 优雅的关闭nginx服务
-./nginx -s quit
+```shell
+$ ./nginx -s quit
+```
 
 注意：
 > nginx默认监听80端口，但是有时会由于权限问题导致启动失败. 解决方法: 将conf/nginx.conf中的监听端口由80改为8008，保存退出
 
 # 4.验证
 启动nginx服务后，在其他机器上打开浏览器，输入: http://nginx服务所在机器ip:8008
-
-
-
-./configure --prefix=/home/air/ProgramFiles/nginx/test_basic --with-openssl=/home/air/soft_setup/openssl-1.1.0h --with-pcre=/home/air/soft_setup/pcre-8.40 --with-zlib=/home/air/soft_setup/zlib-1.2.11
