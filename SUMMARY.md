@@ -206,6 +206,7 @@
     * [docker: 隔离机制及其局限性](software/docker/docker010.md)
   * [Nginx](software/nginx/README.md)
     * [Nginx: 最简单的例子](software/nginx/nginx001.md)
+    * [Nginx: 自定义helloworld模块](software/nginx/nginx002.md)
 * [Dataset](dataset/README.md)
   * [CTW](dataset/ctw/README.md)
     * [CTW: 运行预训练detection模型](dataset/ctw/ctw001.md)
