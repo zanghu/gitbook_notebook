@@ -31,7 +31,8 @@ server {
 }
 
 // 访问网站时，浏览器输入: http://10.230.168.28:8010/test
-// nginx检查到http://10.230.168.28:8010后面的uri是/test, 就会调用ngx_command_t对象ngx_http_mytest_commands来处理请求
+// nginx检查到http://10.230.168.28:8010后面的uri是/test,
+// 就会调用ngx_command_t对象ngx_http_mytest_commands来处理请求
 // 显示网页上有nginx
 */
 
