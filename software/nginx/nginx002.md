@@ -40,7 +40,8 @@ $ cd nginx-1.14.2/
 $ ./configure --prefix=/home/zanghu/ProgramFiles/nginx/test_basic \
               --with-openssl=~/soft_setup/openssl-1.1.0h \
               --with-pcre=~/soft_setup/pcre-8.40 \
-              --with-zlib=~/soft_setup/zlib-1.2.11
+              --with-zlib=~/soft_setup/zlib-1.2.11 \
+              --add-module=/home/air/code_box/nginx_code/test_helloworld
 ```
 
 * 编译安装
