@@ -35,7 +35,7 @@ NGX_ADDON_SRCS="$NGX_ADDON_SRCS $ngx_addon_dir/ngx_http_mytest_module.c"
 ### 2.安装
 
 * 配置
-与没有自定义模块时的`configure`指令相比增加了`--add-module`参数指明自定义模块源码和config文件的目录
+`configure`的参数与没有自定义模块时相比增加了`--add-module`参数指明自定义模块源码和config文件的目录
 ```shell
 $ cd nginx-1.14.2/
 $ ./configure --prefix=/home/zanghu/ProgramFiles/nginx/test_helloworld \
