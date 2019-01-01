@@ -99,6 +99,7 @@
     * [Linux: 搭建jupyter sevrer（非SSL）](python/env_and_tools/python015.md)
     * [Linux: 搭建jupyter sevrer（SSL）](python/env_and_tools/python016.md)
     * [Linux: 安装git](linux/soft_setup/lin030.md)
+    * [Linux: 安装补充man手册](linux/soft_setup/lin039.md)
   * [Linux: 基础知识](linux/basic/README.md)
     * [Linux: 目录下指定类型文件总数](linux/basic/lin035.md)
     * [Linux: 内核版本号查看方式](linux/basic/lin017.md)
