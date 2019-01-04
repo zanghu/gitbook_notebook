@@ -23,3 +23,13 @@ $ ./nginx -s quit
 
 ### 2.运维
 
+* 查看指定端口被哪些进程占用
+```shell
+# 例如: lsof -i:8008
+$ lsof -i:[端口号]
+```
+
+* 强制结束指定进程
+```shell
+$ kill -s SIGKILL [进程号]
+```
