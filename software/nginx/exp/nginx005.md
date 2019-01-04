@@ -2,35 +2,10 @@
 
 参考资料: 《Nginx模块开发与架构解析》, 陶辉
 
-### 1.操作
-
-* 启动
 ```shell
-$ cd path/to/nginx/dir
-$ cd sbin
-$ ./nginx
-```
-
-* 立即终止
-```sehll
-$ ./nginx -s stop
-```
-
-* 优雅终止
-```sehll
-$ ./nginx -s quit
-```
-
-### 2.运维
-
-* 查看指定端口被哪些进程占用
-```shell
-# 例如: lsof -i:8008
-$ lsof -i:[端口号]
-```
-
-* 强制结束指定进程
-```shell
-# kill [进程号]默认信号并不是SIGKILL，因此可以被进程忽略
-$ kill -s SIGKILL [进程号]
+$ ./configure --prefix=/home/zanghu/ProgramFiles/nginx/test_helloworld \
+              --with-openssl=~/soft_setup/openssl-1.1.0h \
+              --with-pcre=~/soft_setup/pcre-8.40 \
+              --with-zlib=~/soft_setup/zlib-1.2.11 \
+              --add-module=/home/zanghu/code_box/nginx_code/test_helloworld
 ```
