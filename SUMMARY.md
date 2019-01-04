@@ -173,6 +173,7 @@
     * [C: 返回值是函数指针的函数的正确写法](c/example/c021.md)
     * [C: strerror获取errno语义信息的便捷方法](c/example/c024.md)
     * [C: 常用调试宏](c/example/c023.md)
+    * [C: 可变参数宏实现简单日志宏](c/example/c033.md)
   * [C: 自动构建](c/daily_build/README.md)
     * [C: 基于lcov搭建自动构建](c/daily_build/c027.md)
 * [C++](c++/README.md)
