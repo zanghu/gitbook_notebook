@@ -27,7 +27,6 @@ $ ./configure --prefix=/home/zanghu/ProgramFiles/nginx/test_helloworld \
 
 * 增加编译参数
 ```shell
-# 编译器参数
 --cc-opt=...
 
 # 链接器参数
