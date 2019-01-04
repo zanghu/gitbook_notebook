@@ -219,7 +219,7 @@ static inline int _raise_error_without_call_level_test(int code, const char *fun
         fprintf(stderr, "LOG BUFFEROVERFLOW\n"); \
     } \
     if (writeStringToPath("log.txt", buf, "a") != 0) { \
-        fprintf(stderr, WRITE_LOG failed, error.\n"); \
+        fprintf(stderr, "WRITE_LOG failed, error.\n"); \
     } \
 }
 
