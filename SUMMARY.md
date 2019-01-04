@@ -209,6 +209,8 @@
     * [Nginx: 快速入门](software/nginx/basic/README.md)
       * [Basic: 最简单的例子](software/nginx/basic/nginx001.md)
       * [Basic: 自定义helloworld模块](software/nginx/basic/nginx002.md)
+    * [Nginx: 使用经验](software/nginx/exp/README.md)
+      * [Exp: 常用操作命令](software/nginx/exp/nginx004.md)
     * [Nginx: 代码示例](software/nginx/example/README.md)
       * [example: helloworld](software/nginx/example/nginx003.md)
 * [Dataset](dataset/README.md)
