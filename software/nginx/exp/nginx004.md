@@ -31,5 +31,6 @@ $ lsof -i:[端口号]
 
 * 强制结束指定进程
 ```shell
+# kill [进程号]默认信号并不是SIGKILL，因此可以被进程忽略
 $ kill -s SIGKILL [进程号]
 ```
