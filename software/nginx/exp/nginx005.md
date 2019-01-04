@@ -2,6 +2,7 @@
 
 参考资料: 《Nginx模块开发与架构解析》, 陶辉
 
+* 不带自定义模块
 ```shell
 $ ./configure --prefix=/home/zanghu/ProgramFiles/nginx/test_basic \
               --with-openssl=~/soft_setup/openssl-1.1.0h \
