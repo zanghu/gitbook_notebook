@@ -50,7 +50,11 @@ int readStringFromFileSimple(char **buf, FILE *file_in)
     }
     if (read_len != file_len) {
         error = TEST_ERROR;
-        ERROR_MSG_2("fread实际读取长度小于文件长度，file_len = %d, read_len = %d, error.\n", file_len, read_len);
+#ifdef __x86_64__
+        ERROR_MSG_2("fread实际读取长度小于文件长度，file_len = %ld, read_len = %lu, error.\n", file_len, read_len);
+#else
+        ERROR_MSG_2("fread实际读取长度小于文件长度，file_len = %ld, read_len = %u, error.\n", file_len, read_len);
+#endif
         break;
     }
     buf_tmp[file_len] = '\0';
@@ -58,7 +62,11 @@ int readStringFromFileSimple(char **buf, FILE *file_in)
     // 检查文件中包含非法字符
     size_t len_str = strlen(buf_tmp);
     if (len_str != file_len) {
-        ERROR_MSG_2("读到的文件字符串的文件长度是: %d, strlen()计算出长度是: %d, 二者不相等, 怀疑文件内容中包含'\\0'导致, error.\n", file_len, len_str);
+#ifdef __x86_64__
+        ERROR_MSG_2("读到的文件字符串的文件长度是: %ld, strlen()计算出长度是: %lu, 二者不相等, 怀疑文件内容中包含'\\0'导致, error.\n", file_len, len_str);
+#else
+        ERROR_MSG_2("读到的文件字符串的文件长度是: %ld, strlen()计算出长度是: %u, 二者不相等, 怀疑文件内容中包含'\\0'导致, error.\n", file_len, len_str);
+#endif
         error = TEST_ERROR;
         break;
     }
@@ -115,14 +123,22 @@ int writeStringToFileSimple(FILE *fp, const char *msg)
 
     size_t len_msg = strlen(msg); 
     if (len_msg <= 0) {
-        ERROR_MSG_1("不支持写入文件的字符串长度为 %d, error.\n", len_msg);
+#ifdef __x86_64__
+        ERROR_MSG_1("不支持写入文件的字符串长度为 %lu, error.\n", len_msg);
+#else
+        ERROR_MSG_1("不支持写入文件的字符串长度为 %u, error.\n", len_msg);
+#endif
         return RAISE_ERROR();
     }
 
     size_t num_write = fwrite(msg, sizeof(char), len_msg, fp);
     CHK_ERR(ferror(fp)); // 对文件指针调用任何输入输出函数后，都应立即使用ferror检查
-    if (num_write == len_msg) {
-        ERROR_MSG_2("fwrite实际写入长度 %d 与 期望写入长度 %d 不一致, error.\n", num_write, error);
+    if (num_write != len_msg) {
+#ifdef __x86_64__
+        ERROR_MSG_2("fwrite实际写入长度 %lu 与 期望写入长度 %lu 不一致, error.\n", num_write, len_msg);
+#else
+        ERROR_MSG_2("fwrite实际写入长度 %u 与 期望写入长度 %u 不一致, error.\n", num_write, len_msg);
+#endif
         return RAISE_ERROR();
     }
     return 0;
@@ -144,11 +160,48 @@ int writeStringToPathSimple(const char *file_path, const char *msg)
 
     if (error != 0) {
         ERROR_MSG_1("写入文件 %s 失败, error.\n", file_path);
-        return RAISE_ERROR(TEST_ERROR);
+        return RAISE_ERROR();
     }
 
     return 0;
 }
+
+/*
+ * 将字符串写入到指定路径的文件
+       r      Open text file for reading.  The stream is positioned at the beginning of the file.
+ 
+       r+     Open for reading and writing.  The stream is positioned at the beginning of the file.
+ 
+       w      Truncate file to zero length or create text file for writing.  The stream is positioned at the beginning of the file.
+ 
+       w+     Open for reading and writing.  The file is created if it does not exist, otherwise it is truncated.  The stream is positioned at the beginning of the file.
+ 
+       a      Open for appending (writing at end of file).  The file is created if it does not exist.  The stream is positioned at the end of the file.
+ 
+       a+     Open  for reading and appending (writing at end of file).  The file is created if it does not exist.  The initial file position for reading is at the beginning of the file,
+              but output is always appended to the end of the file.
+ */
+int writeStringToPath(const char *file_path, const char *msg, const char *mode)
+{
+    CHK_NIL(file_path);
+    CHK_NIL(msg);
+    CHK_NIL(mode);
+
+    int error = 0;
+
+    FILE *fp = NULL;
+    CHK_NIL((fp = fopen(file_path, mode)));
+    error = writeStringToFileSimple(fp, msg);
+    CHK_ERR(fclose(fp));
+
+    if (error != 0) {
+        ERROR_MSG_1("写入文件 %s 失败, error.\n", file_path);
+        return RAISE_ERROR();
+    }
+
+    return 0;
+}
+
 
 
 // 1.3.字节流读操作=========================
@@ -174,7 +227,11 @@ int readBytesFromFileSimple(char **buf, long *len, FILE *file_in)
     read_len = fread(buf_tmp, sizeof(char), file_len, file_in);
     if (read_len != file_len) {
         error = TEST_ERROR;
-        ERROR_MSG_2("fread实际读取长度小于文件长度，file_len = %d, read_len = %d, error.\n", file_len, read_len);
+#ifdef __x86_64__
+        ERROR_MSG_2("fread实际读取长度小于文件长度，file_len = %ld, read_len = %lu, error.\n", file_len, read_len);
+#else
+        ERROR_MSG_2("fread实际读取长度小于文件长度，file_len = %ld, read_len = %u, error.\n", file_len, read_len);
+#endif
         break;
     }
     buf_tmp[file_len] = '\0';
@@ -189,7 +246,7 @@ int readBytesFromFileSimple(char **buf, long *len, FILE *file_in)
 
     if (error != 0) {
         free(buf_tmp);
-        return RAISE_ERROR(TEST_ERROR);
+        return RAISE_ERROR();
     }
 
     *buf = buf_tmp;
@@ -214,7 +271,7 @@ int readBytesFromPathSimple(char **file_bytes, long *len_file, const char *file_
 
     char *buf = NULL;
 
-    int len_tmp = 0;
+    long len_tmp = 0;
     error = readBytesFromFileSimple(&buf, &len_tmp, file_in);
     if (error != 0) {
         ERROR_MSG_1("读取文件 %s 失败, error.\n", file_path);
@@ -222,7 +279,7 @@ int readBytesFromPathSimple(char **file_bytes, long *len_file, const char *file_
     if (fclose(file_in) ); 
 
     if (error != 0) {
-        return RAISE_ERROR(TEST_ERROR);
+        return RAISE_ERROR();
     }
 
     *file_bytes = buf;
@@ -267,7 +324,7 @@ int writeBytesToPathSimple(const char *file_path, const char *msg, size_t len)
 
     if (error != 0) {
         ERROR_MSG_1("写入文件 %s 失败, error.\n", file_path);
-        return RAISE_ERROR(TEST_ERROR);
+        return RAISE_ERROR();
     }
 
     return 0;

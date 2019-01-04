@@ -206,4 +206,23 @@ static inline int _raise_error_without_call_level_test(int code, const char *fun
 }
 
 
+// 六、简易日志模块
+
+#ifdef _ENABLE_SIMPLE_LOG
+
+#include "simple_wr.h"
+
+#define WRITE_LOG(...) \
+{ \
+    char buf[512]; \
+    if (snprintf(buf, 512, __VA_ARGS__) >= 512) { \
+        fprintf(stderr, "LOG BUFFEROVERFLOW\n"); \
+    } \
+    if (writeStringToPath("log.txt", buf, "a") != 0) { \
+        fprintf(stderr, WRITE_LOG failed, error.\n"); \
+    } \
+}
+
+#endif
+
 #endif
