@@ -6,6 +6,7 @@
 
 ```
 
+* 带有自定义模块
 ```shell
 $ ./configure --prefix=/home/zanghu/ProgramFiles/nginx/test_helloworld \
               --with-openssl=~/soft_setup/openssl-1.1.0h \
