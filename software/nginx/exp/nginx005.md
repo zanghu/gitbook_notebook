@@ -3,6 +3,10 @@
 参考资料: 《Nginx模块开发与架构解析》, 陶辉
 
 ```shell
+
+```
+
+```shell
 $ ./configure --prefix=/home/zanghu/ProgramFiles/nginx/test_helloworld \
               --with-openssl=~/soft_setup/openssl-1.1.0h \
               --with-pcre=~/soft_setup/pcre-8.40 \
