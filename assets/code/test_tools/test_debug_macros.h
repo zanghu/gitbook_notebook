@@ -106,7 +106,7 @@
 // 2.2.值为空报错
 #define CHK_NIL(val) \
 { \
-    if (_UNLIKELY(((val) == NULL)) { \
+    if (_UNLIKELY((val) == NULL)) { \
         ERROR_MSG("NULL ptr Error in %s at line %d, var %s=NULL in %s(), throw error: %d\n", \
         __FILE__, __LINE__, #val, __FUNCTION__,  TEST_ERROR); \
         FUNC_ERROR(); \
