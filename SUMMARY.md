@@ -155,7 +155,7 @@
     * [同步工具: XSI信号量](c/process/c039.md)
     * [同步工具: POSIX信号量](c/process/c040.md)
     * [同步工具: pthread互斥锁](c/process/c041.md)
-    * [C: 守护进程](c/process/c032.md)
+    * [守护进程](c/process/c032.md)
   * [C: 编译链接](c/lib_compile_link/README.md)
     * [C: 常用GCC参数汇总](c/lib_compile_link/c011.md)
     * [C: 动态库的源与流](c/lib_compile_link/c006.md)
