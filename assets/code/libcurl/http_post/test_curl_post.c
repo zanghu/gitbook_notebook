@@ -28,178 +28,104 @@
 #include <string.h>
 #include <curl/curl.h>
 
+#include "buffer.h"
 #include "test_debug_macros.h"
 
-int cnt_header = 0;
-//int cnt_body = 0;
+#define NUM_LOOP (1)
 
-static const char *m_rmc_req = 
-"{"
-	"\"esa\":	{"
-		"\"appId\":	\"BDC201708_03\","
-		"\"instanceId\":	\"e2f34972503244d4a8f940f57349d221\","
-		"\"encryptedData\":	\"EB351BA378D4BC73122254A78157E5C5\","
-		"\"provinceCode\":	\"99\","
-		"\"channelCode\":	\"ATM\","
-		"\"esaVersion\":	\"ACC_C_LIN_1.7.0\","
-		"\"consumerIP\":	\"10.230.147.31\""
-	"},"
-	"\"version\":	0"
-"}";
-
-struct Buffer
-{
-    char *buf;
-    size_t len;
-    size_t size;
-};
-
-#define BUFFER_INIT_SIZE (1024)
-#define BUFFER_EXPAND_FACTOR (2)
-
-int createBuffer(struct Buffer **buf)
-{
-    CHK_NIL(buf);
-
-    struct Buffer *buf_tmp = NULL;
-    CHK_NIL((buf_tmp = calloc(1, sizeof(struct Buffer))));
-    buf_tmp->len = 0;
-    buf_tmp->size = BUFFER_INIT_SIZE;
-    CHK_NIL((buf_tmp->buf = calloc(BUFFER_INIT_SIZE, sizeof(char))));
-    *buf = buf_tmp;
-    return 0;
-}
-
-int writeBuffer(struct Buffer *buf, char *src, size_t len)
-{
-    CHK_NIL(buf);
-    CHK_NIL(src);
-
-    if (len == 0) {
-        return 0;
-    }
-
-    if (len + buf->len >= buf->size) {
-        CHK_ERR((buf->size > 0)? 0: 1);
-        size_t size_new = buf->size * 2;
-        while (size_new <= len + buf->len) {
-            size_new *= BUFFER_EXPAND_FACTOR;
-        }
-        char *tmp = NULL;
-        CHK_NIL((tmp = calloc(size_new, sizeof(char))));
-        memcpy(tmp, buf->buf, buf->len);
-        free(buf->buf);
-        buf->buf = tmp;
-        buf->size = size_new;
-    }
-
-    CHK_ERR((buf->size > len + buf->len)? 0: 1);
-    memcpy(buf->buf + buf->len, src, len);
-    buf->len += len;
-
-    return 0;
-}
-
-int destroyBuffer(struct Buffer *buf)
-{
-    if (buf != NULL) {
-        free(buf->buf);
-        buf->len = 0;
-        buf->size = 0;
-    }
-    free(buf);
-    return 0;
-}
-    
-
-static size_t write_body(char *ptr, size_t size, size_t nmemb, void *userdata)
+// 处理HTTP响应报文体的回调函数
+// 在一次HTTP通讯(一次curl_easy_perform函数执行过程)中该函数可能被调用多次, 原因包括HTTP 100或者多次TCP通讯 
+size_t body_callback(char *ptr, size_t size, size_t nmemb, void *userdata)
 {
     size_t total = size * nmemb;
-    //memcpy(userdata, ptr, total);
     struct Buffer *buf = (struct Buffer *)userdata;
     CHK_ERR(writeBuffer(buf, ptr, total));
 
     return total;
 }
 
-static size_t write_header(char *buffer, size_t size, size_t nitems, void *userdata)
+// 处理HTTP响应报文头的回调函数, 在一次HTTP通讯(一次curl_easy_perform函数执行过程)中该函数可能被调用多次
+// 在一次HTTP通讯(一次curl_easy_perform函数执行过程)中该函数可能被调用多次, 原因包括HTTP 100或者多次TCP通讯 
+size_t header_callback(char *ptr, size_t size, size_t nitems, void *userdata)
 {
     size_t total = size * nitems;
     struct Buffer *buf = (struct Buffer *)userdata;
-    CHK_ERR(writeBuffer(buf, buffer, total));
-
-    char *tmp = calloc(total + 1, sizeof(char));
-    if (tmp == NULL) {
-        fprintf(stderr, "tmp calloc error\n");
-        return -1;
-    }
-    memcpy(tmp, buffer, total);
-    fprintf(stdout, "===========\nheader cnt = %d, data:\n%s\n==========\n", cnt_header, tmp);
-    free(tmp);
-    ++cnt_header;
+    CHK_ERR(writeBuffer(buf, ptr, total));
 
     return total;
 }
- 
-int main(void)
+
+int test_http_post(const char *url, const char *req_body)
 {
-  CURL *curl;
-  CURLcode res;
+    CHK_NIL(url);
 
-    struct Buffer *body = NULL;
-    CHK_ERR(createBuffer(&body));
-    struct Buffer *header = NULL;
-    CHK_ERR(createBuffer(&header));
- 
-  /* In windows, this will init the winsock stuff */ 
-  curl_global_init(CURL_GLOBAL_ALL);
- 
-  /* get a curl handle */ 
-  curl = curl_easy_init();
-  //fprintf(stdout, "111\n");
-  if(curl) {
-    //fprintf(stdout, "222\n");
-    /* First set the URL that is about to receive our POST. This URL can
-       just as well be a https:// URL if that is what should receive the
-       data. */ 
-    //curl_easy_setopt(curl, CURLOPT_URL, "http://postit.example.com/moo.cgi");
-    //curl_easy_setopt(curl, CURLOPT_URL, "http://itable.abc");
-    curl_easy_setopt(curl, CURLOPT_URL, "http://10.230.135.55:8001/rmc/checkversion.action");
-    //fprintf(stdout, "333\n");
+    struct Buffer *body_buf = NULL;
+    CHK_ERR(createBuffer(&body_buf));
+    struct Buffer *header_buf = NULL;
+    CHK_ERR(createBuffer(&header_buf));
 
-    /* Now specify the POST data */ 
-    //curl_easy_setopt(curl, CURLOPT_POSTFIELDS, "name=daniel&project=curl");
-    curl_easy_setopt(curl, CURLOPT_POSTFIELDS, m_rmc_req);
-    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_body); // 将返回报文使用write_res处理
-    curl_easy_setopt(curl, CURLOPT_WRITEDATA, body); // 提供write_res的第四个参数
+    /* In windows, this will init the winsock stuff */ 
+    CHK_ERR(curl_global_init(CURL_GLOBAL_ALL));
 
-    curl_easy_setopt(curl, CURLOPT_HEADERFUNCTION, write_header);
-    curl_easy_setopt(curl, CURLOPT_HEADERDATA, header); // 提供write_res的第四个参数
+    // 循环执行 NUM_LOOP 次 HTTP POST
+    int cnt = 0;
+    while (cnt < NUM_LOOP) {
+        /* get a curl handle */ 
+        CURL *curl = NULL;;
 
-    curl_easy_setopt(curl, CURLOPT_HEADER, 1L); // 屏幕输出时会输出header
-    //fprintf(stdout, "444\n");
- 
-    /* Perform the request, res will get the return code */ 
-    res = curl_easy_perform(curl);
-    //fprintf(stdout, "555\n");
+        CHK_NIL((curl = curl_easy_init()));
 
-    /* Check for errors */ 
-    //fprintf(stdout, "666\n");
-    if(res != CURLE_OK)
-      fprintf(stderr, "curl_easy_perform() failed: %s\n",
-              curl_easy_strerror(res));
-    //fprintf(stdout, "777\n");
-    /* always cleanup */ 
-    curl_easy_cleanup(curl);
-    //fprintf(stdout, "888\n");
-  }
-  curl_global_cleanup();
+        // 设置URL
+        CHK_ERR(curl_easy_setopt(curl, CURLOPT_URL, url));
 
-  fprintf(stdout, "响应报文header:\n%s\n", header->buf);
-  fprintf(stdout, "响应报文body:\n%s\n", body->buf);
+        // 设置header
+        struct curl_slist *header_list = NULL;
+        CHK_NIL((header_list = curl_slist_append(header_list, "Expect:"))); // 很重要，因为curl默认对超过1024B的报文采用Expect:100, 但并不是所有服务方都能正确处理
+        CHK_ERR(curl_easy_setopt(curl, CURLOPT_HTTPHEADER, header_list));
 
-  CHK_ERR(destroyBuffer(header));
-  CHK_ERR(destroyBuffer(body));
+        // 设置body
+        CHK_ERR(curl_easy_setopt(curl, CURLOPT_POSTFIELDS, req_body));
 
-  return 0;
+        CHK_ERR(curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, body_callback)); // 将返回报文使用write_res处理
+        CHK_ERR(curl_easy_setopt(curl, CURLOPT_WRITEDATA, body_buf)); // 提供write_res的第四个参数
+
+        CHK_ERR(curl_easy_setopt(curl, CURLOPT_HEADERFUNCTION, header_callback));
+        CHK_ERR(curl_easy_setopt(curl, CURLOPT_HEADERDATA, header_buf)); // 提供write_res的第四个参数
+        //curl_easy_setopt(curl, CURLOPT_HEADER, 1L); // 屏幕输出时会输出header
+
+        // 执行HTTP通讯
+        CHK_ERR(curl_easy_perform(curl));
+
+        // 处理响应报文
+        long res_code = 0;
+        CHK_ERR(curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &res_code));
+        if (res_code != 200 && res_code != 201) {
+            fprintf(stderr, "HTTP ret_code not 2xx\n");
+        }
+
+        // 即使返回报文不是2xx任然可以查看返回报文头和报文体
+        fprintf(stdout, "HTTP ret code: %ld\n", res_code);
+        fprintf(stdout, "响应报文header:\n%s\n", header_buf->buf);
+        fprintf(stdout, "响应报文body:\n%s\n", body_buf->buf);
+
+        // 释放本次通讯相关资源
+        curl_slist_free_all(header_list);
+        curl_easy_cleanup(curl);
+        ++cnt;
+    }
+
+    curl_global_cleanup();
+
+    CHK_ERR(destroyBuffer(header_buf));
+    CHK_ERR(destroyBuffer(body_buf));
+
+    return 0;
+}
+
+int main()
+{
+    const char *req = "";
+    CHK_ERR(test_http_post("http://www.baidu.com/", req));
+
+    return 0;
 }
