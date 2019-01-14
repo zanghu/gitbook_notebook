@@ -1,10 +1,6 @@
 #coding=utf-8
 #!/bin/env python
 
-"""
-批量将编译后的c++符号转为可理解的明文符号
-"""
-
 import os
 import cxxfilt
 
