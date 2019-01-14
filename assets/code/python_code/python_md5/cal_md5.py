@@ -4,7 +4,7 @@ import hashlib
 def md5_by_line(pth):
     """"""
     m = hashlib.md5()
-    with open(file_path,'r') as f:            #以二进制读的方式打开文件
+    with open(file_path,'rb') as f:            #以二进制读的方式打开文件
         for line in f:                   #每次传入一"行"
             m.update(line)               #md5值更新
     md5_value = m.hexdigest()          #进制转化
@@ -21,4 +21,5 @@ def md5_by_chunk(file):
     print(md5_value.hexdigest())
 
 if __name__ == '__main__':
-    md5_by_chunk('/home/zanghu/123.jpg')
+    #md5_by_chunk('/home/zanghu/123.jpg')
+    md5_by_chunk("/home/zanghu/pylearn2_data/stl10_matlab/unlabeled.mat")
