@@ -70,6 +70,10 @@ int copy_file(const char *src_path, const char *dst_path)
 		fsz += copysz;
 	}
 
+    // 关闭文件描述符
+    CHK_ERR(close(fdin));
+    CHK_ERR(close(fdout));
+
 	return 0;
 }
 

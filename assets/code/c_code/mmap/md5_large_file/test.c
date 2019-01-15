@@ -74,6 +74,9 @@ int md5_large_file(const char *src_path)
 		offset += mem_size;
         ++cnt;
 	}
+    // 关闭文件描述符
+    CHK_ERR(close(fd));
+
     MD5_Final(result, &ctx); // 获取加密结果
     fprintf(stdout, "md5摘要计算完毕, 共经历 %d 轮\n", cnt);
     CHK_ERR(show_md5(result));
