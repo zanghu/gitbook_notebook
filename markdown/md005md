@@ -1,0 +1,23 @@
+## Markdown: “注意”的格式
+
+# CTW dataset tutorial (Part 3: detection baseline)
+
+In this part of the turotial, we will show you:
+
+  - [Framework of detection baseline](#Framework-of-detection-baseline)
+  - [Training steps](#Training-steps)
+  - [Predicting steps](#Predicting-steps)
+  - [Submission format](#Submission-format)
+  - [Evaluation API](#Evaluation-API)
+  - [Evaluate results locally](#Evaluate-results-locally)
+  - [Appendix: Details to the evaluation API](#Appendix:-Details-to-the-evaluation-API)
+
+Notes:
+
+  > This notebook MUST be run under `$CTW_ROOT/tutorial`.
+  >
+  > All the code SHOULD be run with `Python>=3.4`. We make it compatible with `Python>=2.7` with best effort.
+
+
+
+
