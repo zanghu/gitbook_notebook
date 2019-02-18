@@ -78,6 +78,9 @@ int test_http_post(const char *url, const char *req_body)
         // 设置URL
         CHK_ERR(curl_easy_setopt(curl, CURLOPT_URL, url));
 
+        // 通过屏幕显示详细信息, 特别是包含请求header
+        CHK_ERR(curl_easy_setopt(curl, CURLOPT_VERBOSE, 1l));
+
         // 设置header
         struct curl_slist *header_list = NULL;
         CHK_NIL((header_list = curl_slist_append(header_list, "Expect:"))); // 很重要，因为curl默认对超过1024B的报文采用Expect:100, 但并不是所有服务方都能正确处理
