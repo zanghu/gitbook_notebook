@@ -78,7 +78,7 @@ int test_http_post(const char *url, const char *req_body)
         // 设置URL
         CHK_ERR(curl_easy_setopt(curl, CURLOPT_URL, url));
 
-        // 通过屏幕显示详细信息, 特别是包含请求header
+        // 通过屏幕显示详细信息, 特别是包含请求header. 因为目前没找到获得请求header原文句柄的方法, 暂时用此方式代替
         CHK_ERR(curl_easy_setopt(curl, CURLOPT_VERBOSE, 1l));
 
         // 设置header
