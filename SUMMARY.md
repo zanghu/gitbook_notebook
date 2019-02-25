@@ -123,7 +123,7 @@
     * [Linux: pkg-config工具](c/tools/c018.md)
   * [Linux: 高级技术](linux/advanced/README.md)
     * [Linux: sudo运行程序搜索路径变化原因的研究](linux/advanced/lin009.md)
-    * [Linux: lsof + kill快速释放本地端口](linux/advanced/lin014.md)
+    * [Linux: lsof快速释放本地端口](linux/advanced/lin014.md)
     * [Linux: 内核模式与用户模式探讨](linux/advanced/lin020.md)
     * [Linux: 关于如何看待系统内核](linux/advanced/lin029.md)
     * [参考文献: Understanding User and Kernel Mode](linux/advanced/lin021.md)
