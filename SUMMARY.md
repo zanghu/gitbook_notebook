@@ -144,6 +144,7 @@
     * [C: 编写信号处理函数的注意事项](c/basic/c020.md)
     * [C: 基于mmap的大文件复制](c/basic/c037.md)
     * [C: 基于mmap的大文件md5计算](c/basic/c043.md)
+    * [C: snprinf返回值的含义](c/basic/c047.md)
   * [C: 网络编程](c/net/README.md)
     * [C: 实现connect、send和recv超时处理](c/net/c025.md)
     * [C: 模拟connect、send和recv超时场景](c/net/c046.md)
