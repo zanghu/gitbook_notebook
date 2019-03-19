@@ -1,0 +1,7 @@
+dbx ./Test core
+dbxs ./Tests
+
+
+dbx ./Test
+r
+where // 相当于gdb的bt

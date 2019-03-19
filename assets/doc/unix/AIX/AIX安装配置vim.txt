@@ -1,0 +1,52 @@
+原文链接：http://m.blog.csdn.net/blog/tsingyee/6143143
+
+
+部分引用：
+vim7.1下载与安装：http://blog.csdn.net/chinainvent/archive/2008/07/26/2716820.aspx 
+ vim颜色设置：http://blog.csdn.net/celavi/archive/2007/09/12/1782334.aspx 
+ vimrc文件：http://easwy.com/blog/archives/where-is-vimrc/ 
+
+AIX 5.3上安装vim7.1  
+
+1. 到VIM的官网：ftp://ftp.vim.org/pub/vim/unix/下载一个最新版，目前是vim-7.1.tar.bz2 。
+
+2. 在AIX服务器上，你一般没有直接安装软件的权限。但没关系，找一个你能创建目录的地方，比如是/home/myName/。
+    我是在aix.unix-center.net 上安装vim：
+    (1) 首先通过winSCP 把安装文件 vim-7.1.tar.bz2 上传到 /home/d/b/tsingyee/soft 目录下。
+    (2) 使用 bunzip2 或 bzip2 -d 命令解压缩安装文件，得到vim-7.1.tar。
+    (3) 使用 tar xvf vim-7.1.tar  命令解包。
+
+3. 编译
+    方法一：使用AIX自带的编译器xlC
+         #1.执行configure
+         $ export CC=xlC        #使用AIX自带的xlC编译器
+        $ export CFLAGS=-q64   #如果你的服务器是64位CPU，务必使用这个选项
+        $ ./configure --prefix=<安装路径> --enable-multibyte　 #可以执行./configure --help 查看更多选择
+        #<安装路径>是你有写权限的目录，比如这里是/home/myName/soft/vim71
+         #使用--enable-multibye的用途是，可以使用VIM的encoding,fileecncodings等设置。
+
+     方法二：使用gcc编译
+        #第一步要改成：
+        #1.执行configure
+         $ export CC=gcc     #使用gcc编译器
+        $ export CFLAGS=-maix64   #如果你的服务器是64位CPU，务必使用这个选项
+        $ export LDFLAGS=-maix64  #如果你的服务器是64位CPU，务必使用这个选项，链接器选项
+        $ ./configure --prefix=<安装路径> --enable-multibyte
+
+4. 执行make
+         $ make
+         $ make install          #这一步，会按照上一步中--prefix所指定的安装路径安装可执行文件和man文件
+
+ 
+
+至此，vim就安装完成了。
+
+ 
+
+vim的语法高亮显示  
+
+我通过putty连接并通过vim进行shell编辑的时候，没有语法高亮显示。
+ 解决该问题需要进行一些设置：
+ 编辑 .vimrc 文件（$HOME/.vimrc）
+
+/home/d/b/tsingyee/.vimrc

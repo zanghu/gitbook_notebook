@@ -1,0 +1,5 @@
+例如：想要查看cc的位置
+whence cc
+
+想要查看xlc_r的位置
+whence xlc_r

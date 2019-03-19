@@ -1,0 +1,10 @@
+-bloadmap用法
+xlc -g test.c aaa.c bbb.c -o Test -bloadmap:file_path
+其中file_path是本地的路径, 执行后会把链接错误的详细信息打印到file_path指定的文件，如果该文件不存在则会创建新的
+
+-bnoquiet用法
+xlc -bnoquiet -g test.c aaa.c bbb.c -o Test -bloadmap:file_path
+效果是将链接错误的详细信息输出到屏幕
+
+
+http://blog.csdn.net/wudidaqueer/article/details/8609663

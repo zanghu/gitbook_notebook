@@ -1,0 +1,10 @@
+.tar(注意不支持解压缩.gz或.bz2，只支持解包)
+tar -xvf aaa.tar
+
+.bz2
+bzip2 -d aaa.tar.bz2 # 结果会删除原文件，得到一个aaa.tar
+或者
+gunip aaa.tar.bz2
+
+.zip
+jar -xvf xxx.zip

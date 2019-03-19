@@ -1,0 +1,5 @@
+df -k
+出现：
+FileSsystem	1024-blocks	Free	%Used	Iused	%Iused	Mounted on
+
+其中%Used为100%，同时Mount on如果是当前使用的根目录，那么就可以确定是硬盘写满了

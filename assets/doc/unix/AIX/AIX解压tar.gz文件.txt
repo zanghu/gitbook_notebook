@@ -1,0 +1,5 @@
+# 1.用gzip将.tar.gz为念解压成.tar文件，原有的.tar.gz文件会消失
+gzip -d xxx.tar.gz
+
+# 2.用tar将.tar文件解包
+tar -xvf xxx.tars
