@@ -14,6 +14,7 @@
     * [Y3: 数据加载中的并发策略](yolo/source/yolo007.md)
 * [Python](python/README.md)
   * [Python: 基础知识](python/basic/README.md)
+    * [Python: 使用conda安装制定模块](python/basic/python029.md)
     * [Python: 关于函数定义形参表的形参前面的星号和双星号](python/basic/python001.md)
     * [Python: 关于classmethod和staticmethod的区别](python/basic/python004.md)
     * [Python: 元类与metaclass](python/basic/python005.md)
