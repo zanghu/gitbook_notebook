@@ -1,5 +1,7 @@
 ##安装conda包
 
+[http://docs.anaconda.com/anaconda/user-guide/tasks/install-packages/?#installing-packages-on-a-non-networked-air-gapped-computer](http://docs.anaconda.com/anaconda/user-guide/tasks/install-packages/?#installing-packages-on-a-non-networked-air-gapped-computer)
+
 有关在Anaconda Prompt（Linux或macOS上的终端）中使用conda包管理器的更多信息，请参阅[conda文档](http://conda.io/)。
 
 您还可以使用图形界面 [Anaconda Navigator](http://docs.anaconda.com/anaconda/navigator/)只需点击几下即可安装conda软件包。
