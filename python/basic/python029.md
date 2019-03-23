@@ -1,8 +1,8 @@
 ##安装conda包
 
-有关在Anaconda Prompt（Linux或macOS上的终端）中使用conda包管理器的更多信息，请参阅conda文档。
+有关在Anaconda Prompt（Linux或macOS上的终端）中使用conda包管理器的更多信息，请参阅[conda文档](http://conda.io/)。
 
-您还可以使用图形界面 Anaconda Navigator只需点击几下即可安装conda软件包。
+您还可以使用图形界面 [Anaconda Navigator](http://docs.anaconda.com/anaconda/navigator/)只需点击几下即可安装conda软件包。
 
 打开Anaconda提示符（Linux或macOS上的终端）并按照这些说明操作。
 
