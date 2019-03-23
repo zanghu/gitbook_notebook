@@ -15,14 +15,14 @@ $ conda install package-name
 > 注意：替换`package-name`为您的包裹名称。
 
 ### 安装特定版本的conda软件包
-在包名称后面包含所需的版本号或其前缀：
+* 在包名称后面包含所需的版本号或其前缀：
 
 ```shell
 $ conda install package-name=2.3.4
 ```
 > 注意：替换`package-name`为您的包裹名称。替换 `2.3.4`为所需的版本号。
 
-要仅指定主要版本，请运行：
+* 要仅指定主要版本，请运行：
 
 ```shell
 $ conda install package-name=2
@@ -39,7 +39,7 @@ $ conda install package-name=2.3.4 -n some-environment
 如果包特定于Python版本，则conda使用当前或命名环境中安装的版本。有关版本，依赖关系和通道的详细信息，请参阅 Conda常见问题解答和 Conda疑难解答。
 
 ### 在非联网计算机上安装软件包
-要从本地计算机直接安装conda软件包，请运行：
+* 要从本地计算机直接安装conda软件包，请运行：
 
 ```shell
 $ conda install /package-path/package-filename.tar.bz2
@@ -48,7 +48,7 @@ $ conda install /package-path/package-filename.tar.bz2
 
 Conda将软件包安装到`anaconda/pkgs`目录中。
 
-要安装包含许多conda包的.tar文件，请运行以下命令：
+* 要安装包含许多conda包的.tar文件，请运行以下命令：
 
 ```shell
 $ conda install /packages-path/packages-filename.tar
