@@ -12,7 +12,7 @@
 ```shell
 $ conda install package-name
 ```
-注意：替换`package-name`为您的包裹名称。
+> 注意：替换`package-name`为您的包裹名称。
 
 ### 安装特定版本的conda软件包
 在包名称后面包含所需的版本号或其前缀：
