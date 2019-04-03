@@ -153,7 +153,7 @@
     * [C: epoll用法基础](c/net/c026.md)
     * [C: connect出现EINTR时的处理方法](c/net/c045.md)
     * [C: 非阻塞模式是否会产生EINTR](c/net/c044.md)
-    * [C: 非阻塞模式recv返回0](c/net/c049.md)
+    * [C: 非阻塞模式recv返回0的含义](c/net/c049.md)
     * [C: send引发SIGPIPE的处理方法](c/net/c050.md)
     * [C: libcurl基本介绍](c/net/c031.md)
     * [C: libcurl——HTTP POST](c/net/c032.md)
