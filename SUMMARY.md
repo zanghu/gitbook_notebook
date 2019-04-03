@@ -155,6 +155,7 @@
     * [C: libcurl——HTTP POST](c/net/c032.md)
     * [C: libcurl——HTTP GET](c/net/c033.md)
     * [C: 非阻塞模式是否会产生EINTR](c/net/c044.md)
+    * [C: 非阻塞模式recv返回0](c/net/c049.md)
     * [C: connect出现EINTR时的处理方法](c/net/c045.md)
   * [C: 多进程](c/process/README.md)
     * [IPC: 共享内存与同步](c/process/c036.md)
