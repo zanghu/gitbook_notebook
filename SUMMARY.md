@@ -148,7 +148,7 @@
     * [C: snprinf返回值的含义](c/basic/c047.md)
     * [C: 结构体定义中的冒号](c/basic/c048.md)
   * [C: 网络编程](c/net/README.md)
-    * [C: 实现connect、send和recv超时处理](c/net/c025.md)
+    * [C: 实现send和recv超时处理](c/net/c025.md)
     * [C: 模拟connect、send和recv超时场景](c/net/c046.md)
     * [C: epoll用法基础](c/net/c026.md)
     * [C: libcurl基本介绍](c/net/c031.md)
