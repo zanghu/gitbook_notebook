@@ -137,6 +137,7 @@
 * [C](c/README.md)
   * [C: 基础知识](c/basic/README.md)
     * [C: C标准库和POSIX标准库的关系](c/basic/c015.md)
+    * [C: 系统调用的定义的研究](c/basic/c053.md)
     * [C: C99风格初始化（结构体和数组）](c/basic/c002.md)
     * [C: dlopen等函数的基本用法](c/basic/c003.md)
     * [C: 存在库间链式依赖的动态库的dlopen调用方法](c/basic/c008.md)
