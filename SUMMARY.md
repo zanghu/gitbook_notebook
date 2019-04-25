@@ -150,6 +150,7 @@
     * [C: 结构体定义中的冒号](c/basic/c048.md)
     * [C: printf字符串传入NULL是否安全](c/basic/c051.md)
     * [C: void \*的性质与讨论](c/basic/c052.md)
+    * [C: 安装32位GCC运行时库](c/basic/c054.md)
   * [C: 网络编程](c/net/README.md)
     * [C: 实现send和recv超时处理](c/net/c025.md)
     * [C: 模拟connect、send和recv超时场景](c/net/c046.md)
