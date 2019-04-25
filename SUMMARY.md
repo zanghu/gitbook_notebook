@@ -183,6 +183,7 @@
     * [C: readelf命令常见用法](c/tools/c016.md)
     * [C: valgrind工具常见用法](c/tools/c017.md)
     * [C: callgrind工具性能测试](c/tools/c022.md)
+    * [C: ASAN内存检查工具](c/tools/c055.md)
     * [C: pkg-config工具链接库](c/tools/c018.md)
   * [C: 常用操作](c/options/README.md)
     * [C: 查看库的位数](c/options/c029.md)
