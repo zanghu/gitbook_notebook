@@ -102,6 +102,7 @@
     * [Linux: 安装git](linux/soft_setup/lin030.md)
     * [Linux: 安装扩展man手册](linux/soft_setup/lin039.md)
     * [Linux: 安装C++ man手册](linux/soft_setup/lin040.md)
+    * [Linux: 安装32位GCC运行时](c/basic/c054.md)
   * [Linux: 基础知识](linux/basic/README.md)
     * [Linux: 目录下指定类型文件总数](linux/basic/lin035.md)
     * [Linux: 内核版本号查看方式](linux/basic/lin017.md)
