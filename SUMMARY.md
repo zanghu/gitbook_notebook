@@ -193,6 +193,7 @@
   * [C: 调试](c/debug/README.md)
     * [gdb实践总结](c/debug/c019.md)
     * [修改core文件相关配置](linux/config/lin027.md)
+    * [backtrace打印堆栈](c/debug/c057.md)
   * [C: example](c/example/README.md)
     * [socket: 类Unix系统下获取IP、MAC和掩码](c/example/c001.md)
     * [socket: DNS域名解析](c/example/c028.md)
