@@ -202,6 +202,7 @@
     * [example: strerror获取errno语义信息的便捷方法](c/example/c024.md)
     * [example: 常用调试宏](c/example/c023.md)
     * [example: 可变参数宏实现简单日志宏](c/example/c033.md)
+    * [example: backtrace打印堆栈](c/debug/c057.md)
     * [libcurl: HTTP GET](c/example/c034.md)
     * [libcurl: HTTP POST](c/example/c035.md)
   * [C: 自动构建](c/daily_build/README.md)
