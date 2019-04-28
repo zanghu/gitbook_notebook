@@ -193,6 +193,8 @@
   * [C: 调试](c/debug/README.md)
     * [gdb实践总结](c/debug/c019.md)
     * [修改core文件相关配置](linux/config/lin027.md)
+    * [dmesg命令查看系统中程序异常中断记录](c/debug/c058.md)
+    * [addr2line命令将内存地址转化为源码位置](c/debug/c059.md)
     * [backtrace打印堆栈](c/debug/c057.md)
   * [C: example](c/example/README.md)
     * [socket: 类Unix系统下获取IP、MAC和掩码](c/example/c001.md)
