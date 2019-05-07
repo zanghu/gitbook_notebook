@@ -195,7 +195,7 @@
     * [gdb: 实践总结](c/debug/c019.md)
     * [gdb: 监视指定地址区间的内存](c/debug/c063.md)
     * [修改core文件相关配置](linux/config/lin027.md)
-    * [backtrace函数打印堆栈](c/debug/c057.md)
+    * [backtrace函数的用法与限制](c/debug/c057.md)
     * [addr2line命令将内存地址转化为源码位置](c/debug/c059.md)
     * [dmesg命令查看系统中程序异常中断记录](c/debug/c058.md)
   * [example](c/example/README.md)
