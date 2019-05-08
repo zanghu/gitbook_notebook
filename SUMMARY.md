@@ -153,6 +153,8 @@
     * [printf字符串传入NULL是否安全](c/basic/c051.md)
     * [void \*的性质与讨论](c/basic/c052.md)
     * [指针类型转换与内存对齐的关联](c/basic/c062.md)
+    * [有符号类型与无符号类型之间的相互转换](c/basic/c064.md)
+    * [标准C对基本数据类型的约束](c/basic/c065.md)
     * [安装32位GCC运行时库](c/basic/c054.md)
   * [网络编程](c/net/README.md)
     * [socket: 实现send和recv超时处理](c/net/c025.md)
