@@ -176,7 +176,7 @@
 	* [SystemV IPC](c/process/ipc/systemv/README.md)
 		* [SystemV共享内存](c/process/ipc/systemv/c067.md)
 	* [POSIX IPC](c/process/ipc/posix/README.md)
-		* [SystemV共享内存](c/process/ipc/posix/c040.md)
+		* [Posix共享内存](c/process/ipc/posix/c040.md)
   * [编译链接](c/compile_link/README.md)
     * [常用GCC参数汇总](c/compile_link/c011.md)
     * [动态库的源与流](c/compile_link/c006.md)
