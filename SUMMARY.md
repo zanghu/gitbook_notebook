@@ -157,6 +157,7 @@
     * [标准C对基本数据类型的约束](c/basic/c065.md)
     * [安装32位GCC运行时库](c/basic/c054.md)
 	* [二维指针与二维数组的用法注意事项](c/basic/c066.md)
+	* [不同进制下数字表示法](c/basic/c069.md)
   * [网络编程](c/net/README.md)
     * [socket: 实现send和recv超时处理](c/net/c025.md)
     * [socket: 模拟connect、send和recv超时场景](c/net/c046.md)
