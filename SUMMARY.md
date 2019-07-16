@@ -123,6 +123,7 @@
     * [Linux: man命令查询手册](linux/basic/lin026.md)
     * [Linux: su命令切换用户](linux/basic/lin032.md)
     * [Linux: pkg-config工具](c/tools/c018.md)
+	* [Linux: 命令在后台执行](linux/basic/lin041.md)
   * [高级技术](linux/advanced/README.md)
     * [Linux: sudo运行程序搜索路径变化原因的研究](linux/advanced/lin009.md)
     * [Linux: lsof快速释放本地端口](linux/advanced/lin014.md)
