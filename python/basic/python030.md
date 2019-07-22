@@ -25,3 +25,56 @@ print sys.getsizeof(train_transaction)
 ### 2.进程占用内存大小
 
 参考：[python中使用psutil查看内存占用](https://blog.csdn.net/xiaodongxiexie/article/details/54633049)
+
+需要用到`psutils`，模块，例子：
+
+```python
+import psutil
+import os
+
+info = psutil.virtual_memory()
+print u'内存使用：',psutil.Process(os.getpid()).memory_info().rss
+print u'总内存：',info.total
+print u'内存占比：',info.percent
+print u'cpu个数：',psutil.cpu_count()
+```
+
+其他内置的方法或属性还有：
+```
+boot_time
+callable
+collections
+cpu_count
+cpu_percent
+cpu_stats
+cpu_times
+cpu_times_percent
+disk_io_counters
+disk_partitions
+disk_usage
+errno
+functools
+long
+net_connections
+net_if_addrs
+net_if_stats
+net_io_counters
+os
+pid_exists
+pids
+process_iter
+pwd
+signal
+subprocess
+swap_memory
+sys
+test
+time
+traceback
+users
+version_info
+virtual_memory
+wait_procs
+win_service_get
+win_service_iter
+```
