@@ -4,6 +4,8 @@
 
 ### 1.查看对象占用内存大小
 
+参考：[python查看对象占用的内存空间大小](https://blog.csdn.net/scene_2015/article/details/81779694)
+
 python查看对象占用的内存空间大小，一共两步
 
 （1）引用`sys`模块
@@ -19,3 +21,7 @@ train_transaction = pd.read_csv('../input/train_transaction.csv', index_col='Tra
 # 显示对象占用内存, 单位: 字节
 print sys.getsizeof(train_transaction)
 ```
+
+### 2.进程占用内存大小
+
+参考：[python中使用psutil查看内存占用](https://blog.csdn.net/xiaodongxiexie/article/details/54633049)
