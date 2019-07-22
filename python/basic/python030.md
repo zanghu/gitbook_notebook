@@ -7,7 +7,7 @@
 python查看对象占用的内存空间大小，一共两步
 
 （1）引用`sys`模块
-（2）使用`getsizeof()`方法
+（2）使用`getsizeof`方法
 举例如下：
 ```python
 import sys
