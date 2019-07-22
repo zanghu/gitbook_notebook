@@ -13,6 +13,9 @@ python查看对象占用的内存空间大小，一共两步
 import sys
 import pandas as pd
 
+# 读取csv文件中的训练数据到 DataFrame 对象
 train_transaction = pd.read_csv('../input/train_transaction.csv', index_col='TransactionID')
- print sys.getsizeof(train_transaction)
- ```
+
+# 显示对象占用内存, 单位: 字节
+print sys.getsizeof(train_transaction)
+```
