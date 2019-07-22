@@ -1,4 +1,4 @@
-##安装conda包
+## 安装conda包
 
 [http://docs.anaconda.com/anaconda/user-guide/tasks/install-packages/?#installing-packages-on-a-non-networked-air-gapped-computer](http://docs.anaconda.com/anaconda/user-guide/tasks/install-packages/?#installing-packages-on-a-non-networked-air-gapped-computer)
 
