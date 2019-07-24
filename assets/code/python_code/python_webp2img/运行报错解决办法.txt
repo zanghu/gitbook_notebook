@@ -1,0 +1,14 @@
+from: https://qiita.com/hengsokvisal/items/e4610ec5c39a2f0045cc
+
+First of all , we have to install webp by using pip
+
+```shell
+pip install webp
+```
+
+then , we have to install pillow. If you have pillow install please reinstall it because it is not going to work. you can reinstall pillow by
+
+```shell
+pip uninstall Pillow
+pip install Pillow
+```
