@@ -32,5 +32,22 @@
 
 消去维数为1的轴向。
 
+### numpy.repeat
+
+函数原型：
+
+```python
+numpy.repeat(a,repeats,axis=None)
+```
+
+参数的意义：
+
+axis=None，时候就会flatten当前矩阵，实际上就是变成了一个行向量
+
+axis=0,沿着y轴复制，实际上增加了行数
+
+axis=1,沿着x轴复制，实际上增加列数
+
+repeats可以为一个数，也可以为一个矩阵，具体区别我们从以下实例中就会发现
 
 
