@@ -84,6 +84,8 @@
   * [Statistics](math/statistics/README.md)
     * [Static: N sigma 准则](math/statistics/static001.md)
 * [Linux/Unix](linux/README.md)
+  * [深入内核](linux/kernel/README.md)
+    * [数据结构: LIST_HEAD](linux/kernel/lin101.md)
   * [环境设置](linux/config/README.md)
     * [Linux: 格式化和挂载SSD](linux/config/lin011.md)
     * [Linux: 创建用户/配置用户组1](linux/config/lin015.md)
