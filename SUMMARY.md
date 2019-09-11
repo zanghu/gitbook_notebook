@@ -200,7 +200,7 @@
   * [命令行工具](c/tools/README.md)
     * [nm命令查看lib库中符号](c/tools/c005.md)
     * [objdump命令常见用法](c/tools/c009.md)
-    * [file命令查看elf文件状态-g、stripped](c/perf/lin044.md)
+    * [file命令查看elf文件状态-g、stripped](linux/perf/lin044.md)
     * [readelf命令常见用法](c/tools/c016.md)
     * [valgrind工具常见用法](c/tools/c017.md)
     * [callgrind工具性能测试](c/tools/c022.md)
