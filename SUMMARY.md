@@ -130,6 +130,7 @@
     * [Linux: telnet命令](linux/basic/lin028.md)
     * [Linux: man命令查询手册](linux/basic/lin026.md)
     * [Linux: su命令切换用户](linux/basic/lin032.md)
+    * [Linux: readlink命令获取真实路径](linux/basic/lin046.md)
     * [Linux: pkg-config工具](c/tools/c018.md)
     * [Linux: 命令在后台执行](linux/basic/lin041.md)
     * [Linux: 黑洞与白洞](linux/basic/lin042.md)
