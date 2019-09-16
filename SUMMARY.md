@@ -87,6 +87,7 @@
   * [深入内核](linux/kernel/README.md)
     * [数据结构: LIST\_HEAD](linux/kernel/lin101.md)
     * [进程管理: 进程状态](linux/kernel/lin102.md)
+    * [调试分析: 内核符号表kallsyms](linux/kernel/lin103.md)
   * [调试、跟踪与分析](linux/perf/README.md)
     * [Linux: 可执行文件stripped属性在跟踪中的作用](linux/perf/lin044.md)
     * [Linux: 可执行文件分类](linux/perf/lin045.md)
