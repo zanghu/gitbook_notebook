@@ -47,3 +47,12 @@ $ pip install torch-1.2.0-cp36-cp36m-manylinux1_x86_64.whl
 ### 3.下载wheel格式的离线安装包
 
 Pypi官网地址: [https://pypi.org/](https://pypi.org/)
+
+在首页搜索模块名称
+
+![](/assets/python032_01_1.PNG)
+
+在搜索结果中找到目标模块
+
+![](/assets/python033_01_1.PNG)
+
