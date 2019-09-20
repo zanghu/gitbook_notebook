@@ -58,3 +58,5 @@ Pypi官网地址: [https://pypi.org/](https://pypi.org/)
 
 下载适合自己当前环境的安装包
 
+![](/assets/python032_03_1.PNG)
+
