@@ -44,4 +44,6 @@ $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 $ pip install torch-1.2.0-cp36-cp36m-manylinux1_x86_64.whl
 ```
 
-###
+### 3.下载wheel格式的离线安装包
+
+Pypi官网地址: [https://pypi.org/](https://pypi.org/)
