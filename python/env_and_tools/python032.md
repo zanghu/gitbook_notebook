@@ -2,6 +2,8 @@
 
 参考资料: [清华大学Pypi镜像](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)
 
+参考资料：[Pypi官方网站](https://pypi.org/)
+
 ### 1.什么是pip和pypi
 
 `pip`是一个现代的，通用的 Python 包管理工具，是easy_install的替代品，英文`python install packages`
