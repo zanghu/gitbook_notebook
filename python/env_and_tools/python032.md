@@ -54,5 +54,5 @@ Pypi官网地址: [https://pypi.org/](https://pypi.org/)
 
 在搜索结果中找到目标模块
 
-![](/assets/python033_01_1.PNG)
+![](/assets/python032_02_1.PNG)
 
