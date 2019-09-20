@@ -1,21 +1,31 @@
-## Python: 使用conda安装opencv
+## Python: 使用pip安装模块
 
 参考资料: [https://stackoverflow.com/questions/23119413/how-do-i-install-python-opencv-through-conda](https://stackoverflow.com/questions/23119413/how-do-i-install-python-opencv-through-conda)
 
-#### 安装方法
+### 基本命令
 
-目前Anaconda默认安装后不包含opencv, 即`import cv2`会失败。
+更新本地`pip`版本
 
-经过测试，如下的安装方法均不可行：
-
-```shell
-conda install opencv
-conda install cv2
+```python
+# 从python2.7.9开始自带pip
+$ pip install --upgrade pip
 ```
 
-推荐的使用conda安装opencv的方法：
+安装软件包(如果本地已有吗，不会尝试更新版版本)
 
-```shell
-conda install -c menpo opencv
+```python
+$ pip3 install numpy
 ```
 
+会自动更新本地版本的安装
+
+```python
+$ pip3 install -U numpy
+```
+
+从指定源安装
+
+```python
+# 以下命令时清华镜像源
+$ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+```
