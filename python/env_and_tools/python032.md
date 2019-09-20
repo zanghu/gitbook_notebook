@@ -1,6 +1,6 @@
 ## Python: 使用pip安装模块
 
-参考资料: [https://stackoverflow.com/questions/23119413/how-do-i-install-python-opencv-through-conda](https://stackoverflow.com/questions/23119413/how-do-i-install-python-opencv-through-conda)
+参考资料: [清华大学Pypi镜像](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)
 
 ### 1.什么是pip和pypi
 
