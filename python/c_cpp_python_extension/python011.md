@@ -4,6 +4,8 @@
 
 参考资料: [https://blog.csdn.net/arnozhang12/article/details/5409155](https://blog.csdn.net/arnozhang12/article/details/5409155)
 
+参考资料: [深入源码解析Python中的对象与类型](https://www.jb51.net/article/76269.htm)
+
 #### 1.基本步骤与格式约束
 
 * **第零部分**：定义C结构体
