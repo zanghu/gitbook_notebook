@@ -134,8 +134,8 @@ static void CScore_Destruct(CScore* Self)                   //析构方法.
     if(Self->m_szName)
         delete [] Self->m_szName;              //先释放其字符指针对象.
 
-    //如果还有PyObject*成员的话，要一并释放之.
-    //如：Py_XDECREF(Self->Member);
+    //如果还有PyObject*成员的话，要一并释放之. 如：Py_XDECREF(Self->Member);
+    // #define Py_TYPE(ob)             (((PyObject*)(ob))->ob_type)
     Py_TYPE(Self)->tp_free((PyObject*)Self);      //释放对象/实例.
 }
 
