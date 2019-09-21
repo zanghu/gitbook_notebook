@@ -118,7 +118,8 @@ typedef struct _CScore
 static void CScore_init(CScore* Self, PyObject* pArgs)    //构造方法.
 {
     const char* Name = 0;
-    // int PyArg_ParseTuple(PyObject *arg, char *format, ...), 注意这里的format格式串不同于C语言显示函数中的格式串, 它们有自己的约定法则, 例如"sff"表示按顺序解析string、float、float三个值
+    // int PyArg_ParseTuple(PyObject *arg, char *format, ...);
+    // 注意这里的format格式串不同于C语言显示函数中的格式串, 它们有自己的约定法则, 例如"sff"表示按顺序解析string、float、float三个值
     if(!PyArg_ParseTuple(pArgs, "sff", &Name, &Self->m_dMath, &Self->m_dEnglish)) {
         cout << "Parse the argument FAILED! You should pass correct values!" << endl;
         return ;
