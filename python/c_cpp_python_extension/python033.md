@@ -2,6 +2,10 @@
 
 参考资料：[深入源码解析Python中的对象与类型](https://www.php.cn/python-tutorials-157807.html)
 
+参考资料：[Python 的 type 和 object 之间是怎么一种关系？](https://www.zhihu.com/question/38791962)
+
+参考资料：《Python源码剖析》
+
 ### 1.Python对象在C源码中的基类
 
 #### 1.1 Python对象
@@ -146,6 +150,8 @@ PyTypeObject PyType_Type = {
 ```
 
 （3）注意到：类型名`tp_name`这里是"type", 归属类型`*ob_type = &PyType_Type`，即, PyType_Type的类型是其本身!
+
+![](/assets/python033_03.png) ![](/assets/python033_04.png)
 
 #### 2.3 其次，定义一个PyTypeObject实例叫做PyInt_Type，它在Python运行时的类型是type类型
 
