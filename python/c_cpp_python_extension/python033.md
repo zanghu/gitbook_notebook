@@ -59,34 +59,18 @@ typedef struct {
 
 ### 基类的操作宏函数
 
+* 属性相关方法
 ```c
 #define Py_REFCNT(ob)           (((PyObject*)(ob))->ob_refcnt)  // 读取引用计数
 #define Py_TYPE(ob)             (((PyObject*)(ob))->ob_type)    // 获取对象类型
 #define Py_SIZE(ob)             (((PyVarObject*)(ob))->ob_size) //读取元素个数(len)
 ```
 
-跟对象相关的方法
-
-#define Py_REFCNT(ob) (((PyObject*)(ob))->ob_refcnt)
-
-
-#define Py_TYPE(ob) (((PyObject*)(ob))->ob_type)
-
-
-#define Py_SIZE(ob) (((PyVarObject*)(ob))->ob_size)
-
-跟引用计数相关的方法
-
-Py_INCREF(op) 增加对象引用计数
-
-Py_DECREF(op) 减少对象引用计数, 如果计数位0, 调用_Py_Dealloc
-
-_Py_Dealloc(op) 调用对应类型的 tp_dealloc 方法(每种类型回收行为不一样的, 各种缓存池机制, 后面看)
-其他
-几个参数涉及
-
-ob_refcnt 引用计数, 与内存管理/垃圾回收相关
-ob_type 类型, 涉及Python的类型系统
+* 跟对象相关的方法
+```c
+#define Py_REFCNT(ob) ... // 增加对象引用计数
+#define Py_DECREF(ob) ... // 减少对象引用计数, 如果计数位0, 调用_Py_Dealloc
+```
 
 
 类型
