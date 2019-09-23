@@ -2,8 +2,9 @@
 
 参考资料：[深入源码解析Python中的对象与类型](https://www.php.cn/python-tutorials-157807.html)
 
+### 1.基类
 
-### 对象
+#### 1.1 对象
 
 Python中对象分为两类: 定长(int等), 非定长(list/dict等容器)
 
@@ -11,7 +12,7 @@ Python中对象分为两类: 定长(int等), 非定长(list/dict等容器)
 
 源码位置: Include/object.h
 
-### PyObject_HEAD & PyObject_VAR_HEAD
+### 1.2 PyObject_HEAD & PyObject_VAR_HEAD
 
 Python 内部, 每个对象拥有相同的头部.
 
@@ -36,7 +37,7 @@ Python 内部, 每个对象拥有相同的头部.
 `PyObject_VAR_HEAD`则是Python中所有非定长对象的基类。
 
 
-### PyObject & yVarObject
+### 1.3 PyObject & PyVarObject
 
 * 定义
 
@@ -54,101 +55,54 @@ typedef struct {
 ![](/assets/python033_02.png)
 
 
+* 基类的操作宏函数
 
-
-
-### 基类的操作宏函数
-
-* 属性相关方法
+（1） 属性相关方法
 ```c
 #define Py_REFCNT(ob)           (((PyObject*)(ob))->ob_refcnt)  // 读取引用计数
 #define Py_TYPE(ob)             (((PyObject*)(ob))->ob_type)    // 获取对象类型
 #define Py_SIZE(ob)             (((PyVarObject*)(ob))->ob_size) //读取元素个数(len)
 ```
 
-* 跟对象相关的方法
+（2） 跟对象相关的方法
 ```c
 #define Py_REFCNT(ob) ... // 增加对象引用计数
 #define Py_DECREF(ob) ... // 减少对象引用计数, 如果计数位0, 调用_Py_Dealloc
 ```
 
+### 2.类型机制
 
 
 我们反向推导一个int对象是怎么生成的.
 
-1. 首先, 定义一种类型叫PyTypeObject
+#### 2.1 首先, 定义一种类型叫PyTypeObject
+
 代码位置 Include/object.h
 
-定义
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* 定义
+```c
 typedef struct _typeobject {
-
- 
-
  /* MARK: base, 注意, 是个变长对象*/
-
  PyObject_VAR_HEAD
-
  const char *tp_name; /* For printing, in format "<module>.<name>" */ //类型名
-
  Py_ssize_t tp_basicsize, tp_itemsize; /* For allocation */ // 创建该类型对象时分配的内存空间大小
-
- 
-
  
 
  // 一堆方法定义, 函数和指针
-
  /* Methods to implement standard operations */
-
  printfunc tp_print;
-
  hashfunc tp_hash;
 
- 
-
  /* Method suites for standard classes */
-
  PyNumberMethods *tp_as_number;  // 数值对象操作
-
  PySequenceMethods *tp_as_sequence; // 序列对象操作
-
  PyMappingMethods *tp_as_mapping; // 字典对象操作
 
- 
-
  // 一堆属性定义
-
  ....
-
  
-
 } PyTypeObject;
-
+```
  
 
 </name></module>
