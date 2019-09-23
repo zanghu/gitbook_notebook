@@ -72,8 +72,9 @@ typedef struct {
 
 ### 2.类型机制
 
+Python中经常都提到“一切皆对象”的，甚至包括Python中的类型(class)的定义也是一个对象，所有类型的基类type也是一个对象。
 
-我们反向推导一个int对象是怎么生成的.
+我们反向推导一个int对象是怎么生成的，通过这个过程来说明Python源码中是如何通过C语言来实现“一切皆对象的”。
 
 #### 2.1 首先, 定义一种类型叫PyTypeObject
 
@@ -84,20 +85,9 @@ typedef struct {
 ```c
 typedef struct _typeobject {
  /* MARK: base, 注意, 是个变长对象*/
- PyObject_VAR_HEAD
- const char *tp_name;  //类型名
+ PyObject_VAR_HEAD // 变长对象基类
+ const char *tp_name;  // 类型名，是一个字符串
  Py_ssize_t tp_basicsize, tp_itemsize; // 创建该类型对象时分配的内存空间大小
- 
- /*
- 1. PyObject_VAR_HEAD: 变长对象基类
- 2. const char *tp_name
-tp_name, 类型名字符串数组
-所有Type都是PyTypeObject的"实例": PyType_Type/PyInt_Type
-
-2. 然后, 用PyTypeObject初始化得到一个对象PyType_Type
-代码位置 Objects/typeobject.c
- */
- 
 
  // 一堆方法定义, 函数和指针
  /* Methods to implement standard operations */
@@ -116,23 +106,12 @@ tp_name, 类型名字符串数组
 
 * 说明
 
+Python中的所有Type都是`PyTypeObject`的"实例"，包括所有类型的基类type自身也是`PyTypeObject`的实例。后面我们将看到，Python中的一切基本类型都是`PyTypeObject`的·实例。
 
-
-定义
-
-
-
-
-
-
-
-
-
-
+#### 2.2 其次，定义一个PyTypeObject实例叫做PyType_Type
 
 
 PyTypeObject PyType_Type = {
-
  PyVarObject_HEAD_INIT(&PyType_Type, 0)
 
  "type",                   /* tp_name */
