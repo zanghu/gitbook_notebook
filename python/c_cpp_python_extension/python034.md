@@ -2,7 +2,8 @@
 
 * 对arena比较详细的介绍：
 
-  参考资料：[Python源码阅读-内存管理机制](http://wklken.me/posts/2015/08/29/python-source-memory-2.html)
+  参考资料：[Python源码阅读-内存管理机制（一）](http://wklken.me/posts/2015/08/29/python-source-memory-1.html)
+  参考资料：[Python源码阅读-内存管理机制（二）](http://wklken.me/posts/2015/08/29/python-source-memory-2.html)
 
   参考资料：
 [话说Python内存管理机制篇一之结构](https://laucyun.com/4672f926ac3f26136b2caa1c08a2ffba.html)
@@ -16,5 +17,5 @@
 
 ### 1.官方教程
 
-
+python
 
