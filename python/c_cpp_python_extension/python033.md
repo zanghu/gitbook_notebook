@@ -10,7 +10,7 @@ Python中对象分为两类: 定长(int等), 非定长(list/dict等容器)
 
 所有对象都有一些相同的东西, 源码中定义为PyObject和PyVarObject, 两个定义都有一个共同的头部定义PyObject_HEAD(其实PyVarObject有自己的头部定义PyObject_VAR_HEAD, 但其实际上用的也是PyObject_HEAD).
 
-源码位置: Include/object.h
+源码位置: `include/python3.6m/object.h`
 
 ### 1.2 PyObject_HEAD & PyObject_VAR_HEAD
 
@@ -77,9 +77,10 @@ typedef struct {
 
 #### 2.1 首先, 定义一种类型叫PyTypeObject
 
-代码位置 Include/object.h
+代码位置：`include/python3.6m/object.h`
 
 * 定义
+
 ```c
 typedef struct _typeobject {
  /* MARK: base, 注意, 是个变长对象*/
