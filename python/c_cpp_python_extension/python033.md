@@ -11,17 +11,21 @@ Python中对象分为两类: 定长(int等), 非定长(list/dict等)
 
 源码位置: Include/object.h
 
-### PyObject_HEAD
+### PyObject_HEAD &
 
 Python 内部, 每个对象拥有相同的头部.
 
 * 定义
 ```c
-/* PyObject_HEAD defines the initial segment of every PyObject. */
-#define PyObject_HEAD          \
-  _PyObject_HEAD_EXTRA \       # 先忽略, 双向链表结构, 有资料显示该宏只与DEBUG模式有关
-  Py_ssize_t ob_refcnt; \      # 引用计数, 跟Python的内存管理机制相关
-  struct _typeobject *ob_type; # 指向类型对象的指针(指向_typeobject结构体)
+  /* PyObject_HEAD defines the initial segment of every PyObject. */
+  #define PyObject_HEAD          \
+      _PyObject_HEAD_EXTRA \       # 先忽略, 双向链表结构, 有资料显示该宏只与DEBUG模式有关
+      Py_ssize_t ob_refcnt; \      # 引用计数, 跟Python的内存管理机制相关
+      struct _typeobject *ob_type; # 指向类型对象的指针(指向_typeobject结构体)
+  
+  #define PyObject_VAR_HEAD        \
+      PyObject_HEAD            \
+      Py_ssize_t ob_size; /* Number of items in variable part */
   ```
 
 
