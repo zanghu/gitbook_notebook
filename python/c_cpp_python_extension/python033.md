@@ -174,7 +174,7 @@ PyTypeObject PyInt_Type = {
 （2）*ob_type = &PyType_Type说明`PyInt_Type`作为Python的类型其Python意义下的归属类型是`PyType_Type`
 
 
-#### 2.4 最后, 定义int类型的对象的C定义PyIntObject
+#### 2.4 最后, 定义int类型的对象的C定义PyIntObject，它是PyObject的C语言意义下的子类
 
 * 代码位置：`include/.../intobject.h`
 
