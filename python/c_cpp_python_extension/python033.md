@@ -76,7 +76,7 @@ Python中经常都提到“一切皆对象”的，甚至包括Python中的类�
 
 我们反向推导一个int对象是怎么生成的，通过这个过程来说明Python源码中是如何通过C语言来实现“一切皆对象的”。
 
-#### 2.1 首先, 定义一种类型叫PyTypeObject
+#### 2.1 首先, 定义一种类型叫PyTypeObject，Python中一切类型都是该定义的实例
 
 代码位置：`include/python3.6m/object.h`
 
@@ -108,7 +108,7 @@ typedef struct _typeobject {
 
 Python中的所有Type都是`PyTypeObject`的"实例"，包括所有类型的基类type自身也是`PyTypeObject`的实例。后面我们将看到，Python中的一切基本类型都是`PyTypeObject`的·实例。
 
-#### 2.2 其次，定义一个PyTypeObject实例叫做PyType_Type
+#### 2.2 其次，定义一个PyTypeObject实例叫做PyType_Type，作为Python中所有类型的基类
 
 PyType_Type是`PyTypeObject`的一个实例，它就是Python中一切类型的基类Type
 
@@ -127,6 +127,9 @@ PyTypeObject PyType_Type = {
 
 * 说明
 
+（1）`PyType_Type`是一个C语言全局变量；
+
+（2）宏函数`PyVarObject_HEAD_INIT`的定义
 ```c
 #define PyObject_HEAD_INIT(type)        \
     { _PyObject_EXTRA_INIT              \
@@ -136,53 +139,23 @@ PyTypeObject PyType_Type = {
     { PyObject_HEAD_INIT(type) size },
 ```
 
-1. tp_name
-类型名, 这里是"type"
+（3）注意到：类型名`tp_name`这里是"type", 归属类型`*ob_type = &PyType_Type`，即, PyType_Type的类型是其本身!
 
-2. PyVarObject_HEAD_INIT(&PyType_Type, 0)
-PyVarObject_HEAD_INIT, 这个方法在 Include/object.h中,
-等价于
-ob_refcnt = 1
-*ob_type = &PyType_Type
-ob_size = 0
+#### 2.3 其次，定义一个PyTypeObject实例叫做PyInt_Type，它是Python中type类型的子类
 
-即, PyType_Type的类型是其本身!
-结构
+```c
+PyTypeObject PyInt_Type = {
+    PyVarObject_HEAD_INIT(&PyType_Type, 0)
+    "int",
+    sizeof(PyIntObject),
+    0,
 
-第一张图, 箭头表示实例化(google doc用不是很熟找不到对应类型的箭头)
-20151211181832844.png (510×277)
-
-第二张图, 箭头表示指向
-20151211181846535.png (484×250)
-
-使用
+    // int类型的相关方法和属性值
+    ....
+    (hashfunc)int_hash,             /* tp_hash */
+};
 
 
-
-
-
-
-
-
-
-
-# 1. int 的 类型 是`type`
-
->>> type(int)
-
-<type 'type'="">
-
- 
-
-# 2. type 的类型 还是`type`, 对应上面说明第二点
-
->>> type(type(int))
-
-<type 'type'="">
-
- 
-
-</type></type>
 
 注意: 无论任何时候, ob_type指向的是 PyTypeObject的实例: PyType_Type/PyInt_Type...
 
@@ -203,29 +176,7 @@ ob_size = 0
 
 
 
-PyTypeObject PyInt_Type = {
 
- PyVarObject_HEAD_INIT(&PyType_Type, 0)
-
- "int",
-
- sizeof(PyIntObject),
-
- 0,
-
- 
-
- // int类型的相关方法和属性值
-
- ....
-
- 
-
- (hashfunc)int_hash,             /* tp_hash */
-
- 
-
-};
 
 说明
 
