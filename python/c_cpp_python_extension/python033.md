@@ -165,6 +165,7 @@ PyTypeObject PyInt_Type = {
     ....
     (hashfunc)int_hash,             /* tp_hash */
 };
+```
 
 * 说明
 
