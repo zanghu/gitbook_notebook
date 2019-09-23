@@ -5,30 +5,35 @@
 
 ### 对象
 
-Python中对象分为两类: 定长(int等), 非定长(list/dict等)
+Python中对象分为两类: 定长(int等), 非定长(list/dict等容器)
 
 所有对象都有一些相同的东西, 源码中定义为PyObject和PyVarObject, 两个定义都有一个共同的头部定义PyObject_HEAD(其实PyVarObject有自己的头部定义PyObject_VAR_HEAD, 但其实际上用的也是PyObject_HEAD).
 
 源码位置: Include/object.h
 
-### PyObject_HEAD &
+### PyObject_HEAD & PyObject_VAR_HEAD
 
 Python 内部, 每个对象拥有相同的头部.
 
 * 定义
 ```c
   /* PyObject_HEAD defines the initial segment of every PyObject. */
+  // 所有定长对象的公共头部部分
   #define PyObject_HEAD          \
       _PyObject_HEAD_EXTRA \       # 先忽略, 双向链表结构, 有资料显示该宏只与DEBUG模式有关
       Py_ssize_t ob_refcnt; \      # 引用计数, 跟Python的内存管理机制相关
       struct _typeobject *ob_type; # 指向类型对象的指针(指向_typeobject结构体)
   
   /* PyObject_VAR_HEAD defines the initial segment of all variable-size container objects. */
+  // 所有非定长对象的公共头部部分
   #define PyObject_VAR_HEAD        \
       PyObject_HEAD            \
       Py_ssize_t ob_size; /* Number of items in variable part */
   ```
+`
+`PyObject_HEAD`可以看作是Python源码中所有Python对象的C定义中的基类，同时也是`PyObject_VAR_HEAD`的基类。
 
+`PyObject_VAR_HEAD`则是Python中所有非定长对象的基类。
 
 
 ### PyObject
