@@ -28,6 +28,7 @@ Python 内部, 每个对象拥有相同的头部.
 
 ### PyObject
 
+* 定义
 ```c
 typedef struct _object {
   PyObject_HEAD
