@@ -110,27 +110,18 @@ Python中的所有Type都是`PyTypeObject`的"实例"，包括所有类型的基
 
 #### 2.2 其次，定义一个PyTypeObject实例叫做PyType_Type
 
-
+```c
 PyTypeObject PyType_Type = {
- PyVarObject_HEAD_INIT(&PyType_Type, 0)
+    PyVarObject_HEAD_INIT(&PyType_Type, 0)
+    "type",                   /* tp_name */
+    sizeof(PyHeapTypeObject),          /* tp_basicsize */
+    sizeof(PyMemberDef),            /* tp_itemsize */
+    (destructor)type_dealloc,          /* tp_dealloc */
 
- "type",                   /* tp_name */
-
- sizeof(PyHeapTypeObject),          /* tp_basicsize */
-
- sizeof(PyMemberDef),            /* tp_itemsize */
-
- (destructor)type_dealloc,          /* tp_dealloc */
-
- 
-
- // type对象的方法和属性初始化值
-
- .....
-
- 
-
+    // type对象的方法和属性初始化值
+    .....
 };
+```
 
 说明
 
