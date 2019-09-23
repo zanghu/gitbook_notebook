@@ -37,29 +37,15 @@ typedef struct _object {
 
 ![](/assets/python033_01.png)
 
-说明
+### PyVarObject
 
-1. 依赖关系
-PyObject -> PyObject_HEAD
-结构
-20151211181600262.png (459×180)
+* 定义
 
-PyVarObject
-定义
-
-
-
-
-
-
-
-
+```c
 typedef struct {
-
   PyObject_VAR_HEAD
-
 } PyVarObject;
-
+```
  
 
 #define PyObject_VAR_HEAD        \
