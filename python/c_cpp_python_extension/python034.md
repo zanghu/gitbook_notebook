@@ -11,9 +11,8 @@
 
 * 对内存池usedtools的比较详细的分析：
 
-参考资料：《Python源码剖析》
-
-参考资料：[Python内存管理模块的一个奇技淫巧](http://blog.guoyb.com/2017/03/15/python-obmalloc-trick/)
+参考资料：《Python源码剖析》  
+参考资料：[Python内存管理模块的一个奇技淫巧](http://blog.guoyb.com/2017/03/15/python-obmalloc-trick/)  
 
 ### 1.官方教程
 
