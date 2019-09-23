@@ -143,6 +143,11 @@ PyTypeObject PyType_Type = {
 
 #### 2.3 其次，定义一个PyTypeObject实例叫做PyInt_Type，它是Python中type类型的子类
 
+* 代码位置`Objects/intobject.c`
+  >注意：python3.6中没有intobject.c`文件和`PyInt_Type`类型，替代这是`PyLong_Type`类型`
+
+* 定义
+
 ```c
 PyTypeObject PyInt_Type = {
     PyVarObject_HEAD_INIT(&PyType_Type, 0)
@@ -160,7 +165,7 @@ PyTypeObject PyInt_Type = {
 注意: 无论任何时候, ob_type指向的是 PyTypeObject的实例: PyType_Type/PyInt_Type...
 
 3. 再然后, 定义具体的类型, 这里以PyInt_Type为例子
-代码位置 Objects/intobject.c
+
 
 定义
 
