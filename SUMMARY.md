@@ -43,7 +43,7 @@
     * [C/C++扩展Python: 类](python/c_cpp_python_extension/python011.md)
     * [C/C++扩展Python: 官方文档](python/c_cpp_python_extension/python012.md)
     * [C/C++扩展Python: 实践注意事项](python/c_cpp_python_extension/python013.md)
-    * [Python源码阅读: 类型对象系统](python/c_cpp_python_extension/python033.md)
+    * [Python源码阅读: 类型体系](python/c_cpp_python_extension/python033.md)
     * [Python源码阅读: 内存管理](python/c_cpp_python_extension/python034.md)
   * [Python: 环境和工具](python/env_and_tools/README.md)
     * [pip安装模块](python/env_and_tools/python032.md)

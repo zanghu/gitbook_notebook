@@ -1,4 +1,4 @@
-## Python源码阅读（一）: Python的面向对象机制
+## Python源码阅读（一）: Python的类型体系
 
 参考资料：[深入源码解析Python中的对象与类型](https://www.php.cn/python-tutorials-157807.html)
 
@@ -108,7 +108,7 @@ typedef struct _typeobject {
 
 Python中的所有Type都是`PyTypeObject`的"实例"，包括所有类型的基类type自身也是`PyTypeObject`的实例。后面我们将看到，Python中的一切基本类型都是`PyTypeObject`的·实例。
 
-#### 2.2 其次，定义一个PyTypeObject实例叫做PyType_Type，作为Python中所有类型的基类
+#### 2.2 其次，定义一个PyTypeObject实例叫做PyType_Type，作为Python中所有类型的类型
 
 PyType_Type是`PyTypeObject`的一个实例，它就是Python中一切类型的基类Type
 
