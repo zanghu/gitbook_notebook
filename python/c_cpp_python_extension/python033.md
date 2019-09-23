@@ -39,6 +39,7 @@ Python 内部, 每个对象拥有相同的头部.
 ### PyObject & yVarObject
 
 * 定义
+
 ```c
 typedef struct _object {
   PyObject_HEAD
@@ -55,20 +56,21 @@ typedef struct {
 ### 基类的操作宏函数
 
 ```c
-#define Py_REFCNT(ob)           (((PyObject*)(ob))->ob_refcnt)
-#define Py_TYPE(ob)             (((PyObject*)(ob))->ob_type)
-#define Py_SIZE(ob)             (((PyVarObject*)(ob))->ob_size)
+#define Py_REFCNT(ob)           (((PyObject*)(ob))->ob_refcnt)  // 读取引用计数
+#define Py_TYPE(ob)             (((PyObject*)(ob))->ob_type)    // 获取对象类型
+#define Py_SIZE(ob)             (((PyVarObject*)(ob))->ob_size) //读取元素个数(len)
 ```
+
 跟对象相关的方法
 
 #define Py_REFCNT(ob) (((PyObject*)(ob))->ob_refcnt)
-读取引用计数
+
 
 #define Py_TYPE(ob) (((PyObject*)(ob))->ob_type)
-获取对象类型
+
 
 #define Py_SIZE(ob) (((PyVarObject*)(ob))->ob_size)
-读取元素个数(len)
+
 跟引用计数相关的方法
 
 Py_INCREF(op) 增加对象引用计数
