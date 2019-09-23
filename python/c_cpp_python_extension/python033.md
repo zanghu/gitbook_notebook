@@ -51,6 +51,10 @@ typedef struct {
 ```
 
 ![](/assets/python033_01.png)
+![](/assets/python033_02.png)
+
+
+
 
 
 ### 基类的操作宏函数
