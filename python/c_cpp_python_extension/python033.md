@@ -8,7 +8,7 @@
 
 Python有一句话：一切皆对象。因为所有Python运行时环境中的概念实际上都是一个C语言结构体的实例。
 
-Python中类型间的一切关系本质上都是C语言实例的运行时对象间的关联关系。例如：Python中自定义类型A继承了`object`类型，其实是A类型的Python定义（也是Python运行时对象）关联着`object`类型（也是Python运行时对象），这种关联可能是通过对象中的一个指向基类的指针实现的。
+Python中类型间的一切关系本质上都是C语言实例的运行时对象间的关联关系。例如：Python中自定义类型A继承了`object`类型，其实是A类型的Python定义（也是Python运行时对象）关联着`object`类型（也是Python运行时对象），这种关联可能是通过子类对象中的一个指向基类的指针实现的。
 
 作为对比，C语言中的类间继承关系是一种纯粹的语法特性上的关联关系，是通过定义的源码静态描述的。
 
@@ -172,48 +172,19 @@ PyTypeObject PyInt_Type = {
 
 （2）*ob_type = &PyType_Type说明`PyInt_Type`作为Python的类型其Python意义下的归属类型是`PyType_Type`
 
-结构
-20151211181940069.png (1083×570)
 
-使用
+#### 2.4 最后, 定义int类型的对象
 
+* 代码位置：`include/.../intobject.h`
 
+* 定义
 
-
-
-
-
-
->>> type(1)
-
-<type 'int'="">
-
- 
-
->>> type(type(1))
-
-<type 'type'="">
-
- 
-
-</type></type>
-
-4. 最后, 生成一个整数对象int
-代码位置 Include/intobject.h
-
-定义
-
-
-
-
-
+```c
 typedef struct {
-
-  PyObject_HEAD
-
-  long ob_ival;
-
+    PyObject_HEAD
+    long ob_ival;
 } PyIntObject;
+```
 
 结构
 20151211182004246.png (1768×832)
