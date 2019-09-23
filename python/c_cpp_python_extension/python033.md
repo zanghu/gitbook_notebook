@@ -30,7 +30,7 @@ Python 内部, 每个对象拥有相同的头部.
       PyObject_HEAD            \
       Py_ssize_t ob_size; /* Number of items in variable part */
   ```
-`
+
 `PyObject_HEAD`可以看作是Python源码中所有Python对象的C定义中的基类，同时也是`PyObject_VAR_HEAD`的基类。
 
 `PyObject_VAR_HEAD`则是Python中所有非定长对象的基类。
