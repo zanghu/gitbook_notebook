@@ -151,7 +151,8 @@ PyTypeObject PyType_Type = {
 
 （3）注意到：类型名`tp_name`这里是"type", 归属类型`*ob_type = &PyType_Type`，即, PyType_Type的类型是其本身!
 
-![](/assets/python033_03.png) ![](/assets/python033_04.png)
+![](/assets/python033_03.png) 
+![](/assets/python033_04.png)
 
 #### 2.3 其次，定义一个PyTypeObject实例叫做PyInt_Type，它在Python运行时的类型是type类型
 
@@ -179,6 +180,7 @@ PyTypeObject PyInt_Type = {
 
 （2）*ob_type = &PyType_Type说明`PyInt_Type`作为Python的类型其Python意义下的归属类型是`PyType_Type`
 
+![](/assets/python033_05.png)
 
 #### 2.4 最后, 定义int类型的对象的C定义PyIntObject，它是PyObject的C语言意义下的子类
 
@@ -192,3 +194,6 @@ typedef struct {
     long ob_ival;
 } PyIntObject;
 ```
+
+![](/assets/python033_06.png)
+
