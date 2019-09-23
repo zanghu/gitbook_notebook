@@ -103,11 +103,8 @@ typedef struct _typeobject {
  
 } PyTypeObject;
 ```
- 
 
-</name></module>
-
-说明
+* 说明
 
 1. PyObject_VAR_HEAD
 变长对象
