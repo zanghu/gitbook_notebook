@@ -144,7 +144,7 @@ PyTypeObject PyType_Type = {
 #### 2.3 其次，定义一个PyTypeObject实例叫做PyInt_Type，它是Python中type类型的子类
 
 * 代码位置`Objects/intobject.c`
-  >注意：python3.6中没有intobject.c`文件和`PyInt_Type`类型，替代这是`PyLong_Type`类型`
+  >注意：python3.6中没有`intobject.c`文件和`PyInt_Type`类型，代替它们的是`longobject.c`文件和`PyLong_Type`类型`。
 
 * 定义
 
