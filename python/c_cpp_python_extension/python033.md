@@ -22,23 +22,8 @@ Python 内部, 每个对象拥有相同的头部.
   _PyObject_HEAD_EXTRA \       # 先忽略, 双向链表结构, 后面垃圾回收再说
   Py_ssize_t ob_refcnt; \      # 引用计数, 跟Python的内存管理机制相关
   struct _typeobject *ob_type; # 指向类型对象的指针(指向_typeobject结构体)
-
   ```
 
-* 说明
-
-- _PyObject_HEAD_EXTRA
-先忽略, 双向链表结构, 后面垃圾回收再说
-
-- Py_ssize_t ob_refcnt
-Py_ssize_t在编译时确定, 整型
-ob_refcnt, 引用计数, 跟Python的内存管理机制相关(基于引用计数的垃圾回收)
-
-- struct _typeobject *ob_type
-*ob_type 指向类型对象的指针(指向_typeobject结构体)
-决定了这个对象的类型!
-PyObject
-定义
 
 
 
