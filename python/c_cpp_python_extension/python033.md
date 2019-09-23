@@ -88,6 +88,18 @@ typedef struct _typeobject {
  const char *tp_name; /* For printing, in format "<module>.<name>" */ //类型名
  Py_ssize_t tp_basicsize, tp_itemsize; /* For allocation */ // 创建该类型对象时分配的内存空间大小
  
+ /*
+ 1. PyObject_VAR_HEAD
+变长对象
+
+2. const char *tp_name
+tp_name, 类型名字符串数组
+所有Type都是PyTypeObject的"实例": PyType_Type/PyInt_Type
+
+2. 然后, 用PyTypeObject初始化得到一个对象PyType_Type
+代码位置 Objects/typeobject.c
+ */
+ 
 
  // 一堆方法定义, 函数和指针
  /* Methods to implement standard operations */
@@ -101,21 +113,12 @@ typedef struct _typeobject {
 
  // 一堆属性定义
  ....
- 
 } PyTypeObject;
 ```
 
 * 说明
 
-1. PyObject_VAR_HEAD
-变长对象
 
-2. const char *tp_name
-tp_name, 类型名字符串数组
-所有Type都是PyTypeObject的"实例": PyType_Type/PyInt_Type
-
-2. 然后, 用PyTypeObject初始化得到一个对象PyType_Type
-代码位置 Objects/typeobject.c
 
 定义
 
