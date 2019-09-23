@@ -20,9 +20,9 @@ Python 内部, 每个对象拥有相同的头部.
   /* PyObject_HEAD defines the initial segment of every PyObject. */
   // 所有定长对象的公共头部部分
   #define PyObject_HEAD          \
-      _PyObject_HEAD_EXTRA \       # 先忽略, 双向链表结构, 有资料显示该宏只与DEBUG模式有关
-      Py_ssize_t ob_refcnt; \      # 引用计数, 跟Python的内存管理机制相关
-      struct _typeobject *ob_type; # 指向类型对象的指针(指向_typeobject结构体)
+      _PyObject_HEAD_EXTRA \       // 先忽略, 双向链表结构, 有资料显示该宏只与DEBUG模式有关
+      Py_ssize_t ob_refcnt; \      // 引用计数, 跟Python的内存管理机制相关
+      struct _typeobject *ob_type; // 指向类型对象的指针(指向_typeobject结构体)
   
   /* PyObject_VAR_HEAD defines the initial segment of all variable-size container objects. */
   // 所有非定长对象的公共头部部分
