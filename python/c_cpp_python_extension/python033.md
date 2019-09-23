@@ -73,68 +73,6 @@ typedef struct {
 ```
 
 
-类型
-一个例子
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>> a = 1
-
->>> a
-
-1
-
- 
-
->>> type(a)
-
-<type 'int'="">
-
- 
-
-#等价的两个
-
->>> type(type(a))
-
-<type 'type'="">
-
->>> type(int)
-
-<type 'type'="">
-
- 
-
-#还是等价的两个
-
->>> type(type(type(a)))
-
-<type 'type'="">
-
->>> type(type(int))
-
-<type 'type'="">
-
- 
-
-</type></type></type></type></type>
 
 我们反向推导一个int对象是怎么生成的.
 
