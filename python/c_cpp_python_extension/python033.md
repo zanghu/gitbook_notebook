@@ -16,7 +16,7 @@ Python中对象分为两类: 定长(int等), 非定长(list/dict等)
 Python 内部, 每个对象拥有相同的头部.
 
 * 定义
-```python
+```c
 /* PyObject_HEAD defines the initial segment of every PyObject. */
 #define PyObject_HEAD          \
   _PyObject_HEAD_EXTRA \       # 先忽略, 双向链表结构, 有资料显示该宏只与DEBUG模式有关
@@ -26,13 +26,13 @@ Python 内部, 每个对象拥有相同的头部.
 
 
 
+### PyObject
 
-
+```c
 typedef struct _object {
-
   PyObject_HEAD
-
 } PyObject;
+```
 
 说明
 
