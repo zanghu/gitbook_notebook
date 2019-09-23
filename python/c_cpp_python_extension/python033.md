@@ -36,48 +36,29 @@ Python 内部, 每个对象拥有相同的头部.
 `PyObject_VAR_HEAD`则是Python中所有非定长对象的基类。
 
 
-### PyObject
+### PyObject & yVarObject
 
 * 定义
 ```c
 typedef struct _object {
   PyObject_HEAD
 } PyObject;
-```
 
-![](/assets/python033_01.png)
-
-### PyVarObject
-
-* 定义
-
-```c
 typedef struct {
   PyObject_VAR_HEAD
 } PyVarObject;
 ```
- 
 
-#define PyObject_VAR_HEAD        \
+![](/assets/python033_01.png)
 
- PyObject_HEAD            \
 
- Py_ssize_t ob_size; /* Number of items in variable part */
+### 基类的操作宏函数
 
-说明
-
-1. 依赖关系
-PyVarObject -> PyObject_VAR_HEAD -> PyObject_HEAD
-
-2.Py_ssize_t ob_size
-ob_size, 变长对象容纳的元素个数
-结构
-20151211181633658.png (484×250)
-
-代码关系
-20151211181651468.png (740×385)
-
-几个方法
+```c
+#define Py_REFCNT(ob)           (((PyObject*)(ob))->ob_refcnt)
+#define Py_TYPE(ob)             (((PyObject*)(ob))->ob_type)
+#define Py_SIZE(ob)             (((PyVarObject*)(ob))->ob_size)
+```
 跟对象相关的方法
 
 #define Py_REFCNT(ob) (((PyObject*)(ob))->ob_refcnt)
