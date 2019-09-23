@@ -85,14 +85,12 @@ typedef struct {
 typedef struct _typeobject {
  /* MARK: base, 注意, 是个变长对象*/
  PyObject_VAR_HEAD
- const char *tp_name; /* For printing, in format "<module>.<name>" */ //类型名
- Py_ssize_t tp_basicsize, tp_itemsize; /* For allocation */ // 创建该类型对象时分配的内存空间大小
+ const char *tp_name;  //类型名
+ Py_ssize_t tp_basicsize, tp_itemsize; // 创建该类型对象时分配的内存空间大小
  
  /*
- 1. PyObject_VAR_HEAD
-变长对象
-
-2. const char *tp_name
+ 1. PyObject_VAR_HEAD: 变长对象基类
+ 2. const char *tp_name
 tp_name, 类型名字符串数组
 所有Type都是PyTypeObject的"实例": PyType_Type/PyInt_Type
 
