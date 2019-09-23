@@ -34,6 +34,8 @@ typedef struct _object {
 } PyObject;
 ```
 
+![](/assets/python033_01.png)
+
 说明
 
 1. 依赖关系
