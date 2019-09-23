@@ -3,44 +3,37 @@
 参考资料：[深入源码解析Python中的对象与类型](https://www.php.cn/python-tutorials-157807.html)
 
 
-对象
-对象, 在C语言是如何实现的?
+### 对象
+
 Python中对象分为两类: 定长(int等), 非定长(list/dict等)
 
 所有对象都有一些相同的东西, 源码中定义为PyObject和PyVarObject, 两个定义都有一个共同的头部定义PyObject_HEAD(其实PyVarObject有自己的头部定义PyObject_VAR_HEAD, 但其实际上用的也是PyObject_HEAD).
 
 源码位置: Include/object.h
 
-PyObject_HEAD
+### PyObject_HEAD
+
 Python 内部, 每个对象拥有相同的头部.
 
-定义
-
-
-
-
-
-
+* 定义
+```python
 /* PyObject_HEAD defines the initial segment of every PyObject. */
-
 #define PyObject_HEAD          \
-
   _PyObject_HEAD_EXTRA        \
-
   Py_ssize_t ob_refcnt;        \
-
   struct _typeobject *ob_type;
+  ```
 
-说明
+* 说明
 
-1. _PyObject_HEAD_EXTRA
+- _PyObject_HEAD_EXTRA
 先忽略, 双向链表结构, 后面垃圾回收再说
 
-2. Py_ssize_t ob_refcnt
+- Py_ssize_t ob_refcnt
 Py_ssize_t在编译时确定, 整型
 ob_refcnt, 引用计数, 跟Python的内存管理机制相关(基于引用计数的垃圾回收)
 
-3. struct _typeobject *ob_type
+- struct _typeobject *ob_type
 *ob_type 指向类型对象的指针(指向_typeobject结构体)
 决定了这个对象的类型!
 PyObject
