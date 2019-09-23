@@ -14,11 +14,11 @@ Python中类型间的一切关系本质上都是C语言实例的运行时对象�
 
 Python中对象分为两类: 定长(int等), 非定长(list/dict等容器)
 
+### 1.2 PyObject_HEAD & PyObject_VAR_HEAD
+
 所有对象都有一些相同的东西, 源码中定义为PyObject和PyVarObject, 两个定义都有一个共同的头部定义PyObject_HEAD(其实PyVarObject有自己的头部定义PyObject_VAR_HEAD, 但其实际上用的也是PyObject_HEAD).
 
-源码位置: `include/python3.6m/object.h`
-
-### 1.2 PyObject_HEAD & PyObject_VAR_HEAD
+* 源码位置: `include/python3.6m/object.h`
 
 Python 内部, 每个对象拥有相同的头部.
 
