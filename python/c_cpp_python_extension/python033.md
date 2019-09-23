@@ -186,9 +186,3 @@ typedef struct {
     long ob_ival;
 } PyIntObject;
 ```
-
-结构
-20151211182004246.png (1768×832)
-
-微信
-分享
