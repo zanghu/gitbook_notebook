@@ -141,7 +141,7 @@ PyTypeObject PyType_Type = {
 
 （3）注意到：类型名`tp_name`这里是"type", 归属类型`*ob_type = &PyType_Type`，即, PyType_Type的类型是其本身!
 
-#### 2.3 其次，定义一个PyTypeObject实例叫做PyInt_Type，它是Python中type类型的子类
+#### 2.3 其次，定义一个PyTypeObject实例叫做PyInt_Type，它在Python运行时的类型是type类型
 
 * 代码位置`Objects/intobject.c`
   >注意：python3.6中没有`intobject.c`文件和`PyInt_Type`类型，代替它们的是`longobject.c`文件和`PyLong_Type`类型`。
@@ -160,39 +160,11 @@ PyTypeObject PyInt_Type = {
     (hashfunc)int_hash,             /* tp_hash */
 };
 
+* 说明
 
+（1）"int"：PyInt_Type的类型名是int
 
-注意: 无论任何时候, ob_type指向的是 PyTypeObject的实例: PyType_Type/PyInt_Type...
-
-3. 再然后, 定义具体的类型, 这里以PyInt_Type为例子
-
-
-定义
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-说明
-
-1. "int"
-PyInt_Type的类型名是int
-
-2.PyVarObject_HEAD_INIT(&PyType_Type, 0)
-PyInt_Type的
-
-
-*ob_type = &PyType_Type
+（2）*ob_type = &PyType_Type说明`PyInt_Type`作为Python的类型其Python意义下的归属类型是`PyType_Type`
 
 结构
 20151211181940069.png (1083×570)
