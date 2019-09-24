@@ -46,7 +46,7 @@
     * [Python源码阅读: 类型体系](python/c_cpp_python_extension/python033.md)
     * [Python源码阅读: 内存管理](python/c_cpp_python_extension/python034.md)
   * [Python: 环境和工具](python/env_and_tools/README.md)
-    * [pip安装模块](python/env_and_tools/python032.md)
+    * [pip安装模块（附清华IPV6源）](python/env_and_tools/python032.md)
     * [使用conda安装opencv](python/env_and_tools/python007.md)
     * [搭建jupyter sevrer（非SSL方式）](python/env_and_tools/python015.md)
     * [搭建jupyter sevrer（SSL方式）](python/env_and_tools/python016.md)
