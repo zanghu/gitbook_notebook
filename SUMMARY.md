@@ -295,5 +295,6 @@
   * [归档: 有价值的参考书](others/others006.md)
   * [工具: vscode编辑远程文件](others/others007.md)
   * [工具: vscode远程工作区](others/others008.md)
-  * [网络: HTTP错误码总结](others/others009.md)
+  * [工具: 清华大学IPV6资源](others/others009.md)
   * [网络: HTTP错误码总结](others/others010.md)
+
