@@ -6,6 +6,8 @@
 
 参考资料: [清华大学Pypi镜像](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)
 
+参考资料：[清华大学Ubuntu软件源](https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/)
+
 
 经测试，在校园网不需要登陆外网账号的情况下即可访问清华IPV6资源。
 
@@ -46,6 +48,10 @@ $ pip install --upgrade pip
 ```python
 $ pip3 install numpy
 ```
+
+### 3.配置Ubuntu软件源
+
+
 
 
 
