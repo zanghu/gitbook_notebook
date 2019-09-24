@@ -53,6 +53,8 @@ $ pip3 install numpy
 
 Ubuntu 的软件源配置文件是 `/etc/apt/sources.list`。将系统自带的该文件做个备份，将该文件替换为下面内容，即可使用 TUNA 的软件源镜像。
 
+注意选择适合自己系统版本的软件源。
+
 以下是Ubuntu16.04LTS的源
 ```shell
 # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
