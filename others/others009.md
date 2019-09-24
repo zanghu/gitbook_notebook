@@ -25,6 +25,24 @@ nameserver 2001:da8::666 # 设置备用dns
 ```
 ### 2.pip的Pipy资源库
 
+* 从指定源安装
+```python
+# 以下命令指定使用清华提供的ipv6镜像源（临时使用指定源）
+$ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package
+```
+
+* 将指定源设为pip的默认源
+```python
+$ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+* 更新本地`pip`版本
+```python
+# 从python2.7.9开始自带pip
+$ pip install --upgrade pip
+```
+
+
 
 
 
