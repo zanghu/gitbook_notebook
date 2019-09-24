@@ -42,6 +42,12 @@ $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 $ pip install --upgrade pip
 ```
 
+* 安装软件包(如果本地已有吗，不会尝试更新版版本)
+```python
+$ pip3 install numpy
+```
+
+
 
 
 
