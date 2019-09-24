@@ -101,6 +101,7 @@
     * [Linux: 修改core文件相关配置](linux/config/lin027.md)
     * [Linux: 添加字体](linux/config/lin038.md)
     * [Linux: 常用环境变量](linux/config/lin034.md)
+    * [Linux: 配置DNS](linux/config/lin047.md)
   * [软件安装](linux/soft_setup/README.md)
     * [Linux: 安装opencv](linux/soft_setup/lin032.md)
     * [Linux: 安装Matlab（图形化界面）](linux/soft_setup/lin003.md)
