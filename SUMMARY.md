@@ -279,7 +279,7 @@
     * [Nginx: 代码示例](software/nginx/example/README.md)
       * [example: helloworld](software/nginx/example/nginx003.md)
     * [Nginx: 源码学习](software/nginx/src/README.md)
-      * [example: helloworld](software/nginx/src/nginx003.md)
+      * [example: helloworld](software/nginx/src/nginx006.md)
   * [Curl](software/curl/README.md)
     * [Curl: shell工具](software/curl/curl/README.md)
     * [Curl: libcurl编程](software/curl/libcurl/README.md)
