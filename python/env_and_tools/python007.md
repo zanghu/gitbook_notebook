@@ -31,3 +31,4 @@ $ pip install opencv-python
 
 `pypi`网站中对`opencv`的情况进行了描述，简单地说`opencv`（也就是`import cv2`）在`pypi`库中共有四个互相独立的安装包，用户应该只选择其中之一进行安装，原因是这些安装包共用了`cv2`名空间。如果安装了上述四个安装包中的多于一个，那么应该用`pip uninstall`全部删除之后再重新安装唯一的一个需要的安装包。
 
+![](/assets/python029_01.png)
