@@ -56,7 +56,7 @@ def webp2img_dir(webp_dir, img_dir):
                 webp_pth = os.path.join(dirpath, name)
                 parts = name.split('.');
                 if len(parts) > 2:
-                    if parts[-2] in ['jpg', 'png']:
+                    if parts[-2] in ['jpg', 'png', 'jpeg', 'JPG', 'PNG', 'JPEG']:
                         img_pth = os.path.join(img_dir, '.'.join(parts[:-1]))
                     else:
                         img_pth = os.path.join(img_dir, ''.join([name[:-4], 'jpg']))
