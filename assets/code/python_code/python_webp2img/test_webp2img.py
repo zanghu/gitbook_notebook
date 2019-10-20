@@ -58,10 +58,8 @@ def webp2img_dir(webp_dir, img_dir):
                 if len(parts) > 2:
                     if parts[-2] in ['jpg', 'png']:
                         img_pth = os.path.join(img_dir, '.'.join(parts[:-1]))
-                elif name[:-5].endswith('png'):
-                    img_pth = os.path.join(img_dir, ''.join([name[:-4], 'png']))
-                else:
-                    img_pth = os.path.join(img_dir, ''.join([name[:-4], 'jpg']))
+                    else:
+                        img_pth = os.path.join(img_dir, ''.join([name[:-4], 'jpg']))
                 #print('img_pth: {}'.format(img_pth))
                 webp2img(webp_pth, img_pth)
                 cnt += 1
