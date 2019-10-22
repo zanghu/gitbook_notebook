@@ -16,4 +16,4 @@ String pathStr = path.toString();
 ...
 ```
 
-`Path.resolve` can be used to combine one path with another, or with a string. The Paths helper class is useful too. 
+`Path.resolve` 可以用于将指定路径与当前所在路径拼接
