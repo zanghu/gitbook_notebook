@@ -2,6 +2,7 @@
 
 参考资料：[How to combine paths in Java?](https://stackoverflow.com/questions/412380/how-to-combine-paths-in-java)
 
+#### 1.路径组装
 
 If you're using Java 7 or Java 8, you should strongly consider using `java.nio.file.Path` and `java.nio.file.Paths`. For example:
 
