@@ -12,5 +12,6 @@ import java.nio.file.Paths;
 ...
 Path path = Paths.get("/home/", "/zanghu", "baz.txt");
 String pathStr = path.toString();
+...
 ```
 
