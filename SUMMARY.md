@@ -293,6 +293,7 @@
   * [CTW](dataset/ctw/README.md)
     * [CTW: 运行预训练detection模型](dataset/ctw/ctw001.md)
 * [Others](others/README.md)
+  * [管理: OKR学习](others/others004.md)
   * [知识: 交叉编译](others/others002.md)
   * [知识: 编译器自举](others/others003.md)
   * [归档: 微服务常见发布模式介绍](others/others005.md)
