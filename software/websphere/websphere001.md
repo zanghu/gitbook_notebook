@@ -1,5 +1,5 @@
 ## WebSphere入门
-参考资料: [https://github.com/vislee/leevis.com/issues/99](https://github.com/vislee/leevis.com/issues/99)
+参考资料: [IBM WebSphere Application Server](https://zh.wikipedia.org/wiki/IBM_WebSphere_Application_Server)
 
 #### WebSphere和WAS的关系
 
