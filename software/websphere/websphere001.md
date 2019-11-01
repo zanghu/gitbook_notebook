@@ -1,5 +1,7 @@
 ## WebSphere入门
-参考资料: [IBM WebSphere Application Server](https://zh.wikipedia.org/wiki/IBM_WebSphere_Application_Server)
+参考资料: 
+[IBM WebSphere Application Server](https://zh.wikipedia.org/wiki/IBM_WebSphere_Application_Server)
+[Java Servlet](https://zh.wikipedia.org/wiki/Java_Servlet)
 
 #### WebSphere和WAS的关系
 
