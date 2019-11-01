@@ -289,6 +289,8 @@
       * [libcurl: 基本介绍](c/net/c031.md)
       * [libcurl: HTTP POST](c/net/c032.md)
       * [libcurl: HTTP GET](c/net/c033.md)
+  * [WebSphere](software/websphere/README.md)
+    * [WebSphere: 入门](software/websphere/basic/README.md)
 * [Dataset](dataset/README.md)
   * [CTW](dataset/ctw/README.md)
     * [CTW: 运行预训练detection模型](dataset/ctw/ctw001.md)
