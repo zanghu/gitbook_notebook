@@ -4,32 +4,8 @@
 
 参考资料: [java jdk1.7中path.resolve() 怎么用？？](https://zhidao.baidu.com/question/646760893559036565.html)
 
-#### 1.路径组装
+#### ORM
 
-If you're using Java 7 or Java 8, you should strongly consider using `java.nio.file.Path` and `java.nio.file.Paths`. For example:
+        对象关系映射（Object-Relational Mapping，简称ORM）是一种为了解决程序的面向对象模型与数据库的关系模型互不匹配问题的技术；
 
-```java
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
-...
-Path path = Paths.get("/home/", "/zanghu", "baz.txt");
-String pathStr = path.toString();
-...
-```
-
-`Path.resolve` 可以用于将指定路径与当前所在路径拼接。
-
-```java
-public void usePath() {
-    Path path1 = Paths.get("folder1", "sub1");
-    Path path2 = Paths.get("folder2", "sub2");
-    path1.resolve(path2); //folder1\sub1\folder2\sub2
-    path1.resolveSibling(path2); //folder1\folder2\sub2
-    path1.relativize(path2); //..\..\folder2\sub2
-    path1.subpath(0, 1); //folder1
-    path1.startsWith(path2); //false
-    path1.endsWith(path2); //false
-    Paths.get("folder1/./../folder2/my.text").normalize(); //folder2\my.text
-}
-```
+        简单的说，ORM是通过使用描述对象和数据库之间映射的元数据（在Java中可以用XML或者是注解），将程序中的对象自动持久化到关系数据库中或者将关系数据库表中的行转换成Java对象，其本质上就是将数据从一种形式转换到另外一种形式。
