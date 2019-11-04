@@ -41,8 +41,8 @@ def webp2img(webp_pth, img_pth):
     im = Image.open(webp_pth).convert("RGB")
     im.save(fp='{}'.format(img_pth), format=None)
 
-def webp2img_dir(webp_dir, img_dir):
-    """"""
+def webp2img_single_dir(webp_dir, img_dir):
+    """将指定目录webp_dir下的所有*.webp转换为普通图片格式到img_dir"""
     assert os.path.isdir(webp_dir)
     if not os.path.exists(img_dir):
         os.mkdir(img_dir)
@@ -63,9 +63,30 @@ def webp2img_dir(webp_dir, img_dir):
                 #print('img_pth: {}'.format(img_pth))
                 webp2img(webp_pth, img_pth)
                 cnt += 1
-    print('finish, cnt = {}'.format(cnt))
+    print('finish dir {}, cnt = {}'.format(img_dir, cnt))
+
+def webp2img_multi_dirs(webp_dir, img_dir):
+    """对指定目录webp_dir目录下的所有子目录，执行 webp2img_single_dir() """
+    assert os.path.isdir(webp_dir)
+    if not os.path.exists(img_dir):
+        os.mkdir(img_dir)
+    else:
+        assert os.path.isdir(img_dir)
+
+    cnt = 0
+    for dirpath, dirnames, filenames in os.walk(webp_dir):
+        for sub_name in dirnames:
+            subdir_pth = os.path.join(dirpath, sub_name)
+            assert os.path.isdir(subdir_pth)
+            if not os.path.exists(img_dir):
+                os.makedirs(img_dir)
+            dstdir_pth = os.path.join(img_dir, sub_name)
+            webp2img_single_dir(subdir_pth, dstdir_pth)
+            cnt += 1
+    print('all subdir finish, cnt = {}'.format(cnt))
 
 if __name__ == '__main__':
     #webp2img('002.jpg.webp', '01.jpg')
     #webp2img('002.jpg.webp', '01.png')
-    webp2img_dir('123', '123_jpg')
+    #webp2img_single_dir('123', '123_jpg')
+    webp2img_multi_dirs('webp', 'img')
