@@ -56,10 +56,10 @@ def webp2img_dir(webp_dir, img_dir):
                 webp_pth = os.path.join(dirpath, name)
                 parts = name.split('.');
                 if len(parts) > 2:
-                    if parts[-2] in ['jpg', 'png', 'jpeg', 'JPG', 'PNG', 'JPEG']:
+                    if parts[-2] in ['jpg', 'png', 'jpeg', 'JPG', 'PNG', 'JPEG']: # 根据倒数第二段后缀名决定转化后的名称
                         img_pth = os.path.join(img_dir, '.'.join(parts[:-1]))
                     else:
-                        img_pth = os.path.join(img_dir, ''.join([name[:-4], 'jpg']))
+                        img_pth = os.path.join(img_dir, ''.join([name[:-4], 'jpg'])) # 如果文件不存在倒数第二段后缀名, 则使用jpgh
                 #print('img_pth: {}'.format(img_pth))
                 webp2img(webp_pth, img_pth)
                 cnt += 1
