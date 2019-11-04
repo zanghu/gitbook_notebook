@@ -6,7 +6,7 @@
 
 #### ORM
 
-参考：[面试之Java持久层(十)](https://www.cnblogs.com/shizhijie/p/8038573.html)
+>参考：[面试之Java持久层(十)](https://www.cnblogs.com/shizhijie/p/8038573.html)
 
 对象关系映射（Object-Relational Mapping，简称ORM）是一种为了解决程序的面向对象模型与数据库的关系模型互不匹配问题的技术；
 
