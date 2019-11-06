@@ -252,6 +252,7 @@
     * [拼接文件路径](java/basic/java005.md)
 * [DataBase](database/README.md)
   * [DB: 分库分表](database/db001.md)
+  * [DB: 自增主键](database/db002.md)
 * [Markdown](markdown/README.md)
   * [MD: 绘制简单表格](markdown/md001.md)
   * [MD: 如何在markdown语法中显示尖括号](markdown/md002.md)
