@@ -254,6 +254,7 @@
   * [DB: 分库分表](database/db001.md)
   * [DB: 自增主键](database/db002.md)
   * [DB: Oracle触发器](database/db003.md)
+  * [DB: Oracle SQL Developer执行SQL脚本](database/db004.md)
 * [Markdown](markdown/README.md)
   * [MD: 绘制简单表格](markdown/md001.md)
   * [MD: 如何在markdown语法中显示尖括号](markdown/md002.md)
