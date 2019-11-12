@@ -86,6 +86,7 @@
 * [推荐系统](recommend_system/README.md)
   * [数据采集](recommend_system/collection/README.md)
     * [埋点、无埋点和全埋点](recommend_system/collection/rs001.md)
+    * [PV、UV、VV、IP的区别](recommend_system/collection/rs002.md)
 * [Math](math/README.md)
   * [Statistics](math/statistics/README.md)
     * [Static: N sigma 准则](math/statistics/static001.md)
