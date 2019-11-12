@@ -85,7 +85,7 @@
   * [OpenCV: 图像容器像素的遍历与随机访问](cv/cv008.md)
 * [推荐系统](recommend_system/README.md)
   * [数据采集](recommend_system/collection/README.md)
-    * [CV: 非最大压制方法\(NMS\)](recommend_system/collection/rs001.md)
+    * [埋点、无埋点和全埋点](recommend_system/collection/rs001.md)
 * [Math](math/README.md)
   * [Statistics](math/statistics/README.md)
     * [Static: N sigma 准则](math/statistics/static001.md)
