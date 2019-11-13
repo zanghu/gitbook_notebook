@@ -4,6 +4,8 @@
 
 参考资料: [知乎：一文带你入门面向切面编程（AOP）](https://zhuanlan.zhihu.com/p/67577468)
 
+参考资料：[疯狂JAVA讲义（第二版）]
+
 #### 1.面向切面编程
 
 >参考：[知乎：一文带你入门面向切面编程（AOP）](https://zhuanlan.zhihu.com/p/67577468)
