@@ -268,3 +268,5 @@ class com.sun.proxy.$Proxy0
 ----已经保存数据!----
 提交事务2
 ```
+
+#### 3.详解Proxy类
