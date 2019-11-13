@@ -91,3 +91,183 @@ public class SlaverAdvice {
 
 ![](/assets/java007_01.png)
 
+代理模式的关键点是:代理对象与目标对象.代理对象是对目标对象的扩展,并会调用目标对象
+
+##### 2.2.静态代理(类似于装饰者模式)
+
+**定义**
+静态代理在使用时,需要定义接口或者父类,被代理对象与代理对象一起实现相同的接口或者是继承相同父类.
+
+**案例**
+
+模拟保存动作,定义一个保存动作的接口:IUserDao.java,然后目标对象实现这个接口的方法UserDao.java,此时如果使用静态代理方 式,就需要在代理对象(UserDaoProxy.java)中也实现IUserDao接口.调用的时候通过调用代理对象的方法来调用目标对象.
+需要注意的是,代理对象与目标对象要实现相同的接口,然后通过调用相同的方法来调用目标对象的方法
+
+接口:IUserDao.java
+```java
+复制代码
+/**
+ * 接口
+ */
+public interface IUserDao {
+
+    void save();
+}
+```
+ 
+
+ 
+目标对象:UserDao.java
+```java
+复制代码
+/**
+ * 接口实现
+ * 目标对象
+ */
+public class UserDao implements IUserDao {
+    public void save() {
+        System.out.println("----已经保存数据!----");
+    }
+}
+```
+
+代理对象:UserDaoProxy.java
+```java
+/**
+ * 代理对象,静态代理
+ */
+public class UserDaoProxy implements IUserDao{
+    //接收保存目标对象
+    private IUserDao target;
+    public UserDaoProxy(IUserDao target){
+        this.target=target;
+    }
+
+    public void save() {
+        System.out.println("开始事务...");
+        target.save();//执行目标对象的方法
+        System.out.println("提交事务...");
+    }
+}
+```
+ 
+测试类:App.java
+```
+/**
+ * 测试类
+ */
+public class App {
+    public static void main(String[] args) {
+        //目标对象
+        UserDao target = new UserDao();
+
+        //代理对象,把目标对象传给代理对象,建立代理关系
+        UserDaoProxy proxy = new UserDaoProxy(target);
+
+        proxy.save();//执行的是代理的方法
+    }
+}
+```
+ 
+
+ 
+静态代理总结:
+1.可以做到在不修改目标对象的功能前提下,对目标功能扩展.
+2.缺点:
+
+因为代理对象需要与目标对象实现一样的接口,所以会有很多代理类,类太多.同时,一旦接口增加方法,目标对象与代理对象都要维护.
+如何解决静态代理中的缺点呢?答案是可以使用动态代理方式
+
+1.2.动态代理
+　　　　　　参考:http://www.cnblogs.com/qlqwjy/p/7151748.html
+
+动态代理有以下特点:
+1.代理对象,不需要实现接口
+2.代理对象的生成,是利用JDK的API,动态的在内存中构建代理对象(需要我们指定创建代理对象/目标对象实现的接口的类型)
+3.动态代理也叫做:JDK代理,接口代理
+
+JDK中生成代理对象的API
+代理类所在包:java.lang.reflect.Proxy
+JDK实现代理只需要使用newProxyInstance方法,但是该方法需要接收三个参数,完整的写法是:
+
+static Object newProxyInstance(ClassLoader loader, Class<?>[] interfaces,InvocationHandler h )
+ 
+
+注意该方法是在Proxy类中是静态方法,且接收的三个参数依次为:
+
+ClassLoader loader,:指定当前目标对象使用类加载器,获取加载器的方法是固定的
+Class<?>[] interfaces,:目标对象实现的接口的类型,使用泛型方式确认类型
+InvocationHandler h:事件处理,执行目标对象的方法时,会触发事件处理器的方法,会把当前执行目标对象的方法作为参数传入
+代码示例:
+接口类IUserDao.java以及接口实现类,目标对象UserDao是一样的,没有做修改.在这个基础上,增加一个代理工厂类 (ProxyFactory.java),将代理类写在这个地方,然后在测试类(需要使用到代理的代码)中先建立目标对象和代理对象的联系,然后代用代理 对象的中同名方法
+
+代理工厂类:ProxyFactory.java
+
+复制代码
+/**
+ * 创建动态代理对象
+ * 动态代理不需要实现接口,但是需要指定接口类型
+ */
+public class ProxyFactory{
+
+    //维护一个目标对象
+    private Object target;
+    public ProxyFactory(Object target){
+        this.target=target;
+    }
+
+   //给目标对象生成代理对象
+    public Object getProxyInstance(){
+        return Proxy.newProxyInstance(
+                target.getClass().getClassLoader(),
+                target.getClass().getInterfaces(),
+                new InvocationHandler() {
+                    @Override
+                    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+                        System.out.println("开始事务2");
+                        //运用反射执行目标对象方法
+                        Object returnValue = method.invoke(target, args);
+                        System.out.println("提交事务2");
+                        return returnValue;
+                    }
+                }
+        );
+    }
+
+}
+复制代码
+ 
+
+ 
+测试类:App.java
+
+复制代码
+/**
+ * 测试类
+ */
+public class App {
+    public static void main(String[] args) {
+        // 目标对象
+        IUserDao target = new UserDao();
+        // 【原始的类型 class cn.itcast.b_dynamic.UserDao】
+        System.out.println(target.getClass());
+
+        // 给目标对象，创建代理对象
+        IUserDao proxy = (IUserDao) new ProxyFactory(target).getProxyInstance();
+        // class $Proxy0   内存中动态生成的代理对象
+        System.out.println(proxy.getClass());
+
+        // 执行方法   【代理对象】
+        proxy.save();
+    }
+}
+复制代码
+ 
+
+结果:
+
+class ReflectTest.UserDao
+class com.sun.proxy.$Proxy0
+开始事务2
+----已经保存数据!----
+提交事务2
