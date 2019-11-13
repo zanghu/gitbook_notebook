@@ -278,5 +278,4 @@ class com.sun.proxy.$Proxy0
 >参考：《疯狂JAVA讲义（第二版）》，18.5.1
 
 ![](/assets/java007_02.PNG)
-
 ![](/assets/java007_03.PNG)
