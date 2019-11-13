@@ -1,6 +1,6 @@
 ### 从字符串拼接路径的正确方式
 
-参考资料：[How to combine paths in Java?](https://stackoverflow.com/questions/412380/how-to-combine-paths-in-java)
+参考资料：[CSDN: Java的三种代理模式](https://www.cnblogs.com/qlqwjy/p/7550609.html)
 
 参考资料: [java jdk1.7中path.resolve() 怎么用？？](https://zhidao.baidu.com/question/646760893559036565.html)
 
