@@ -4,9 +4,11 @@
 
 参考资料: [知乎：一文带你入门面向切面编程（AOP）](https://zhuanlan.zhihu.com/p/67577468)
 
-#### ORM
+#### 面向切面编程
 
->参考：[面试之Java持久层(十)](https://www.cnblogs.com/shizhijie/p/8038573.html)
+>参考：[知乎：一文带你入门面向切面编程（AOP）](https://zhuanlan.zhihu.com/p/67577468)
+
+
 
 对象关系映射（Object-Relational Mapping，简称ORM）是一种为了解决程序的面向对象模型与数据库的关系模型互不匹配问题的技术；
 
