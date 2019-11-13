@@ -2,7 +2,7 @@
 
 参考资料：[CSDN: Java的三种代理模式](https://www.cnblogs.com/qlqwjy/p/7550609.html)
 
-参考资料: [java jdk1.7中path.resolve() 怎么用？？](https://zhidao.baidu.com/question/646760893559036565.html)
+参考资料: [知乎：一文带你入门面向切面编程（AOP）](https://zhuanlan.zhihu.com/p/67577468)
 
 #### ORM
 
