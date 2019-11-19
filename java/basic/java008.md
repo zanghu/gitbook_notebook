@@ -1,8 +1,6 @@
 ### 从字符串拼接路径的正确方式
 
-参考资料：[How to combine paths in Java?](https://stackoverflow.com/questions/412380/how-to-combine-paths-in-java)
-
-参考资料: [java jdk1.7中path.resolve() 怎么用？？](https://zhidao.baidu.com/question/646760893559036565.html)
+参考资料：[CSDN: domain、entity和model的package的不同用法](https://blog.csdn.net/id_rin/article/details/54288809)
 
 #### ORM
 
