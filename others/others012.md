@@ -1,5 +1,6 @@
-## 网络：HTTP错误码总结
+## 网络：Cookie详解
 
+参考资料：[cnblogs: HTTP报文结构及Cookie、session区别](https://www.cnblogs.com/plf-Jack/p/11105228.html)
 
 100: 同意大文件传输
 
