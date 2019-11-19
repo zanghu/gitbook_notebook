@@ -256,6 +256,7 @@
     * [常用术语和简称](java/basic/java006.md)
     * [拼接文件路径](java/basic/java005.md)
     * [AOP与代理类Proxy](java/basic/java007.md)
+    * [domain、entity和model的不同用法](java/basic/java008.md)
 * [DataBase](database/README.md)
   * [DB: 分库分表](database/db001.md)
   * [DB: 自增主键](database/db002.md)
