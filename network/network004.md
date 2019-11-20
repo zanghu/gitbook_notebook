@@ -1,12 +1,7 @@
-## 网络：HTTP错误码总结
+## WebSocket协议介绍
 
+参考资料：[cnblogs: HTTP协议详解](https://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html)
 
-100: 同意大文件传输
+参考资料：[Github: 为什么不直接使用socket ,还要定义一个新的websocket 的呢？](https://github.com/onlyliuxin/coding2017/issues/497)
 
-200: 成功
-
-300: 重定位、跳转引发的访问错误
-
-400：传输层协议相关运行错误（拒绝链接、连接超时等等），一般就是TCP/IP层的socket接口调用错误
-
-500：应用层协议相关运行错误，例如：SOAP通讯wsdl、xmlns错误，HTTP报文headercontent-type与body内容不符等，此类错误一般是因为服务端底层通讯框架（webservice框架、HTTP框架）逻辑错误直接返回的。
+参考资料：[RFC6455: The WebSocket Protocol](https://tools.ietf.org/html/rfc6455)
