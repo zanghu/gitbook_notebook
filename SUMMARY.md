@@ -246,7 +246,7 @@
     * [拼接文件路径](java/basic/java005.md)
     * [AOP与代理类Proxy](java/basic/java007.md)
     * [service、DAO、domain、entity的使用场景](java/basic/java008.md)
-* [DataBase](database/README.md)
+* [数据集](database/README.md)
   * [DB: 分库分表](database/db001.md)
   * [DB: 自增主键](database/db002.md)
   * [DB: Oracle触发器](database/db003.md)
