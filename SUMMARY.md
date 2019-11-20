@@ -258,7 +258,7 @@
   * [网络: HTTP错误码总结](network/network001.md)
   * [网络: Cookie和Session详解](network/network002.md)
   * [网络: 端口详解与监听](network/network003.md)
-  * [网络: websocket介绍](network/network004.md)
+  * [网络: WebSocket介绍](network/network004.md)
 * [前端](front_end/README.md)
   * [HTML页面加载过程](front_end/front001.md)
 * [第三方软件](software/README.md)
