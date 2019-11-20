@@ -1,10 +1,12 @@
 ## WebSocket协议介绍
 
-参考资料：[cnblogs: HTTP协议详解](https://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html)
+参考资料：[**cnblogs**: HTTP协议详解](https://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html)
 
-参考资料：[Github: 为什么不直接使用socket ,还要定义一个新的websocket 的呢？](https://github.com/onlyliuxin/coding2017/issues/497)
+参考资料：[**Github**: 为什么不直接使用socket ,还要定义一个新的websocket 的呢？](https://github.com/onlyliuxin/coding2017/issues/497)
 
-参考资料：[RFC6455: The WebSocket Protocol](https://tools.ietf.org/html/rfc6455)
+参考资料：[**RFC6455**: The WebSocket Protocol](https://tools.ietf.org/html/rfc6455)
+
+参考资料：[**知乎**：WebSocket协议：5分钟从入门到精通](https://zhuanlan.zhihu.com/p/32739737)
 
 ### 1.HTTP是无连接的应用层协议
 
@@ -52,6 +54,8 @@ HTTP是一个属于应用层的面向对象的协议，由于其简捷、快速�
 * 如何交换数据（数据传输）
 * 数据帧格式（报文格式）
 * 如何维持连接（心跳）
+
+详见：[WebSocket协议：5分钟从入门到精通](https://zhuanlan.zhihu.com/p/32739737)
 
 #### 2.3.Websocket的优点
 
