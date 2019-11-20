@@ -1,4 +1,9 @@
-Cookie和Session详解
+## Cookie和Session详解
+
+参考资料：[掘金：一文搞懂Session和Cookie的用法及区别](https://juejin.im/post/5d8330996fb9a06b1d217bf5#heading-6)
+
+参考资料：[cnblogs: HTTP报文结构及Cookie、session区别](https://www.cnblogs.com/plf-Jack/p/11105228.html)
+
 
 ### 1.Cookie
 
