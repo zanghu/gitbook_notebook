@@ -83,6 +83,7 @@
 * [Math](math/README.md)
   * [Statistics](math/statistics/README.md)
     * [Static: N sigma 准则](math/statistics/static001.md)
+    * [Static: 协方差矩阵的定义和计算](math/statistics/static002.md)
 * [Linux/Unix](linux/README.md)
   * [深入内核](linux/kernel/README.md)
     * [数据结构: LIST\_HEAD](linux/kernel/lin101.md)
