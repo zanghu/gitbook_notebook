@@ -14,3 +14,7 @@ HTML 4.01 与 HTML 5 之间的差异
 "async" 是 HTML5 中的新属性。
 
 HTML5 中不再支持 HTML 4.01 中的某些属性。
+
+HTML4中`script`标签的唯一必填属性`type`在HTML5中不再是必填项，默认值为`"text/javascript"`
+
+### 2.script标签的位置
