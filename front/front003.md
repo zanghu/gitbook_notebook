@@ -51,3 +51,5 @@ HTML5中的属性
 　
 以上两条符合任何一个，&ltnoscript&gt标签内的内容都会被显示。
 
+![](/assets/front003_02.png)
+
