@@ -9,4 +9,9 @@
 ```js
 > var p = {x: 1};
 undefined
+>x = 1;
+1
+> console.log("123");
+123
+undefined
 ```
