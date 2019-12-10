@@ -41,3 +41,13 @@ HTML5中的属性
 ![](/assets/front003_01.png)
 
 　　在上面中提到过&ltscript&gt中有defer这个属性，但是由于在HTML5中提到过，HTML5会忽略嵌入脚本所设置defer属性，目前只有IE4~IE7还支持defer属性，IE8以后完全遵循HTML5的标准，所以把&ltscript&gt放在&ltbody&gt标签里的底部依旧是最佳选择。
+
+### 3.noscript标签的位置
+
+字面意思，NO-script，没有script，也就是浏览器不支持JavaScript时，<noscript>标签中内容才会被显示，
+
+* 浏览器不支持脚本；
+* 浏览器支持脚本，但是JavaScript被禁用；
+　
+以上两条符合任何一个，&ltnoscript&gt标签内的内容都会被显示。
+
