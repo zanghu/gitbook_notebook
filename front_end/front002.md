@@ -6,6 +6,8 @@
 
 **实验一**
 
+使用linux命令行的`node`
+
 ```js
 > var p = {x: 1}; // 定义变量语句没有返回值，所以输出undefined
 undefined
