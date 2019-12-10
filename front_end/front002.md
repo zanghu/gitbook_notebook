@@ -25,9 +25,9 @@ undefined
 ```js
 function p(x) {
     console.log(x);
-    return true;
+    return true; // 指定函数返回值，避免函数返回undefined
 }
-p("123");
+p("123"); // 执行函数
 ```
 
 运行结果：
