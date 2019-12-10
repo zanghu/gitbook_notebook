@@ -7,11 +7,11 @@
 例如：
 
 ```js
-> var p = {x: 1};
+> var p = {x: 1}; // 定义变量语句没有返回值，所以输出undefined
 undefined
->x = 1;
+>x = 1; // 等号运算符有返回值，因此输出的时表达式返回值
 1
-> console.log("123");
+> console.log("123"); // console.log没有返回值，所以执行结束后显示undefined
 123
 undefined
 ```
