@@ -29,3 +29,7 @@ function p(x) {
 }
 p("123");
 ```
+
+运行结果：
+
+![](/assets/front002_01.PNG)
