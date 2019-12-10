@@ -17,3 +17,7 @@ undefined
 123
 undefined
 ```
+
+**实验二**
+
+使用chrome的JS脚本调试功能
