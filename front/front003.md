@@ -1,10 +1,10 @@
 ## HTML的script标签
 
-[W3school: HTML &ltscript&gt 标签](https://www.w3school.com.cn/tags/tag_script.asp)
+参考资料：[W3school: HTML &ltscript&gt 标签](https://www.w3school.com.cn/tags/tag_script.asp)
 
-[W3school: HTML 5 &ltscript&gt 标签](https://www.w3school.com.cn/html5/tag_script.asp)
+参考资料：[W3school: HTML 5 &ltscript&gt 标签](https://www.w3school.com.cn/html5/tag_script.asp)
 
-[cnblogs: 关于在HTML中使用的script标签](https://www.cnblogs.com/wangyue99599/p/7275527.html)
+参考资料：[cnblogs: 关于在HTML中使用的script标签](https://www.cnblogs.com/wangyue99599/p/7275527.html)
 
 HTML4和HTML5标准中对script标签属性的必填项、默认值的要求有较大区别
 
