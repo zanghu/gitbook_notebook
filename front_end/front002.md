@@ -21,3 +21,11 @@ undefined
 **实验二**
 
 使用chrome的JS脚本调试功能
+
+```js
+function p(x) {
+    console.log(x);
+    return true;
+}
+p("123");
+```
