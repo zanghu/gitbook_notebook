@@ -36,4 +36,6 @@ HTML5中的属性
 
 　　但是在解析过程中一旦遇到多个JavaScript外部文件，就要等到所有的外部文件加载完成后，页面才能完全显示，所以通常我们会把它放在&ltbody&gt标签里的底部，如下所示：
 
+![](/assets/front003_01.png)
+
 　　在上面中提到过&ltscript&gt中有defer这个属性，但是由于在HTML5中提到过，HTML5会忽略嵌入脚本所设置defer属性，目前只有IE4~IE7还支持defer属性，IE8以后完全遵循HTML5的标准，所以把&ltscript&gt放在&ltbody&gt标签里的底部依旧是最佳选择。
