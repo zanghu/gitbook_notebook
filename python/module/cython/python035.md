@@ -1,5 +1,7 @@
 ## 通过cython调用C库的入门例子
 
+参考资料：[GitHub: hello_world](https://github.com/yeyuzhen/EasonCodeShare/tree/master/cython_tutorials/hello_world)
+
 
 ### 1. 源码
 
