@@ -30,7 +30,7 @@
       * [cv2: putText在图片写字](python/module/cv2/python024.md)
       * [cv2: 绘制几何形状](python/module/cv2/python025.md)
     * [cython](python/module/cython/README.md)
-      * cython简单例子]((python/module/cython/python035.md)
+      * [cython简单例子]((python/module/cython/python035.md)
     * [others](python/module/others/README.md)
       * [socket编程](python/module/others/python020.md)
       * [operator: 提供常用lambda函数](python/module/others/python027.md)
