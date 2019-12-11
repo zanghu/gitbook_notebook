@@ -28,3 +28,14 @@ cdef extern from "hello_world.h":
 def hello_world():
     print_hello_world()
 ```
+
+```shell
+# build.sh
+#!/bin/bash
+
+set -ex
+
+cython cython_hello_world.pyx
+gcc -g -Wall -c -fPIC -I/home/zanghu/ProgramFiles/software/anaconda3/2019.03/include/python3.7m *.c 
+gcc -g -Wall -shared *.o -o cython_hello_world.so
+```
