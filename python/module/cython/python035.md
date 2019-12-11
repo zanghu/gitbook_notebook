@@ -1,7 +1,7 @@
 ## 通过cython调用C库的入门例子
 
 
-### 1.源码
+### 1. 源码
 
 C头文件：`hello_world.h`
 
@@ -25,6 +25,7 @@ void print_hello_world()
 ```
 
 cython文件：`cython_hello_world.pyx`
+注意必须加入`# cython: language_level=3`，否则可能按照python2方式编译
 
 ```python
 # cython_hello_world.pyx
@@ -54,3 +55,9 @@ gcc -g -Wall -c -fPIC -I/home/zanghu/ProgramFiles/software/anaconda3/2019.03/inc
 # 注意：生成的动态库的名字（其实是动态库名字中第一个'.'之前的部分）必须与*.c源文件名严格相同，否则pythoh加载会失败
 gcc -g -Wall -shared *.o -o cython_hello_world.so
 ```
+
+### 2. 运行
+
+```shell
+> sh build.sh
+> python
