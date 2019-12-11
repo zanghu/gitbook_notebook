@@ -1,5 +1,7 @@
 ## 通过cython调用C库的入门例子
 
+参考资料：[简书：用Cython加速Python到“起飞”](https://www.jianshu.com/p/fc5025094912)
+
 参考资料：[GitHub: hello_world](https://github.com/yeyuzhen/EasonCodeShare/tree/master/cython_tutorials/hello_world)
 
 ### 1. 源码
