@@ -4,6 +4,8 @@
 
 参考资料：[GitHub: hello_world](https://github.com/yeyuzhen/EasonCodeShare/tree/master/cython_tutorials/hello_world)
 
+注意：将**cython**与**CPython**区分
+
 ### 1. 源码
 
 C头文件：`hello_world.h`
