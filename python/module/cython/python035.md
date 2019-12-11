@@ -1,7 +1,7 @@
 ## 通过cython调用C库的入门例子
 
 
-`hello_world.h`
+C头文件：`hello_world.h`
 
 ```c
 /* hello_world.h */
@@ -9,7 +9,7 @@
 void print_hello_world();
 ```
 
-`hello_world.c`
+C源文件：`hello_world.c`
 
 ```c
 /* hello_world.c */
@@ -22,7 +22,8 @@ void print_hello_world()
 }
 ```
 
-`cython_hello_world.pyx`
+cython文件：`cython_hello_world.pyx`
+
 ```python
 # cython_hello_world.pyx
 # cython: language_level=3
@@ -34,7 +35,7 @@ def hello_world():
     print_hello_world()
 ```
 
-`build.sh`
+编译脚本：`build.sh`
 
 ```shell
 #!/bin/bash
