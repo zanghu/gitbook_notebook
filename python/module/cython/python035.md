@@ -1,11 +1,15 @@
 ## 通过cython调用C库的入门例子
 
 
+`hello_world.h`
+
 ```c
 /* hello_world.h */
 #pragma once
 void print_hello_world();
 ```
+
+`hello_world.c`
 
 ```c
 /* hello_world.c */
@@ -18,6 +22,7 @@ void print_hello_world()
 }
 ```
 
+`cython_hello_world.pyx`
 ```python
 # cython_hello_world.pyx
 # cython: language_level=3
@@ -29,8 +34,9 @@ def hello_world():
     print_hello_world()
 ```
 
+`build.sh`
+
 ```shell
-# build.sh
 #!/bin/bash
 
 set -ex
