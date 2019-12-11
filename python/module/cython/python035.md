@@ -35,7 +35,12 @@ def hello_world():
 
 set -ex
 
-cython cython_hello_world.pyx # 生成cython_hello_world.c文件
+# 生成cython_hello_world.c文件
+cython cython_hello_world.pyx
+
+# *.c -> *.o
 gcc -g -Wall -c -fPIC -I/home/zanghu/ProgramFiles/software/anaconda3/2019.03/include/python3.7m *.c 
+
+# *.o -> cython_hello_world.so
 gcc -g -Wall -shared *.o -o cython_hello_world.so
 ```
