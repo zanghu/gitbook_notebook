@@ -25,7 +25,7 @@ void print_hello_world()
 ```
 
 cython文件：`cython_hello_world.pyx`
-注意必须加入`# cython: language_level=3`，否则可能按照python2方式编译
+注意必须加入`# cython: language_level=3`，否则可能按照python2方式转译
 
 ```python
 # cython_hello_world.pyx
@@ -59,5 +59,9 @@ gcc -g -Wall -shared *.o -o cython_hello_world.so
 ### 2. 运行
 
 ```shell
-> sh build.sh
-> python
+$ sh build.sh
+$ python
+>>> import cython_hello_world
+>>> cython_hello_world.hello_world()
+hello world!
+>>>
