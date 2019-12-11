@@ -49,6 +49,6 @@ cython cython_hello_world.pyx
 gcc -g -Wall -c -fPIC -I/home/zanghu/ProgramFiles/software/anaconda3/2019.03/include/python3.7m *.c 
 
 # *.o -> cython_hello_world.so
-# 注意：生成的动态库的名字（其实是动态库名字中第一个'.'之前的部分）必须与*.c源文件名严格相同，否则pythoh加载时会失败
+# 注意：生成的动态库的名字（其实是动态库名字中第一个'.'之前的部分）必须与*.c源文件名严格相同，否则pythoh加载会失败
 gcc -g -Wall -shared *.o -o cython_hello_world.so
 ```
