@@ -18,7 +18,7 @@ void print_hello_world()
 }
 ```
 
-```cython
+```python
 # cython_hello_world.pyx
 # cython: language_level=3
 
