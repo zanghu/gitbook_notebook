@@ -21,8 +21,7 @@
 有三种方式：
 
 1、在片段文件名（在左侧窗格中列出了所有的片段）右键单击并选择“RUN”。
-2、点击运行按钮（▶）或使用快捷键`Ctrl + Enter`。
-3、按Command+Enter（Mac）或Ctrl+Enter（Windows和Linux）。
+2、点击运行按钮（▶），也可以使用快捷键`Ctrl + Enter`（Windows和Linux）或者`Command+Enter`（Mac）。
 
 ![](/assets/front004_03.png)
 
