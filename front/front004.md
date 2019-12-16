@@ -1,6 +1,6 @@
 ### 使用chrome浏览器测试JS脚本的方法
 
-[CSDN: 为什么console.log()后会有一个undefined](https://blog.csdn.net/qiansuike/article/details/90765903)
+[cnblogs: chrome浏览器控制台创建js脚本并执行](https://www.cnblogs.com/WangHaiMing/p/9553678.html)
 
 控制台执行语句时，会先执行语句内容，最后在控制台打印语句返回值。因此，对于那些没有返回值的语句，最后的控制台输出就是`undefined`。
 
