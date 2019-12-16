@@ -8,17 +8,21 @@
 
 首先f12 打开开发者工具，再打开Sources面板中，单击上Snippets选项卡，在导航器中单击鼠标右键，然后选择New。
 
-
+![](/assets/front004_01.jpg)
 
 ### 第二步
 
 在编辑器中输入代码。当你有未保存的更改，您的脚本名称旁边有“*”，像下面的截图。按Command+S（Mac）或Ctrl+S（Windows和Linux），以保存更改。
 
-
+![](/assets/front004_02.jpg)
 
 ### 第三步运行你的代码片段
 
 有三种方式：
+
 1、在片段文件名（在左侧窗格中列出了所有的片段）右键单击并选择“RUN”。
 2、点击运行按钮（▶）。
 3、按Command+Enter（Mac）或Ctrl+Enter（Windows和Linux）。
+
+![](/assets/front004_03.png)
+
