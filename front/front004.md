@@ -2,34 +2,5 @@
 
 [cnblogs: chrome浏览器控制台创建js脚本并执行](https://www.cnblogs.com/WangHaiMing/p/9553678.html)
 
-控制台执行语句时，会先执行语句内容，最后在控制台打印语句返回值。因此，对于那些没有返回值的语句，最后的控制台输出就是`undefined`。
+`javascript`语言是为浏览器量身定做的，目标是在浏览器中执行，这就导致日常测试JS脚本很不方便。幸运的是`chrome`浏览器提供了一种简单的运行JS脚本的功能。
 
-**实验一**
-
-使用linux命令行的`node`
-
-```js
-> var p = {x: 1}; // 定义变量语句没有返回值，所以输出undefined
-undefined
->x = 1; // 等号运算符有返回值，因此输出的时表达式返回值
-1
-> console.log("123"); // console.log没有返回值，所以执行结束后显示undefined
-123
-undefined
-```
-
-**实验二**
-
-使用chrome的JS脚本调试功能
-
-```js
-function p(x) {
-    console.log(x);
-    return true; // 指定函数返回值，避免函数返回undefined
-}
-p("123"); // 执行函数
-```
-
-运行结果：
-
-![](/assets/front002_01.PNG)
