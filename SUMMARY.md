@@ -265,7 +265,7 @@
   * [网络: WebSocket介绍](network/network004.md)
 * [前端](front/README.md)
   * [HTML页面加载过程](front/front001.md)
-  * [为什么执行JS在控制台最后输出undefined](front/front002.md)
+  * [为什么执行JS脚本最后输出undefined](front/front002.md)
   * [HTML的script标签](front/front003.md)
 * [第三方软件](software/README.md)
   * [Yolo](yolo/README.md)
