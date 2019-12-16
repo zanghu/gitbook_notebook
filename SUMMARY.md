@@ -267,6 +267,7 @@
   * [HTML页面加载过程](front/front001.md)
   * [为什么执行JS脚本最后输出undefined](front/front002.md)
   * [HTML的script标签](front/front003.md)
+  * [浏览器执行JS脚本的简单方法](front/front004.md)
 * [第三方软件](software/README.md)
   * [Yolo](yolo/README.md)
     * [Yolo V3: 入门](yolo/basic/README.md)
