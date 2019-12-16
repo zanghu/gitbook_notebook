@@ -1,4 +1,4 @@
-## 使用chrome浏览器测试JS脚本的方法
+## Javascript变量声明提升
 
 [cnblogs: chrome浏览器控制台创建js脚本并执行](https://www.cnblogs.com/WangHaiMing/p/9553678.html)
 
