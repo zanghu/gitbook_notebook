@@ -146,6 +146,7 @@
     * [Linux: 内核模式与用户模式探讨](linux/advanced/lin020.md)
     * [Linux: 关于如何看待系统内核](linux/advanced/lin029.md)
     * [Linux: 内存管理机制简析](linux/advanced/lin043.md)
+    * [Linux: 零拷贝机制](linux/advanced/lin048.md)
     * [参考文献: Understanding User and Kernel Mode](linux/advanced/lin021.md)
   * [Ubuntu知识](linux/ubuntu/README.md)
     * [Linux: ubuntu源列表结构分析](linux/ubuntu/lin008.md)
