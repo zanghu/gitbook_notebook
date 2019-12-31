@@ -1,6 +1,8 @@
 ## scipy: 稀疏矩阵存储法
 
-参考资料：[scipy几种稀疏矩阵表示](https://dirtysalt.github.io/html/types-of-scipy-sparse-matrix.html)
+参考资料：[GitHub: scipy几种稀疏矩阵表示](https://dirtysalt.github.io/html/types-of-scipy-sparse-matrix.html)
+
+参考资料：[CSDN: scipy中稀疏矩阵coo_matrix, csr_matrix 的使用](https://blog.csdn.net/OOC_ZC/article/details/79605702)
 
 ### 1.三类稀疏矩阵
 
@@ -91,6 +93,10 @@ Out[121]: array([0, 1, 3, 5, 5, 5], dtype=int32)
 Out[122]: array([0, 0, 1, 0, 1], dtype=int32)
 ```
 
-### 4.不同格式稀疏矩阵相互转换注意事项
+### 4.不同格式稀疏矩阵相互转换的注意事项
+
+这两种稀疏矩阵类型`csr_matrix`存储密度更大，但不易手工构建。`coo_matrix`存储密度相对小，但易于手工构建，常用方法为先手工构建`coo_matrix`，如果对内存要求高则使用 `tocsr()` 方法把coo_matrix转换为`csr_matrix`类型。
+
+![](/assets/python036_01.png)
 
 几种matrix之间相互转换的时间也是不对称的，从csc, csr -> coo转换的时间，相比coo->csc, csr的时间更短。所以如果只能使用一种中间存储格式的话，尽可能使用csc,csr而不是coo.
