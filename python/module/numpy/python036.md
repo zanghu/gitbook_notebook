@@ -37,57 +37,57 @@ array([[1., 2., 3., 0., 0.],
 ```
 
 ```python
-m2 = scipy.sparse.coo_matrix(m.toarray())
-m3 = m2.tocsr()
-m4 = m2.tocsc()
+>>> m2 = scipy.sparse.coo_matrix(m.toarray())
+>>> m3 = m2.tocsr()
+>>> m4 = m2.tocsc()
 ```
 
 coo_matrix矩阵比较好理解
 
 ```python
-m2.data
+>>> m2.data
 Out[114]: array([1., 2., 3., 4., 5.])
 ```
 
 ```python
-m2.row
+>>> m2.row
 Out[115]: array([0, 0, 0, 1, 1], dtype=int32)
 ```
 
 ```python
-m2.col
+>>> m2.col
 Out[116]: array([0, 1, 2, 1, 2], dtype=int32)
 ```
 
 csr_matrix矩阵里面有 `data`, `indptr`, `indices` 三个变量共同定位，其中row ith的数据是 `data[indptr[i]:indptr[i+1]]`, 对应的colum是 `indices[indptr[i]:indptr[i+1]`. 所以假设有N个row的话，那么indptr的大小是N+1. csc_matrix和csr_matrix相对应，只不过是通过column来定位.
 
 ```python
-m3.data
+>>> m3.data
 Out[117]: array([1., 2., 3., 4., 5.])
 ```
 
 ```python
-m3.indptr
+>>> m3.indptr
 Out[118]: array([0, 3, 5, 5, 5, 5], dtype=int32)
 ```
 
 ```python
-m3.indices
+>>> m3.indices
 Out[119]: array([0, 1, 2, 1, 2], dtype=int32)
 ```
 
 ```python
-m4.data
+>>> m4.data
 Out[120]: array([1., 2., 4., 3., 5.])
 ```
 
 ```python
-m4.indptr
+>>> m4.indptr
 Out[121]: array([0, 1, 3, 5, 5, 5], dtype=int32)
 ```
 
 ```python
-m4.indices
+>>> m4.indices
 Out[122]: array([0, 0, 1, 0, 1], dtype=int32)
 ```
 
