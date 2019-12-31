@@ -65,8 +65,6 @@ Out[116]: array([0, 1, 2, 1, 2], dtype=int32)
 
 （2）`csr_matrix`的存储结构
 
-csr_matrix矩阵里面有 `data`, `indptr`, `indices` 三个变量共同定位，其中row ith的数据是 `data[indptr[i]:indptr[i+1]]`, 对应的colum是 `indices[indptr[i]:indptr[i+1]`. 所以假设有N个row的话，那么indptr的大小是N+1. csc_matrix和csr_matrix相对应，只不过是通过column来定位.
-
 ```python
 >>> m3.data
 Out[117]: array([1., 2., 3., 4., 5.])
@@ -99,7 +97,31 @@ Out[121]: array([0, 1, 3, 5, 5, 5], dtype=int32)
 Out[122]: array([0, 0, 1, 0, 1], dtype=int32)
 ```
 
-### 4.不同格式稀疏矩阵相互转换的注意事项
+### 4.csr_matrix详细说明
+
+```python
+>>> indptr = np.array([0, 2, 3, 6])
+>>> indices = np.array([0, 2, 2, 0, 1, 2])
+>>> data = np.array([1, 2, 3, 4, 5, 6])
+>>> x = csr_matrix((data, indices, indptr), shape=(3, 3)).toarray()
+```
+
+**解释：**
+（1）data表示数据，为[1, 2, 3, 4, 5, 6]
+（2）shape表示矩阵的形状
+（3）indices表示对应data中的数据，在压缩后矩阵中各行的下标，如：数据1在某行的0位置处，数据2在某行的2位置处，数据6在某行的2位置处。
+（4）indptr表示压缩后矩阵中每一行所拥有数据的个数，如：[0 2 3 6]表示从第0行开始数据的个数，0表示默认起始点，0之后有几个数字就表示有几行，第一个数字2表示第一行有2 - 0 = 2个数字，因而数字1，2都第0行，第二行有3 - 2 = 1个数字，因而数字3在第1行，以此类推。
+
+```python
+>>> x
+array([[1, 0, 2],
+       [0, 0, 3],
+       [4, 5, 6]])
+```
+
+
+
+### 5.不同格式稀疏矩阵相互转换的注意事项
 
 这两种稀疏矩阵类型`csr_matrix`存储密度更大，但不易手工构建。`coo_matrix`存储密度相对小，但易于手工构建，常用方法为先手工构建`coo_matrix`，如果对内存要求高则使用 `tocsr()` 方法把coo_matrix转换为`csr_matrix`类型。
 
