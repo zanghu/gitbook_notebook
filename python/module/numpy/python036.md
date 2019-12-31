@@ -4,6 +4,8 @@
 
 参考资料：[CSDN: scipy中稀疏矩阵coo_matrix, csr_matrix 的使用](https://blog.csdn.net/OOC_ZC/article/details/79605702)
 
+参考资料：[CSDN: csr_matrix和csc_matrix简析](https://blog.csdn.net/sinat_33741547/article/details/79878547)
+
 ### 1.三类稀疏矩阵
 
 `scipy.sparse`里面有几种稀疏矩阵的表示：
