@@ -44,7 +44,7 @@ array([[1., 2., 3., 0., 0.],
 >>> m4 = m2.tocsc()
 ```
 
-coo_matrix矩阵比较好理解
+（1）`coo_matrix`的存储结构
 
 ```python
 >>> m2.data
@@ -60,6 +60,8 @@ Out[115]: array([0, 0, 0, 1, 1], dtype=int32)
 >>> m2.col
 Out[116]: array([0, 1, 2, 1, 2], dtype=int32)
 ```
+
+（2）`csr_matrix`的存储结构
 
 csr_matrix矩阵里面有 `data`, `indptr`, `indices` 三个变量共同定位，其中row ith的数据是 `data[indptr[i]:indptr[i+1]]`, 对应的colum是 `indices[indptr[i]:indptr[i+1]`. 所以假设有N个row的话，那么indptr的大小是N+1. csc_matrix和csr_matrix相对应，只不过是通过column来定位.
 
@@ -77,6 +79,8 @@ Out[118]: array([0, 3, 5, 5, 5, 5], dtype=int32)
 >>> m3.indices
 Out[119]: array([0, 1, 2, 1, 2], dtype=int32)
 ```
+
+（3）`csc_matrix`的存储结构
 
 ```python
 >>> m4.data
