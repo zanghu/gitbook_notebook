@@ -26,7 +26,7 @@
     * [numpy / scipy](python/module/numpy/README.md)
       * [numpy: 关于numpy.array和numpy.asarray的区别](python/module/numpy/python003.md)
       * [numpy: 常用函数汇总](python/module/numpy/python031.md)
-      * [numpy: 稀疏矩阵存储方法](python/module/numpy/python036.md)
+      * [scipy: 稀疏矩阵存储方法](python/module/numpy/python036.md)
     * [cv2](python/module/cv2/README.md)
       * [cv2: putText在图片写字](python/module/cv2/python024.md)
       * [cv2: 绘制几何形状](python/module/cv2/python025.md)
