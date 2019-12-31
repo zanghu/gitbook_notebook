@@ -99,7 +99,7 @@ Out[122]: array([0, 0, 1, 0, 1], dtype=int32)
 
 ### 4.csr_matrix/csc_matrix详细说明
 
-以`csr_matrix为例，请看下面的示例：`
+以`csr_matrix`为例，请看下面的示例：
 
 ```python
 >>> indptr = np.array([0, 2, 3, 6])
