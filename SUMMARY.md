@@ -80,6 +80,8 @@
     * [埋点、无埋点和全埋点](recommend_system/collection/rs001.md)
     * [PV、UV、VV、IP的区别](recommend_system/collection/rs002.md)
     * [Web App和Native App的区别](recommend_system/collection/rs003.md)
+  * [算法笔记](recommend_system/algorithm/README.md)
+    * [相似度计算：BM25权重](recommend_system/algorithm/rs004.md)
 * [数据集](dataset/README.md)
   * [CTW](dataset/ctw/README.md)
     * [CTW: 运行预训练detection模型](dataset/ctw/ctw001.md)
