@@ -65,7 +65,7 @@ public class Human {
 
   Spring将创建bean C，然后创建bean B（并将bean注入其中），然后创建bean A（并将bean B注入其中）。
 
-  但是，当具有循环依赖时，Spring无法决定应该首先创建哪个bean，因为它们彼此依赖。在这些情况下，Spring将在加载上下文时引发BeanCurrentlyInCreationException。
+  但是，当具有循环依赖时，Spring无法决定应该首先创建哪个bean，因为它们彼此依赖。在这些情况下，Spring将在加载上下文时引发`BeanCurrentlyInCreationException`。
 
   使用构造函数注入时，它可能发生在Spring中; 如果您使用其他类型的注入，则不应该发现此问题，因为依赖项将在需要时注入，而不是在上下文加载时注入。
 
@@ -97,4 +97,34 @@ public class CircularDependencyB {
         this.circA = circA;
     }
 }
+```
+
+现在我们可以为测试编写一个Configuration类，让我们称之为TestConfig，它指定要扫描组件的基础包。假设我们的bean在包`com.baeldung.circulardependenc`中定义：
+
+```java
+@Configuration
+@ComponentScan(basePackages = { "com.baeldung.circulardependency" })
+public class TestConfig {
+
+}
+
+最后我们可以编写一个JUnit测试来检查循环依赖。测试可以为空，因为在上下文加载期间将检测循环依赖性。
+
+```java
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = { TestConfig.class })
+public class CircularDependencyTest {
+
+    @Test
+    public void givenCircularDependency_whenConstructorInjection_thenItFails() {
+        // Empty test; we just want the context to load
+    }
+}
+```
+
+如果您尝试运行此测试，则会出现以下异常：
+
+```
+BeanCurrentlyInCreationException: Error creating bean with name 'circularDependencyA':
+Requested bean is currently in creation: Is there an unresolvable circular reference?
 ```
