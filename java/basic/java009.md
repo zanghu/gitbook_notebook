@@ -47,28 +47,31 @@ public class Human {
 
 #### 2.循环依赖
 
-1.什么是循环依赖？
-它发生在bean A依赖于另一个bean B时，bean B依赖于bean A：
+* 什么是循环依赖？
 
-豆A→豆B→豆A
+  它发生在bean A依赖于另一个bean B时，bean B依赖于bean A：
 
-当然，我们可以有更多的暗示：
+  豆A→豆B→豆A
 
-豆A→豆B→豆C→豆D→豆E→豆A
+  当然，我们可以有更多的暗示：
 
-2.春天会发生什么
-当Spring上下文加载所有bean时，它会尝试按照它们完全工作所需的顺序创建bean。例如，如果我们没有循环依赖，如下例所示：
+  豆A→豆B→豆C→豆D→豆E→豆A
 
-豆A→豆B→豆C.
+* spring会发生什么
 
-Spring将创建bean C，然后创建bean B（并将bean注入其中），然后创建bean A（并将bean B注入其中）。
+  当Spring上下文加载所有bean时，它会尝试按照它们完全工作所需的顺序创建bean。例如，如果我们没有循环依赖，如下例所示：
 
-但是，当具有循环依赖时，Spring无法决定应该首先创建哪个bean，因为它们彼此依赖。在这些情况下，Spring将在加载上下文时引发BeanCurrentlyInCreationException。
+  豆A→豆B→豆C.
 
-使用构造函数注入时，它可能发生在Spring中; 如果您使用其他类型的注入，则不应该发现此问题，因为依赖项将在需要时注入，而不是在上下文加载时注入。
+  Spring将创建bean C，然后创建bean B（并将bean注入其中），然后创建bean A（并将bean B注入其中）。
 
-3.一个快速示例
-让我们定义两个相互依赖的bean（通过构造函数注入）：
+  但是，当具有循环依赖时，Spring无法决定应该首先创建哪个bean，因为它们彼此依赖。在这些情况下，Spring将在加载上下文时引发BeanCurrentlyInCreationException。
+
+  使用构造函数注入时，它可能发生在Spring中; 如果您使用其他类型的注入，则不应该发现此问题，因为依赖项将在需要时注入，而不是在上下文加载时注入。
+
+* 一个快速示例
+
+  让我们定义两个相互依赖的bean（通过构造函数注入）：
 
 ```java
 @Component
