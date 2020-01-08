@@ -248,6 +248,7 @@
   * [C++: Linux下安装C++ man page](linux/soft_setup/lin040.md)
   * [C++: 模板元编程](c++/cpp001.md)
   * [C++: 符号名demangle](c++/cpp002.md)
+  * [C++: C++11的堆操作](c++/cpp003.md)
 * [Java](java/README.md)
   * [Maven](java/maven/README.md)
     * [Maven: Linux环境安装maven](java/maven/java001.md)
