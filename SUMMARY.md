@@ -119,7 +119,6 @@
     * [Linux: 搭建jupyter sevrer（非SSL）](python/setup/python015.md)
     * [Linux: 搭建jupyter sevrer（SSL）](python/setup/python016.md)
     * [Linux: 安装git](linux/soft_setup/lin030.md)
-    * [Linux: 安装扩展man手册](linux/soft_setup/lin039.md)
     * [Linux: 安装C/C++ man手册](linux/soft_setup/lin040.md)
     * [Linux: 安装32位GCC运行时](c/basic/c054.md)
   * [基础知识](linux/basic/README.md)
