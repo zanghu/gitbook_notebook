@@ -2,18 +2,40 @@
 
 参考资料：[cnblogs: vo类，model类，dto类的作用及划分](https://www.cnblogs.com/liuhaobin/p/10709713.html)
 
+1、entity里的每一个字段，与数据库相对应，
 
-鼓励使用service domain dao 层分层设计概念。
+2、dto里的每一个字段，是和你前台页面相对应，
 
-其次，对几层作用的理解：
-
-
-第一：dao层操作单表，不涉及复杂逻辑，主要是表的增删改查操作，完全根据domain的要求来查询数据。
-
-第二：domain层考虑业务逻辑，例如过滤条件，放行或者返回，以及数据的处理，为调用dao层做好准备，一个domain可以调用一个或者一组相关的dao层
-
-第三：service层调用一个或者一组domain层，主要是展现需要开放出去的接口，其中domain层不是所有的接口都要再service层体现的，可能仅在service层开放几个接口出去，此外，主要接口需要对接受的参数要尽量的扩大化，也就是说可以容纳各种类型的参数的接入（Object），然后需要在service层做好转换，以备domain层使用。
+3、VO，这是用来转换从entity到dto，或者从dto到entity的中间的东西。
 
  
+举个例子：
 
-正确的设计应该是，一个领域活动会聚合对应一个或一组DAO ，来完成一个领域活动。而一个服务可能包含两个领域活动，比如一个转账的业务，对应两个领域活动。两个帐户的金额分别发生变化，需要操作一组领域活动，而每个活动需要操作很多表（调用多个DAO ）。
+你的html页面上有三个字段，name，pass，age
+
+你的数据库表里，有两个字段，name，pass(注意没有age哦)而你的dto里，就应该有下面三个(因为对应html页面上三个字段嘛)
+
+```java
+private string name；
+private string pass; 
+private string age;
+```
+
+这个时候，你的entity里，就应该有两个(因为对应数据库表中的2个字段嘛)
+
+```java
+private string name；
+private string pass;
+```
+
+到了这里，好了，业务经理让你做这样一个业务“年龄大于20的才能存入数据库”
+
+这个时候，你就要用到vo了
+
+你要先从页面上拿到dto，然后判断dto中的age是不是大于20，如果大于20，就把dto中的
+
+name和pass拿出来，放到vo中，然后在把vo中的name和pass原封不懂的给entity，然后根据
+
+entity的值，在传入数据库，这就是他们三个的区别
+
+PS，VO和entity里面的字段应该是一样的，vo只是entity到dto，或者dto到entity的中间过程，如果没有这个过程，你仍然可以做到增删改查，这个就根据具体公司来的
