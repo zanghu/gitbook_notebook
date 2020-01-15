@@ -1,6 +1,6 @@
 ### service、domain、entity和DAO的使用场景
 
-参考资料：[CSDN: domain、entity和model的package的不同用法](https://blog.csdn.net/id_rin/article/details/54288809)
+参考资料：[cnblogs: vo类，model类，dto类的作用及划分](https://www.cnblogs.com/liuhaobin/p/10709713.html)
 
 
 鼓励使用service domain dao 层分层设计概念。
