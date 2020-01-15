@@ -260,6 +260,7 @@
     * [拼接文件路径](java/basic/java005.md)
     * [AOP与代理类Proxy](java/basic/java007.md)
     * [service、DAO、domain、entity的使用场景](java/basic/java008.md)
+    * [VO类，model类，dto类的作用及划分](java/basic/java010.md)
     * [Spring: 依赖注入和循环依赖](java/basic/java009.md)
 * [数据库](database/README.md)
   * [DB: 分库分表](database/db001.md)
