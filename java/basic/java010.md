@@ -1,6 +1,14 @@
-### service、domain、entity和DAO的使用场景
+### vo类，entity类，dto类的作用及划分
 
 参考资料：[cnblogs: vo类，model类，dto类的作用及划分](https://www.cnblogs.com/liuhaobin/p/10709713.html)
+
+#### 对象与层次的映射关系
+
+Model层：entity类
+
+Service层：VO
+
+View层：DTO
 
 #### entity、DTO、VO的概念
 
