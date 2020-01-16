@@ -84,6 +84,7 @@
   * [算法笔记](recsys/algorithm/README.md)
     * [文档相似度：TF-IDF](recsys/algorithm/rs006.md)
     * [文档相似度：BM25权重](recsys/algorithm/rs004.md)
+    * [文档相似度：Page Rank](recsys/algorithm/rs007.md)
     * [词向量：word2vec原理和历史](recsys/algorithm/rs005.md)
 * [数据集](dataset/README.md)
   * [CTW](dataset/ctw/README.md)
