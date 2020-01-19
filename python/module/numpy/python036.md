@@ -30,7 +30,7 @@
 
 ### 3.coo_matrix和csr_matrix存储格式分析
 
-假设有个矩阵如下：
+假设有个`numpy.ndarray`对象`m`如下：
 
 ```python
 array([[1., 2., 3., 0., 0.],
@@ -41,7 +41,7 @@ array([[1., 2., 3., 0., 0.],
 ```
 
 ```python
->>> m2 = scipy.sparse.coo_matrix(m.toarray())
+>>> m2 = scipy.sparse.coo_matrix(m)
 >>> m3 = m2.tocsr()
 >>> m4 = m2.tocsc()
 ```
