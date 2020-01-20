@@ -11,15 +11,17 @@
 ```python
 class A(object):
     def m1(self, n):
-        """普通方法"""
+        """普通方法，第一个参数self是类实例对象"""
         print("self:", self)
 
     @classmethod
     def m2(cls, n):
+        """类方法, 第一个参数cls是类定义对象而不是类的实例对象"""
         print("cls:", cls)
 
     @staticmethod
     def m3(n):
+        """静态方法，既不需要类定义对象也不需要类实例对象"""
         pass
 
 a = A()
