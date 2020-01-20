@@ -1,31 +1,31 @@
-## 字符串前的f：f-string
+## Python字符串开头字母的含义：ubrf
 
 **参考资料**
 
 CSDN：[Python格式化字符串f-string概览](https://blog.csdn.net/sunxb10/article/details/81036693)
 
-### 简介
-
-`f-string`，亦称为格式化字符串常量（formatted string literals），是`Python3.6`新引入的一种字符串格式化方法，该方法源于PEP 498 – Literal String Interpolation，主要目的是使格式化字符串的操作更加简便。
-
-`f-string`在形式上是以 f 或 F 修饰符引领的字符串（f'xxx' 或 F'xxx'），以大括号 {} 标明被替换的字段；`f-string`在本质上并不是字符串常量，而是一个在运行时运算求值的表达式.
-
-`f-string`在功能方面不逊于传统的%-formatting语句和str.format()函数，同时性能又优于二者，且使用起来也更加简洁明了，因此对于`Python3.6`及以后的版本，推荐使用`f-string`进行字符串格式化。
-
-### 简单使用
-
-`f-string`用大括号 {} 表示被替换字段，其中直接填入替换内容：
+`b`开头的字符串：bytes字节符
 
 ```python
->>> name = 'Eric'
->>> f'Hello, my name is {name}'
-'Hello, my name is Eric'
-
->>> number = 7
->>> f'My lucky number is {number}'
-'My lucky number is 7'
-
->>> price = 19.99
->>> f'The price of this book is {price}'
-'The price of this book is 19.99'
+>>> b= b'have'
+>>> print(b)
+b'have'
 ```
+
+`r`开头的字符串：非转义原生（raw）字符串，原生字符串中的`\n`、`\r`等特殊字符将被作为字面值而不是换行符、回车符处理。
+
+```python
+>>> print(r'have\n')
+have\n
+```
+
+`u`开头的字符串，unicode编码字符，python3默认字符串编码方式
+
+```
+>>> print(u'have\n')
+have
+ 
+>>>
+```
+
+`f`开头的字符串，`f-string`，Python36新增的格式化输出方法
