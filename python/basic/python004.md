@@ -1,5 +1,9 @@
 # \[Python\]关于staticmethod和calssmethod的区别
 
+**参考资料**
+
+知乎：[正确理解Python中的 @staticmethod@classmethod方法](https://zhuanlan.zhihu.com/p/28010894)
+
 ### 经典回答1
 
 @classmethod means: when this method is called, we pass the class as the first argument instead of the instance of that class \(as we normally do with methods\). This means you can use the class and its properties inside that method rather than a particular instance.
