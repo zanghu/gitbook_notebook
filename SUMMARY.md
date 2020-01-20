@@ -18,6 +18,7 @@
     * [逻辑运算符and和or的返回值](python/basic/python026.md)
     * [查看对象或进程占用的内存大小](python/basic/python030.md)
     * [为什么python没有函数重载](python/basic/python038.md)
+    * [字符串前的f：f-string](python/basic/python039.md)
   * [Python: 进阶经验](python/practice/README.md)
     * [远程终端matplotlib绘图不报错的小技巧](python/practice/python022.md)
     * [functools.update保持被装饰器修饰的函数的自省/反射属性](python/practice/python002.md)
