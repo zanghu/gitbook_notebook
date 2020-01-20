@@ -4,6 +4,8 @@
 
 CSDN：[Python格式化字符串f-string概览](https://blog.csdn.net/sunxb10/article/details/81036693)
 
+### 解释
+
 `b`开头的字符串：bytes字节符
 
 ```python
