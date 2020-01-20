@@ -6,6 +6,28 @@
 
 @staticmethod means: when this method is called, we don't pass an instance of the class to it \(as we normally do with methods\). This means you can put a function inside a class but you can't access the instance of that class \(this is useful when your method does not use the instance\).
 
+简单的示例：
+
+```python
+class A(object):
+    def m1(self, n):
+        """普通方法"""
+        print("self:", self)
+
+    @classmethod
+    def m2(cls, n):
+        print("cls:", cls)
+
+    @staticmethod
+    def m3(n):
+        pass
+
+a = A()
+a.m1(1) # self: <__main__.A object at 0x000001E596E41A90>
+A.m2(1) # cls: <class '__main__.A'>
+A.m3(1)
+```
+
 ### 经典回答2
 
 类的普通方法的调用方式
