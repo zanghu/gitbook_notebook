@@ -34,15 +34,3 @@ A.m2(1) # cls: <class '__main__.A'>
 A.m3(1)
 ```
 
-### 经典回答2
-
-类的普通方法的调用方式
-
-![](/assets/1.jpg)
-
-类的类方法和静态方法的调用方式
-
-![](/assets/2.jpg)
-
-参考资料：https://www.zhihu.com/question/20021164
-
