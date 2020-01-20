@@ -1,5 +1,9 @@
 ## 字符串前的f：f-string
 
+**参考资料**
+
+CSDN：[Python格式化字符串f-string概览](https://blog.csdn.net/sunxb10/article/details/81036693)
+
 ### 简介
 
 `f-string`，亦称为格式化字符串常量（formatted string literals），是`Python3.6`新引入的一种字符串格式化方法，该方法源于PEP 498 – Literal String Interpolation，主要目的是使格式化字符串的操作更加简便。
