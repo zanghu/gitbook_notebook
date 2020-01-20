@@ -12,6 +12,7 @@
   * [Python: 基础知识](python/basic/README.md)
     * [关于函数定义形参表的形参前面的星号和双星号](python/basic/python001.md)
     * [关于classmethod和staticmethod的区别](python/basic/python004.md)
+    * [字符串开头的字母：u, b, r, f](python/basic/python040.md)
     * [元类与metaclass](python/basic/python005.md)
     * [获得模块路径和函数所属文件路径](python/basic/python021.md)
     * [带默认值的字典defaultdict](python/basic/python023.md)
