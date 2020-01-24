@@ -1,33 +1,33 @@
-## Python字符串开头字母的含义：ubrf
+## 获取文件的创建时间，修改时间和访问时间
 
 **参考资料**
 
-CSDN：[Python格式化字符串f-string概览](https://blog.csdn.net/sunxb10/article/details/81036693)
+CSDN：[Python每日进阶--获取文件的创建时间，修改时间和访问时间](https://blog.csdn.net/webofrxy/article/details/80391063)
 
-### 解释
-
-`b`开头的字符串：bytes字节符
+### 示例
 
 ```python
->>> b= b'have'
->>> print(b)
-b'have'
+#endcoding: utf-8
+
+# 获取文件的时间属性
+# 用到的知识
+#   os.getcwd() 方法用于返回当前工作目录
+#   os.path.getatime(file) 输出文件访问时间
+#   os.path.getctime(file) 输出文件的创建时间
+#   os.path.getmtime(file) 输出文件最近修改时间
+
+
+import time 
+import os
+
+def fileTime(file):
+    return [
+        time.ctime(os.path.getatime(file)),
+        time.ctime(os.path.getmtime(file)),
+        time.ctime(os.path.getctime(file))
+    ]
+
+times = fileTime(os.getcwd())
+print(times)
+print(type(times))
 ```
-
-`r`开头的字符串：非转义原生（raw）字符串，原生字符串中的`\n`、`\r`等特殊字符将被作为字面值而不是换行符、回车符处理。
-
-```python
->>> print(r'have\n')
-have\n
-```
-
-`u`开头的字符串，unicode编码字符，python3默认字符串编码方式
-
-```
->>> print(u'have\n')
-have
- 
->>>
-```
-
-`f`开头的字符串，`f-string`，Python36新增的格式化输出方法
