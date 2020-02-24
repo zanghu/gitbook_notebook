@@ -2,6 +2,12 @@
 
 参考资料：[cnblogs：maven中的groupId和artifactId到底指的是什么](https://www.cnblogs.com/zhaiyf/p/9077402.html)
 
+### 0.背景
+
+eclipse种新建MAVEN项目必需填写项目的`groupid`和`artifactId`
+
+![](/assets/java011_01.PNG)
+
 ### 1.概述
 
 `groupid`和`artifactId`被统称为“坐标”是为了保证项目唯一性而提出的，如果你要把你项目弄到`maven`本地仓库去，你想要找到你的项目就必须根据这两个id去查找。
