@@ -2,7 +2,7 @@
 
 参考资料: [清华大学Pypi镜像](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)
 
-参考资料：[Pypi官方网站](https://pypi.org/)
+参考资料：[StackOverflow: List dependencies of Python wheel file](https://stackoverflow.com/questions/50170588/list-dependencies-of-python-wheel-file)
 
 ### 1.使用 pipdeptree 工具查看
 
