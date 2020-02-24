@@ -1,6 +1,6 @@
 ## 查看模块的依赖关系
 
-参考资料: [清华大学Pypi镜像](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)
+参考资料: [StackOverflow: How to find a Python package's dependencies](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)
 
 参考资料：[StackOverflow: List dependencies of Python wheel file](https://stackoverflow.com/questions/50170588/list-dependencies-of-python-wheel-file)
 
