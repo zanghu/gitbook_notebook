@@ -1,4 +1,4 @@
-## 查看模块的依赖关系
+## 查看Python模块的依赖关系
 
 参考资料: [StackOverflow: How to find a Python package's dependencies](https://stackoverflow.com/questions/29751572/how-to-find-a-python-packages-dependencies)
 
