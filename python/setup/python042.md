@@ -37,7 +37,7 @@ wordcloud==1.6.0
   - pillow [required: Any, installed: 6.2.0]
 ```
 
-> note
+> 缺点
 > 此方法查看效果不稳定，对于某些模块（例如：torch、tensorflow等）无法准确显示依赖；
 
 ### 2.使用 pkginfo 工具查看*.whl安装包中的依赖
@@ -79,4 +79,9 @@ download_url: https://github.com/tensorflow/tensorflow/tags
 requires_dist: ['absl-py (>=0.7.0)', 'astor (>=0.6.0)', 'gast (>=0.2.0)', 'google-pasta (>=0.1.6)', 'keras-applications (>=1.0.6)', 'keras-preprocessing (>=1.0.5)', 'numpy (<2.0,>=1.14.5)', 'six (>=1.10.0)', 'protobuf (>=3.6.1)', 'tensorboard (<1.15.0,>=1.14.0)', 'tensorflow-estimator (<1.15.0rc0,>=1.14.0rc0)', 'termcolor (>=1.1.0)', 'wrapt (>=1.11.1)', 'grpcio (>=1.8.6)', 'wheel (>=0.26)']
 ```
 
-上面显示的`requires_dist`开头的一行内容即是依赖关系
+上面显示的`requires_dist`开头的一行内容即是依赖关系。
+
+> 缺点
+> 此方法只能显示安装包的第一级依赖关系，不能显示递归依赖关系；
+
+
