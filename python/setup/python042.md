@@ -4,9 +4,7 @@
 
 参考资料：[StackOverflow: List dependencies of Python wheel file](https://stackoverflow.com/questions/50170588/list-dependencies-of-python-wheel-file)
 
-参考资料：[Pypi: pipdeptree 0.13.2](https://pypi.org/project/pipdeptree/
-
-)
+参考资料：[Pypi: pipdeptree 0.13.2](https://pypi.org/project/pipdeptree/)
 
 ### 1.使用 pipdeptree 工具查看
 
