@@ -48,7 +48,7 @@ wordcloud==1.6.0
 $ pip install pkginfo
 ```
 
-第二步：查看指定whl安装包的依赖关系
+第二步：查看指定whl安装包的依赖关系（模块的whl安装包可以从pypi网站上下载）
 
 ```shell
 $ pkginfo tensorflow_gpu-1.14.0-cp36-cp36m-manylinux1_x86_64.whl
@@ -78,3 +78,5 @@ classifiers: ['Development Status :: 5 - Production/Stable', 'Intended Audience 
 download_url: https://github.com/tensorflow/tensorflow/tags
 requires_dist: ['absl-py (>=0.7.0)', 'astor (>=0.6.0)', 'gast (>=0.2.0)', 'google-pasta (>=0.1.6)', 'keras-applications (>=1.0.6)', 'keras-preprocessing (>=1.0.5)', 'numpy (<2.0,>=1.14.5)', 'six (>=1.10.0)', 'protobuf (>=3.6.1)', 'tensorboard (<1.15.0,>=1.14.0)', 'tensorflow-estimator (<1.15.0rc0,>=1.14.0rc0)', 'termcolor (>=1.1.0)', 'wrapt (>=1.11.1)', 'grpcio (>=1.8.6)', 'wheel (>=0.26)']
 ```
+
+上面显示的`requires_dist`开头的一行内容即是依赖关系
