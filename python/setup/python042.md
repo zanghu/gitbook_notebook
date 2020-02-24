@@ -17,7 +17,7 @@ $ pip install pipdeptree
 then run
 
 ```
-$ pipdeptree -p wordcloud # 想查看依赖关系的模块名
+$ pipdeptree -p wordcloud # wordcloud是想查看依赖关系的模块名
 ```
 
 and it will show you your dependencies in a tree form, e.g.,
