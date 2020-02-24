@@ -4,7 +4,7 @@
 
 参考资料：[Pypi官方网站](https://pypi.org/)
 
-### 1.方法一：使用 pipdeptree 工具查看
+### 1.使用 pipdeptree 工具查看
 
 In addition to the pip show [package name] command, there is pipdeptree.
 
@@ -17,16 +17,28 @@ $ pip install pipdeptree
 then run
 
 ```
-$ pipdeptree -p wordcloud # wordcloud是想查看依赖关系的模块名
+$ pipdeptree -p wordcloud # 假设 wordcloud 是想查看依赖关系的模块名
 ```
 
 and it will show you your dependencies in a tree form, e.g.,
 
-flake8==2.5.0
-  - mccabe [required: >=0.2.1,<0.4, installed: 0.3.1]
-  - pep8 [required: !=1.6.0,>=1.5.7,!=1.6.1,!=1.6.2, installed: 1.5.7]
-  - pyflakes [required: >=0.8.1,<1.1, installed: 1.0.0]
-ipdb==0.8
-  - ipython [required: >=0.10, installed: 1.1.0]
+```shell
+wordcloud==1.6.0
+  - matplotlib [required: Any, installed: 3.1.1]
+    - cycler [required: >=0.10, installed: 0.10.0]
+      - six [required: Any, installed: 1.12.0]
+    - kiwisolver [required: >=1.0.1, installed: 1.1.0]
+      - setuptools [required: Any, installed: 41.4.0]
+    - numpy [required: >=1.11, installed: 1.17.3]
+    - pyparsing [required: >=2.0.1,!=2.1.6,!=2.1.2,!=2.0.4, installed: 2.4.2]
+    - python-dateutil [required: >=2.1, installed: 2.8.0]
+      - six [required: >=1.5, installed: 1.12.0]
+  - numpy [required: >=1.6.1, installed: 1.17.3]
+  - pillow [required: Any, installed: 6.2.0]
+```
 
-`
+> note
+> 此方法查看效果不稳定，对于某些模块（例如：torch、tensorflow等）无法准确显示依赖；
+
+### 2.使用 pkginfo 工具查看*.whl安装包中的依赖
+
