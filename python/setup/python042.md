@@ -89,4 +89,20 @@ requires_dist: ['absl-py (>=0.7.0)', 'astor (>=0.6.0)', 'gast (>=0.2.0)', 'googl
 > 缺点
 > 此方法只能显示安装包的第一级依赖关系，不能显示递归依赖关系；
 
+### 3.使用 pip show 命令
+
+Try to use show command in pip, for example:
+
+```shell
+$ pip show tornado
+---
+Name: tornado
+Version: 4.1
+Location: *****
+Requires: certifi, backports.ssl-match-hostname
+
+```
+
+> 缺点
+> 此方法现实的依赖关系中不会显示所依赖模块的指定版本好，过于粗糙；
 
