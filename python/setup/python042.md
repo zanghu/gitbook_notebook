@@ -42,3 +42,10 @@ wordcloud==1.6.0
 
 ### 2.使用 pkginfo 工具查看*.whl安装包中的依赖
 
+第一步：安装`pkginfo`工具
+
+```shell
+$ pip install pkginfo
+```
+
+第二步：
