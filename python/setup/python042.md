@@ -54,7 +54,7 @@ $ pip install pkginfo
 $ pkginfo tensorflow_gpu-1.14.0-cp36-cp36m-manylinux1_x86_64.whl
 ```
 
-显示结果：
+第三步：查看显示结果：
 
 ```shell
 metadata_version: 2.0
