@@ -52,6 +52,11 @@ $ pip install pkginfo
 
 ```shell
 $ pkginfo tensorflow_gpu-1.14.0-cp36-cp36m-manylinux1_x86_64.whl
+```
+
+显示结果：
+
+```shell
 metadata_version: 2.0
 name: tensorflow-gpu
 version: 1.14.0
