@@ -4,6 +4,10 @@
 
 参考资料：[StackOverflow: List dependencies of Python wheel file](https://stackoverflow.com/questions/50170588/list-dependencies-of-python-wheel-file)
 
+参考资料：[Pypi: pipdeptree 0.13.2](https://pypi.org/project/pipdeptree/
+
+)
+
 ### 1.使用 pipdeptree 工具查看
 
 `piptree`工具的详细用法（包括如何查看模块的反向依赖关系、生成`requirements.txt`文件的方法等等）见官网：https://pypi.org/project/pipdeptree/
