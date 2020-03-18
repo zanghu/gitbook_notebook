@@ -92,6 +92,7 @@
     * [文档相似度：Page Rank](recsys/algorithm/rs007.md)
     * [词向量：word2vec原理和历史](recsys/algorithm/rs005.md)
     * [基于历史行为的用户兴趣偏好类型计算方法](recsys/algorithm/rs008.md)
+    * [Hash函数：Hash函数现状概览](recsys/algorithm/rs008.md)
 * [数据集](dataset/README.md)
   * [CTW](dataset/ctw/README.md)
     * [CTW: 运行预训练detection模型](dataset/ctw/ctw001.md)
