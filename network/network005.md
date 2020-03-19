@@ -7,7 +7,7 @@
 
 阮一峰的博客：[理解RESTful架构](http://www.ruanyifeng.com/blog/2011/09/restful.html)
 
-
+简书：[HTTP 的幂等性 分析 POST 表单重复提交](https://www.jianshu.com/p/84a583e540d2)
 
 ### 1.要点总结
 
