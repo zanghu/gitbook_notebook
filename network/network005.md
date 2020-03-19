@@ -1,12 +1,14 @@
 ## 网络：Restful API 详解
 
 
-100: 同意大文件传输
+参考资料
 
-200: 成功
+菜鸟教程：[RESTful 架构详解](https://www.runoob.com/w3cnote/restful-architecture.html)
 
-300: 重定位、跳转引发的访问错误
+### 1.要点总结
 
-400：传输层协议相关运行错误（拒绝链接、连接超时等等），一般就是TCP/IP层的socket接口调用错误
+* URI、GET、POST、PUT、DELETE都不是HTTP特有的，实际上是Retful API的特性，只不过目前应用层协议只有HTTP遵循了Restful API的要求。
 
-500：应用层协议相关运行错误，例如：SOAP通讯wsdl、xmlns错误，HTTP报文headercontent-type与body内容不符等，此类错误一般是因为服务端底层通讯框架（webservice框架、HTTP框架）逻辑错误直接返回的。
+* GET、POST、PUT、DELETE的动词操作再HTTP中的原始定义，注意每一种操作的幂等性和安全性。
+
+
