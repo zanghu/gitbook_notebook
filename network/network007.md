@@ -2,9 +2,11 @@
 
 参考资料
 
+知乎：[POST 方法比 GET 方法更安全吗? 为什么?](https://www.zhihu.com/question/54076547)
 
+cnblogs: [讨论“get”和“post”安全性](https://www.cnblogs.com/harry335/p/4181844.html)
 
-### 1.从保密性或者说密码学的意义下考虑的安全性
+### 1.从保密性或者的意义下考虑的安全性
 
 **结论：POST的安全性强于GET**
 
