@@ -2,7 +2,7 @@
 
 **参考资料**
 
-CSDN：[Python每日进阶--获取文件的创建时间，修改时间和访问时间](https://blog.csdn.net/webofrxy/article/details/80391063)
+cnblogs：[python str与bytes之间的转换](https://www.cnblogs.com/zqifa/p/python-7.html)
 
 ### 示例
 
