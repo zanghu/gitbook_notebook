@@ -7,27 +7,22 @@ cnblogs：[python str与bytes之间的转换](https://www.cnblogs.com/zqifa/p/py
 ### 示例
 
 ```python
-#endcoding: utf-8
+# bytes object  
+b = b"example"
 
-# 获取文件的时间属性
-# 用到的知识
-#   os.getcwd() 方法用于返回当前工作目录
-#   os.path.getatime(file) 输出文件访问时间
-#   os.path.getctime(file) 输出文件的创建时间
-#   os.path.getmtime(file) 输出文件最近修改时间
+# str object  
+s = "example"  
 
+# str to bytes  
+sb = bytes(s, encoding = "utf8")  
 
-import time 
-import os
+# bytes to str  
+bs = str(b, encoding = "utf8")  
 
-def fileTime(file):
-    return [
-        time.ctime(os.path.getatime(file)),
-        time.ctime(os.path.getmtime(file)),
-        time.ctime(os.path.getctime(file))
-    ]
+# an alternative method  
+# str to bytes  
+sb2 = str.encode(s)  
 
-times = fileTime(os.getcwd())
-print(times)
-print(type(times))
+# bytes to str  
+bs2 = bytes.decode(b)
 ```
