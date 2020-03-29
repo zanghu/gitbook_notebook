@@ -4,7 +4,7 @@
 
 CSDB：[python 的1970年秒数和datetime互相转换](https://blog.csdn.net/nini3816/article/details/81053994)
 
-### 1 .datetime转1970年秒数
+### datetime转1970年秒数
 
 ```python
 import time,datetime
@@ -13,7 +13,7 @@ time1=datetime.datetime.strptime(timeDateStr,"%Y-%m-%d %H:%M:%S")
 secondsFrom1970=time.mktime(time1.timetuple())
 ```
 
-### 2.1970年秒数转datetime
+### 1970年秒数转datetime
 
 ```python
 import time,datetime
