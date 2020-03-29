@@ -2,5 +2,7 @@
 
 **参考资料**
 
-
-
+```python
+>>> import datetime >>> print datetime.datetime(2006,9,4).isocalendar()[1]
+36
+```
