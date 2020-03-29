@@ -39,7 +39,7 @@
     * [cython](python/module/cython/README.md)
       * [cython简单例子](python/module/cython/python035.md)
     * [datetime](python/module/datetime/README.md)
-      * [datetime: 查看日期属于一年的第几周](python/module/cython/python044.md)
+      * [datetime: 查看日期属于一年的第几周](python/module/datetime/python044.md)
     * [others](python/module/others/README.md)
       * [socket编程](python/module/others/python020.md)
       * [operator: 提供常用lambda函数](python/module/others/python027.md)
