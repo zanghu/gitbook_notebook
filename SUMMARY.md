@@ -22,7 +22,7 @@
     * [为什么python没有函数重载](python/basic/python038.md)
     * [字符串前的f：f-string](python/basic/python039.md)
     * [获取文件的创建时间、修改时间、访问时间](python/basic/python041.md)
-    * [获取文件的创建时间、修改时间、访问时间](python/basic/python043.md)
+    * [str与bytes相互转换](python/basic/python043.md)
   * [Python: 进阶经验](python/practice/README.md)
     * [远程终端matplotlib绘图不报错的小技巧](python/practice/python022.md)
     * [functools.update保持被装饰器修饰的函数的自省/反射属性](python/practice/python002.md)
