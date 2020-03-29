@@ -1,5 +1,9 @@
 ## datetime: 查看指定日期属于一年中的哪一周
 
+参考资料
+
+cnblogs: [python中datetime和字符串互转](https://www.cnblogs.com/chenqionghe/p/12235277.html)
+
 ### 一、datetime生成
 
 ```python
