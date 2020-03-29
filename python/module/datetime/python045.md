@@ -17,7 +17,10 @@ test=datetime(2020,1,26,11,11,11)
 * str 强转类型
 ```python
 str(datetime(2020,1,3))
-strftime：根据传入格式
+```
+
+* strftime：根据传入格式
+```python
 datetime.now().strftime('%Y-%m-%d')
 ```
 
