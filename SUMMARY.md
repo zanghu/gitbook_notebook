@@ -277,6 +277,7 @@
     * [service、DAO、domain、entity的使用场景](java/basic/java008.md)
     * [VO类，Model类，DTO类的作用及划分](java/basic/java010.md)
     * [Spring: 依赖注入和循环依赖](java/basic/java009.md)
+    * [并发: JAVA提供的应用层锁](linux/kernel/lin107.md)
   * [Maven](java/maven/README.md)
     * [Maven: Linux环境安装maven](java/maven/java001.md)
     * [Maven: Linux环境maven创建项目](java/maven/java002.md)
