@@ -116,7 +116,7 @@
     * [数据结构: 无锁队列kfifo](linux/kernel/lin105.md)
     * [并发编程: 并发引起问题的来源分类](linux/kernel/lin106.md)
     * [并发编程: 强弱内存序模型](linux/kernel/lin108.md)
-    * [并发编程: JAVA提供的应用层锁](linux/kernel/lin107.md)
+    * [并发编程: 不同类型的应用层锁(以JAVA语言为例)](linux/kernel/lin107.md)
   * [调试、跟踪与分析](linux/perf/README.md)
     * [Linux: 可执行文件stripped属性在跟踪中的作用](linux/perf/lin044.md)
     * [Linux: 可执行文件分类](linux/perf/lin045.md)
