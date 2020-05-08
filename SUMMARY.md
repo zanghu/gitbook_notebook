@@ -114,6 +114,7 @@
     * [调试分析: 内核符号表kallsyms](linux/kernel/lin103.md)
     * [无锁编程: CAS乐观锁](linux/kernel/lin104.md)
     * [数据结构: 无锁队列kfifo](linux/kernel/lin105.md)
+    * [并发编程: 指令重排的三种原因](linux/kernel/lin106.md)
   * [调试、跟踪与分析](linux/perf/README.md)
     * [Linux: 可执行文件stripped属性在跟踪中的作用](linux/perf/lin044.md)
     * [Linux: 可执行文件分类](linux/perf/lin045.md)
