@@ -114,7 +114,7 @@
     * [调试分析: 内核符号表kallsyms](linux/kernel/lin103.md)
     * [无锁编程: CAS和乐观锁](linux/kernel/lin104.md)
     * [数据结构: 无锁队列kfifo](linux/kernel/lin105.md)
-    * [并发编程: 并发引起问题的来源](linux/kernel/lin106.md)
+    * [并发编程: 并发引起问题的来源分类](linux/kernel/lin106.md)
     * [并发编程: 内存顺序](linux/kernel/lin107.md)
     * [并发编程: 强弱内存序模型](linux/kernel/lin108.md)
   * [调试、跟踪与分析](linux/perf/README.md)
