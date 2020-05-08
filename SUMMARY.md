@@ -118,6 +118,8 @@
     * [并发编程: 强弱内存序模型](linux/kernel/lin108.md)
     * [并发编程: 不同类型的应用层锁(以JAVA语言为例)](linux/kernel/lin107.md)
     * [并发编程: 内存屏障](linux/kernel/lin109.md)
+    * [并发编程: 指令乱序](linux/kernel/lin110.md)
+    * [并发编程: linux提供的锁](linux/kernel/lin111.md)
   * [调试、跟踪与分析](linux/perf/README.md)
     * [Linux: 可执行文件stripped属性在跟踪中的作用](linux/perf/lin044.md)
     * [Linux: 可执行文件分类](linux/perf/lin045.md)
