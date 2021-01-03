@@ -59,7 +59,7 @@ CREATE TABLE `president`
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 
-执行脚本
+执行脚本的命令：
 
 ```shell
 $ mysql -u [用户名] -p -D [数据库名] < [建库脚本路径]
