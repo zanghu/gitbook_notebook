@@ -14,5 +14,5 @@ mysql -u zanghu -P -h localhost # 失败，据说原因是mysql连接localhost�
 
 登陆后查看当前用户权限
 
-mysql > show grants
+mysql> show grants
 ```
