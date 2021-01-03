@@ -6,9 +6,9 @@
 登录本地MySQL服务
 
 ```shell
-mysql -u zanghu -p              # 成功
-mysql -u zanghu -P -h 127.0.0.1 # 成功
-mysql -u zanghu -P -h localhost # 失败，据说原因是mysql连接localhost默认使用unix域sokcet，
+$ mysql -u zanghu -p              # 成功
+$ mysql -u zanghu -P -h 127.0.0.1 # 成功
+$ mysql -u zanghu -P -h localhost # 失败，据说原因是mysql连接localhost默认使用unix域sokcet，
                                 # 但是具体为什么会失败原因没查到
 ```
 
@@ -36,4 +36,12 @@ mysql> use [数据库名称];
 ```mysql
 mysql> show tables;                # 成功
 mysql> show tables from [数据库名]; # 成功
+```
+
+### 2.脚本
+
+通过数据库脚本（*.sql）建表
+
+```shell
+$ mysql -u [用户名] -p -D [数据库名] < [建库脚本路径]
 ```
