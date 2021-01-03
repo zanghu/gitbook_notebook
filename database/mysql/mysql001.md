@@ -13,6 +13,13 @@ mysql -u zanghu -P -h localhost # 失败，据说原因是mysql连接localhost�
 ```
 
 登陆后查看当前用户权限
+
 ```mysql
-mysql> show grants
+mysql> show grants;
+```
+
+查看当前连接的数据库
+
+```mysql
+mysql> select database();
 ```
