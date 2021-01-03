@@ -50,7 +50,7 @@ mysql> show columns from `president` from `sampdb`;
 
 通过数据库脚本（*.sql）建表
 
-脚本内容：
+脚本内容（注意表明、字段名被反引号括起来了）：
 
 ```mysql
 CREATE TABLE `president`
