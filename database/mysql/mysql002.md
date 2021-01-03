@@ -29,7 +29,7 @@
 例如：如下的建库脚本（注意其中的表名、字段名都被反引号括起来了）：
 
 ```sql
-CREATE TABLE `president`
+CREATE TABLE IF NOT EXISTS `president`
 (
     `last_name`  VARCHAR(15) NOT NULL,
     `first_name` VARCHAR(15) NOT NULL,
