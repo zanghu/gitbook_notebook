@@ -58,7 +58,8 @@ mysql> describe [表名]; # 成功
 脚本内容（注意其中的表名、字段名都被反引号括起来了）：
 
 ```sql
-CREATE TABLE IF NOT EXISTS `president`
+DROP TABLE IF EXISTS `president`;
+CREATE TABLE `president`
 (
     `last_name`  VARCHAR(15) NOT NULL,
     `first_name` VARCHAR(15) NOT NULL,
