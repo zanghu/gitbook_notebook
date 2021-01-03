@@ -3,7 +3,7 @@
 
 ### 1.概念
 
-登录本地MySQL服务
+1.1. 登录本地MySQL服务
 
 ```shell
 $ mysql -u zanghu -p              # 成功
@@ -12,26 +12,26 @@ $ mysql -u zanghu -P -h localhost # 失败，据说原因是mysql连接localhost
                                 # 但是具体为什么会失败原因没查到
 ```
 
-登陆后查看当前用户权限
+1.2. 登陆后查看当前用户权限
 
 ```mysql
 mysql> show grants;             # 成功
 mysql> show grants for [用户名]; # 失败
 ```
 
-查看当前连接的数据库
+1.3. 查看当前连接的数据库
 
 ```mysql
 mysql> select database();
 ```
 
-连接指定数据库
+1.4. 连接指定数据库
 
 ```mysql
 mysql> use [数据库名称];
 ```
 
-查看数据库中所有表名
+1.5. 查看数据库中所有表名
 
 ```mysql
 mysql> show tables;                # 成功
