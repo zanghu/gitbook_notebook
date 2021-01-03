@@ -14,33 +14,33 @@ $ mysql -u zanghu -P -h localhost # 失败，据说原因是mysql连接localhost
 
 1.2. 登陆后查看当前用户权限
 
-```mysql
+```sql
 mysql> show grants;             # 成功
 mysql> show grants for [用户名]; # 失败
 ```
 
 1.3. 查看当前连接的数据库
 
-```mysql
+```sql
 mysql> select database();
 ```
 
 1.4. 连接指定数据库
 
-```mysql
+```sql
 mysql> use [数据库名称];
 ```
 
 1.5. 查看数据库中所有表名
 
-```mysql
+```sql
 mysql> show tables;                # 成功
 mysql> show tables from [数据库名]; # 成功
 ```
 
 1.6. 查看表中所有字段名
 
-```mysql
+```sql
 # 注意下面的命令中 president 和 sampdb 都用反引号'`'括起来了
 # 使用反引号一般是为了避免 MySQL 关键字域字段名、表名、数据库名称冲突，目前成为惯例
 mysql> show columns from `president` from `sampdb`;
@@ -52,7 +52,7 @@ mysql> show columns from `president` from `sampdb`;
 
 脚本内容（注意其中的表名、字段名都被反引号括起来了）：
 
-```mysql
+```sql
 CREATE TABLE `president`
 (
     `last_name`  VARCHAR(15) NOT NULL,
