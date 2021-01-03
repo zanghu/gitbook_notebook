@@ -25,3 +25,7 @@ mysql> select database();
 ```
 
 连接指定数据库
+
+```mysql
+mysql> use [数据库名称];
+```
