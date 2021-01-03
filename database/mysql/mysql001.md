@@ -74,6 +74,27 @@ $ mysql -u zanghu -p -D sampdb < /home/zanghu/code_box/mysql_code/sampdb/create_
 
 2.2. 在mysql命令行内，执行建表脚本建表
 
+建表脚本内容：
+
+```sql
+CREATE TABLE IF NOT EXISTS `member`
+(
+    `member_id`  INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    PRIMARY KEY (`member_id`),
+    `last_name`  VARCHAR(20) NOT NULL,
+    `first_name` VARCHAR(20) NOT NULL,
+    `suffix`     VARCHAR(5)  NULL,
+    `expiration` DATE NULL,
+    `email`      VARCHAR(100)  NULL,
+    `street`     VARCHAR(50)  NULL,
+    `city`       VARCHAR(50) NOT NULL,
+    `state`      VARCHAR(2)  NOT NULL,
+    `zip`        VARCHAR(10) NULL,
+    `phone`      VARCHAR(20) NULL,
+    `interests`  VARCHAR(255) NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
+
 ```mysql
 # 使用 source 关键字
 mysql> source /home/zanghu/code_box/mysql_code/sampdb/create_member.sql;
