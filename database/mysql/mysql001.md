@@ -44,4 +44,6 @@ mysql> show tables from [数据库名]; # 成功
 
 ```shell
 $ mysql -u [用户名] -p -D [数据库名] < [建库脚本路径]
+$ mysql -u zanghu -p -D sampdb < /home/zanghu/code_box/mysql_code/sampdb/create_president.sql
+
 ```
