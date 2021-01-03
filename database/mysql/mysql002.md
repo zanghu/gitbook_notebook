@@ -28,7 +28,7 @@
 
 例如：如下的建库脚本（注意其中的表名、字段名都被反引号括起来了）：
 
-```mysql
+```sql
 CREATE TABLE `president`
 (
     `last_name`  VARCHAR(15) NOT NULL,
