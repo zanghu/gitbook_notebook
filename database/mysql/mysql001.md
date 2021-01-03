@@ -82,7 +82,8 @@ $ mysql -u zanghu -p -D sampdb < /home/zanghu/code_box/mysql_code/sampdb/create_
 建表脚本内容：
 
 ```sql
-CREATE TABLE IF NOT EXISTS `member`
+DROP TABLE IF EXISTS `member`;
+CREATE TABLE `member`
 (
     `member_id`  INT UNSIGNED NOT NULL AUTO_INCREMENT,
     PRIMARY KEY (`member_id`),
