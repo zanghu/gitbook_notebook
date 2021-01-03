@@ -38,9 +38,28 @@ mysql> show tables;                # 成功
 mysql> show tables from [数据库名]; # 成功
 ```
 
+
+
 ### 2.脚本
 
 通过数据库脚本（*.sql）建表
+
+脚本内容：
+
+```mysql
+CREATE TABLE `president`
+(
+    `last_name`  VARCHAR(15) NOT NULL,
+    `first_name` VARCHAR(15) NOT NULL,
+    `suffix`     VARCHAR(5)  NULL,
+    `city`       VARCHAR(20) NOT NULL,
+    `state`      VARCHAR(2)  NOT NULL,
+    `birth`      DATE        NOT NULL,
+    `death`      DATE        NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
+
+执行脚本
 
 ```shell
 $ mysql -u [用户名] -p -D [数据库名] < [建库脚本路径]
