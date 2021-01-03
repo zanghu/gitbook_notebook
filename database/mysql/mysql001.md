@@ -46,7 +46,7 @@ mysql> show tables from [数据库名]; # 成功
 mysql> show columns from `president` from `sampdb`;
 ```
 
-### 2.脚本
+### 2.执行SQL脚本
 
 2.1. 执行shell命令，通过数据库脚本（*.sql）建表
 
