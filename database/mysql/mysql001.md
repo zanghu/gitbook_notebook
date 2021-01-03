@@ -36,7 +36,7 @@ mysql> use [数据库名称];
 ```sql
 mysql> show tables;                # 成功
 mysql> show tables from [数据库名]; # 成功
-mysql> show tables in [数据库名]; # 成功
+mysql> show tables in [数据库名];   # 成功
 ```
 
 1.6. 查看表中所有字段名
