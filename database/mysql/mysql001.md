@@ -3,7 +3,7 @@
 
 ### 1.概念
 
-登录本地数据库
+登录本地MySQL服务
 
 ```shell
 mysql -u zanghu -p              # 成功
@@ -23,3 +23,5 @@ mysql> show grants;
 ```mysql
 mysql> select database();
 ```
+
+连接指定数据库
