@@ -48,7 +48,7 @@ mysql> show columns from `president` from `sampdb`;
 
 ### 2.脚本
 
-通过数据库脚本（*.sql）建表
+2.1. 执行shell命令，通过数据库脚本（*.sql）建表
 
 脚本内容（注意其中的表名、字段名都被反引号括起来了）：
 
@@ -72,3 +72,9 @@ $ mysql -u [用户名] -p -D [数据库名] < [建库脚本路径]
 $ mysql -u zanghu -p -D sampdb < /home/zanghu/code_box/mysql_code/sampdb/create_president.sql
 ```
 
+2.2. 在mysql命令行内，执行建表脚本建表
+
+```mysql
+# 使用 source 关键字
+mysql> source /home/zanghu/code_box/mysql_code/sampdb/create_member.sql;
+```
