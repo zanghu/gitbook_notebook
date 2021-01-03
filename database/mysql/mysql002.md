@@ -1,49 +1,35 @@
-## 初学
+## MySQL: 单引号、双引号和反引号的用法区别
 
+先我们先来说一下单引号和反引号，如图，这里的   '图书ID'   就使用到了单引号，而
 
-### 1.概念
+ CREATE TABLE `book`  这里的  book  就使用到了反引号，那么他们具体的有什么区别呢？
 
-1.1. 登录本地MySQL服务
+数据库中引号的用法（mysql、oracle、plsql）
+单引号：我们在例子中的条件值周围使用的是单引号。SQL 使用单引号来环绕文本值。如果是数值，请不要使用引号。
 
-```shell
-$ mysql -u zanghu -p              # 成功
-$ mysql -u zanghu -P -h 127.0.0.1 # 成功
-$ mysql -u zanghu -P -h localhost # 失败，据说原因是mysql连接localhost默认使用unix域sokcet，
-                                # 但是具体为什么会失败原因没查到
-```
+按照别的说法来说就是Varchar类型（也可以说是String、字符串类型）这一些在数据库语句中使用的时候应该使用单引号，而不是直接使用。
 
-1.2. 登陆后查看当前用户权限
+而对于数值类型的，反而是不能使用单引号。
 
-```mysql
-mysql> show grants;             # 成功
-mysql> show grants for [用户名]; # 失败
-```
+如图所示有正确的和错误的使用方法：
 
-1.3. 查看当前连接的数据库
+数据库中引号的用法（mysql、oracle、plsql）
+数据库中引号的用法（mysql、oracle、plsql）
+反引号：它是为了区分MYSQL的保留字与普通字符而引入的符号。
 
-```mysql
-mysql> select database();
-```
+注意划重点：有MYSQL保留字作为字段的，必须加上反引号来区分！！！
 
-1.4. 连接指定数据库
+所谓的保留字就是select database insert 这一类数据库的sql指令，当我们不得已要拿他们来做表名和字段名的时候 我们必须要加反引号来避免编译器把这部分认为是保留字而产生错误。
 
-```mysql
-mysql> use [数据库名称];
-```
+当然，在上面的例子中，book并不是保留字，这么加反引号只是作一个保险，这也是一个良好的sql建表习惯。
 
-1.5. 查看数据库中所有表名
+务必要记住：保留字既不能作为表名，也不能作为字段名，如果非要这么操作，请记住要增加反引号！
 
-```mysql
-mysql> show tables;                # 成功
-mysql> show tables from [数据库名]; # 成功
-```
+数据库中引号的用法（mysql、oracle、plsql）
+4
+双引号的用法和单引号有所类似，大多数数据库都支持单引号和双引号的互换，即varchar类型的变量既可以用单引号来囊括，也可以用双引号。
 
-1.6. 查看表中所有字段名
-
-```mysql
-# 注意下面的命令中 president 和 sampdb 都用反引号'`'括起来了
-# 使用反引号一般是为了避免 MySQL 关键字域字段名、表名、数据库名称冲突，目前成为惯例
-mysql> show columns from `president` from `sampdb`;
+当然了，一边单引号，一边双引号是不被允许的。
 ```
 
 ### 2.脚本
@@ -65,10 +51,4 @@ CREATE TABLE `president`
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 
-执行脚本的命令：
-
-```shell
-$ mysql -u [用户名] -p -D [数据库名] < [建库脚本路径]
-$ mysql -u zanghu -p -D sampdb < /home/zanghu/code_box/mysql_code/sampdb/create_president.sql
-```
 
