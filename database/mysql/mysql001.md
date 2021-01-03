@@ -49,7 +49,7 @@ mysql> show tables in [数据库名];   # 成功
 mysql> show columns from `president` from `sampdb`; # 成功
 
 # 方法二：describe 关键字
-mysql> describe [表名]; # 成功
+mysql> describe [表名];           # 成功
 mysql> describe [数据库名].[表名]; # 成功
 ```
 
