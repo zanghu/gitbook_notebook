@@ -184,6 +184,8 @@
     * [Linux: ubuntu自动更新相关的三个命令](linux/ubuntu/lin019.md)
     * [Ubuntu: apt-cache search 搜索相关安装包](linux/ubuntu/lin016.md)
     * [Ubuntu: 安装MySQL](linux/soft_setup/lin052.md)
+ [Golang](go/README.md)
+  * [Go: 多包程序编译](go/go001.md)
 * [Shell](shell/README.md)
   * [Shell: 字符串排序](shell/shell001.md)
 * [C](c/README.md)
