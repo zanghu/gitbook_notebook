@@ -41,6 +41,7 @@ mysql> show tables from [数据库名]; # 成功
 1.6. 查看表中所有字段名
 
 ```mysql
+# 注意下面的命令中 president 和 sampdb 都用反引号'`'括起来了
 mysql> show columns from `president` from `sampdb`;
 ```
 
