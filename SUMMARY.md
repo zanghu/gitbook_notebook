@@ -298,7 +298,7 @@
   * [DB: Oracle触发器](database/db003.md)
   * [DB: Oracle SQL Developer执行SQL脚本](database/db004.md)
   * [DB: Oracle常用查询命令](database/db005.md)
-  * [基础知识](database/mysql/README.md)
+  * [MySQL](database/mysql/README.md)
     * [MySQL: 初学](database/mysql/mysql001.md)
 * [网络](network/README.md)
   * [HTTP: HTTP错误码总结](network/network001.md)
