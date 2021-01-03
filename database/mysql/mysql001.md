@@ -42,6 +42,7 @@ mysql> show tables from [数据库名]; # 成功
 
 ```mysql
 # 注意下面的命令中 president 和 sampdb 都用反引号'`'括起来了
+# 使用反引号一般是为了避免 MySQL 关键字域字段名、表名、数据库名称冲突，目前成为惯例
 mysql> show columns from `president` from `sampdb`;
 ```
 
