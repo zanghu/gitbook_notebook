@@ -301,6 +301,7 @@
   * [MySQL](database/mysql/README.md)
     * [MySQL: 初学](database/mysql/mysql001.md)
     * [MySQL: 单引号、双引号和反引号](database/mysql/mysql002.md)
+    * [MySQL: IF NOT EXISTS和 IF EXISTS](database/mysql/mysql003.md)
 * [网络](network/README.md)
   * [HTTP: HTTP错误码总结](network/network001.md)
   * [HTTP: GET和POST的安全性比较](network/network007.md)
