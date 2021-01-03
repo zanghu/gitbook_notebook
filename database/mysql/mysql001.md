@@ -30,3 +30,10 @@ mysql> select database();
 ```mysql
 mysql> use [数据库名称];
 ```
+
+查看数据库中所有表名
+
+```mysql
+mysql> show tables;                # 成功
+mysql> show tables from [数据库名]; # 成功
+```
