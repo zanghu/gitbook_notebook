@@ -38,7 +38,11 @@ mysql> show tables;                # 成功
 mysql> show tables from [数据库名]; # 成功
 ```
 
+1.6. 查看表中所有字段名
 
+```mysql
+mysql> show columns from `president` from `sampdb`;
+```
 
 ### 2.脚本
 
