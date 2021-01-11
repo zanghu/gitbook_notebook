@@ -2,7 +2,7 @@
 
 参考资料
 
-知乎：[POST 方法比 GET 方法更安全吗? 为什么?](https://www.zhihu.com/question/54076547)
+知乎：[详细的端口意义和中文说明 (转)](https://www.cnblogs.com/hicome/archive/2004/01/13/884062.html)
 
 cnblogs: [讨论“get”和“post”安全性](https://www.cnblogs.com/harry335/p/4181844.html)
 
