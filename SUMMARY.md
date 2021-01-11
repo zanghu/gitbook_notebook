@@ -306,7 +306,7 @@
     * [MySQL: IF NOT EXISTS和 IF EXISTS](database/mysql/mysql003.md)
 * [网络](network/README.md)
   * [HTTP: HTTP错误码总结](network/network001.md)
-  * [HTTP: GET和POST的安全性比较](network/network007.md)
+  * [HTTP: GET和POST的安全性比较](network/network008.md)
   * [网络: Cookie和Session详解](network/network002.md)
   * [网络: 端口详解与监听](network/network003.md)
   * [网络: WebSocket介绍](network/network004.md)
