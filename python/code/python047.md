@@ -11,20 +11,11 @@ def count_time(func):
         return result
     return int_time
 
-def check_file(data_dir, train_file_name):
-    """"""
-    assert os.path.isdir(data_dir)
-    train_file_pth = os.path.join(data_dir, train_file_name)
-    assert os.path.isfile(train_file_pth)
-    print("train_file_pth: {}".format(train_file_pth))
-    return train_file_pth
 
 @count_time
 def read_data(train_file_pth):
     """"""
-    t0 = time.time()
     data = pd.read_csv(train_file_pth) # "../input/jane-street-market-prediction/train.csv"
-    #print('load data: {}s'.format(time.time() - t0))
     data['resp_weight']=data['resp']*data['weight']
     data["action"] = (data["resp_weight"] > 0).astype('int')
     data['action'].value_counts()
