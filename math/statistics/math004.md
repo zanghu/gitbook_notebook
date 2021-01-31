@@ -1,5 +1,9 @@
 ## 术语：CDF、KDE、ECDF
 
+参考资料：[核密度估计 Kernel Density Estimation(KDE)](https://blog.csdn.net/unixtch/article/details/78556499)
+
+参考资料：[Empirical distribution function](https://en.wikipedia.org/wiki/Empirical_distribution_function)
+
   
 * CDF: Cumulative Distribution Function，累积分布函数
 
