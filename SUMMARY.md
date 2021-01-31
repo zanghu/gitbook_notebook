@@ -59,6 +59,8 @@
     * [编辑excel：英文总结存档](python/python_office/python019.md)
     * [编辑excel：xlrd打开文件的缺陷](python/python_office/python037.md)
     * [使用pptx模块制作幻灯片](python/python_office/python018.md)
+  * [Python: 通用代码](python/code/README.md)
+    * [计算函数运行时间的装饰器](python/setup/python029.md)
 * [Tensorflow](tensorflow/README.md)
   * [TF: tf.app.run\(\)的理解](tensorflow/tf001.md)
   * [TF: slim构造和加载数据](tensorflow/tf002.md)
