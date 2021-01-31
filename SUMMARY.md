@@ -177,6 +177,7 @@
     * [Linux: ps命令常用方法](linux/basic/lin049.md)
     * [Linux: lsof：查看进程与文件描述符关系](linux/basic/lin050.md)
     * [Linux: 常用信号含义说明](linux/basic/lin051.md)
+    * [Linux: 截取文件指定行](eda/eda001.md)
   * [高级技术](linux/advanced/README.md)
     * [Linux: sudo运行程序搜索路径变化原因的研究](linux/advanced/lin009.md)
     * [Linux: lsof快速释放本地端口](linux/advanced/lin014.md)
