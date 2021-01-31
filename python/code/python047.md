@@ -1,57 +1,33 @@
-# \[Python\]使用functools.update\_wrapper保持被装饰器修饰的函数的自省/反射属性
+# PYTHON: 计算函数运行时间的装饰器
 
 下面演示对使用函数装饰器的函数调用自省/反射方法**name**和**doc**的效果
 
 ```python
-def wrap(func):  
-    def call_it(*args, **kwargs):  
-        """wrap func: call_it"""  
-        print 'before call'  
-        return func(*args, **kwargs)  
-    return call_it
+def count_time(func):
+    def int_time(*args, **kwargs):
+        t0 = time.time()  # 程序开始时间
+        result = func(*args, **kwargs)
+        print('{} finish, time elapsed: {}s'.format(func.__name__, time.time() - t0))
+        return result
+    return int_time
 
-@wrap  
-def hello():  
-    """say hello"""  
-    print 'hello world'
+def check_file(data_dir, train_file_name):
+    """"""
+    assert os.path.isdir(data_dir)
+    train_file_pth = os.path.join(data_dir, train_file_name)
+    assert os.path.isfile(train_file_pth)
+    print("train_file_pth: {}".format(train_file_pth))
+    return train_file_pth
 
-from functools import update_wrapper  
-def wrap2(func):  
-    def call_it(*args, **kwargs):  
-        """wrap func: call_it2"""  
-        print 'before call'  
-        return func(*args, **kwargs)  
-    return update_wrapper(call_it, func)
-
-@wrap2  
-def hello2():  
-    """test hello"""  
-    print 'hello world2'
-
-if __name__ == '__main__':  
-    hello()  
-    print hello.__name__  
-    print hello.__doc__
-
-    print  
-    hello2()  
-    print hello2.__name__  
-    print hello2.__doc__
+@count_time
+def read_data(train_file_pth):
+    """"""
+    t0 = time.time()
+    data = pd.read_csv(train_file_pth) # "../input/jane-street-market-prediction/train.csv"
+    #print('load data: {}s'.format(time.time() - t0))
+    data['resp_weight']=data['resp']*data['weight']
+    data["action"] = (data["resp_weight"] > 0).astype('int')
+    data['action'].value_counts()
+    features = [col for col in data.columns if "feature" in col]
+    return data, features
 ```
-
-返回结果如下, 使用functools.update\_wrapper\(\)前被修饰函数的函数签名是call\_it, 使用后则变回hello2:
-
-```python
->>before call
-hello world
-call_it
-wrap func: call_it
-
-before call
-hello world2
-hello2
-test hello
-```
-
-参考链接: [http://www.jb51.net/article/65778.htm](http://www.jb51.net/article/65778.htm)
-
