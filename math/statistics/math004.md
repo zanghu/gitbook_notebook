@@ -6,6 +6,7 @@
 
 ### ECDF: Empirical distribution function，经验分布函数
 
+根据样本数据估计累积分布函数
 
 ### KDE: Kernel Density Estimation，核密度估计
 
