@@ -1,14 +1,14 @@
-## N sigma准则
+## 术语：CDF、KDE、ECDF
 
   
-函数曲线下68.268949%的面积在平均数左右的一个标准差范围内。  
-95.449974%的面积在平均数左右两个标准差的范围内。  
-99.730020%的面积在平均数左右三个标准差的范围内。  
-99.993666%的面积在平均数左右四个标准差的范围内。
+### CDF: Cumulative Distribution Function，累积分布函数
 
 
+### ECDF: Empirical distribution function，经验分布函数
 
-6 sigma: 99.99966%
 
+### KDE: Kernel Density Estimation，核密度估计
+
+根据样本数据估计原始分布的概率密度，经常和直方图绘制相联系，即直方图中加入KDE曲线
 
 
