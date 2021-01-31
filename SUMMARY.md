@@ -110,7 +110,7 @@
 * [数据集](dataset/README.md)
   * [CTW](dataset/ctw/README.md)
     * [CTW: 运行预训练detection模型](dataset/ctw/ctw001.md)
-* [Math](math/README.md)
+* [应用数学](math/README.md)
   * [Statistics](math/statistics/README.md)
     * [Static: N sigma 准则](math/statistics/math001.md)
     * [Static: 协方差矩阵的定义和计算](math/statistics/math002.md)
