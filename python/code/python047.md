@@ -3,6 +3,8 @@
 下面演示对使用函数装饰器的函数调用自省/反射方法**name**和**doc**的效果
 
 ```python
+import time
+
 def count_time(func):
     def int_time(*args, **kwargs):
         t0 = time.time()  # 程序开始时间
