@@ -79,6 +79,8 @@
   * [torch: 官方cifar10教程注释版](pytorch/code/pytorch007.md)
 * [lightGBM](lightgbm/README.md)
   * [安装lightGBM的GPU版本](lightgbm/gbm001.md)
+* [数据处理与分析](EDA/README.md)
+  * [截取文件指定行](eda/eda001.md)
 * [CV](cv/README.md)
   * [CV: 非最大压制方法\(NMS\)](cv/cv001.md)
   * [CV: 图像的仿射变换](cv/cv002.md)
