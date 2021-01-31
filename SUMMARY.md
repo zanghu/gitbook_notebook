@@ -115,6 +115,7 @@
     * [Static: N sigma 准则](math/statistics/math001.md)
     * [Static: 协方差矩阵的定义和计算](math/statistics/math002.md)
     * [Static: 个人对贝叶斯理论的理解和论述](math/statistics/math003.md)
+    * [Static: CDF、KDE、ECDF](math/statistics/math003.md)
 * [Linux/Unix](linux/README.md)
   * [深入内核](linux/kernel/README.md)
     * [数据结构: LIST\_HEAD](linux/kernel/lin101.md)
