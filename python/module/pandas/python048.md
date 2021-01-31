@@ -1,5 +1,7 @@
 ## Pandas：isna() vs isnull()，二者有什么区别
 
+参考资料：[Python笔记：Pandas的isna() vs isnull() vs numpy.isnan()有什么区别？](https://blog.csdn.net/htuhxf/article/details/89525441)
+
 ### Pandas.DataFrame isna() vs isnull()
 我觉得咱要说的是pandas.DataFrame.isna() vs pandas.DataFrame.isnull()。而不是pandas.isnull()，因为它不是用于`DataFrame`的。
 这俩函数的功用一模一样！它俩甚至连官方文档都一模一样。你点击pandas的官网文档就明白了。
