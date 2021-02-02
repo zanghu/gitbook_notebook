@@ -4,6 +4,13 @@
 
 参考资料：[维基百科：条件数](https://zh.wikipedia.org/wiki/%E6%9D%A1%E4%BB%B6%E6%95%B0)
 
-  
+### 1.函数的条件数
+
+![](/assets/math005_01.PNG)
+
+### 2.矩阵的条件数
+
+![](/assets/math005_02.PNG)
 
 
+2
