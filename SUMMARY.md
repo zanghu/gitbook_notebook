@@ -385,6 +385,7 @@
   * [管理: OKR学习](others/others004.md)
   * [知识: 交叉编译](others/others002.md)
   * [知识: 编译器自举](others/others003.md)
+  * [知识: CRC32作哈希的问题分析](others/others013.md)
   * [归档: 微服务常见发布模式介绍](others/others005.md)
   * [归档: 有价值的开源软件](others/others001.md)
   * [归档: 有价值的参考书](others/others006.md)
