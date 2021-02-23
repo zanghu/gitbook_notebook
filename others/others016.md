@@ -2,7 +2,7 @@
 
 **参考资料**
 
-wiki：[Jenkins hash function](https://en.wikipedia.org/wiki/Jenkins_hash_function)
+[知乎：聊聊一致性哈希](https://zhuanlan.zhihu.com/p/24440059)
 
 算法介绍：[Wang/Jenkins Hash算法](http://d0evi1.com/wang-jenkins-hash/)
 
