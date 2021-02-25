@@ -1,14 +1,16 @@
-## Jekins哈希函数
+## 分布式事务的一致性
 
 **参考资料**
 
-wiki：[Jenkins hash function](https://en.wikipedia.org/wiki/Jenkins_hash_function)
+[关于分布式事务，XA协议的学习笔记（整理转载），解决方案和适用场景列表](https://www.cnblogs.com/monkeyblog/p/10449363.html)
 
-算法介绍：[Wang/Jenkins Hash算法](http://d0evi1.com/wang-jenkins-hash/)
+[以交易系统为例，看分布式事务架构的五大演进](https://zhuanlan.zhihu.com/p/68881314)
 
-新浪博客：[常用哈希函数笔记](http://blog.sina.com.cn/s/blog_70b2b6020100lexb.html)
 
-搜狐：[推荐系统候选池的两种去重策略](https://www.sohu.com/a/231215520_499730)
+
+
+以交易系统为例，看分布式事务架构的五大演进
+
 
 Wang/Jenkins Hash算法在网上提到的也甚多，但是很少有人或有文章能系统地能将该算法的来龙去脉说明白。于是，我就充当了该苦工，幸好还是找到了一些东西，尝试着将该算法简单道来。
 
