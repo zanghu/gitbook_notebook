@@ -387,6 +387,7 @@
   * [知识：Hash函数现状概览](others/others014.md)
   * [知识：Hash：Jenkins hash function](others/others015.md)
   * [知识：一致性哈希](others/others016.md)
+  * [知识：分布式事务一致性](others/others017.md)
   * [归档: 微服务常见发布模式介绍](others/others005.md)
   * [归档: 有价值的开源软件](others/others001.md)
   * [归档: 有价值的参考书](others/others006.md)
