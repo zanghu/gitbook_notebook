@@ -309,6 +309,7 @@
 * [数据库](database/README.md)
   * [DB: 分库分表](database/db001.md)
   * [DB: 自增主键](database/db002.md)
+  * [DB: DDL/DML/DCL概述](database/db006.md)
   * [Oracle](database/oracle/README.md)
       * [Oracle: 触发器](database/oracle/db003.md)
       * [Oracle: SQL Developer执行SQL脚本](database/oracle/db004.md)
