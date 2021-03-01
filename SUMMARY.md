@@ -309,6 +309,7 @@
 * [数据库](database/README.md)
   * [DB: 分库分表](database/db001.md)
   * [DB: 自增主键](database/db002.md)
+  * [MySQL](database/oracle/README.md)
   * [DB: Oracle触发器](database/db003.md)
   * [DB: Oracle SQL Developer执行SQL脚本](database/db004.md)
   * [DB: Oracle常用查询命令](database/db005.md)
