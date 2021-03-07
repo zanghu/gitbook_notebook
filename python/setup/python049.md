@@ -1,4 +1,4 @@
-## Python: 使用pip安装模块
+## Jupyter: 自定义配置
 
 参考资料: [清华大学Pypi镜像](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)
 
