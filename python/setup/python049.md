@@ -7,12 +7,11 @@
 ### 1.自动换行和行号
 
 * 首先通过命令`jupyter --config-dir`找到配置文件所在路径, 进入下一级路径 nbconfig 
+![](/assets/python049_01.png)
 
+* 找到`notebook.json 文件`(如果没有, 自行创建即可), 通过 notepad++ 打开文件进行编辑
 
-
-* 找到 notebook.json 文件 (如果没有, 自行创建即可), 通过 notepad++ 打开文件进行编辑
-
-* 追加 / 写入如下代码, 保存并重新启动 Jupyter Notebook
+* 追加写入如下代码, 保存并重新启动`Jupyter Notebook`
 
 ```json
 {
