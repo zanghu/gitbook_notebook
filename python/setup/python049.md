@@ -10,6 +10,7 @@
 ![](/assets/python049_01.png)
 
 * 找到`notebook.json 文件`(如果没有, 自行创建即可), 通过 notepad++ 打开文件进行编辑
+![](/assets/python049_02.png)
 
 * 追加写入如下代码, 保存并重新启动`Jupyter Notebook`
 
