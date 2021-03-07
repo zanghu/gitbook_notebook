@@ -6,7 +6,9 @@
 
 ### 1.自动换行和行号
 
-* 首先通过命令 jupyter --config-dir 找到配置文件所在路径, 进入下一级路径 nbconfig  (如果没有, 自行创建即可)
+* 首先通过命令`jupyter --config-dir`找到配置文件所在路径, 进入下一级路径 nbconfig 
+
+
 
 * 找到 notebook.json 文件 (如果没有, 自行创建即可), 通过 notepad++ 打开文件进行编辑
 
