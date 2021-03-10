@@ -10,6 +10,7 @@
 git config --global http.proxy 代理ip:代理端口
 git config --global https.proxy 代理ip:代理端口
 
+# 清除代理设置
 git config --global --get http.proxy
 git config --global --get https.proxy
 
