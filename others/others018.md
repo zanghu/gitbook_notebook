@@ -1,10 +1,13 @@
-## 分布式事务的一致性
+## git bash 使用本地代理
 
 **参考资料**
 
-[关于分布式事务，XA协议的学习笔记（整理转载），解决方案和适用场景列表](https://www.cnblogs.com/monkeyblog/p/10449363.html)
 
-[以交易系统为例，看分布式事务架构的五大演进](https://zhuanlan.zhihu.com/p/68881314)
+### 1.git设置代理相关命令
 
+```shell
+git config --global --get http.proxy
+git config --global --get https.proxy
 
-![](/assets/others017_001.png)
+```
+
