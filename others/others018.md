@@ -19,7 +19,7 @@ git config --global --get http.proxy
 git config --global --get https.proxy
 ```
 
-检查本地git代理设置
+检查本地git代理设置，如下图
 
 ![](/assets/others018_02.png)
 
