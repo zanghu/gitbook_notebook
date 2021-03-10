@@ -28,6 +28,7 @@ git config --global --get https.proxy
 例如：本地代理开放`7890`端口（Port）和`7891`端口（Socks Port）
 
 ```shell
+# localhost等价于127.0.0.1
 git config --global http.proxy localhost:7890
 git config --global https.proxy localhost:7890
 ```
