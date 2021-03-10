@@ -397,6 +397,7 @@
   * [工具: vscode编辑远程文件](others/others007.md)
   * [工具: vscode远程工作区](others/others008.md)
   * [工具: 清华大学IPV6资源](others/others009.md)
+  * [工具: git bash 连接本地代理](others/others018.md)
   * [随笔: 近期的疑问](others/others012.md)
   * [Markdown](others/markdown/README.md)
     * [MD: 绘制简单表格](others/markdown/md001.md)
