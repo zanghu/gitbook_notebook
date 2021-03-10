@@ -19,6 +19,8 @@ git config --global --get http.proxy
 git config --global --get https.proxy
 ```
 
+检查本地git代理设置
+
 ![](/assets/others018_02.png)
 
 ### 2.设置代理
@@ -30,6 +32,6 @@ git config --global http.proxy localhost:7890
 git config --global https.proxy localhost:7890
 ```
 
-配置代理后git代码上传成功
+配置代理后git代码上传成功，如下图
 
 ![](/assets/others018_01.png)
