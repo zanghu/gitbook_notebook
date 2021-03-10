@@ -19,6 +19,8 @@ git config --global --get http.proxy
 git config --global --get https.proxy
 ```
 
+![](/assets/others018_02.png)
+
 ### 2.设置代理
 
 例如：本地代理开放`7890`端口（Port）和`7891`端口（Socks Port）
@@ -28,3 +30,6 @@ git config --global http.proxy localhost:7890
 git config --global https.proxy localhost:7890
 ```
 
+配置代理后git代码上传成功
+
+![](/assets/others018_01.png)
