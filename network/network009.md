@@ -14,6 +14,8 @@
 
 ### 2.介绍
 
+需要说明，`multipart/form-data`并不是一个新鲜事物，其协议草案`RFC 1867`制订于1995年11月
+
 首先，HTTP HEADER中的`Content-Type`字段的取值如下：
 
 `Content-Type: multipart/form-data; boundary=285fa365bd76e6378f91f09f4eae20877246bbba4d31370d3c87b752d350`
