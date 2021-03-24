@@ -6,5 +6,35 @@
 
 [RFC 1867](https://tools.ietf.org/html/rfc1867)
 
+### 1.场景
+
+对于HTTP POST的body部分包含多种类型混杂，特别是包含上传文件类型时（例如某全文检索平台的某接口的请求报文body中同时包含json字符串和二进制串形式的文件）；
+
+此外，HTTP POST并未提供上传多文件的支持（个人理解是如果body中同时包含不止一个文件，那么如何区分文件间的边界，是一件困难的事情）。因此如果需要上传多文件则需自定义上传协议，而且客户端和服务端都要提供相应的支持。
+
+### 2.介绍
+
+首先，HTTP HEADER中的`Content-Type`字段的取值如下：
+
+`Content-Type: multipart/form-data; boundary=285fa365bd76e6378f91f09f4eae20877246bbba4d31370d3c87b752d350`
+
+其次，请求报文中的body形如：
+
+```
+upload file1
+--285fa365bd76e6378f91f09f4eae20877246bbba4d31370d3c87b752d350
+Content-Disposition: form-data; name="uploadFile1"; filename="uploadfile2.txt"
+Content-Type: application/octet-stream
+
+upload file2
+--285fa365bd76e6378f91f09f4eae20877246bbba4d31370d3c87b752d350
+Content-Disposition: form-data; name="words"
+
+123
+--285fa365bd76e6378f91f09f4eae20877246bbba4d31370d3c87b752d350--
+```
+
+注意：报文中的内容被之前`Content-Type`中出现的boundary分割，这样就实现了清晰标记body中各部分内容的边界
+
 
 
