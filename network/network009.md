@@ -43,9 +43,10 @@ Content-Disposition: form-data; name="words"
 目前主流HTTP包、工具都支持`multipart/form-data`模式，并提供了简化的API。
 
 * POSTMAN
+![](/assets/network009_01.png)
 
-
-
+* Golang
+![](/assets/network009_02.png)
 
 
 
