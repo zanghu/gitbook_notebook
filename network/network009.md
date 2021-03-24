@@ -1,8 +1,10 @@
-## 详细端口说明
+## HTTP的标准文件传输方式：multipart/form-data
 
 参考资料
 
-知乎：[详细的端口意义和中文说明 (转)](https://www.cnblogs.com/hicome/archive/2004/01/13/884062.html)
+[从 HTTP 角度看 Go 如何实现文件提交](https://juejin.cn/post/6844904017466753032)
+
+[RFC 1867](https://tools.ietf.org/html/rfc1867)
 
 
 
