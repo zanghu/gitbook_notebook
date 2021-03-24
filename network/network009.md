@@ -38,6 +38,10 @@ Content-Disposition: form-data; name="words"
 
 注意：报文中的内容被之前`Content-Type`中出现的boundary分割，这样就实现了清晰标记body中各部分内容的边界（这也就是为什么boundry字符串如此之长，应该是为了尽可能避免与文件内容中某一部分相同）。
 
+### 3.支持
+
+目前主流HTTP包、工具都支持`multipart/form-data`模式，并提供了简化的API。
+
 
 
 
