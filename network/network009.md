@@ -34,7 +34,7 @@ Content-Disposition: form-data; name="words"
 --285fa365bd76e6378f91f09f4eae20877246bbba4d31370d3c87b752d350--
 ```
 
-注意：报文中的内容被之前`Content-Type`中出现的boundary分割，这样就实现了清晰标记body中各部分内容的边界
+注意：报文中的内容被之前`Content-Type`中出现的boundary分割，这样就实现了清晰标记body中各部分内容的边界（这也就是为什么boundry字符串如此之长，应该是为了尽可能避免与文件内容中某一部分相同）。
 
 
 
