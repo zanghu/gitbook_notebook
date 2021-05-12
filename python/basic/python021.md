@@ -15,7 +15,7 @@
 
 * **2.利用__module__属性获取类的文件路径**
 
-该方法的思路是：首先利用类的`__module__`属性获得其模块名称，再利用`sys.modules`字典获得模块的文件的路径。
+该方法的思路是：首先利用类的`__module__`属性获得其模块名称，再利用`sys.modules`字典获得模块的文件的路径。该方法的缺陷是实践中某些类方法的`__module__`属性值为`None`。
 
 例子：以`torch.nn.Embedding`为例
 
@@ -37,29 +37,6 @@
 # 利用os.path.abspath获取绝对路径
 >>> os.path.abspath(sys.modules[torch.nn.Embedding.__module__].__file__)
 '/home/zanghu/ProgramFiles/software/anaconda3/2019.03/lib/python3.7/site-packages/torch/nn/modules/sparse.py'
-
-```
-
-
->>> system.modules[torch.nn.Embeddings.__module__]
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'system' is not defined
->>> system.modules[torch.nn.Embedding.__module__]
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'system' is not defined
->>> sys.modules[torch.nn.Embedding.__module__]
-<module 'torch.nn.modules.sparse' from '/home/zanghu/ProgramFiles/software/anaconda3/2019.03/lib/python3.7/site-packages/torch/nn/modules/sparse.py'>
->>> sys.modules[torch.nn.Embedding.__module__].__file__
-'/home/zanghu/ProgramFiles/software/anaconda3/2019.03/lib/python3.7/site-packages/torch/nn/modules/sparse.py'
->>> import os
->>> os.path.abspath
-<function abspath at 0x7fc3714ef9e0>
->>> os.path.abspath(sys.modules[torch.nn.Embedding.__module__].__file__)
-'/home/zanghu/ProgramFiles/software/anaconda3/2019.03/lib/python3.7/site-packages/torch/nn/modules/sparse.py'
->>> 
-
 ```
 
 
