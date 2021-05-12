@@ -26,11 +26,18 @@
 >>> torch.nn.Embedding.__module__
 'torch.nn.modules.sparse'
 
-# 利用sys.modules字典查询模块路径，注意返回的已经是路径
+# 利用sys.modules字典查询模块路径，注意返回内容的已经包含模块文件的路径
 >>> sys.modules[torch.nn.Embedding.__module__]
 <module 'torch.nn.modules.sparse' from '/home/zanghu/ProgramFiles/software/anaconda3/2019.03/lib/python3.7/site-packages/torch/nn/modules/sparse.py'>
 
-# 
+# 利用__file__提纯路径
+>>> sys.modules[torch.nn.Embedding.__module__].__file__
+'/home/zanghu/ProgramFiles/software/anaconda3/2019.03/lib/python3.7/site-packages/torch/nn/modules/sparse.py'
+
+# 利用os.path.abspath获取绝对路径
+>>> os.path.abspath(sys.modules[torch.nn.Embedding.__module__].__file__)
+'/home/zanghu/ProgramFiles/software/anaconda3/2019.03/lib/python3.7/site-packages/torch/nn/modules/sparse.py'
+
 ```
 
 
