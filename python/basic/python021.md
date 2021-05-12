@@ -39,6 +39,13 @@
 '/home/zanghu/ProgramFiles/software/anaconda3/2019.03/lib/python3.7/site-packages/torch/nn/modules/sparse.py'
 ```
 
+例子：`__module__`返回`None`
+
+```python
+>>>torch.conv2d.__module__
+>>>
+```
+
 
 * **3.利用help功能获得函数的所属文件（模块）的文件路径**
 
