@@ -91,6 +91,7 @@
   * [CV: 「计算机视觉必读干货」图像分类、检测，语义分割等方法梳理](cv/cv003.md)
   * [CV: 图像样本膨胀之Jitter（抖动）](cv/cv004.md)
   * [CV: im2col函数原理](cv/cv005.md)
+  * [CV: dilation膨胀卷积](cv/cv005.md)
   * [OpenCV: cv2.putText在图上写字](python/module/cv2/python024.md)
   * [OpenCV: 绘制几何形状](python/module/cv2/python025.md)
   * [OpenCV: 图像容器结构定义](cv/cv007.md)
