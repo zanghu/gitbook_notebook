@@ -82,7 +82,7 @@
   * [torch: 示例代码](pytorch/code/README.md)
   * [torch: 官方cifar10教程注释版](pytorch/code/pytorch007.md)
   * [torch: Conv2d中的dilation参数](cv/cv009.md)
-* [数据探索分析](eda/README.md)
+* [EDA](eda/README.md)
   * [基础知识](eda/basic/README.md)
       * [截取文件指定行](eda/basic/eda001.md)
   * [统计分析](eda/eda/README.md)
