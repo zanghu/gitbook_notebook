@@ -1,37 +1,25 @@
-## Pandas：info和describe
+## Pandas：DataFrame的切片
 
 参考资料：
 
 
-### 1.查看数据基本信息：DataFrame.info()
+### 1.按“列名”取若干列
 
-显示`DataFrame`的行数、数据类型、内存占用大小
-
-```python
->>> df[['isDefault']].info()
-<class 'pandas.core.frame.DataFrame'>
-RangeIndex: 800000 entries, 0 to 799999
-Data columns (total 1 columns):
-isDefault    800000 non-null int64
-dtypes: int64(1)
-memory usage: 6.1 MB
-```
-
->注意：`info()`是`DataFrame`对象的方法，不是`Series`对象的方法。
-
-### 2.查看数据统计信息：DataFrame.describe()
-
-显示`DataFrame`的均值、方差、分位数等统计信息
+取出`DataFrame`中列名为'A'和'B'的两列
 
 ```python
->>> df[['isDefault']].describe()
-           isDefault
-count  800000.000000
-mean        0.199513
-std         0.399634
-min         0.000000
-25%         0.000000
-50%         0.000000
-75%         0.000000
-max         1.000000
+>>> df
+   A   B   C
+0  0   1   2
+1  3   4   5
+2  6   7   8
+3  9  10  11
+>>> df.columns
+Index(['A', 'B', 'C'], dtype='object')
+>>> df[['A', 'B']]
+   A   B
+0  0   1
+1  3   4
+2  6   7
+3  9  10
 ```
