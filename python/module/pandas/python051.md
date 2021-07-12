@@ -21,7 +21,7 @@ memory usage: 6.1 MB
 
 ### 2.查看数据统计信息：DataFrame.describe()
 
-显示`DataFrame`的均值、方差、分位数等信息
+显示`DataFrame`的均值、方差、分位数等统计信息
 
 ```python
 >>> df[['isDefault']].describe()
