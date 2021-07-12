@@ -45,6 +45,7 @@
       * [datetime: datetime与距离1970年1月1日的秒数相互转换](python/module/datetime/python046.md)
     * [pandas](python/module/pandas/README.md)
       * [pandas: DF的isna()和isnull](python/module/pandas/python048.md)
+      * [pandas: DF的info和describe查看数据概要](python/module/pandas/python051.md)
     * [others](python/module/others/README.md)
       * [socket编程](python/module/others/python020.md)
       * [operator: 提供常用lambda函数](python/module/others/python027.md)
