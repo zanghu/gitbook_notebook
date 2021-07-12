@@ -21,3 +21,15 @@ memory usage: 6.1 MB
 
 ### 2.查看数据统计信息：DataFrame.describe()
 
+```python
+>>> df[['isDefault']].describe()
+           isDefault
+count  800000.000000
+mean        0.199513
+std         0.399634
+min         0.000000
+25%         0.000000
+50%         0.000000
+75%         0.000000
+max         1.000000
+```
