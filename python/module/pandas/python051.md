@@ -5,6 +5,8 @@
 
 ### 1.查看数据基本信息：DataFrame.info()
 
+显示`DataFrame`的行数、数据类型、内存占用大小
+
 ```python
 >>> df[['isDefault']].info()
 <class 'pandas.core.frame.DataFrame'>
