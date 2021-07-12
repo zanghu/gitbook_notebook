@@ -30,7 +30,7 @@ Index(['A', 'B', 'C'], dtype='object')
 
 ### 2.按照列的“序号”取若干列
 
-取出`DataFrame`中列号为1和2的列
+取出`DataFrame`中列号为1和2的列（即'B'和'C'列）
 
 ```python
 >>> df.iloc[:, 1:3]
