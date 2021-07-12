@@ -66,5 +66,6 @@ Index(['A', 'B', 'C'], dtype='object')
 根据序号获取列名
 
 ```python
-
+>>> df.columns[0]
+'A'
 ```
