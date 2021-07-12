@@ -16,3 +16,8 @@ isDefault    800000 non-null int64
 dtypes: int64(1)
 memory usage: 6.1 MB
 ```
+
+>注意：`info()`是`DataFrame`对象的方法，不是`Series`对象的方法。
+
+### 2.查看数据统计信息：DataFrame.describe()
+
