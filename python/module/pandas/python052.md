@@ -30,7 +30,7 @@ Index(['A', 'B', 'C'], dtype='object')
 
 ### 2.按照列的“序号”取若干列
 
-取出`DataFrame`中列号为1和2的列（即'B'和'C'列）
+取连续的列：取出`DataFrame`中列号为1和2的列（即'B'和'C'列）
 
 ```python
 >>> df.iloc[:, 1:3]
@@ -41,3 +41,13 @@ Index(['A', 'B', 'C'], dtype='object')
 3  10  11
 ```
 
+取连续的列：取出`DataFrame`中列号为1和2的列（即'B'和'C'列）
+
+```python
+>>> df.iloc[:, [0, 2]]
+   A   C
+0  0   2
+1  3   5
+2  6   8
+3  9  11
+```
