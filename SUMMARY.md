@@ -46,6 +46,7 @@
     * [pandas](python/module/pandas/README.md)
       * [pandas: DF的isna()和isnull](python/module/pandas/python048.md)
       * [pandas: DF的info和describe查看数据概要](python/module/pandas/python051.md)
+      * [pandas: DF的“切片”](python/module/pandas/python052.md)
     * [others](python/module/others/README.md)
       * [socket编程](python/module/others/python020.md)
       * [operator: 提供常用lambda函数](python/module/others/python027.md)
