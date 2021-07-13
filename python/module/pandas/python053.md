@@ -1,5 +1,4 @@
-## Pandas：DataFrame的切片
-
+## Pandas：统计列取值的种类
 参考资料：
 
 
