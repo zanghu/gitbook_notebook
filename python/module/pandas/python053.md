@@ -17,7 +17,7 @@ StackOverflow: [Count the frequency that a value occurs in a dataframe column](h
 
 ### 1.单列数据统计
 
-取出`DataFrame`中列名为'A'和'B'的两列
+方法：利用`value_counts`
 
 ```python
 >>> df['A'].value_counts()
