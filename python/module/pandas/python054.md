@@ -2,7 +2,9 @@
 
 ### 参考资料：
 
-StackOverflow: [Count the frequency that a value occurs in a dataframe column](https://stackoverflow.com/questions/22391433/count-the-frequency-that-a-value-occurs-in-a-dataframe-column)
+知乎: [Pandas中的object数据类型｜Python](https://zhuanlan.zhihu.com/p/161073173)
+
+pbpython: [Overview of Pandas Data Types](https://pbpython.com/pandas_dtypes.html)
 
 ### 0.样例数据
 
