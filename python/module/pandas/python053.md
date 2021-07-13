@@ -28,6 +28,15 @@ StackOverflow: [Count the frequency that a value occurs in a dataframe column](h
 Name: A, dtype: int64
 ```
 
+利用`DataFrame`对象的“列名即属性”的特性，也可以按如下方式写：
+
+```python
+>>> df.A.value_counts()
+1    3
+0    1
+Name: A, dtype: int64
+```
+
 ### 2.统计全部列数据
 
 方法：利用`apply`和`value_counts`
