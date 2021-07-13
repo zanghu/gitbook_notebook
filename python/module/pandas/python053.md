@@ -1,6 +1,8 @@
 ## Pandas：统计列取值的种类
+
 参考资料：
 
+StackOverflow: [Count the frequency that a value occurs in a dataframe column](https://stackoverflow.com/questions/22391433/count-the-frequency-that-a-value-occurs-in-a-dataframe-column)
 
 ### 1.按“列名”取若干列
 
