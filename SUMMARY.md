@@ -90,6 +90,7 @@
   * [基础知识](eda/basic/README.md)
       * [截取文件指定行](eda/basic/eda001.md)
   * [统计分析](eda/eda/README.md)
+      * [热力图（heat map）](eda/eda/eda002.md)
   * [算法模型](eda/model/README.md)
     * [lightGBM](eda/model/lightgbm/README.md)
       * [安装lightGBM的GPU版本](eda/model/lightgbm/gbm001.md)
