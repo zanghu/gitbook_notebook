@@ -9,6 +9,9 @@ pbpython: [Overview of Pandas Data Types](https://pbpython.com/pandas_dtypes.htm
 ### 1.统计单列数据
 
 ```python
+# 将重新排好序的列标题做成列表
 order = ['date', 'time', 'open', 'high', 'low', 'close', 'volumefrom', 'volumeto']
+
+# 切片列置换
 df = df[order]
 ```
