@@ -6,7 +6,7 @@ CSDN: [Pandas中的object数据类型｜Python](https://zhuanlan.zhihu.com/p/161
 
 pbpython: [Overview of Pandas Data Types](https://pbpython.com/pandas_dtypes.html)
 
-### 1.统计单列数据
+### 1.修改DataFarme对象的列顺序
 
 ```python
 # 将重新排好序的列标题做成列表
