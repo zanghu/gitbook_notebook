@@ -29,7 +29,7 @@
     * [functools.update保持被装饰器修饰的函数的自省/反射属性](python/practice/python002.md)
     * [展示对象所有属性的类型的方法](python/practice/python008.md)
     * [函数默认参数不应是list类型](python/practice/python009.md)
-  * [Python: 模块](python/module/README.md)
+  * [Python: 模块学习](python/module/README.md)
     * [numpy / scipy](python/module/numpy/README.md)
       * [numpy: 关于numpy.array和numpy.asarray的区别](python/module/numpy/python003.md)
       * [numpy: 常用函数汇总](python/module/numpy/python031.md)
