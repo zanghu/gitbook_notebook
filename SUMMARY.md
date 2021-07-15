@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Python](python/README.md)
-  * [Python: 安装与配置](python/setup/README.md)
+  * [Python: 安装配置](python/setup/README.md)
     * [使用conda安装制定模块](python/setup/python029.md)
     * [pip安装模块（附清华IPV6源）](python/setup/python032.md)
     * [安装opencv](python/setup/python007.md)
@@ -61,7 +61,7 @@
     * [C/C++扩展Python: 实践注意事项](python/c_cpp_python_extension/python013.md)
     * [Python源码阅读: 类型体系](python/c_cpp_python_extension/python033.md)
     * [Python源码阅读: 内存管理](python/c_cpp_python_extension/python034.md)
-  * [Python: 编office](python/python_office/README.md)
+  * [Python: 编辑office](python/python_office/README.md)
     * [编辑excel：基本读写操作](python/python_office/python014.md)
     * [编辑excel：常用操作](python/python_office/python017.md)
     * [编辑excel：英文总结存档](python/python_office/python019.md)
