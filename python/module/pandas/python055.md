@@ -1,10 +1,8 @@
-## Pandas：统计列取值的种类
+## Pandas：修改DataFarme对象的列顺序
 
 ### 参考资料：
 
-CSDN: [Pandas中的object数据类型｜Python](https://zhuanlan.zhihu.com/p/161073173)
-
-pbpython: [Overview of Pandas Data Types](https://pbpython.com/pandas_dtypes.html)
+CSDN: [Python dataframe修改列顺序｜Python](https://blog.csdn.net/a19990412/article/details/81945315)
 
 ### 1.修改DataFarme对象的列顺序
 
