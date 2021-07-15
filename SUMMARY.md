@@ -49,6 +49,7 @@
       * [pandas: DF的“切片”](python/module/pandas/python052.md)
       * [pandas: 数据取值种类统计](python/module/pandas/python053.md)
       * [pandas: 数据类型](python/module/pandas/python054.md)
+      * [pandas: DF改变列顺序](python/module/pandas/python055.md)
     * [others](python/module/others/README.md)
       * [socket编程](python/module/others/python020.md)
       * [operator: 提供常用lambda函数](python/module/others/python027.md)
