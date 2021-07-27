@@ -18,7 +18,7 @@ for sheet_name in sheet_names:
 　　 cols = sheet2.col_values(1) # 获取第二列内容
 　　 print rows
 　　 print cols
-```python
+```
  
 
 ### 2.写excel文件
