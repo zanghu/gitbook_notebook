@@ -24,15 +24,15 @@ def _format_addr(s):
         Header(name, 'utf-8').encode(), \
         addr.encode('utf-8') if isinstance(addr, unicode) else addr))
 
-from_addr = r"xxx@126.com" # raw_input('From: ')
-password = r"xxx" # raw_input('Password: ')
-to_addr = r"yyy@sina.com" # raw_input('To: ')
-smtp_server = r"smtp.126.com" # raw_input('SMTP server: ')
+from_addr = r"xxx@126.com" # 发送方邮箱
+password = r"xxx" # 发送方密码
+to_addr = r"yyy@sina.com" # 接收方邮箱
+smtp_server = r"smtp.126.com" # SMTP邮件服务器地址
 
 msg = MIMEText('hello, send by Python...', 'plain', 'utf-8')
-msg['From'] = _format_addr(u'Python爱好者 <%s>' % from_addr)
-msg['To'] = _format_addr(u'管理员 <%s>' % to_addr)
-msg['Subject'] = Header(u'来自SMTP的问候……', 'utf-8').encode()
+#msg['From'] = _format_addr(u'Python爱好者 <%s>' % from_addr)
+#msg['To'] = _format_addr(u'管理员 <%s>' % to_addr)
+#msg['Subject'] = Header(u'来自SMTP的问候……', 'utf-8').encode()
 
 server = smtplib.SMTP(smtp_server, 25)
 server.set_debuglevel(1)
