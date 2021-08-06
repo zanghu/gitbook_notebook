@@ -22,8 +22,32 @@
 　　SMTP服务器地址:smtp.126.com（端口：25）
 ```
 
+STEP 1: telnet邮件服务器地址
+
 命令行执行：
+
 ```shell
 telnet smtp.163.com 25
 ```
+
+如下图：
+
+![](/assets/network010_01.png)
+
+STEP 2: 使用EHLO命令查看邮件服务器支持的身份验证协议
+
+```shell
+EHLO localhost
+```
+
+或者
+
+```shell
+EHLO smtp.163.com
+```
+
+如下图：
+![](/assets/network010_03.png)
+
+
 
