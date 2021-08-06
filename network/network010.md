@@ -12,7 +12,6 @@
 
 ```python
 # -*- coding: utf-8 -*-
-
 from email import encoders
 from email.header import Header
 from email.mime.text import MIMEText
@@ -25,10 +24,10 @@ def _format_addr(s):
         Header(name, 'utf-8').encode(), \
         addr.encode('utf-8') if isinstance(addr, unicode) else addr))
 
-from_addr = "xxx@126.com" # raw_input('From: ')
-password = raw_input('Password: ')
-to_addr = raw_input('To: ')
-smtp_server = raw_input('SMTP server: ')
+from_addr = r"xxx@126.com" # raw_input('From: ')
+password = r"xxx" # raw_input('Password: ')
+to_addr = r"yyy@sina.com" # raw_input('To: ')
+smtp_server = r"smtp.126.com" # raw_input('SMTP server: ')
 
 msg = MIMEText('hello, send by Python...', 'plain', 'utf-8')
 msg['From'] = _format_addr(u'Python爱好者 <%s>' % from_addr)
