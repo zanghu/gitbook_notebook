@@ -8,8 +8,6 @@
 
 [SMTP的认证 - EHLO的使用](http://www.360doc.com/content/12/0218/15/3200886_187602886.shtml)
 
-
-
 ### 1.方法
 
 以网易的SMTP邮件服务为例：
