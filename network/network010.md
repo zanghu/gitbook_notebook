@@ -8,7 +8,7 @@
 
 
 
-### 方法
+### 1.方法
 
 以网易的SMTP邮件服务为例：
 
@@ -22,7 +22,7 @@
 　　SMTP服务器地址:smtp.126.com（端口：25）
 ```
 
-* STEP 1: telnet邮件服务器地址
+* **STEP 1**: telnet邮件服务器地址
 
 命令行执行：
 
@@ -34,7 +34,7 @@ telnet smtp.163.com 25
 
 ![](/assets/network010_01.png)
 
-* STEP 2: 使用EHLO命令查看邮件服务器支持的身份验证协议
+* **STEP 2**: 使用EHLO命令查看邮件服务器支持的身份验证协议
 
 ```shell
 EHLO localhost
@@ -49,6 +49,10 @@ EHLO smtp.163.com
 如下图：
 ![](/assets/network010_03.png)
 
+2.知识
 
+EHLO是extend helo，可以支持authorization，即用户认证。
+
+EHLO是SMTP的必要步骤之一，由客户端发送，指示 ESMTP 会话开始。服务器可以在它对 EHLO 的响应中表明自己支持 ESMTP 命令
 
 
