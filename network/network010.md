@@ -19,25 +19,28 @@ from email.utils import parseaddr, formataddr
 import smtplib
 
 def _format_addr(s):
+    """"""
     name, addr = parseaddr(s)
     return formataddr(( \
         Header(name, 'utf-8').encode(), \
         addr.encode('utf-8') if isinstance(addr, unicode) else addr))
 
-from_addr = r"xxx@126.com" # 发送方邮箱
-password = r"xxx" # 发送方密码
-to_addr = r"yyy@sina.com" # 接收方邮箱
-smtp_server = r"smtp.126.com" # SMTP邮件服务器地址
+def main():
+    """"""
+    from_addr = r"xxx@126.com" # 发送方邮箱
+    password = r"xxx" # 发送方密码
+    to_addr = r"yyy@sina.com" # 接收方邮箱
+    smtp_server = r"smtp.126.com" # SMTP邮件服务器地址
 
-msg = MIMEText('hello, send by Python...', 'plain', 'utf-8')
-#msg['From'] = _format_addr(u'Python爱好者 <%s>' % from_addr)
-#msg['To'] = _format_addr(u'管理员 <%s>' % to_addr)
-#msg['Subject'] = Header(u'来自SMTP的问候……', 'utf-8').encode()
+    msg = MIMEText('hello, send by Python...', 'plain', 'utf-8')
+    #msg['From'] = _format_addr(u'Python爱好者 <%s>' % from_addr)
+    #msg['To'] = _format_addr(u'管理员 <%s>' % to_addr)
+    #msg['Subject'] = Header(u'来自SMTP的问候……', 'utf-8').encode()
 
-server = smtplib.SMTP(smtp_server, 25)
-server.set_debuglevel(1)
-server.login(from_addr, password)
-server.sendmail(from_addr, [to_addr], msg.as_string())
-server.quit()
+    server = smtplib.SMTP(smtp_server, 25)
+    server.set_debuglevel(1)
+    server.login(from_addr, password)
+    server.sendmail(from_addr, [to_addr], msg.as_string())
+    server.quit()
 ```
 
