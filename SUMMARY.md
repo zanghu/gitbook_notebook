@@ -346,7 +346,7 @@
   * [网络: Restful与RPC](network/network006.md)
   * [网络: 详细的端口意义和中文说明](network/network007.md)
   * [网络: tcpdump抓包](linux/perf/lin053.md)
-  * [网络: telnet查看SMTP服务支持的协议](network/network008.md)
+  * [网络: telnet查看SMTP服务支持的协议](network/network010.md)
 * [前端](front/README.md)
   * [HTML: 页面加载过程](front/front001.md)
   * [HTML: script标签](front/front003.md)
