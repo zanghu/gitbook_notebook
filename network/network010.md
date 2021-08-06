@@ -53,6 +53,9 @@ EHLO smtp.163.com
 
 EHLO是extend helo，可以支持authorization，即用户认证。
 
-EHLO是SMTP的必要步骤之一，由客户端发送，指示 ESMTP 会话开始。服务器可以在它对 EHLO 的响应中表明自己支持 ESMTP 命令
+EHLO是SMTP的必要步骤之一，由客户端发送，指示 ESMTP 会话开始。服务器可以在它对 EHLO 的响应中表明自己支持 ESMTP 命令。
 
+HELO是普通SMTP，不带身份验证也可以继续MAIL FROM。。。下去，直到成功发送邮件，也就是可以伪造邮件啦！
+
+EHLO是ESMTP，带有身份验证，所以没法伪造。
 
