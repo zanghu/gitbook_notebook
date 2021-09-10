@@ -52,4 +52,8 @@ cd.>pip.ini
 index-url = https://pypi.mirrors.ustc.edu.cn/simple/
 ```
 
+### 3.验证
+
+![](/assets/python056.png)
+
 
