@@ -1,38 +1,53 @@
-## Jupyter: 自定义配置
+## pip修改镜像源
 
-参考资料: [清华大学Pypi镜像](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)
 
-参考资料：[Pypi官方网站](https://pypi.org/)
 
-### 1.自动换行和行号
+参考资料: [anaconda修改镜像源](https://www.cnblogs.com/wzz2500/p/11427507.html)
 
-* 首先通过命令`jupyter --config-dir`找到配置文件所在路径, 进入下一级路径 nbconfig 
-![](/assets/python049_01.png)
 
-* 找到`notebook.json 文件`(如果没有, 自行创建即可), 通过 notepad++ 打开文件进行编辑
-![](/assets/python049_02.png)
+### 1.国内源：
+新版ubuntu要求使用https源，要注意。
+清华：https://pypi.tuna.tsinghua.edu.cn/simple
+阿里云：http://mirrors.aliyun.com/pypi/simple/
+中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+华中科技大学：http://pypi.hustunique.com/
+山东理工大学：http://pypi.sdutlinux.org/
+豆瓣：http://pypi.douban.com/simple/
+清华的镜像源是最常用的，我试过几个镜像源之后，发现中科大的比较快质量不错。
 
-* 追加写入如下代码, 保存并重新启动`Jupyter Notebook`
+### 2.修改方法
 
-```json
-{
-  "Cell": {
-    "cm_config": {
-      "lineNumbers": true,
-      "lineWrapping": true
-    }
-  },
-  "MarkdownCell": {
-    "cm_config": {
-      "lineWrapping": true
-    }
-  },
-  "CodeCell": {
-    "cm_config": {
-      "lineWrapping": true
-    }
-  }
-}
+#### 2.1 对于Linux系统：
+
+```shell
+mkdir ~/.pip
+cd ~/.pip
+vi pip.conf
+```
+
+按i进入编辑模式，添加如下内容（来自制品库）：
+
+```shell
+[global]
+index-url = https://pypi.mirrors.ustc.edu.cn/simple/
+``
+
+按ESC,再输入wq保存即可。
+
+#### 2.2 对于windows系统：
+
+```bat
+cd C:\Users\(你的用户名)
+mkdir pip
+cd pip
+cd.>pip.ini
+```
+
+然后打开`C:\Users(用户名)\pip\pip.ini`，在里面黏贴和linux系统一样的内容：
+
+```bat
+[global]
+index-url = https://pypi.mirrors.ustc.edu.cn/simple/
 ```
 
 
