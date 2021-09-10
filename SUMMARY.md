@@ -10,6 +10,7 @@
     * [jupyter: 搭建 sevrer（SSL方式）](python/setup/python016.md)
     * [jupyter: 服务器快速配置](python/setup/python006.md)
     * [jupyter: 自定义配置](python/setup/python049.md)
+    * [pip: 镜像源设置](python/setup/python056.md)
     * [模块依赖关系获取方法](python/setup/python042.md)
   * [Python: 基础](python/basic/README.md)
     * [关于函数定义形参表的形参前面的星号和双星号](python/basic/python001.md)
