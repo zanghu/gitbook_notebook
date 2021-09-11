@@ -19,4 +19,9 @@ import seaborn as sns
 %matplotlib inline
 ```
 
+#### 3.执行命令行命令
+
+```python
+!ps aux
+```
 
