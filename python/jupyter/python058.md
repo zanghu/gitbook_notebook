@@ -6,7 +6,7 @@
 
 #### 1.下载二进制文件
 
-代码如下：
+**代码如下**：
 
 ```python
 from IPython.display import HTML
@@ -24,13 +24,13 @@ def create_download_link(src_pth, title="Download CSV file", filename="data.csv"
 create_download_link(src_pth=r'C:\Users\zanghu\Desktop\1.zip', title="Download ZIP file", filename="data.zip")
 ```
 
-运行效果：
+**运行效果**：
 
 ![](/assets/python058_02.png)
 
 #### 2.下载DataFrame
 
-代码如下：
+**代码如下**：
 
 ```python
 from IPython.display import HTML
@@ -50,7 +50,7 @@ df = pd.DataFrame(data = [[1,2],[3,4]], columns=['Col 1', 'Col 2'])
 create_download_link(df)
 ```
 
-运行效果：
+**运行效果**：
 
 ![](/assets/python058_01.png)
 
