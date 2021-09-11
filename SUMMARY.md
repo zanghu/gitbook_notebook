@@ -72,6 +72,7 @@
   * [Python: 通用代码](python/code/README.md)
     * [计算函数运行时间的装饰器](python/code/python047.md)
     * [简单强大的HTTPServer](python/code/python050.md)
+    * [文件压缩](python/code/python057.md)
 * [Tensorflow](tensorflow/README.md)
   * [TF: tf.app.run\(\)的理解](tensorflow/tf001.md)
   * [TF: slim构造和加载数据](tensorflow/tf002.md)
