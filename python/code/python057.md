@@ -8,7 +8,9 @@
 
 ```python
 import zipfile
-f = zipfile.ZipFile('压缩后zip文件的路径', 'w', zipfile.ZIP_DEFLATED, compresslevel=9)
+
+# 注意：某些旧版本不支持compresslevel参数
+f = zipfile.ZipFile('压缩后zip文件的路径', 'w', zipfile.ZIP_DEFLATED, compresslevel=9) 
 f.write('被压缩的原始文件的路径')
 f.close()
 ```
