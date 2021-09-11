@@ -4,7 +4,7 @@
 
 **medium**: [How to Upload/Download Files to/from Notebook in my Local machine](https://medium.com/@charles2588/how-to-upload-download-files-to-from-notebook-in-my-local-machine-6a4e65a15767)
 
-#### 1.下载二进制文件
+#### 1.生成页面链接下载二进制文件
 
 **代码如下**：
 
@@ -28,7 +28,7 @@ create_download_link(src_pth=r'C:\Users\zanghu\Desktop\1.zip', title="Download Z
 
 ![](/assets/python058_02.png)
 
-#### 2.下载DataFrame
+#### 2.生成页面链接下载DataFrame
 
 **代码如下**：
 
