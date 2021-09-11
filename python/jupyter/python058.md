@@ -23,15 +23,14 @@ create_download_link(df)
 #### 2.改进方法——加入压缩
 
 ```python
-def create_download_link( df, title = "Download CSV file", filename = "data.csv"):  
-    csv = df.to_csv()
-    b64 = base64.b64encode(csv.encode())
+def create_download_link(src_pth, title="Download CSV file", filename="data.csv"):  
+    with open(src_pth, 'rb') as f:
+        data = f.read()
+    b64 = base64.b64encode(data.encode())
     payload = b64.decode()
     html = '<a download="{filename}" href="data:text/csv;base64,{payload}" target="_blank">{title}</a>'
     html = html.format(payload=payload,title=title,filename=filename)
     return HTML(html)
-
-
 ```
 
 
