@@ -2,6 +2,8 @@
 
 参考资料: [清华大学Pypi镜像](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)
 
+> 注意：本节内容均为在jupyter notebook的cell中执行的代码
+
 #### 1.cell内容写入文件
 
 ```python
