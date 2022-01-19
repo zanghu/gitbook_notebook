@@ -34,7 +34,7 @@ version_tuple getCompileVersion() {
 
 ```cuda
 version_tuple getRuntimeVersion() {
-  auto version = cudnnGetVersion(); // cudnnGetVersion()是cudnn.h中的声明
+  auto version = cudnnGetVersion(); // cudnnGetVersion()在cudnn.h中声明
   auto major = version / 1000;
   auto minor = (version % 1000) / 100;
   auto patch = version % 10;
