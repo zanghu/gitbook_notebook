@@ -1,4 +1,4 @@
-# Pytorch: 检查cudnn版本
+## Pytorch: 检查cudnn版本
 
 ### 1.调用方法
 `pytorch`提供了官方的`cudnn`版本检查接口，调用方法如下：
