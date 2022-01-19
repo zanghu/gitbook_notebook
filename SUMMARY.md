@@ -86,6 +86,7 @@
   * [example: mnist](caffe/caffe_example001.md)
 * [Pytorch](pytorch/README.md)
   * [torch: 关于自动求梯度的原理](pytorch/pytorch001.md)
+  * [torch: 检查cudnn版本](pytorch/pytorch008.md)
   * [torch: permute与transpose的区别](pytorch/pytorch002.md)
   * [torch: squeeze与unsqueeze](pytorch/pytorch003.md)
   * [torch: detach\(\)与detach\_\(\)](pytorch/pytorch004.md)
