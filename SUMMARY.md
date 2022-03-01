@@ -205,6 +205,7 @@
     * [Linux: 常用信号含义说明](linux/basic/lin051.md)
     * [Linux: 截取文件指定行](eda/eda001.md)
     * [Linux: nc命令拦截和转发网络数据](linux/basic/lin054.md)
+    * [Linux: 查看某路径的挂载点](linux/basic/lin055.md)
   * [高级技术](linux/advanced/README.md)
     * [Linux: sudo运行程序搜索路径变化原因的研究](linux/advanced/lin009.md)
     * [Linux: lsof快速释放本地端口](linux/advanced/lin014.md)
