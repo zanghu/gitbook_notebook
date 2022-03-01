@@ -155,6 +155,7 @@
     * [Linux: 可执行文件stripped属性在跟踪中的作用](linux/perf/lin044.md)
     * [Linux: 可执行文件分类](linux/perf/lin045.md)
     * [Linux: tcpdump抓包](linux/perf/lin053.md)
+    * [Linux: /proc特殊文件系统检查进程状态](linux/perf/lin056.md)
   * [环境设置](linux/config/README.md)
     * [Linux: 格式化和挂载SSD](linux/config/lin011.md)
     * [Linux: 创建用户/配置用户组1](linux/config/lin015.md)
