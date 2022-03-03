@@ -8,7 +8,7 @@ Stackoverflow：[inspect.isfunction doesn't work for all modules?](https://stack
 
 CSDN: [Python中的函数（function）与方法（method）](https://blog.csdn.net/qq_44614026/article/details/108610467)
 
-segmentfault: [Python: 函数与方法的区别 以及 Bound Method 和 Unbound Method]
+segmentfault: [Python: 函数与方法的区别 以及 Bound Method 和 Unbound Method](https://segmentfault.com/a/1190000009157792)
 
 ### 1.显示对象或类的全部成员
 
