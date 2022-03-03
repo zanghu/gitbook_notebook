@@ -55,7 +55,7 @@ True
 >>> x = np.arange(12).reshape(4, 3)
 >>> inspect.isfunction(x.mean) # x.mean时C实现的，不属于“python函数”
 False
->>> inspect.isfunction(os.path.isdir)
+>>> inspect.isfunction(os.path.isdir) # isdir是python函数
 True
 ```
 
