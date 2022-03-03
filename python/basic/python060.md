@@ -86,7 +86,7 @@ True
 >>> inspect.ismethod(A.show) # 方法前缀时类名称，返回Flase
 False
 >>> a = A()
->>> inspect.ismethod(a.show) # 方法前缀时类对象，返回Flase
+>>> inspect.ismethod(a.show) # 方法前缀时类对象，返回True
 True
 ```
 
