@@ -2,7 +2,7 @@
 
 **参考资料**
 
-cnblogs：[python str与bytes之间的转换](https://www.cnblogs.com/zqifa/p/python-7.html)
+Stackoverflow：[inspect.isfunction doesn't work for all modules?](https://stackoverflow.com/questions/22428910/inspect-isfunction-doesnt-work-for-all-modules)
 
 ### 1.显示对象或类的全部成员
 
