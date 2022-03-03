@@ -17,3 +17,5 @@ method（**方法**）—— A function which is defined inside a class body. If
 所以本质上, 函数和方法的区别是: 函数是属于 `FunctionObject`, 而方法是属 `PyMethodObject`
 
 ### 2.Bound Method 和 Unbound Method
+
+method 还能再分为 Bound Method 和 Unbound Method, 他们的差别是什么呢? 差别就是 Bound method 多了一个实例绑定的过程!
