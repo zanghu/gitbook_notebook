@@ -64,7 +64,12 @@ False
 True
 ```
 
-`inspect.ismethod`
+**工具二**：`inspect.ismethod`
+
+
+**工具三**：`inspect.isbuiltin`
+
+
 
 以上两个方法在python3.7下测试都不是很准确，
 
