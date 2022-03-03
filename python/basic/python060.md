@@ -77,7 +77,9 @@ True
 1、与`isfunction`类似，不能检出C语言（估计也包括C++等）实现的函数，大概是因为这些函数不是“Python函数”；
 2、与`isfunction`类似，不能检出内建（`builtin`）函数，比如：filter，iter等；
 3、不能检出类方法（`@classmethod`修饰）、类静态方法（`@staticmethod`修饰）；
-4、输入的方法的前缀如果是一个类型而不是类对象，则任何方法都会返回`False`
+4、输入的方法的前缀如果是一个类型而不是类对象，则任何方法都会返回`False`。
+
+**示例**：
 
 ```python
 >>> class A:
@@ -90,8 +92,9 @@ False
 True
 ```
 
-
 **工具三**：`inspect.isbuiltin`
+
+官方说明：当且仅当输入是内建函数时，返回`True`。
 
 
 
