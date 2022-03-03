@@ -38,4 +38,8 @@ False
 True
 ```
 
+#### 2.2 使用`isfunction`
+
+
+
 
