@@ -56,7 +56,6 @@ True
 >>> inspect.isfunction(x.mean) # x.mean时C实现的，不属于“python函数”
 False
 >>> inspect.isfunction(os.path.isdir)
-
 True
 ```
 
