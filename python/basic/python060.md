@@ -70,7 +70,7 @@ True
 
 **工具二**：`inspect.ismethod`
 
-官方说明：当且仅当输入是Python编写的`bound method`时，返回`True`。
+官方说明：当且仅当输入是Python编写的`bound method`（即绑定了实例的方法）时，返回`True`。
 
 需要注意：
 
