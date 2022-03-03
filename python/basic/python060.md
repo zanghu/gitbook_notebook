@@ -26,7 +26,8 @@ Python具有强大的反射功能，可以用`__class__`告诉调用者“我是
 >>> x = np.arange(12).reshape(4, 3)
 >>> hasattr(x.shape, '__call__') # shape没有__call__成员，因此shape是属性
 False
->>> hasattr(x.mean, '__call__')
+>>> hasattr(x.mean, '__call__') # mean没有__call__成员，因此mean是属性
+
 True
 ```
 
