@@ -2,6 +2,8 @@
 
 **参考资料**
 
+官方文档: [inspect — Inspect live objects](https://docs.python.org/3/library/inspect.html)
+
 Stackoverflow：[inspect.isfunction doesn't work for all modules?](https://stackoverflow.com/questions/22428910/inspect-isfunction-doesnt-work-for-all-modules)
 
 CSDN: [Python中的函数（function）与方法（method）](https://blog.csdn.net/qq_44614026/article/details/108610467)
@@ -46,7 +48,7 @@ True
 
 官方说明：当对象是`Python function`时返回`True`, 包括lambda表达式.
 
-但是需要注意：
+需要注意：
 
 1、该方法不能检出C语言（估计也包括C++等）实现的函数，大概是因为这些函数不是“Python函数”；
 2、该方法不能检出内建（`builtin`）函数，比如：filter，iter等。
@@ -67,6 +69,14 @@ True
 ```
 
 **工具二**：`inspect.ismethod`
+
+官方说明：当对象是`Python function`时返回`True`, 包括lambda表达式.
+
+需要注意：
+
+1、该方法不能检出C语言（估计也包括C++等）实现的函数，大概是因为这些函数不是“Python函数”；
+2、该方法不能检出内建（`builtin`）函数，比如：filter，iter等。
+
 
 
 **工具三**：`inspect.isbuiltin`
