@@ -8,6 +8,9 @@ cnblogs：[python str与bytes之间的转换](https://www.cnblogs.com/zqifa/p/py
 
 Python具有强大的反射功能，可以用`__class__`告诉调用者“我是谁”、也可以用`dir()`通过显示对象或类的全部成员来说明“我会什么”。
 
+**示例**：
+
+
 ```python
 >>> import numpy as np
 >>> x = np.arange(12).reshape(4, 3)
@@ -20,6 +23,8 @@ Python具有强大的反射功能，可以用`__class__`告诉调用者“我是
 ### 2.判断成员是方法还是属性
 
 如果某个对象具备`__call__`成员，则它可以被一函数的形式调用，也就可以被认为是一个方法，反之就是一个成员。
+
+**示例**：
 
 ```python
 >>> import numpy as np
