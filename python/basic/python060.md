@@ -81,7 +81,7 @@ True
 
 **工具三**：`inspect.isbuiltin`
 
-
+当且仅当输入是Python编写的`bound method`时，返回`True`。
 
 以上两个方法在python3.7下测试都不是很准确，
 
