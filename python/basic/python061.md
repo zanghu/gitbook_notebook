@@ -2,7 +2,9 @@
 
 **参考资料**
 
-egmentfault: [Python: 函数与方法的区别 以及 Bound Method 和 Unbound Method](https://segmentfault.com/a/1190000009157792)
+segmentfault: [Python: 函数与方法的区别 以及 Bound Method 和 Unbound Method](https://segmentfault.com/a/1190000009157792)
+
+Chris Siebenmann的博客: [How functions become bound or unbound methods](https://utcc.utoronto.ca/~cks/space/blog/python/HowFunctionsToMethods)
 
 ### 1.方法与函数
 
