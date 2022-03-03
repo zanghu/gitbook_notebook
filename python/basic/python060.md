@@ -70,18 +70,19 @@ True
 
 **工具二**：`inspect.ismethod`
 
-官方说明：当对象是`Python function`时返回`True`, 包括lambda表达式.
+官方说明：当且仅当输入是Python编写的`bound method`时，返回`True`。
 
 需要注意：
 
-1、该方法不能检出C语言（估计也包括C++等）实现的函数，大概是因为这些函数不是“Python函数”；
-2、该方法不能检出内建（`builtin`）函数，比如：filter，iter等。
-
+1、与`isfunction`类似，不能检出C语言（估计也包括C++等）实现的函数，大概是因为这些函数不是“Python函数”；
+2、与`isfunction`类似，不能检出内建（`builtin`）函数，比如：filter，iter等；
+3、不能检出类方法（`@classmethod`修饰）、类静态方法（`@staticmethod`修饰）；
+4、
 
 
 **工具三**：`inspect.isbuiltin`
 
-当且仅当输入是Python编写的`bound method`时，返回`True`。
+
 
 以上两个方法在python3.7下测试都不是很准确，
 
