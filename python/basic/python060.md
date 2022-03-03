@@ -44,7 +44,10 @@ True
 
 官方说明：当对象是`Python function`时返回`True`, 包括lambda表达式.
 
-但是需要注意：该方法不能检出C语言（估计也包括C++等）实现的函数，大概是因为这些函数不是“Python函数”。
+但是需要注意：
+
+1、该方法不能检出C语言（估计也包括C++等）实现的函数，大概是因为这些函数不是“Python函数”；
+2、该方法不能检出内建（`builtin`）函数，比如：filter，iter等。
 
 **示例**
 
@@ -55,13 +58,15 @@ True
 >>> x = np.arange(12).reshape(4, 3)
 >>> inspect.isfunction(x.mean) # x.mean时C实现的，不属于“python函数”
 False
+>>> inspect.isfunction(filter) # builtin函数filter是内建函数，检出失败
+False
 >>> inspect.isfunction(os.path.isdir) # isdir是python函数
 True
 ```
 
 `inspect.ismethod`
 
-以上两个方法在python3.7下测试都不是很准确，其中前者似乎只能检测自定义函数，但不能正确检出模块中的方法。
+以上两个方法在python3.7下测试都不是很准确，
 
 慎用。
 
