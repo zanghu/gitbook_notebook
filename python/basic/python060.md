@@ -28,5 +28,6 @@ Python具有强大的反射功能，可以用`__class__`告诉调用者“我是
 False
 >>> hasattr(x.mean, '__call__')
 True
+```
 
 
