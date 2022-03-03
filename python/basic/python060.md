@@ -38,8 +38,14 @@ False
 True
 ```
 
-#### 2.2 使用`inspect.isfunction`
+#### 2.2 使用`inspect`模块
 
+`inspect.isfunction`
 
+`inspect.ismethod`
+
+以上两个方法在python3.7下测试都不是很准确，其中前者似乎只能检测自定义函数，但不能正确检出模块中的方法。
+
+慎用。
 
 
