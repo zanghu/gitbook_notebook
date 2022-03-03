@@ -2,11 +2,11 @@
 
 **参考资料**
 
-segmentfault: [Python: 函数与方法的区别 以及 Bound Method 和 Unbound Method](https://segmentfault.com/a/1190000009157792)
-
-Chris Siebenmann的博客: [How functions become bound or unbound methods](https://utcc.utoronto.ca/~cks/space/blog/python/HowFunctionsToMethods)
+segmentfault: [Python 面向对象-如何查看类的父类，外部如何获取类的名字](https://blog.csdn.net/qq_38161040/article/details/89501291)
 
 ### 方法
+
+利用对象的`__base__`属性
 
 ```python
 >>> np.ndarray.__base__
