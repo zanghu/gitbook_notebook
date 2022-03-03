@@ -6,7 +6,7 @@ Stackoverflow：[inspect.isfunction doesn't work for all modules?](https://stack
 
 ### 1.显示对象或类的全部成员
 
-Python具有强大的反射功能，可以用`__class__`告诉调用者“我是谁”、也可以用`dir()`通过显示对象或类的全部成员来说明“我会什么”。
+Python具有强大的反射与自省功能，可以用`__class__`告诉调用者“我是谁”、也可以用`dir()`通过显示对象或类的全部成员来说明“我会什么”。
 
 **示例**：
 
