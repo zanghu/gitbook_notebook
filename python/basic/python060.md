@@ -40,7 +40,25 @@ True
 
 #### 2.2 使用`inspect`模块
 
-`inspect.isfunction`
+**工具一**：`inspect.isfunction`
+
+官方说明：当对象是`Python function`时返回`True`, 包括lambda表达式.
+
+但是需要注意：该方法不能检出C语言（估计也包括C++等）实现的函数，大概是因为这些函数不是“Python函数”。
+
+**示例**
+
+```python
+>>> import numpy as np
+>>> import inspect
+>>> import os
+>>> x = np.arange(12).reshape(4, 3)
+>>> inspect.isfunction(x.mean) # x.mean时C实现的，不属于“python函数”
+False
+>>> inspect.isfunction(os.path.isdir)
+
+True
+```
 
 `inspect.ismethod`
 
