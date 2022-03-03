@@ -18,7 +18,7 @@
   * [Python: 基础](python/basic/README.md)
   * [Python: 基础](python/basic/README.md)
     * [关于函数定义形参表的形参前面的星号和双星号](python/basic/python001.md)
-    * [日和 区分对象的成员是方法还是属性](python/basic/python060.md)
+    * [如何区分对象的成员是方法还是属性](python/basic/python060.md)
     * [关于classmethod和staticmethod的区别](python/basic/python004.md)
     * [字符串开头的字母：u, b, r, f](python/basic/python040.md)
     * [元类与metaclass](python/basic/python005.md)
