@@ -430,6 +430,7 @@
   * [工具: 清华大学IPV6资源](others/others009.md)
   * [工具: git bash 连接本地代理](others/others018.md)
   * [随笔: 近期的疑问](others/others012.md)
+  * [qemu0530](others/qemu_0530.md)
   * [Markdown](others/markdown/README.md)
     * [MD: 绘制简单表格](others/markdown/md001.md)
     * [MD: 如何在markdown语法中显示尖括号](others/markdown/md002.md)
